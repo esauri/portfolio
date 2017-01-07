@@ -1,0 +1,69 @@
+footer{
+	width: 90%;
+	max-width: 1200px;
+	margin: 2em auto;
+
+	margin-bottom: 50px;
+	@include MQ(M){
+		margin-bottom: 0;
+	}
+}
+#contact{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+
+	input{
+		margin: 1em 0;
+		flex-basis: 45%;
+	}
+	textarea{
+		flex-basis: 100%;
+		margin-bottom: 1em;
+	}
+
+	.btn{
+		width: 100%;
+		margin-top: 1em;
+		font-size: 0.9em;
+		text-align: center;
+	}
+
+	@include MQ(M){
+		.btn{
+			width: auto;
+			flex-basis: 33%;
+		}
+	}
+}
+.copyright{
+	padding: 2em;
+
+	text-align: center;
+}
+
+.social-links {
+
+	footer & {
+		text-align: center;
+	}
+	li {
+		display: inline;
+	}
+
+	a, button {
+		font-size: 2em;
+		padding: 0.5em;
+	}
+
+	button {
+		cursor: pointer;
+		background: none;
+		border: none;
+		color: $link-color;
+
+		&:hover {
+			color: $link-color-hover;
+		}
+	}
+}

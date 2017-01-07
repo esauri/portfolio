@@ -1,0 +1,46 @@
+.btn{
+	display: inline-block;
+	padding: 0 5em;
+
+	width: auto;
+
+	height: 52px;
+	line-height: 42px;
+	font-size: inherit;
+	font-weight: $font-weight-bold;
+	outline: 0;
+
+
+	border: 5px solid $link-color-hover;
+	border-radius: 4px;
+	background: transparent;
+	box-shadow: 0 1px 10px rgba($black, 0.2), 0 2px 4px rgba($black, 0.1);
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+
+	-webkit-tap-highlight-color: transparent;
+	color: $link-color-hover;
+
+	@include vendor-property("transition", "all 0.2s");
+
+	&.btn-fit{
+		display: block;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	&.btn-special{
+		color: $white;
+		background: $link-color;
+		border-color: $link-color;
+	}
+	&:hover{
+		background: $link-color-hover;
+		border-color: $link-color-hover;
+		box-shadow: 0 4px 10px rgba($black, 0.3), 0 6px 4px rgba($black, 0.2);
+		color: $white;
+		cursor: pointer;
+	}
+}
