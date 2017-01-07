@@ -1,2 +1,17 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<main>
+  <article class='container case-study'>
+    <ul class='projects'>
+      {{#each project}}
+        <li class='project-item'>
+          <a href='{{this.link}}' class='project-wrapper'>
+            <section id='{{this.name}}' class='project-image'></section>
+            <section class='project-blurb'>
+              <h2>{{this.title}}</h2>
+              <p>{{this.description}}</p>
+            </section>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </article>
+</main>

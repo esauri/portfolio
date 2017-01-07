@@ -1,3 +1,28 @@
-body {
+@import
+	"components/ionicons/ionicons.scss",
+	"components/layout",
+	"components/mixins",
+	"components/family",
+	"components/variables",
+	"components/reset",
+	//"components/spinners/loaders",
+	"components/animations",
+	"components/base",
+	"components/gallery",
+	"components/projectpanel",
+	"components/video",
+	"components/header",
+	"components/tabs",
+	"components/projects",
+	"components/casestudy",
+	"components/buttons",
+	"components/forms",
+	"components/footer";
 
+.mobile-unfriendly {
+	display: none;
+
+	@include MQ(L) {
+		display: inline-block;
+	}
 }
