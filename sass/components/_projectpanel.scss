@@ -1,0 +1,124 @@
+#project-panel {
+  position: fixed;
+
+  bottom: $tab-height;
+
+  width: 150%;
+  padding: 1em;
+
+  overflow-x: auto;
+
+  background: $background-color;
+  border-bottom: 5px solid $background-color-accent;
+
+  z-index: 5;
+
+  transform: translateY(100%);
+  transition: transform $duration-transition;
+
+  @include MQ(M) {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    width: 100%;
+    transform: translateY(-100%);
+  }
+
+  &.open {
+    transform: translateY(0);
+
+    @include MQ(M) {
+      transform: translateY($tab-height);
+    }
+
+    @include MQ(L) {
+      transform: translateY($tab-height-L);
+    }
+  }
+
+  ul {
+    width: 150%;
+    display: flex;
+    flex-flow: row;
+  }
+
+  .project-item {
+    position: relative;
+    flex-basis: 100%;
+    width: 150px;
+
+    &:hover {
+      background: $background-color-accent;
+    }
+  }
+
+  // .project-wrapper {
+  //
+  // }
+
+  .project-image {
+    height: 100px;
+
+    @include MQ(M) {
+      height: 150px;
+    }
+
+    @include MQ(L) {
+      height: 250px;
+    }
+  }
+
+  .project-blurb {
+    h2 {
+      font-size: 0.85em;
+
+      @include MQ(M) {
+        font-size: 1em;
+      }
+    }
+
+    p {
+      font-size: 0.75em;
+    }
+  }
+}
+
+#project-panel-close-button {
+  position: relative;
+  //float: right;
+  display: inline-block;
+  border: 0;
+  background: none;
+  font-size: 0em;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+
+  @include MQ(M) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &:hover {
+    &::before, &::after {
+      background: $link-color-hover;
+    }
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #000;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

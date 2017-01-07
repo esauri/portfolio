@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "title": "270",
+      "category": "Ionic Framework",
+      "link": "/270",
+      "description": "Race to the White House"
+    },
+    {
+      "title": "Clicker Game",
+      "link": "/clickergame",
+      "category": "Javascript",
+      "description": "Save Bob!"
+    },
+    {
+      "title": "Nest",
+      "link": "/nest",
+      "category": "Javascript",
+      "description": "Join the flock"
+    },
+    {
+      "title": "Admit One ",
+      "link": "/admitone",
+      "category": "Illustrator",
+      "description": "Find out what's happening"
+    },
+    {
+      "title": "Audio Visualizer",
+      "link": "/audiovisualizer",
+      "category": "Javascript",
+      "description": "Visualize audio"
+    },
+    {
+      "title": "Yibaro",
+      "link": "/yibaro",
+      "category": "Photoshop",
+      "description": "Yibaaaro"
+    }
+  ]
+}

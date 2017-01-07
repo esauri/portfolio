@@ -1,0 +1,186 @@
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+::selection {
+    background: $foreground-color-accent;
+    color: $background-color-accent;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font: {
+		size: 15px;
+		family: $primary-font;
+	}
+	background-color: $background-color;
+	color: $foreground-color;
+	font-weight: $font-weight;
+	overflow-x: hidden;
+}
+
+div {
+	margin: auto;
+}
+
+main {
+	animation: fadeIn 0.4s;
+}
+
+p {
+	font-size: 1em;
+	letter-spacing: 0.01rem;
+	line-height: 1.6;
+	margin-bottom: 1em;
+
+	@include MQ(M) {
+		line-height: 1.8;
+	}
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover {
+		color: $link-color-hover;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 2em 0 1em;
+	font-weight: $font-weight-bold;
+	line-height: 1em;
+}
+
+
+h1 {
+	font-size: 2em;
+	line-height: 1.5em;
+	letter-spacing: -0.025em;
+}
+
+h2 {
+	font-size: 1.7em;
+	line-height: 1.5em;
+	letter-spacing: -0.025em;
+}
+
+h3 {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+h4 {
+	font-size: 1.3em;
+	line-height: 1.5em;
+	color: $silver;
+}
+
+h5 {
+	font-size: 1.1em;
+	font-weight: $font-weight;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+sub {
+	position: relative;
+	top: 0.5em;
+	font-size: 0.8em;
+}
+
+sup {
+	position: relative;
+	top: -0.5em;
+	font-size: 0.8em;
+}
+
+strong, b {
+	font-weight: $font-weight-bold;
+}
+
+em, i {
+	font-style: italic;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+blockquote {
+	margin: 1em;
+	padding: 0.5em 0 0.5em 2em;
+	border-left: solid 5px $red;
+	font-size: 1em;
+	letter-spacing: 0.01rem;
+	line-height: 1.6;
+}
+
+
+code {
+	background: $dark;
+	color: $silver;
+	font-size: 0.9em;
+}
+
+pre {
+	-webkit-overflow-scrolling: touch;
+	font-size: 0.9em;
+	code {
+		display: block;
+		line-height: 1.75em;
+		padding: 1em 1.5em;
+		overflow-x: auto;
+	}
+}
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: $L;
+}
+
+#not-found {
+	margin-top: 5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 60vh;
+
+	h1 {
+		font-size: 3em;
+	}
+
+	p, a {
+		font-size: 2em;
+	}
+}
+
+// .loader-container {
+// 	width: 100vw;
+// 	height: 100vh;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+//
+// .hide {
+// 	display: none;
+// }
+//
+// .loader {
+// 	@include loader10;
+// }
