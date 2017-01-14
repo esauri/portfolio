@@ -3,7 +3,7 @@
 
 
 $white:	#f3f6fa;
-$black:	#231f20;
+$black:	#111;
 $dark: #272727;
 $light: #ecf0f1;
 $silver: #a5aebc;
@@ -22,21 +22,29 @@ $warm-gradient: linear-gradient(to bottom right, #e74c3c, #F66B34);
 // Base
 // ------------------------
 
-$primary-font: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Lato", sans-serif;
+$primary-font: -apple-system, ".SFNSText-Regular", "Avenir Next", "San Francisco", "Roboto", "Lato", sans-serif;
 
 $font-weight: 300;
 $font-weight-bold: 600;
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
 
 $line-height: 1.5;
 
 $link-color: $blue;
 $link-color-hover: $red;
 
-$background-color: $white;
-$foreground-color: $black;
+$background-color: $black;
+$foreground-color: $white;
 
-$background-color-accent: $light;
-$foreground-color-accent: $dark;
+$background-color-accent: $dark;
+$foreground-color-accent: $light;
 
 
 $content-padding: 10px;
@@ -48,7 +56,7 @@ $tab-height-L: 70px;
 $sidebar-width: 200px;
 
 // Z-index
-
+$max-zindex: 9999;
 $header-zindex: 6;
 $sidebar-zindex: 5;
 $shadow-zindex: 4;

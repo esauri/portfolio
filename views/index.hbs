@@ -1,2 +1,53 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<main class='container'>
+  <header id='header'>
+    <span id='logo'>
+      <a href='/'>
+        <img class='logo-image' src='img/logo.png'>
+      </a>
+      <span class='logo-description'>Erick Sauri</span>
+    </span>
+    <button id='open-menu-btn'>Open Menu</button>
+    <nav class='nav-global'>
+      <ul>
+        <li class='nav-item-list'>
+          <button id='close-menu-btn'>Close Menu</button>
+        </li>
+        <li class='nav-item-list'>
+          <a class='nav-item' href='/'>Work</a>
+        </li>
+        <li class='nav-item-list'>
+          <a class='nav-item' href='/'>About</a>
+        </li>
+        <li class='nav-item-list'>
+          <a class='nav-item' href='/'>Contact</a>
+        </li>
+        <li class='nav-item-list'>
+          <a class='nav-item' href='/'>Resume</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <article class='container-fullpage'>
+    <ul class='slideshow'>
+      {{#each project}}
+      <li class='slide' id='{{this.name}}'>
+        <section class='slide-section'>
+          {{!--<section class='slide-section-image'></section>--}}
+          <h2 class='slide-section-title'>{{this.title}}</h2>
+          <p class='slide-section-description'>{{this.description}}</p>
+          <a class='btn' href='/'>See work</a>
+        </section>
+      </li>
+      {{/each}}
+    </ul>
+
+    <ul class='slideshow-nav'>
+      {{#each project}}
+        <li class='slideshow-nav-list'>
+          <a class='slideshow-nav-item' href='#{{this.name}}'>{{this.title}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </article>
+</main>

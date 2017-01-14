@@ -1,0 +1,75 @@
+.slideshow {
+  height: 100%;
+  // background: $purple;
+}
+
+.slide {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &#two-seven-zero {
+    background: url('../img/270/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  &#audio-visualizer {
+    background: url('../img/audiovisualizer/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+
+    &#clicker-game {
+    background: url('../img/clickergame/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  &#italian-neorealism {
+    background: url('../img/neorealism/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+
+    &#trump-card {
+    background: url('../img/trumpcard/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.slide-section-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+.slide-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  height: 60vh;
+}
+
+.slide-section-title {
+  margin: 0;
+}
+
+.slide-section-description {}
+
+.slideshow-nav {
+  position: fixed;
+  right: 1em;
+
+  @include center(y);
+}
+
+.slideshow-nav-list {
+  padding: $content-padding;
+}
+
+.slideshow-nav-item {
+  text-align: right;
+}
