@@ -1,4 +1,5 @@
 #header {
+  // position: absolute;
   width: 100%;
   height: $header-S;
   margin-top: 1em;
@@ -6,6 +7,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: $header-zindex;
 }
 
 #logo {
@@ -105,6 +107,7 @@
 
     @include MQ(M) {
       display: inline;
+      border: none;
 
       &:hover {
         background: none;

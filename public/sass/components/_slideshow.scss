@@ -1,5 +1,6 @@
 .slideshow {
   height: 100%;
+  // background: $purple;
 }
 
 .slide {
@@ -8,13 +9,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &#two-seven-zero {
+    background: url('../img/270/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  &#audio-visualizer {
+    background: url('../img/audiovisualizer/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+
+    &#clicker-game {
+    background: url('../img/clickergame/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  &#italian-neorealism {
+    background: url('../img/neorealism/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
+
+    &#trump-card {
+    background: url('../img/trumpcard/thumbnail.png') no-repeat center center;
+    background-size: cover;
+  }
 }
 
 .slide-section-image {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('../img/trumpCardGame.png') no-repeat center center;
   background-size: contain;
 }
 
