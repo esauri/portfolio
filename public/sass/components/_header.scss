@@ -1,6 +1,7 @@
 #header {
-  // position: absolute;
-  width: 100%;
+  position: fixed;
+  width: 90%;
+  max-width: $L;
   height: $header-S;
   margin-top: 1em;
   display: flex;
@@ -59,11 +60,13 @@
   width: $sidebar-width;
   height: 100%;
 
+  background: $background-color-accent;
+
   display: flex;
   flex-direction: column;
   z-index: $max-zindex;
 
-  background: $background-color-accent;
+  opacity: 0;
   transform: translateX(300px);
   transition: transform $duration-transition;
 
@@ -72,12 +75,14 @@
     position: static;
     width: 100%;
     flex-direction: row;
+    opacity: 1;
     transform: translate(0);
     justify-content: flex-end;
     align-items: center;
   }
   
   &.open {
+    opacity: 1;
     transform: translateX(0);
   }
 
@@ -107,6 +112,7 @@
 
     @include MQ(M) {
       display: inline;
+      padding: $content-padding;
       border: none;
 
       &:hover {
