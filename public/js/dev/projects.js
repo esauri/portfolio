@@ -5,7 +5,11 @@ function Projects () {
       projectSlides,
       prevProjectBtn,
       nextProjectBtn,
-      autoRun;
+      resumeProjectBtn,
+      autoRun,
+      delta,
+      SCROLL_THRESHOLD = 6,
+      scrolling = false;
 
   const PROJECT_TIMER = 5000;
   // Get the slide show
@@ -21,22 +25,13 @@ function Projects () {
   projectSlideNav = Array.from(document.getElementsByClassName('project-slideshow-btn'));
 
   // Get the previous project button
-  prevProjectBtn = document.getElementsByClassName('project-slideshow-up-arrow')[0];
+  prevProjectBtn = document.getElementsByClassName('js-projects-prev-btn')[0];
 
   // Get the next project button
-  nextProjectBtn = document.getElementsByClassName('project-slideshow-down-arrow')[0];
+  nextProjectBtn = document.getElementsByClassName('js-projects-next-btn')[0];
 
-  // Add click event listener
-  prevProjectBtn.addEventListener('click', function (event) {
-    previousProject(projectSlides, currentProjectSlide, projectSlideNav);
-    clearInterval(autoRun);
-  });
-
-  // Add click event listener
-  nextProjectBtn.addEventListener('click', function (event) {
-    nextProject(projectSlides, currentProjectSlide, projectSlideNav);
-    clearInterval(autoRun);
-  });
+  // Get the resume project button
+  resumeProjectBtn = document.getElementsByClassName('js-projects-resume-btn')[0];
 
   // Every 5 seconds switch to next slide
   autoRun = setInterval(function () { nextProject(projectSlides, currentProjectSlide, projectSlideNav); }, PROJECT_TIMER);
@@ -48,6 +43,66 @@ function Projects () {
 
     nav.addEventListener('click', changeProject);
   });
+
+    // Add click event listener
+  prevProjectBtn.addEventListener('click', prevBtnEvent);
+
+  // Add click event listener
+  nextProjectBtn.addEventListener('click', nextBtnEvent);
+
+  // Add click event listener
+  resumeProjectBtn.addEventListener('click', function (event) {
+    resumeProjectBtn.classList.remove('visible');
+    nextProject(projectSlides, currentProjectSlide, projectSlideNav);
+    autoRun = setInterval(function () { nextProject(projectSlides, currentProjectSlide, projectSlideNav); }, PROJECT_TIMER);
+  });
+
+  // Add keyboard event listener
+  window.addEventListener('keydown', keydownEvent);
+
+  window.addEventListener('scroll', updateOnScroll);
+
+  function updateOnScroll (event) {
+    console.log('Called');
+    if (!scrolling) {
+      (!window.requestAnimationFrame) ? scrollHijack(event) : window.requestAnimationFrame(function () { scrollHijacking(event); });
+    }
+  }
+
+  function scrollHijack (event) {
+    if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+      delta--;
+      (Math.abs(delta) >= SCROLL_THRESHOLD) && prevBtnEvent(event);
+    }
+    else {
+      delta++;
+      (delta >= SCROLL_THRESHOLD) && nextBtnEvent(event);
+    }
+
+    scrolling = false;
+    return scrolling;
+  }
+
+  function keydownEvent (event) {
+    if (event.which === 37 || event.which === 38) {
+      prevBtnEvent(event);
+    }
+    else if (event.which === 39 || event.which === 40) {
+      nextBtnEvent(event);
+    }
+  }
+
+  function prevBtnEvent (event) {
+    previousProject(projectSlides, currentProjectSlide, projectSlideNav);
+    clearInterval(autoRun);
+    resumeProjectBtn.classList.add('visible');
+  }
+
+  function nextBtnEvent (event) {
+    nextProject(projectSlides, currentProjectSlide, projectSlideNav);
+    clearInterval(autoRun);
+    resumeProjectBtn.classList.add('visible');
+  }
 
   function previousProject (slides, currentSlide, slideNav) {
     let newSlide,
@@ -111,6 +166,7 @@ function Projects () {
     event.target.parentNode.classList.add('current');
     currentProjectSlide = newSlide;
     clearInterval(autoRun);
+    resumeProjectBtn.classList.add('visible');
   }
 }
 

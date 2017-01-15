@@ -1,0 +1,24 @@
+<svg width="11" height="16" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+  <g id="Canvas" transform="translate(-36 4)" figma:type="canvas">
+    <g id="Triangle" style="mix-blend-mode:normal;" figma:type="frame">
+      <g id="Right" style="mix-blend-mode:normal;" figma:type="vector">
+        <use xlink:href="#path0_fill" transform="matrix(0.598604 0.801045 -0.801045 0.598604 46.6175 3.40577)" fill="#F3F6FA" style="mix-blend-mode:normal;"/>
+      </g>
+      <g id="Left" style="mix-blend-mode:normal;" figma:type="vector">
+        <use xlink:href="#path1_fill" transform="matrix(-0.598621 0.801033 -0.801033 -0.598621 47.0781 3.87959)" fill="#F3F6FA" style="mix-blend-mode:normal;"/>
+      </g>
+      <g id="Center" style="mix-blend-mode:normal;" figma:type="vector">
+        <use xlink:href="#path2_fill" transform="matrix(1 1.89418e-16 -1.89418e-16 1 36.1517 -3.8)" fill="#F3F6FA" style="mix-blend-mode:normal;"/>
+      </g>
+      <g id="Fill" style="mix-blend-mode:normal;" figma:type="vector">
+        <use xlink:href="#path3_fill" transform="matrix(1.8735e-16 1 -1 1.8735e-16 46 -3)" fill="#F3F6FA" style="mix-blend-mode:normal;"/>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <path id="path0_fill" d="M 0 0.4462C 0 0.199771 0.199771 0 0.4462 0C 0.69263 0 0.892401 0.199771 0.892401 0.4462L 0.892401 12.7167C 0.892401 12.9631 0.69263 13.1629 0.4462 13.1629C 0.199771 13.1629 0 12.9631 0 12.7167L 0 0.4462Z"/>
+    <path id="path1_fill" d="M 0 0.446206C 0 0.199773 0.199773 0 0.446206 0C 0.692639 0 0.892413 0.199773 0.892413 0.446206L 0.892413 12.7167C 0.892413 12.9631 0.692639 13.1629 0.446206 13.1629C 0.199773 13.1629 0 12.9631 0 12.7167L 0 0.446206Z"/>
+    <path id="path2_fill" d="M 0 0.445C 0 0.199233 0.199233 0 0.445 0C 0.690767 0 0.89 0.199233 0.89 0.445L 0.89 15.155C 0.89 15.4008 0.690767 15.6 0.445 15.6C 0.199233 15.6 0 15.4008 0 15.155L 0 0.445Z"/>
+    <path id="path3_fill" d="M 7 0L 14 9L -1.33227e-15 9L 7 0Z"/>
+  </defs>
+</svg>
