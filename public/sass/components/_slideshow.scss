@@ -133,6 +133,10 @@
 
   &.visible {
     pointer-events: all;
-    transform: scale(1.3);
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.5);
+    }
   }
 }

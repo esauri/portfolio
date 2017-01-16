@@ -7,8 +7,7 @@ function Projects () {
       nextProjectBtn,
       resumeProjectBtn,
       autoRun,
-      delta,
-      SCROLL_THRESHOLD = 6,
+      SCROLL_THRESHOLD = 60,
       scrolling = false;
 
   const PROJECT_TIMER = 5000;
@@ -60,27 +59,32 @@ function Projects () {
   // Add keyboard event listener
   window.addEventListener('keydown', keydownEvent);
 
-  window.addEventListener('scroll', updateOnScroll);
+  window.addEventListener('wheel', updateOnScroll);
 
   function updateOnScroll (event) {
     console.log('Called');
+    event.preventDefault();
+
+    window.removeEventListener('scroll', updateOnScroll);
+
     if (!scrolling) {
-      (!window.requestAnimationFrame) ? scrollHijack(event) : window.requestAnimationFrame(function () { scrollHijacking(event); });
+      scrolling = true;
+      (!window.requestAnimationFrame) ? scrollHijack(event) : window.requestAnimationFrame(function () { scrollHijack (event); });
     }
   }
 
   function scrollHijack (event) {
-    if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-      delta--;
-      (Math.abs(delta) >= SCROLL_THRESHOLD) && prevBtnEvent(event);
+    let delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+
+    if (delta > 0) {
+      nextBtnEvent(event);
     }
     else {
-      delta++;
-      (delta >= SCROLL_THRESHOLD) && nextBtnEvent(event);
+      prevBtnEvent(event);
     }
 
     scrolling = false;
-    return scrolling;
+    return false;
   }
 
   function keydownEvent (event) {
