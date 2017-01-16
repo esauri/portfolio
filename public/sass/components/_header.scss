@@ -32,11 +32,6 @@
 #open-menu-btn,
 #close-menu-btn {
   padding: 1em;
-  background: none;
-  border: none;
-  color: $foreground-color-accent;
-  text-align: center;
-  font-size: 16px;
 
   @include MQ(M) {
     display: none;

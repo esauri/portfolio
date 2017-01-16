@@ -7,6 +7,8 @@ function Projects () {
       nextProjectBtn,
       resumeProjectBtn,
       autoRun,
+      positionX,
+      positionY,
       SCROLL_THRESHOLD = 60,
       scrolling = false;
 
@@ -35,6 +37,7 @@ function Projects () {
   // Every 5 seconds switch to next slide
   autoRun = setInterval(function () { nextProject(projectSlides, currentProjectSlide, projectSlideNav); }, PROJECT_TIMER);
   
+  // Loop through the nav
   projectSlideNav.forEach(function(nav) {
     let newIndex = parseInt(nav.innerHTML) + 1;
 
@@ -43,7 +46,7 @@ function Projects () {
     nav.addEventListener('click', changeProject);
   });
 
-    // Add click event listener
+  // Add click event listener
   prevProjectBtn.addEventListener('click', prevBtnEvent);
 
   // Add click event listener
@@ -59,7 +62,64 @@ function Projects () {
   // Add keyboard event listener
   window.addEventListener('keydown', keydownEvent);
 
+  // Add event for mouse wheel
   window.addEventListener('wheel', updateOnScroll);
+
+  // Add event for touch starting
+  window.addEventListener('touchstart', touchStartEvent);
+
+  // Add event for touch moving
+  window.addEventListener('touchmove', touchMoveEvent);
+
+  /**
+   * @param  {} event
+   */
+  function touchStartEvent (event) {
+    positionX = event.touches[0].clientX;
+    positionY = event.touches[0].clientY;
+    console.log('Tocuh start X: ' + positionX + ' Y: ' + positionY);
+  }
+  /**
+   * @param  {} event
+   */
+  function touchMoveEvent (event) {
+    if (!positionX || !positionY) {
+      return;
+    }
+
+    let newX = event.touches[0].clientX,
+        newY = event.touches[0].clientY;
+
+    let diffX = positionX - newX,
+        diffY = positionY - newY;
+    
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
+        // Left swipe
+        prevBtnEvent(event);
+        console.log('LEFT');
+      }
+      else {
+        // Right swipe
+        nextBtnEvent(event);
+        console.log('RIGHT');
+      }
+    }
+    else {
+      if (diffY > 0) {
+        // Up swipe
+        prevBtnEvent(event);
+        console.log('UP');
+      }
+      else {
+        // Down swipe
+        nextBtnEvent(event);
+        console.log('DOWN');
+      }
+    }
+
+    positionX = positionY = null;
+  }
 
   function updateOnScroll (event) {
     console.log('Called');
