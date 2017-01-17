@@ -188,8 +188,10 @@ function Projects () {
     
     currentNav.classList.remove('current');
     currentSlide.classList.remove('visible');
+    currentSlide.setAttribute('aria-hidden', 'true');
     newNav.classList.add('current');
     newSlide.classList.add('visible');
+    newSlide.setAttribute('aria-hidden', 'false');
     currentProjectSlide = newSlide;
   }
 
@@ -213,8 +215,10 @@ function Projects () {
     
     currentNav.classList.remove('current');
     currentSlide.classList.remove('visible');
+    currentSlide.setAttribute('aria-hidden', 'true');
     newNav.classList.add('current');
     newSlide.classList.add('visible');
+    newSlide.setAttribute('aria-hidden', 'false');
     currentProjectSlide = newSlide;
   }
 
@@ -224,16 +228,16 @@ function Projects () {
         currentSlideIndex = projectSlides.indexOf(currentProjectSlide);
 
     currentProjectSlide.classList.remove('visible');
+    currentProjectSlide.setAttribute('aria-hidden', 'true');
     projectSlideNav[currentSlideIndex].parentNode.classList.remove('current');
     newSlide = projectSlides[index];
     newSlide.classList.add('visible');
+    newSlide.setAttribute('aria-hidden', 'false');
     event.target.parentNode.classList.add('current');
     currentProjectSlide = newSlide;
     clearInterval(autoRun);
     resumeProjectBtn.classList.add('visible');
   }
 }
-
-
 
 export {Projects};

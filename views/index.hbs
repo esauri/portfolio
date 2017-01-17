@@ -6,11 +6,11 @@
       </a>
       <span class='logo-description'>Erick Sauri</span>
     </span>
-    <button id='open-menu-btn' class='hamburger'>Open Menu<span class='hamburger-icon' aria-hidden='true'></span></button>
+    <button id='open-menu-btn' class='hamburger'>Open Menu<span class='hamburger-icon'></span></button>
     <nav class='nav-global'>
       <ul>
         <li class='nav-item-list'>
-          <button id='close-menu-btn' class='close-btn'>Close Menu<span class='close-icon' aria-hidden='true'></span></button>
+          <button id='close-menu-btn' class='close-btn'>Close Menu<span class='close-icon'></span></button>
         </li>
         <li class='nav-item-list'>
           <a class='nav-item' href='/'>Work</a>
@@ -27,14 +27,13 @@
       </ul>
     </nav>
   </header>
-
   <article class='container-fullpage'>
     <ul class='project-slideshow'>
       {{#each project}}
       {{#if this.bool}}
-      <li class='project-slide visible' id='{{this.name}}'>
+      <li class='project-slide visible' id='{{this.name}}' aria-hidden='false'>
       {{else}}
-      <li class='project-slide' id='{{this.name}}'>
+      <li class='project-slide' id='{{this.name}}' aria-hidden='true'>
       {{/if}}
         <section class='project-slide-section'>
           <h2 class='project-slide-section-title'>{{this.title}}</h2>
@@ -123,4 +122,28 @@
       </li>
     </ul>
   </article>
+  <section id='contact-container'>
+    <button class='close-btn'>Close Container<span class='close-icon'></span></button>
+    <form class='contact-form'>
+      <fieldset class='contact-fieldset'>
+        <legend class='contact-title'>Let's get in touch</legend>
+        <ul class='contact-list'>
+          <li class='contact-list-item'>
+            <label class='label' for='contact-name' id='contact-name-label'>Enter your name:</label>
+            <input type='text' name='contactName' class='input' id='contact-name' placeholder='Name' required />
+          </li>
+
+          <li class='contact-list-item'>
+            <label class='label' for='contact-email' id='contact-email-label'>Enter your email:</label>
+            <input type='email' name='contactEmail' class='input' id='contact-email' placeholder='Email' required />
+          </li>
+
+          <li class='contact-list-item'>
+            <label class='label' for='contact-message' id='contact-message-label'>Enter your message:</label>
+            <textarea name='contactMessage' class='textarea' id='contact-message' placeholder='Message'></textarea>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </section>
 </main>

@@ -1,0 +1,59 @@
+#contact-container {
+  position: fixed;
+  z-index: $contact-zindex;
+  background: rgba($background-color-accent, 0.4);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+
+  @include MQ(M) {
+    flex-direction: row;
+  }
+}
+
+.contact-form {
+  flex-basis: 100%;
+  background: red;
+
+  @include MQ(M) {
+    flex-basis: 50%;
+  }
+}
+
+.contact-title {
+	font-size: $mod_1 * $mod_1 * 1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+	letter-spacing: -0.025em;
+  margin-bottom: $content-padding;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+
+  @include MQ(M) {
+    flex-direction: row;
+  }
+}
+
+.contact-list-item {
+  flex-basis: 100%;
+
+  @include MQ(M) {
+    &::first-of-type,
+    &::nth-of-type(2) {
+      flex-basis: 50%;
+    }
+  }
+}
+
+.input {
+
+}
+
+.textarea {
+
+}
