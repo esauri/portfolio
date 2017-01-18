@@ -5,7 +5,7 @@ const projects = [
       {
         name: 'two-seven-zero',
         title: '270',
-        category: 'Ionic Framework',
+        category: 'Angular • Ionic Framework',
         link: '/270',
         description: 'Race to the White House',
         image: './img/270.png',
@@ -15,7 +15,7 @@ const projects = [
         name: 'trump-card',
         title: 'Trump Card',
         link: '/trumpcard',
-        category: 'Swift',
+        category: 'Swift 3',
         description: 'Deal me in',
         image: './img/nestchat.png'
       },

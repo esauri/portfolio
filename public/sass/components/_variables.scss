@@ -27,8 +27,8 @@ $primary-font: -apple-system, ".SFNSText-Regular", "Avenir Next", "San Francisco
 $font-weight: 300;
 $font-weight-bold: 600;
 
-$min_width: 320px;
-$max_width: 1200px;
+$min_width: $S;
+$max_width: $L;
 $min_font: 16px;
 $max_font: 24px;
 
@@ -45,7 +45,6 @@ $foreground-color: $white;
 
 $background-color-accent: $dark;
 $foreground-color-accent: $light;
-
 
 $content-padding: 10px;
 $content-padding-doubled: 30px;

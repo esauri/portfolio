@@ -8,23 +8,15 @@
 	"components/slideshow",
 	"components/animations",
 	"components/base",
-	"components/gallery",
-	"components/projectpanel",
-	"components/video",
+	"components/images",
+	// "components/projectpanel",
+	// "components/video",
 	"components/header",
-	"components/tabs",
+	// "components/tabs",
 	"components/hamburger",
-	"components/projects",
-	"components/casestudy",
+	// "components/projects",
+	// "components/casestudy",
 	"components/buttons",
 	// "components/forms",
 	"components/contact",
 	"components/footer";
-
-.mobile-unfriendly {
-	display: none;
-
-	@include MQ(L) {
-		display: inline-block;
-	}
-}

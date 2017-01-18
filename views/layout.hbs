@@ -33,6 +33,34 @@
     <link rel='stylesheet' href='/css/styles.css' />
   </head>
   <body>
+    <header id='header'>
+      <span id='logo'>
+        <a href='/'>
+          <img class='logo-image' src='./img/misc/logo.png'>
+        </a>
+        <span class='logo-description'>Erick Sauri</span>
+      </span>
+      <button id='open-menu-btn' class='hamburger'>Open Menu<span class='hamburger-icon'></span></button>
+      <nav class='nav-global'>
+        <ul>
+          <li class='nav-item-list'>
+            <button id='close-menu-btn' class='close-btn'>Close Menu<span class='close-icon'></span></button>
+          </li>
+          <li class='nav-item-list'>
+            <a class='nav-item' href='/'>Work</a>
+          </li>
+          <li class='nav-item-list'>
+            <a class='nav-item' href='/about'>About</a>
+          </li>
+          <li class='nav-item-list'>
+            <a class='nav-item' href='/about#contact'>Contact</a>
+          </li>
+          <li class='nav-item-list'>
+            <a class='nav-item' href='/'>Resume</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     {{{body}}}
     <script src='/js/build/bundle.min.js'></script>
   </body>

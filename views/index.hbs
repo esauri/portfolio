@@ -1,32 +1,4 @@
 <main class='container' id='work'>
-  <header id='header'>
-    <span id='logo'>
-      <a href='/'>
-        <img class='logo-image' src='./img/misc/logo.png'>
-      </a>
-      <span class='logo-description'>Erick Sauri</span>
-    </span>
-    <button id='open-menu-btn' class='hamburger'>Open Menu<span class='hamburger-icon'></span></button>
-    <nav class='nav-global'>
-      <ul>
-        <li class='nav-item-list'>
-          <button id='close-menu-btn' class='close-btn'>Close Menu<span class='close-icon'></span></button>
-        </li>
-        <li class='nav-item-list'>
-          <a class='nav-item' href='/'>Work</a>
-        </li>
-        <li class='nav-item-list'>
-          <a class='nav-item' href='/'>About</a>
-        </li>
-        <li class='nav-item-list'>
-          <a class='nav-item' href='/'>Contact</a>
-        </li>
-        <li class='nav-item-list'>
-          <a class='nav-item' href='/'>Resume</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
   <article class='container-fullpage'>
     <ul class='project-slideshow'>
       {{#each project}}
@@ -37,7 +9,7 @@
       {{/if}}
         <section class='project-slide-section'>
           <h2 class='project-slide-section-title'>{{this.title}}</h2>
-          <p class='project-slide-section-description'>{{this.description}}</p>
+          <p class='project-slide-section-description'>{{this.category}}</p>
           <a class='btn' href='/'>See work</a>
         </section>
       </li>
@@ -122,7 +94,7 @@
       </li>
     </ul>
   </article>
-  <section id='contact-container'>
+  {{!--<section id='contact-container'>
     <button class='close-btn'>Close Container<span class='close-icon'></span></button>
     <form class='contact-form'>
       <fieldset class='contact-fieldset'>
@@ -145,5 +117,5 @@
         </ul>
       </fieldset>
     </form>
-  </section>
+  </section>--}}
 </main>

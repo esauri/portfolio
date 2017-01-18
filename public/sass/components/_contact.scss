@@ -6,17 +6,16 @@
   left: 0;
   bottom: 0;
   padding-top: 1em;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
-  @include MQ(M) {
-    flex-direction: row;
-  }
+  // @include MQ(M) {
+  //   flex-direction: row;
+  // }
 }
 
 .contact-form {
   flex-basis: 100%;
-  background: red;
 
   @include MQ(M) {
     flex-basis: 50%;
@@ -33,27 +32,47 @@
 .contact-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @include MQ(M) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .contact-list-item {
   flex-basis: 100%;
+  padding: $content-padding 0;
 
   @include MQ(M) {
-    &::first-of-type,
-    &::nth-of-type(2) {
-      flex-basis: 50%;
+    flex-basis: 50%;
+
+    &:last-of-type {
+      flex-basis: 100%;
     }
   }
 }
 
-.input {
+.label {
+  display: block;
+  margin-bottom: $content-padding;
+  font-size: 18px;
+}
 
+.input {
+  background: none;
+  border: none;
+  border-bottom: 3px solid $foreground-color;
+  color: $foreground-color;
+  padding: 1em;
+  font-size: $min-font;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .textarea {
-
+  // display: block;
 }
