@@ -1,15 +1,22 @@
-<main class='container'>
-  <section id='about'>
-    <img src='./img/misc/meWH.jpg' class='avatar'>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-      Dolor, quidem. Fugiat, vitae, expedita! 
-      Dicta quibusdam, officia, iure ab ea, et numquam 
-      eligendi, sunt doloribus perspiciatis est reiciendis reprehenderit culpa a.
-    </p>
-  </section>
-  <section id='contact'>
-    <form class='contact-form'>
+<main>
+  <article class='container intro wrapper' id='about'>
+    <aside class='content-left'>
+      <img src='./img/misc/meWH.jpg' class='avatar'>
+    </aside>
+    <section class='content-right'>
+      <h2>About me</h2>
+      <p>
+        Hey! I’m Erick Sauri a senior at Rochester Institute of Technology.
+        Currently I’m majoring in New Media Interactive Development
+        and finishing a minor in Mobile App Development. I’m looking to
+        pursue a career in web and mobile app development.
+        Feel free to email me at <a href='mailto:ejs3863@rit.edu'>ejs3863 at rit.edu</a>.
+      </p>
+    </section>
+  </article>
+  <section class='wrapper' id='contact'>
+    <h2>Contact</h2>
+    <form class='contact-form' method='post' action=''>
       <fieldset class='contact-fieldset'>
         <legend class='contact-title'>Let's get in touch</legend>
         <ul class='contact-list'>
@@ -17,18 +24,37 @@
             <label class='label' for='contact-name' id='contact-name-label'>Enter your name:</label>
             <input type='text' name='contactName' class='input' id='contact-name' placeholder='Name' required />
           </li>
-
           <li class='contact-list-item'>
             <label class='label' for='contact-email' id='contact-email-label'>Enter your email:</label>
             <input type='email' name='contactEmail' class='input' id='contact-email' placeholder='Email' required />
           </li>
-
           <li class='contact-list-item'>
             <label class='label' for='contact-message' id='contact-message-label'>Enter your message:</label>
             <textarea name='contactMessage' class='textarea' id='contact-message' placeholder='Message'></textarea>
+          </li>
+          <li class='contact-list-item'>
+            <button type='submit' class='btn btn-special' id='sendEmail' name='sendEmail'>Send</button>            
+            <button type='reset' class='btn' id='resetEmail' name='resetEmail'>Clear</button>
           </li>
         </ul>
       </fieldset>
     </form>
   </section>
 </main>
+<footer>
+  <ul class='social-links'>
+    <li>
+      <a class='icon ion-email' href='mailto:ejs3863@g.rit.edu' target='_blank'></a>
+    </li>
+    <li>
+      <a class='icon ion-social-github' href='https://github.com/esauri' target='_blank'></a>
+    </li>
+    <li>
+      <a class='icon ion-social-linkedin' href='https://www.linkedin.com/in/erick-sauri-1847357b' target='_blank'></a>
+    </li>
+    <li>
+      <button class='icon ion-arrow-up-c scroll-to-top'></button>
+    </li>
+  </ul>
+  <p class='copyright'>&copy; 2017 Erick Sauri</p>
+</footer>

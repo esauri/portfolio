@@ -17,7 +17,9 @@ $purple: #b062ea;
 
 $blue-gradient: linear-gradient(to bottom right, $aqua, $blue);
 $cold-gradient:	linear-gradient(to top left, #2E9F82, #5480f1);
-$warm-gradient: linear-gradient(to bottom right, #e74c3c, #F66B34);
+$warm-gradient: linear-gradient(to bottom right, $red, $orange);
+$warm-gradient-alpha: linear-gradient(to bottom right, $orange, $red);
+
 
 // Base
 // ------------------------

@@ -1,0 +1,71 @@
+.contact-form {
+  // width: 100%;
+}
+
+.contact-title {
+	font-size: $mod_1 * $mod_1 * 1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+	letter-spacing: -0.025em;
+  margin-bottom: $content-padding;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-list-item {
+  padding: $content-padding 0;
+  flex-basis: 100%;
+
+  @include MQ(M) {
+    &:first-of-type {
+      margin-right: calc(#{$content-padding} * 2);
+      flex-basis: calc(50% - #{$content-padding});
+    }
+
+    &:nth-of-type(2) {
+      flex-basis: calc(50% - #{$content-padding});
+    }
+
+    &:nth-of-type(3),
+    &:last-of-type {
+      margin-top: $content-padding;
+    }
+  }
+}
+
+.label {
+  margin-bottom: $content-padding;
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+}
+
+.input,
+.textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  border: 3px solid $foreground-color;
+  color: $foreground-color;
+  margin-top: $content-padding;
+  padding: $content-padding;
+  font-size: $min-font;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.textarea {
+  height: 150px;
+  resize: none;
+}
+
+#sendEmail {
+  margin-bottom: 1em;
+  
+  @include MQ (M) {
+    margin-right: 1em;
+  }
+}

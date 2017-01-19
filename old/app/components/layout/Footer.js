@@ -24,7 +24,7 @@ export default class Footer extends React.Component {
             <button className='icon ion-arrow-up-c scroll-to-top'></button>
           </li>
         </ul>
-  			<p className='copyright'>&copy; 2016 Erick Sauri</p>
+  			<p className='copyright'>&copy; 2017 Erick Sauri</p>
   		</footer>
     );
   }
