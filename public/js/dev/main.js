@@ -1,4 +1,5 @@
 import {Projects} from './projects';
+import {Slideshow} from './slideshow';
 
 (function() {
 	'use strict';
@@ -26,10 +27,14 @@ import {Projects} from './projects';
   }
 
   // If work page
-  if (document.getElementsByClassName('project-slideshow').length > 0) {
+  if (document.getElementsByClassName('project-carousel').length > 0) {
     Projects();
   }
 
+  if (document.getElementsByClassName('gallery').length > 0) {
+    Slideshow();
+  }
+  
   function scrollTo(element) {
     let to = 0,
         duration = 500,
@@ -43,16 +48,16 @@ import {Projects} from './projects';
         var val = Math.easeInOutQuad(currentTime, start, change, duration);
         element.scrollTop = val;
         if(currentTime < duration) {
-            setTimeout(animateScroll, increment);
+          setTimeout(animateScroll, increment);
         }
     };
     animateScroll();
   }
 
-  Math.easeInOutQuad = function (t, b, c, d) {
-  	t /= d/2;
-  	if (t < 1) return c/2*t*t + b;
-  	t--;
-  	return -c/2 * (t*(t-2) - 1) + b;
+  Math.easeInOutQuad = function (time, start, change, duration) {
+  	time /= duration / 2;
+  	if (time < 1) return change / 2 * time * time + start;
+  	time--;
+  	return - change / 2 * (time * (time - 2) - 1) + start;
   };
 }());

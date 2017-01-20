@@ -1,5 +1,5 @@
 <main class='container-fullpage' id='work'>
-  <ul class='project-slideshow'>
+  <ul class='project-carousel'>
     {{#each project}}
     {{#if this.bool}}
     <li class='project-slide visible' id='{{this.name}}' aria-hidden='false'>
@@ -15,14 +15,14 @@
     </li>
     {{/each}}
   </ul>
-  <h6 id='project-slideshow-tip'>
+  <h6 id='project-carousel-tip'>
     <i class='icon ion-information-circled'></i> 
     <span class='mobile-only'>Switch slides by swiping.</span> 
     <span class='desktop-only'>Switch slides by scrolling or pressing the arrow keys.</span>
   </h6>
-  <ul class='project-slideshow-nav'>
-    <li class='project-slideshow-nav-list'>
-      <button class='project-slideshow-up-arrow js-projects-prev-btn'>          
+  <ul class='project-carousel-nav'>
+    <li class='project-carousel-nav-list'>
+      <button class='project-carousel-up-arrow js-projects-prev-btn'>          
         <svg width="16" height="11" viewBox="0 0 16 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
           <g id="Arrow" style="mix-blend-mode:normal;" figma:type="frame">
             <g id="Right" style="mix-blend-mode:normal;" figma:type="vector">
@@ -41,17 +41,17 @@
     </li>
     {{#each project}}
       {{#if this.bool}}
-        <li class='project-slideshow-nav-list current'>
+        <li class='project-carousel-nav-list current'>
       {{else}}
-        <li class='project-slideshow-nav-list'>
+        <li class='project-carousel-nav-list'>
       {{/if}}
-        <button class='project-slideshow-btn'>          
+        <button class='project-carousel-btn'>          
           {{@index}}
         </button>
       </li>
     {{/each}}
-    <li class='project-slideshow-nav-list'>
-      <button class='project-slideshow-down-arrow js-projects-next-btn'>          
+    <li class='project-carousel-nav-list'>
+      <button class='project-carousel-down-arrow js-projects-next-btn'>          
         <svg width="16" height="11" viewBox="0 0 16 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
           <g id="Arrow" style="mix-blend-mode:normal;" figma:type="frame">
             <g id="Right" style="mix-blend-mode:normal;" figma:type="vector">
@@ -68,8 +68,8 @@
         </svg>
       </button>
     </li>
-    <li class='project-slideshow-nav-list'>
-      <button class='project-slideshow-resume js-projects-resume-btn'>
+    <li class='project-carousel-nav-list'>
+      <button class='project-carousel-resume js-projects-resume-btn'>
         <svg width="11" height="16" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
           <g id="Canvas" transform="translate(-36 4)" figma:type="canvas">
             <g id="Triangle" style="mix-blend-mode:normal;" figma:type="frame">

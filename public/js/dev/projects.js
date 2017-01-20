@@ -6,7 +6,7 @@ function Projects () {
       prevProjectBtn,
       nextProjectBtn,
       resumeProjectBtn,
-      slideshowTip,
+      carouselTip,
       autoRun,
       positionX,
       positionY,
@@ -15,7 +15,7 @@ function Projects () {
 
   const PROJECT_TIMER = 5000;
   // Get the slide show
-  projectSlideshow = document.getElementsByClassName('project-slideshow')[0];
+  projectSlideshow = document.getElementsByClassName('project-carousel')[0];
 
   // Get the slides
   projectSlides = Array.from(projectSlideshow.getElementsByClassName('project-slide'));
@@ -24,7 +24,7 @@ function Projects () {
   currentProjectSlide = projectSlideshow.getElementsByClassName('visible')[0];
 
   // Get the projects nav
-  projectSlideNav = Array.from(document.getElementsByClassName('project-slideshow-btn'));
+  projectSlideNav = Array.from(document.getElementsByClassName('project-carousel-btn'));
 
   // Get the previous project button
   prevProjectBtn = document.getElementsByClassName('js-projects-prev-btn')[0];
@@ -35,8 +35,8 @@ function Projects () {
   // Get the resume project button
   resumeProjectBtn = document.getElementsByClassName('js-projects-resume-btn')[0];
 
-  // Get the slideshow tips
-  slideshowTip = document.getElementById('project-slideshow-tip');
+  // Get the carousel tips
+  carouselTip = document.getElementById('project-carousel-tip');
 
   // Every 5 seconds switch to next slide
   autoRun = setInterval(function () { nextProject(projectSlides, currentProjectSlide, projectSlideNav); }, PROJECT_TIMER);
@@ -160,13 +160,13 @@ function Projects () {
   function prevBtnEvent (event) {
     previousProject(projectSlides, currentProjectSlide, projectSlideNav);
     clearInterval(autoRun);
-    slideshowTip.classList.add('hide');
+    carouselTip.classList.add('hide');
     resumeProjectBtn.classList.add('visible');
   }
 
   function nextBtnEvent (event) {
     nextProject(projectSlides, currentProjectSlide, projectSlideNav);
-    slideshowTip.classList.add('hide');
+    carouselTip.classList.add('hide');
     clearInterval(autoRun);
     resumeProjectBtn.classList.add('visible');
   }
