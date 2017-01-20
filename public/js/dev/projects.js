@@ -6,7 +6,7 @@ function Projects () {
       prevProjectBtn,
       nextProjectBtn,
       resumeProjectBtn,
-      slideshowTips,
+      slideshowTip,
       autoRun,
       positionX,
       positionY,
@@ -36,7 +36,7 @@ function Projects () {
   resumeProjectBtn = document.getElementsByClassName('js-projects-resume-btn')[0];
 
   // Get the slideshow tips
-  slideshowTips = Array.from(document.getElementsByClassName('project-slideshow-tip'));
+  slideshowTip = document.getElementById('project-slideshow-tip');
 
   // Every 5 seconds switch to next slide
   autoRun = setInterval(function () { nextProject(projectSlides, currentProjectSlide, projectSlideNav); }, PROJECT_TIMER);
@@ -160,18 +160,13 @@ function Projects () {
   function prevBtnEvent (event) {
     previousProject(projectSlides, currentProjectSlide, projectSlideNav);
     clearInterval(autoRun);
-    slideshowTips.forEach(function (tip) {
-      tip.classList.add('hide');
-    });
-
+    slideshowTip.classList.add('hide');
     resumeProjectBtn.classList.add('visible');
   }
 
   function nextBtnEvent (event) {
     nextProject(projectSlides, currentProjectSlide, projectSlideNav);
-    slideshowTips.forEach(function (tip) {
-      tip.classList.add('hide');
-    });
+    slideshowTip.classList.add('hide');
     clearInterval(autoRun);
     resumeProjectBtn.classList.add('visible');
   }

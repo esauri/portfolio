@@ -6,11 +6,10 @@
     max-height: 250px;
 }
 
-.intro {
+.content {
   margin-top: $banner-height-S;
 
   @include MQ(M) {
-    display: flex;
     margin-top: $banner-height-M;
   }
 
@@ -29,29 +28,6 @@
 .content-right {
   @include MQ(M) {
     flex-basis: 66%;
-  }
-}
-
-
-.banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: $blue;
-  height: $banner-height-S;
-  text-align: center;
-
-  @include MQ (M) {
-    height: $banner-height-M;
-  }
-
-  @include MQ (L) {
-    height: $banner-height-L;
-  }
-  #two-seven-zero & {
-    background: url('../img/270/thumbnail.png') no-repeat center center;
-    background-size: cover;
   }
 }
 
@@ -89,7 +65,9 @@
 
 // .resume-item-title-description {}
 
-// .resume-item-subtitle {}
+.resume-item-subtitle {
+  text-transform: none;
+}
 
 // .resume-item-description {}
 
@@ -108,3 +86,63 @@
   }
 }
 
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $banner-height-S;
+  text-align: center;
+
+  @include MQ (M) {
+    height: $banner-height-M;
+  }
+
+  @include MQ (L) {
+    height: $banner-height-L;
+  }
+  #two-seven-zero & {
+    background: url('../img/270/startScreeniPhone.png') no-repeat top right;
+    background-size: contain;
+  }
+}
+
+.banner-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: $background-color 0.5px 0.5px 0.5px;
+}
+
+.banner-title {
+	font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem; 
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$max_font);
+}
+
+.banner-description {
+	font-size: 1.3em;
+}
+
+.project-intro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-intro-information {
+  @include MQ (M) {
+    margin-right: 2em;
+    flex-basis: calc(33% - 1em);
+  }
+}
+
+.project-intro-summary {
+  @include MQ (M) {
+    flex-basis: calc(66% - 1em);
+  }
+}
+
+.project-section-title {
+  text-transform: uppercase;
+}
