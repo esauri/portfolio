@@ -83,7 +83,6 @@ h4 {
 h5 {
 	font-size: 1.1em;
 	font-weight: $font-weight;
-	text-transform: uppercase;
 }
 
 h6 {
@@ -189,7 +188,13 @@ pre {
   overflow: hidden;
 }
 
-.mobile-unfriendly {
+.mobile-only {
+	@include MQ(L) {
+		display: none;
+	}
+}
+
+.desktop-only {
 	display: none;
 
 	@include MQ(L) {

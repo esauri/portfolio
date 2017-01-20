@@ -7,9 +7,15 @@
 }
 
 .intro {
+  margin-top: $banner-height-S;
+
   @include MQ(M) {
     display: flex;
-    // align-items: center;
+    margin-top: $banner-height-M;
+  }
+
+  @include MQ (L) {
+    margin-top: calc(#{$banner-height-L} - 100px);
   }
 }
 
@@ -28,10 +34,21 @@
 
 
 .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: $blue;
-  height: calc(70vh - #{$header-L});
+  height: $banner-height-S;
   text-align: center;
 
+  @include MQ (M) {
+    height: $banner-height-M;
+  }
+
+  @include MQ (L) {
+    height: $banner-height-L;
+  }
   #two-seven-zero & {
     background: url('../img/270/thumbnail.png') no-repeat center center;
     background-size: cover;
@@ -65,7 +82,7 @@
 // .resume-section {}
 
 .resume-section-title {
-  border-bottom: 5px solid $silver;
+  border-bottom: 5px solid $foreground-color;
 }
 
 // .resume-item-title {}

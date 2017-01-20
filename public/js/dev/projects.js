@@ -6,6 +6,7 @@ function Projects () {
       prevProjectBtn,
       nextProjectBtn,
       resumeProjectBtn,
+      slideshowTips,
       autoRun,
       positionX,
       positionY,
@@ -33,6 +34,9 @@ function Projects () {
 
   // Get the resume project button
   resumeProjectBtn = document.getElementsByClassName('js-projects-resume-btn')[0];
+
+  // Get the slideshow tips
+  slideshowTips = Array.from(document.getElementsByClassName('project-slideshow-tip'));
 
   // Every 5 seconds switch to next slide
   autoRun = setInterval(function () { nextProject(projectSlides, currentProjectSlide, projectSlideNav); }, PROJECT_TIMER);
@@ -77,12 +81,14 @@ function Projects () {
   function touchStartEvent (event) {
     positionX = event.touches[0].clientX;
     positionY = event.touches[0].clientY;
-    console.log('Tocuh start X: ' + positionX + ' Y: ' + positionY);
   }
+
   /**
    * @param  {} event
    */
   function touchMoveEvent (event) {
+    event.preventDefault();
+
     if (!positionX || !positionY) {
       return;
     }
@@ -97,24 +103,20 @@ function Projects () {
       if (diffX > 0) {
         // Left swipe
         prevBtnEvent(event);
-        console.log('LEFT');
       }
       else {
         // Right swipe
         nextBtnEvent(event);
-        console.log('RIGHT');
       }
     }
     else {
       if (diffY > 0) {
         // Up swipe
         prevBtnEvent(event);
-        console.log('UP');
       }
       else {
         // Down swipe
         nextBtnEvent(event);
-        console.log('DOWN');
       }
     }
 
@@ -122,7 +124,6 @@ function Projects () {
   }
 
   function updateOnScroll (event) {
-    console.log('Called');
     event.preventDefault();
 
     window.removeEventListener('scroll', updateOnScroll);
@@ -159,11 +160,18 @@ function Projects () {
   function prevBtnEvent (event) {
     previousProject(projectSlides, currentProjectSlide, projectSlideNav);
     clearInterval(autoRun);
+    slideshowTips.forEach(function (tip) {
+      tip.classList.add('hide');
+    });
+
     resumeProjectBtn.classList.add('visible');
   }
 
   function nextBtnEvent (event) {
     nextProject(projectSlides, currentProjectSlide, projectSlideNav);
+    slideshowTips.forEach(function (tip) {
+      tip.classList.add('hide');
+    });
     clearInterval(autoRun);
     resumeProjectBtn.classList.add('visible');
   }
