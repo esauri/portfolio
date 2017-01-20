@@ -1,6 +1,4 @@
-.contact-form {
-  // width: 100%;
-}
+// .contact-form {}
 
 .contact-title {
 	font-size: $mod_1 * $mod_1 * 1rem;
@@ -52,8 +50,12 @@
   padding: $content-padding;
   font-size: $min-font;
 
+  transition: background $duration-transition;
+
   &:focus {
     outline: none;
+    background: $foreground-color;
+    color: $background-color;
   }
 }
 

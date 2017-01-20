@@ -1,6 +1,6 @@
 .avatar {
     display: block;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 50%;
     max-width: 250px;
     max-height: 250px;
@@ -26,6 +26,7 @@
   }
 }
 
+
 .banner {
   background: $blue;
   height: calc(70vh - #{$header-L});
@@ -36,3 +37,57 @@
     background-size: cover;
   }
 }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-left,
+.column-right {
+  flex-basis: 100%;
+
+  @include MQ(L) {
+    flex-basis: calc(50% - calc(#{$content-padding} * 3));  
+  }
+}
+
+.column-left {
+  @include MQ(L) {
+    margin-right: calc(#{$content-padding} * 6);
+  }
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+// .resume-section {}
+
+.resume-section-title {
+  border-bottom: 5px solid $silver;
+}
+
+// .resume-item-title {}
+
+// .resume-item-title-description {}
+
+// .resume-item-subtitle {}
+
+// .resume-item-description {}
+
+.resume-icon-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resume-icon-item {
+  flex-basis: 33%;
+
+  @include first(3) {
+    .resume-icon {
+      margin-top: 0;
+    }
+  }
+}
+

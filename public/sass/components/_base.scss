@@ -144,6 +144,9 @@ pre {
 }
 
 .wrapper {
+	margin: 0 auto;
+	width: 90%;
+	max-width: $L;
 	padding: 3.25em 1.5em 1.25em 1.5em;
 
 	@include MQ(M) {
@@ -153,12 +156,6 @@ pre {
 	@include MQ(L) {
 		padding: 6em 0em 4em;
 	}
-}
-
-.container {
-	margin: 0 auto;
-	width: 90%;
-	max-width: $L;
 }
 
 #not-found {
@@ -197,5 +194,21 @@ pre {
 
 	@include MQ(L) {
 		display: inline-block;
+	}
+}
+
+.cta {
+	background: $background-color-accent;
+	text-align: center;
+
+	.wrapper {
+		padding-bottom: 3.25em;
+
+		@include MQ(M) {
+			padding-bottom: 4.5em;
+		}
+		@include MQ(L) {
+			padding-bottom: 6em;
+		}
 	}
 }
