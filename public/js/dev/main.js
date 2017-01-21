@@ -31,9 +31,9 @@ import {Slideshow} from './slideshow';
     Projects();
   }
 
-  if (document.getElementsByClassName('gallery').length > 0) {
-    Slideshow();
-  }
+  // if (document.getElementsByClassName('gallery').length > 0) {
+  //   Slideshow();
+  // }
   
   function scrollTo(element) {
     let to = 0,

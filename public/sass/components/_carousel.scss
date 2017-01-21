@@ -19,28 +19,78 @@
   }
 
   &#two-seven-zero {
-    background: url('../img/270/thumbnail.png') no-repeat center center;
+    background: url('../img/270/public/small/thumbnail.jpg') no-repeat center center;
     background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/270/public/medium/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/270/public/large/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
   }
 
   &#audio-visualizer {
-    background: url('../img/audiovisualizer/thumbnail.png') no-repeat center center;
+    background: url('../img/audiovisualizer/public/small/thumbnail.jpg') no-repeat center center;
     background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/audiovisualizer/public/medium/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/audiovisualizer/public/large/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
   }
 
-    &#clicker-game {
-    background: url('../img/clickergame/thumbnail.png') no-repeat center center;
+  &#clicker-game {
+    background: url('../img/clickergame/public/small/thumbnail.jpg') no-repeat center center;
     background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/clickergame/public/medium/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/clickergame/public/large/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
   }
 
   &#italian-neorealism {
-    background: url('../img/neorealism/thumbnail.png') no-repeat center center;
+    background: url('../img/neorealism/public/small/thumbnail.jpg') no-repeat center center;
     background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/neorealism/public/medium/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/neorealism/public/large/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
   }
 
-    &#trump-card {
-    background: url('../img/trumpcard/thumbnail.png') no-repeat center center;
+  &#trump-card {
+    background: url('../img/trumpcard/public/small/thumbnail.jpg') no-repeat center center;
     background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/trumpcard/public/medium/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/trumpcard/public/large/thumbnail.jpg') no-repeat center center;
+      background-size: cover;
+    }
   }
 }
 
