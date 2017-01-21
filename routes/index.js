@@ -49,6 +49,7 @@ const projects = [
 router.get('/', function(req, res, next) {
   var model = {
     title: 'Erick Sauri',
+    viewId: 'work',
     project: projects
   };
 

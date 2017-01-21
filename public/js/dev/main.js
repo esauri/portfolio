@@ -4,26 +4,16 @@ import {Slideshow} from './slideshow';
 (function() {
 	'use strict';
 
-  let openSidebarBtn = document.getElementById('open-menu-btn'),
-      closeSidebarBtn = document.getElementById('close-menu-btn'),
-      sidebar = document.querySelector('.nav-global'),
+  let sidebar = document.querySelector('.nav-global'),
       scrollToTopBtn;
   
+  console.log(navigator);
+  console.log('platform: ' + navigator.platform);
+
   scrollToTopBtn = (document.getElementById('js-scroll-to-top')) ? document.getElementById('js-scroll-to-top') : null;
 
-  openSidebarBtn.addEventListener('click', openSidebar);
-  closeSidebarBtn.addEventListener('click', closeSidebar);
-  
   if (scrollToTopBtn !== null) {
     scrollToTopBtn.addEventListener('click', function (event) { scrollTo(document.body); });
-  }
-
-  function openSidebar (event) {
-    sidebar.classList.add('open');
-  }
-
-  function closeSidebar (event) {
-    sidebar.classList.remove('open');
   }
 
   // If work page

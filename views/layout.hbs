@@ -5,26 +5,25 @@
     <meta name='author' content='Erick Sauri'>
     <meta name='description' content='Erick Sauri creative developer portfolio site.'>
 
-    <!-- Mobile Stuff -->
+    {{! Mobile Stuff }}
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name='msapplication-tap-highlight' content='no'>
 
-    <!-- Chrome on Android -->
+    {{! Chrome on Android }}
     <meta name='mobile-web-app-capable' content='yes'>
     <meta name='application-name' content='Erick Sauri'>
     <link rel='icon' sizes='192x192' href='img/misc/logo.png'>
 
-    <!-- Safari on iOS -->
+    {{! Safari on iOS }}
     <meta name='apple-mobile-web-app-capable' content='yes'>
     <meta name='apple-mobile-web-app-status-bar-style' content='black'>
     <meta name='apple-mobile-web-app-title' content='Erick Sauri'>
     <link rel='apple-touch-icon' href='img/misc/logo.png'>
 
-    <!-- Windows 8 -->
+    {{! Windows 8 }}
     <meta name='msapplication-TileImage' content='img/misc/logo.png'>
     <meta name='msapplication-TileColor' content='#111'>
-
 
     <meta name='theme-color' content='#111'>
 
@@ -33,35 +32,51 @@
     <link rel='stylesheet' href='/css/styles.css' />
   </head>
   <body>
-    <header id='header'>
-      <span id='logo'>
-        <a href='/'>
-          <img class='logo-image' src='./img/misc/logo.png'>
-        </a>
-        <span class='logo-description'>Erick Sauri</span>
-      </span>
-      <button id='open-menu-btn' class='hamburger'>Open Menu<span class='hamburger-icon'></span></button>
+    <header id='header' {{#if headerClass}} class='{{headerClass}}' {{/if}}>
       <nav class='nav-global'>
-        <ul>
-          <li class='nav-item-list'>
-            <button id='close-menu-btn' class='close-btn'>Close Menu<span class='close-icon'></span></button>
+        <ul class='nav-item-list'>
+          <li class='nav-item'>
+            <a class='nav-item-link' href='/'>
+              <img class='logo' src='./img/misc/logo.png'>
+              <span class='logo-description'>Erick Sauri</span>
+            </a>
           </li>
-          <li class='nav-item-list'>
-            <a class='nav-item' href='/'>Work</a>
+          <li class='nav-item'>
+            <a class='nav-item-link' href='/'>Work</a>
           </li>
-          <li class='nav-item-list'>
-            <a class='nav-item' href='/about'>About</a>
+          <li class='nav-item'>
+            <a class='nav-item-link' href='/about'>About</a>
           </li>
-          <li class='nav-item-list'>
-            <a class='nav-item' href='/about#contact'>Contact</a>
+          <li class='nav-item'>
+            <a class='nav-item-link' href='/about#contact'>Contact</a>
           </li>
-          <li class='nav-item-list'>
-            <a class='nav-item' href='/'>Resume</a>
+          <li class='nav-item'>
+            <a class='nav-item-link' href='/about#resume'>Resume</a>
           </li>
         </ul>
       </nav>
     </header>
     {{{body}}}
+
+    {{#unless project}}
+    <footer>
+      <ul class='social-links'>
+        <li>
+          <a class='icon ion-email' href='mailto:ejs3863@g.rit.edu' target='_blank'></a>
+        </li>
+        <li>
+          <a class='icon ion-social-github' href='https://github.com/esauri' target='_blank'></a>
+        </li>
+        <li>
+          <a class='icon ion-social-linkedin' href='https://www.linkedin.com/in/erick-sauri-1847357b' target='_blank'></a>
+        </li>
+        <li>
+          <button class='icon ion-arrow-up-c' id='js-scroll-to-top'></button>
+        </li>
+      </ul>
+      <p class='copyright'>&copy; 2017 Erick Sauri</p>
+    </footer>
+    {{/unless}}
     <script src='/js/build/bundle.min.js'></script>
   </body>
 </html>

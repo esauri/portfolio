@@ -102,8 +102,33 @@
     height: $banner-height-L;
   }
   #two-seven-zero & {
-    background: url('../img/270/startScreeniPhone.png') no-repeat top right;
-    background-size: contain;
+    background: url('../img/270/public/small/banner.jpg') no-repeat center center;
+    background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/270/public/large/banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/270/public/large/banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  #trump-card & {
+    background: url('../img/trumpcard/public/small/banner.jpg') no-repeat center center;
+    background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/trumpcard/public/large/banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/trumpcard/public/large/banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
   }
 }
 

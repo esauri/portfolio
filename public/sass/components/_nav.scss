@@ -1,70 +1,64 @@
 .nav-global {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: $sidebar-width;
-  height: 100%;
-
-  background: $background-color-accent;
-
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
   z-index: $max-zindex;
+}
 
-  opacity: 0;
-  transform: translateX(300px);
-  transition: transform $duration-transition;
+.nav-item-list {
+  display: flex;
 
-  @include MQ(M) {
-    background: none;
-    position: static;
-    width: 100%;
-    flex-direction: row;
-    opacity: 1;
-    transform: translate(0);
-    justify-content: flex-end;
+  @include MQ (M) {
+    // justify-content: flex-end;
+  }
+}
+
+.nav-item {
+  flex-basis: 25%;
+
+  &:first-of-type .nav-item-link {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
-  
-  &.open {
-    opacity: 1;
-    transform: translateX(0);
+
+  &:nth-of-type(2) {
+    display: none;
   }
 
-  .nav-item-list {
+  @include MQ(M) {
+    flex-basis: auto;
 
     &:first-of-type {
-      width: 100%;
+      align-self: flex-start;
     }
-
-    @include MQ(M) {
+    
+    &:nth-of-type(2) {
       display: inline;
-      border: none;
     }
   }
+}
 
-  .nav-item {
-    display: block;
-    padding: 1em;
-    border-bottom: 1px solid $background-color;
-    color: $foreground-color-accent;
-    text-align: center;
+.nav-item-link {
+  display: block;
+  width: 100%;
+  line-height: $header-S;
+  padding: 1em;
+  color: $foreground-color-accent;
+  text-align: center;
+  @include vendor-property('box-sizing', 'border-box');
 
+
+  &:hover {
+    background: $foreground-color;
+    color: $background-color;
+  }
+
+  @include MQ(M) {
+    // display: inline;
     &:hover {
-      background: $foreground-color-accent;
-      color: $background-color-accent;
-    }
-
-    @include MQ(M) {
-      display: inline;
-      padding: $content-padding;
-      border: none;
-
-      &:hover {
-        background: none;
-        color: $foreground-color-accent;
-        border-bottom: 3px solid $foreground-color-accent;
-      }
+      background: none;
+      color: $foreground-color;
+      border-bottom: 3px solid $foreground-color;
     }
   }
 }

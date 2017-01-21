@@ -1,29 +1,22 @@
 #header {
-  position: relative;
-  width: 90%;
-  max-width: $L;
-  height: $header-S;
-  margin: 1em auto 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: $header-zindex;
+  // background: rgba($background-color, 0.85);
 }
 
-#logo {
-	display: flex;
-	flex-direction: row;
-  align-items: center;
-  flex-basis: 50%;
-  height: $header-S;
-
-	.logo-image {
+.logo {
     width: $header-S;
     height: $header-S;
-	}
+}
 
-  .logo-description {
+.logo-description {
+  display: none;
+
+  @include MQ (M) {
+    display: block;
     margin-left: 1em;
   }
 }
