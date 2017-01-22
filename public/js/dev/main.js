@@ -3,6 +3,8 @@ import {Projects} from './projects';
 (function() {
 	'use strict';
 
+  const SCROLL_TOP_MIN = 700;
+
   let sidebar = document.querySelector('.nav-global'),
       scrollToTopBtn;
 
@@ -10,13 +12,24 @@ import {Projects} from './projects';
 
   if (scrollToTopBtn !== null) {
     scrollToTopBtn.addEventListener('click', function (event) { scrollTo(document.body); });
+    window.addEventListener('scroll', scrollBtnToggle);
   }
+
 
   // If work page
   if (document.getElementsByClassName('project-carousel').length > 0) {
     Projects();
   }
   
+  function scrollBtnToggle (event) {
+    if (document.body.scrollTop >= SCROLL_TOP_MIN) {
+      scrollToTopBtn.classList.add('visible');
+    }
+    else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  }
+
   function scrollTo(element) {
     let to = 0,
         duration = 500,

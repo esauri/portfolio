@@ -20,7 +20,7 @@
           Angular &middot; 
           Ionic Framework
         </h6>
-        <h5>Links</h5>
+        <h5>Useful Links</h5>
         <ul class='social-links'>
           <li>
             <a class='icon ion-social-github' href='https://github.com/esauri/270' target='_blank'></a>
@@ -46,22 +46,12 @@
     </section>
     <section class='project-body'>
       <section class='wrapper'>
-        <h3>Video Demo</h3>
-        <section class='video-responsive'>
-          <iframe class='iframe' src='https://player.vimeo.com/video/183411950' width='420' height='236' frameBorder='0' allowFullScreen></iframe>
-        </section>
         <h3>Mockups</h3>
         <h5>Main Views</h5>
         <p>
-          These where the first designs of the app's views. Not much has changed from these views other than the tab bar, which due to time constraints
-          had to be limited. The <strong>Messages</strong> tab was intended so that the user could recieve fake mail from interest groups, super pacs and 501(c)s 
-          for support and in game currency to be used in the trivia section. The <strong>Statisctics</strong> and <strong>Me</strong> tabs where consolidated in the final
-          version into one section where users can view their candidate profile and their vote percentages in each state. Another aspect that changed was how the electoral votes
-          were displayed. Originally, I wasn't going to include vote percentages and each trivia question would grant a specific number to electoral votes if answered correctly.
+          These were the first designs of the app's views. Not much has changed from these views other than the tab bar, which due to time constraints had to be limited. The <strong>Messages</strong> tab was intended so that the user could receive fake mail from interest groups, super pacs and 501(c)s for support and in game currency to be used in the trivia section. The <strong>Statistics</strong> and <strong>Me</strong> tabs were consolidated in the final version into one section where users can view their candidate profile and their vote percentages in each state. Another aspect that changed was how the electoral votes were displayed. Originally, I wasn't going to include vote percentages and each trivia question would grant a specific number to electoral votes if answered correctly.
         </p>
-      </section>
-      <img data-action='zoom' src='./img/270/public/small/mockupMainScreens.png' srcset='./img/270/public/small/mockupMainScreens.png 480w, ./img/270/public/medium/mockupMainScreens.jpg 760w, ./img/270/public/large/mockupMainScreens.jpg 1200w'>
-      <section class='wrapper'>
+        <img data-action='zoom' src='./img/270/public/small/mockupMainScreens.png' srcset='./img/270/public/small/mockupMainScreens.png 480w, ./img/270/public/medium/mockupMainScreens.jpg 760w, ./img/270/public/large/mockupMainScreens.jpg 1200w'>
         <h5>Trivia Views</h5>
         <p>
           As for the trivia views little changed other than the tab bar with different helpers users could call if they wanted to. 
@@ -69,13 +59,101 @@
         </p>
         <img data-action='zoom' src='./img/270/public/small/mockupTriviaScreens.jpg' srcset='./img/270/public/small/mockupTriviaScreens.jpg 480w, ./img/270/public/medium/mockupTriviaScreens.jpg 760w, ./img/270/public/large/mockupTriviaScreens.jpg 1200w'>
       </section>
+      <img data-action='zoom' src='./img/270/public/small/thumbnail.jpg' srcset='./img/270/public/small/thumbnail.jpg 480w, ./img/270/public/medium/thumbnail.jpg 760w, ./img/270/public/large/thumbnail.jpg 1200w'>
       <section class='wrapper'>
         <h3>Final Product</h3>
-      <img data-action='zoom' src='./img/270/public/small/startViewHand.jpg' srcset='./img/270/public/small/startViewHand.jpg 480w, ./img/270/public/medium/startViewHand.jpg 760w, ./img/270/public/large/startViewHand.jpg 1200w'>
+        <ul class='grid'>
+          <li class='column-left'>
+            <h6>States View</h6>
+            <p>
+              Due to time constraints on the project I decided to make enough trivia for only 10 states. I 
+              chose ten battleground states according to the results from the 2012 election. These states were: 
+              <strong>Colorado</strong>, <strong>Florida</strong>, <strong>Iowa</strong>, 
+              <strong>Nevada</strong>, <strong>New Hampshire</strong>, <strong>North Carolina</strong>,
+              <strong>Ohio</strong>, <strong>Pennsylvania</strong>, <strong>Virginia</strong>, and 
+              <strong>Wisconsin</strong>.
+            </p>
+            <p>
+              Since I was excluding 40 other states and the <strong>District of Columbia</strong>, I allotted their 
+              electoral votes to the candidate that had the best shot at winning them, again based on the 2012 election.
+              This gave an edge to the Democrat Presidential Candidate who started with 217 electoral votes while the Republican
+              Presidential Candidate began with 191.
+            </p>
+            <p>
+              The states with the partisan background represent states that have already been completed while the states with the 
+              partisan fill are states where the winner hasn't yet been called.
+            </p>
+            <p>
+              I also removed tabs I had in the mockup designs. <strong>Me</strong> now showed the player's vote totals in each state
+              as well as a button to reset the game, where they would go back to the start view and select a party.
+              The <strong>How to Play</strong> tab had simple instructions on how the game worked and its several mechanics.
+            </p>
+          </li>
+          <li class='column-right'>
+            <img data-action='zoom' src='./img/270/public/small/states.png' srcset='./img/270/public/small/states.png 480w, ./img/270/public/medium/states.png 760w, ./img/270/public/large/states.png 960w'>
+          </li>
+          <li class='column-left'>
+            <img data-action='zoom' src='./img/270/public/small/state.png' srcset='./img/270/public/small/state.png 480w, ./img/270/public/medium/state.png 760w, ./img/270/public/large/state.png 960w'>
+          </li>
+          <li class='column-right'>
+            <h6>State View</h6>
+            <p>
+              To get the electoral votes in a state the player has to obtain over 50% of the vote percentage in that state.
+              Each state has a certain number of electoral votes based on the actual number during the 2010 - 2020 period.
+              For example Iowa has 6 electoral votes.
+            </p>
+            <p>
+              Each card contains a random question and they vary from easy to difficult based on the amount of votes 
+              they grant. The higher the vote the harder the question while lower vote percentages have easier questions. 
+            </p>
+            <p>
+              The cards and their percentages all vary by state. No two states have the same layout.
+            </p>
+            <p>
+              Once a trivia has been answered the card's background changes to the partisan color. 
+            </p>
+          </li>
+          <li class='column-left'>
+            <h6>Trivia View</h6>
+            <p>
+              Each trivia question has a category and four possible choices, one of them being the correct
+              answer. The choices are all randomly ordered as to not give the player any hints on which might
+              be the correct answer.
+            </p>
+            <p>
+              When choosing an answer, if it is incorrect an overlay will appear over the question with a red background
+              telling the player that the answer was wrong and that they don't get any votes.
+            </p>
+            <p>
+              If the player answers correctly, they will be told by how much did they score increase in that state.
+            </p>
+            <p>
+              The player can also forfeit the question by tapping on the back key in the top bar. Their opponent will get 
+              the vote percentage increase for that question.
+            </p>
+          </li>
+          <li class='column-right'>
+            <img data-action='zoom' src='./img/270/public/small/trivia.png' srcset='./img/270/public/small/trivia.png 480w, ./img/270/public/medium/trivia.png 760w, ./img/270/public/large/trivia.png 960w'>
+          </li>
+        </ul>
+        <h6>Demo</h6>
+        <section class='video-responsive'>
+          <iframe class='iframe' src='https://player.vimeo.com/video/183411950' width='420' height='236' frameBorder='0' allowFullScreen></iframe>
+        </section>
       </section>
     </section>
     <section class='wrapper project-conclusion'>
-      <h3>Conclusion</h3>
+      <h3>Thoughts</h3>
+      <p>
+        270 was a fun project to work on and the end result was a fun and replayable 
+        game that can easily be expanded. During the development cycle I learned a lot about 
+        the technologies I used to make it, which I had no experience with such as 
+        Angular <i class='icon ion-social-angular'></i>. I also got more experience working
+        with the model-view-controller pattern which made my app's organization clear and effective.
+        As a solo project I was also able to get a sense of what it takes to create a minimum viable product
+        and learn from appropriately scoping my project. As my first app I feel more excited to delve deeper
+        into mobile development, including progressive web apps, hybrid apps, and native apps.
+      </p>
     </section>
   </article>
 </main>

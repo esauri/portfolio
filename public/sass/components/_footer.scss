@@ -35,6 +35,7 @@
 
 		&:hover {
 			color: $link-color-hover;
+			animation: link-animation 1s;
 		}
 	}
 }

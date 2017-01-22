@@ -5,8 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   var model = {
     title: 'Erick Sauri - 270',
-    viewId: 'two-seven-zero',
-    headerClass: 'dark'
+    viewId: 'two-seven-zero'
   };
 
   res.render('./projects/twosevenzero', model);

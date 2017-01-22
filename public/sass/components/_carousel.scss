@@ -160,53 +160,29 @@
   } 
 }
 
-.project-carousel-btn {
+.project-carousel-btn,
+.project-carousel-icon {
   background: none;
   border: none;
   color: $silver;
   transition: transform $duration-transition;
   text-shadow: $background-color 0.5px 0.5px 0.5px;
 
-  &:hover,
-  &:focus {
-    outline: none;
+  &:hover {
     color: $foreground-color-accent;
+    animation: link-animation 1s;
     transform: scale(1.5);
     cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+    animation: link-animation 1s;
   }
 
   .current & {
     color: $foreground-color;
     transform: scale(2);
-  }
-}
-
-.project-carousel-up-arrow,
-.project-carousel-down-arrow,
-.project-carousel-resume {
-  background: none;
-  border: none;
-  transform: scale(1.3);
-
-  &:focus {
-    outline: none;
-  }
-
-}
-
-.project-carousel-up-arrow {
-  transform: rotate(270deg) scale(1.3);
-
-  @include MQ (M) {
-    transform: rotate(0deg) scale(1.3);
-  }
-}
-
-.project-carousel-down-arrow {
-    transform: rotate(90deg) scale(1.3);
-
-  @include MQ (M) {
-    transform: rotate(180deg) scale(1.3);
   }
 }
 

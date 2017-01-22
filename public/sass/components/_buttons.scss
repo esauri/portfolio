@@ -3,7 +3,8 @@
 	padding: 0 5em;
 	width: 100%;
 	height: $btn-height;
-	line-height: calc( #{$btn-height} - calc(#{$btn-border-size} * 2));
+	line-height: 50px;
+	// line-height: calc( #{$btn-height} - calc(#{$btn-border-size} * 2));
 	font-size: inherit;
 	font-weight: $font-weight-bold;
 	outline: 0;
@@ -45,5 +46,43 @@
 			color: $foreground-color;
 			animation: btn-special-animation 1s;
 		}
+	}
+}
+
+.floating-action-btn {
+	position: fixed;
+	width: 48px;
+	height: 48px;
+	right: $content-padding;
+	bottom: 1em;
+	background: none;
+	color: $foreground-color;
+	border: 1px solid $foreground-color;
+	border-radius: 50%;
+	font-size: $mod_1 * $mod_1 * 1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+	transform: scale(0);
+	pointer-events: none;
+	transition: transform $duration-transition;
+
+	&.visible {
+		transform: scale(1);
+		pointer-events: all;
+	}
+
+	&:hover {
+		background: $red;
+		border-color: $red;
+		animation: btn-special-animation 1s;
+	}
+
+	&:focus {
+		outline: 0;
+		animation: btn-special-animation 1s;
+	}
+
+	@include MQ (M) {
+		right: 1em;
+		bottom: 2em;
 	}
 }
