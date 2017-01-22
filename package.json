@@ -17,7 +17,8 @@
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.8.0",
     "serve-favicon": "~2.3.0",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "zooming": "^1.0.10"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

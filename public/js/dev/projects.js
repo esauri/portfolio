@@ -135,15 +135,29 @@ function Projects () {
   }
 
   function scrollHijack (event) {
-    let delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+    let delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail))),
+        pattern = /mac/,
+        platform = navigator.platform;
 
-    if (delta > 0) {
-      nextBtnEvent(event);
+    
+    if (pattern.test(platform)) {
+      if (delta > 0) {
+        nextBtnEvent(event);
+      }
+      else {
+        prevBtnEvent(event);
+      }
     }
     else {
-      prevBtnEvent(event);
+      if (delta > 0) {
+        prevBtnEvent(event);
+      }
+      else {
+        nextBtnEvent(event);
+      }
     }
 
+    
     scrolling = false;
     return false;
   }

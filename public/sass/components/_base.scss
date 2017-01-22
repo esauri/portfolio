@@ -46,8 +46,10 @@ p {
 a {
 	color: $link-color;
 	text-decoration: none;
+
 	&:hover {
 		color: $link-color-hover;
+		animation: link-animation 1s;
 	}
 }
 

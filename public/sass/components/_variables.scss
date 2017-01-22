@@ -97,6 +97,11 @@ $icon-S: 24px;
 $icon-M: 32px;
 $icon-L: 40px;
 
+// Buttons
+
+$btn-border-size: 1px;
+$btn-height: 52px;
+
 @mixin line-icon($bg: $color-bg, $fg: $color-fg-bold) {
 	@include icon;
 	$size: 1px;

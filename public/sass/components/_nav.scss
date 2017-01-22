@@ -1,14 +1,17 @@
 .nav-global {
-  position: relative;
-  width: 100%;
-  z-index: $max-zindex;
+  @include MQ (M) {
+    width: 90%;
+    margin: 0 auto;
+    background: none;
+    max-width: $L;
+  }
 }
 
 .nav-item-list {
   display: flex;
 
   @include MQ (M) {
-    // justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 
@@ -29,7 +32,7 @@
     flex-basis: auto;
 
     &:first-of-type {
-      align-self: flex-start;
+      margin-right: auto;
     }
     
     &:nth-of-type(2) {
@@ -42,23 +45,16 @@
   display: block;
   width: 100%;
   line-height: $header-S;
-  padding: 1em;
+  padding: $content-padding 1em;
   color: $foreground-color-accent;
   text-align: center;
+  border-bottom: 3px solid transparent;
+  text-shadow: $background-color 0.5px 0.5px 0.5px;
   @include vendor-property('box-sizing', 'border-box');
 
-
   &:hover {
-    background: $foreground-color;
-    color: $background-color;
-  }
-
-  @include MQ(M) {
-    // display: inline;
-    &:hover {
-      background: none;
-      color: $foreground-color;
-      border-bottom: 3px solid $foreground-color;
-    }
+    color: $link-color-hover;
+    border-color: $link-color-hover;
+    animation: btn-animation 1s;
   }
 }

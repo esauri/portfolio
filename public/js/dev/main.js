@@ -1,14 +1,10 @@
 import {Projects} from './projects';
-import {Slideshow} from './slideshow';
 
 (function() {
 	'use strict';
 
   let sidebar = document.querySelector('.nav-global'),
       scrollToTopBtn;
-  
-  console.log(navigator);
-  console.log('platform: ' + navigator.platform);
 
   scrollToTopBtn = (document.getElementById('js-scroll-to-top')) ? document.getElementById('js-scroll-to-top') : null;
 
@@ -20,10 +16,6 @@ import {Slideshow} from './slideshow';
   if (document.getElementsByClassName('project-carousel').length > 0) {
     Projects();
   }
-
-  // if (document.getElementsByClassName('gallery').length > 0) {
-  //   Slideshow();
-  // }
   
   function scrollTo(element) {
     let to = 0,
