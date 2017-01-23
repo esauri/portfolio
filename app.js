@@ -10,6 +10,9 @@ var hbsHelpers = require('handlebars-helpers');
 // Routes
 var routes = require('./routes/index');
 var about = require('./routes/about');
+var audiovisualizer = require('./routes/projects/audiovisualizer');
+var clickergame = require('./routes/projects/clickergame');
+var trumpcard = require('./routes/projects/trumpcard');
 var twosevenzero = require('./routes/projects/twosevenzero');
 
 var app = express();
@@ -35,8 +38,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Using routes
 app.use('/', routes);
-app.use('/about', about);
 app.use('/270', twosevenzero);
+app.use('/about', about);
+app.use('/audiovisualizer', audiovisualizer);
+app.use('/clickergame', clickergame);
+app.use('/trumpcard', trumpcard);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

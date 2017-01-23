@@ -4,12 +4,12 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var model = {
-    title: 'Erick Sauri - 270',
-    viewId: 'two-seven-zero',
-    projectTitle: '270'
+    title: 'Erick Sauri - Clicker Game',
+    viewId: 'clicker-game',
+    projectTitle: 'Clicker Game'
   };
 
-  res.render('./projects/twosevenzero', model);
+  res.render('./projects/clickergame', model);
 });
 
 module.exports = router;

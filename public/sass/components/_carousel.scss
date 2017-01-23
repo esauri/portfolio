@@ -147,11 +147,12 @@
 }
 
 .project-carousel-nav-list {
-  padding: $content-padding;
+  padding: calc($content-padding / 1.5);
   text-align: center;
   text-shadow: $background-color 0.5px 0.5px 0.5px;
 
   @include MQ (M) {
+    padding: $content-padding;
     display: flex;
     flex-direction: row-reverse;
   }

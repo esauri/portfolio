@@ -101,17 +101,33 @@
   @include MQ (L) {
     height: $banner-height-L;
   }
-  #two-seven-zero & {
-    background: url('../img/270/public/small/banner.jpg') no-repeat center center;
+
+  #audio-visualizer & {
+    background: url('../img/audiovisualizer/public/small/banner.jpg') no-repeat center center;
     background-size: cover;
 
     @include MQ (M) {
-      background: url('../img/270/public/large/banner.jpg') no-repeat center center;
+      background: url('../img/audiovisualizer/public/large/banner.jpg') no-repeat center center;
       background-size: cover;
     }
 
     @include MQ (L) {
-      background: url('../img/270/public/large/banner.jpg') no-repeat center center;
+      background: url('../img/audiovisualizer/public/large/banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+  
+  #clicker-game & {
+    background: url('../img/clickergame/public/small/banner.jpg') no-repeat center center;
+    background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/clickergame/public/large/banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/clickergame/public/large/banner.jpg') no-repeat center center;
       background-size: cover;
     }
   }
@@ -127,6 +143,21 @@
 
     @include MQ (L) {
       background: url('../img/trumpcard/public/large/banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  #two-seven-zero & {
+    background: url('../img/270/public/small/banner.jpg') no-repeat center center;
+    background-size: cover;
+
+    @include MQ (M) {
+      background: url('../img/270/public/large/banner.jpg') no-repeat center center;
+      background-size: cover;
+    }
+
+    @include MQ (L) {
+      background: url('../img/270/public/large/banner.jpg') no-repeat center center;
       background-size: cover;
     }
   }
