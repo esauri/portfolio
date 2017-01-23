@@ -49,16 +49,16 @@
   }
 
   &#clicker-game {
-    background: url('../img/clickergame/public/small/thumbnail.jpg') no-repeat center center;
+    background: url('../img/clickergame/public/small/thumbnail.jpg') no-repeat top center;
     background-size: cover;
 
     @include MQ (M) {
-      background: url('../img/clickergame/public/medium/thumbnail.jpg') no-repeat center center;
+      background: url('../img/clickergame/public/medium/thumbnail.jpg') no-repeat top center;
       background-size: cover;
     }
 
     @include MQ (L) {
-      background: url('../img/clickergame/public/large/thumbnail.jpg') no-repeat center center;
+      background: url('../img/clickergame/public/large/thumbnail.jpg') no-repeat top center;
       background-size: cover;
     }
   }
@@ -122,10 +122,7 @@
   position: absolute;
   @include center(x);
   bottom: 3em;
-  
-  @include MQ (M) {
-    bottom: 0;
-  }
+  text-shadow: $background-color 0.5px 0.5px 0.5px;
 
   &.hide {
     display: none;
@@ -143,21 +140,21 @@
   @include MQ (M) {
     flex-direction: column;
     left: auto;
-    right: 1em;
+    right: 3em;
     bottom: auto;
     @include center(y);
   }
 }
 
 .project-carousel-nav-list {
-  padding: calc(#{$content-padding} / 2);
+  padding: $content-padding;
   text-align: center;
+  text-shadow: $background-color 0.5px 0.5px 0.5px;
 
-  &::first-of-type,
-  &:nth-child(6),
-  &::last-of-type {
-    padding: $content-padding;
-  } 
+  @include MQ (M) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .project-carousel-btn,
@@ -166,25 +163,30 @@
   border: none;
   color: $silver;
   transition: transform $duration-transition;
-  text-shadow: $background-color 0.5px 0.5px 0.5px;
+  font-size: 1em;
 
   &:hover {
     color: $foreground-color-accent;
     animation: link-animation 1s;
-    transform: scale(1.5);
+    transform: scale(1.3);
     cursor: pointer;
   }
 
   &:focus {
     outline: none;
-    animation: link-animation 1s;
   }
 
   .current & {
     color: $foreground-color;
-    transform: scale(2);
+    transform: scale(1.5);
   }
 }
+
+.project-carousel-btn:hover + .project-carousel-thumbnail {
+    @include MQ (M) {
+      opacity: 1;
+    }
+  }
 
 .project-carousel-resume {
   pointer-events: none;
@@ -198,5 +200,33 @@
     &:hover {
       transform: scale(1.5);
     }
+  }
+}
+
+.project-carousel-thumbnail {
+  display: none;
+  opacity: 0;
+  // padding: 1em;
+  width: 120px;
+  height: 60px;
+
+  @include MQ (M) {
+    display: inline;
+  }
+
+  &.audio-visualizer {
+    background: url('../img/audioVisualizer/public/small/thumbnail.jpg') no-repeat center center;
+  }
+
+  &.clicker-game {
+    background: url('../img/clickergame/public/small/thumbnail.jpg') no-repeat top center;
+  }
+
+  &.two-seven-zero {
+    background: url('../img/270/public/small/thumbnail.jpg') no-repeat center center;
+  }
+
+  &.trump-card {
+    background: url('../img/trumpCard/public/small/thumbnail.jpg') no-repeat center center;
   }
 }

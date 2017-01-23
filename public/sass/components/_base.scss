@@ -197,6 +197,20 @@ pre {
 	}
 }
 
+.phone-friendly {
+	@include MQ(M) {
+		display: none;
+	}
+}
+
+.mobile-unfriendly {
+	display: none;
+
+	@include MQ(M) {
+		display: inline-block;
+	}
+}
+
 .desktop-only {
 	display: none;
 

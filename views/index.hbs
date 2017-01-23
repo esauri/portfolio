@@ -1,18 +1,14 @@
 <main class='container-fullpage' id='{{viewId}}'>
   <ul class='project-carousel'>
     {{#each project}}
-    {{#if this.bool}}
-    <li class='project-slide visible' id='{{this.name}}' aria-hidden='false'>
-    {{else}}
-    <li class='project-slide' id='{{this.name}}' aria-hidden='true'>
-    {{/if}}
-      <section class='project-slide-section'>
-        <h2 class='project-slide-section-title'>{{this.title}}</h2>
-        <p class='project-slide-section-description'>{{this.category}}</p>
-        <a class='btn btn-special' href='{{this.link}}'>Visit</a>
-        <br/>
-      </section>
-    </li>
+      <li class='project-slide{{#if this.bool}} visible{{/if}}' id='{{this.name}}' aria-hidden='{{#if this.bool}}false{{else}}true{{/if}}'>
+        <section class='project-slide-section'>
+          <h2 class='project-slide-section-title'>{{this.title}}</h2>
+          <p class='project-slide-section-description'>{{this.category}}</p>
+          <a class='btn btn-special' href='{{this.link}}'>Visit</a>
+          <br/>
+        </section>
+      </li>
     {{/each}}
   </ul>
   <p id='project-carousel-tip'>
@@ -23,23 +19,22 @@
   <ul class='project-carousel-nav'>
     <li class='project-carousel-nav-list'>
       <button class='project-carousel-icon js-projects-prev-btn'>          
-        <i class='icon ion-ios-arrow-up'></i>
+        <i class='icon ion-ios-arrow-up mobile-unfriendly'></i>
+        <i class='icon ion-ios-arrow-left phone-friendly'></i>
       </button>
     </li>
     {{#each project}}
-      {{#if this.bool}}
-        <li class='project-carousel-nav-list current'>
-      {{else}}
-        <li class='project-carousel-nav-list'>
-      {{/if}}
+      <li class='project-carousel-nav-list {{#if this.bool}}current{{/if}}'>
         <button class='project-carousel-btn'>          
           {{@index}}
         </button>
+        <span class='project-carousel-thumbnail {{this.name}}'></span>
       </li>
     {{/each}}
     <li class='project-carousel-nav-list'>
       <button class='project-carousel-icon js-projects-next-btn'>          
-        <i class='icon ion-ios-arrow-down'></i>
+        <i class='icon ion-ios-arrow-down mobile-unfriendly'></i>
+        <i class='icon ion-ios-arrow-right phone-friendly'></i>
       </button>
     </li>
     <li class='project-carousel-nav-list'>

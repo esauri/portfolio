@@ -27,14 +27,14 @@ const projects = [
         description: 'Save Bob!',
         image: './img/clickergame.png'
       },
-      {
-        name: 'italian-neorealism',
-        title: 'Italian Neorealism',
-        link: '/neorealismoitaliano',
-        category: 'Web Design',
-        description: 'An adventure through Italian neorealism',
-        image: './img/admitone.jpg'
-      },
+      // {
+      //   name: 'italian-neorealism',
+      //   title: 'Italian Neorealism',
+      //   link: '/neorealismoitaliano',
+      //   category: 'Web Design',
+      //   description: 'An adventure through Italian neorealism',
+      //   image: './img/admitone.jpg'
+      // },
       {
         name: 'audio-visualizer',
         title: 'Audio Visualizer',
