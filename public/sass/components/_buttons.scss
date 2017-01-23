@@ -75,10 +75,6 @@
 		animation: btn-special-animation 1s;
 	}
 
-	&:focus {
-		outline: 0;
-	}
-
 	@include MQ (M) {
 		right: 1em;
 		bottom: 2em;

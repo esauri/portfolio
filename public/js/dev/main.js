@@ -1,4 +1,5 @@
 import {Projects} from './projects';
+import {Gallery} from './gallery';
 
 (function() {
 	'use strict';
@@ -21,6 +22,14 @@ import {Projects} from './projects';
     Projects();
   }
   
+  if (document.getElementsByClassName('gallery-container').length > 0) {
+    let galleries = Array.from(document.getElementsByClassName('gallery-container'));
+
+    galleries.forEach(function (gallery) {
+      Gallery(gallery);
+    });
+  }
+
   function scrollBtnToggle (event) {
     if (document.body.scrollTop >= SCROLL_TOP_MIN) {
       scrollToTopBtn.classList.add('visible');

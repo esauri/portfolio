@@ -1,88 +1,75 @@
-// div.gallery
-.gallery {
-  background: $background-color-accent;
-  // width: 100%;
-  // position: relative;
-  // margin: 1em 0 2.5em;
-  // padding-bottom: 1em;
+.gallery-container {
+  position: relative;
+  margin: auto;
 }
 
-// ul.gallery-pictures
-.gallery-slideshow {
-  cursor: -webkit-grab;
-  white-space: nowrap;
-  font-size: 0;
-  overflow: hide;
-}
-
-// li.gallery.picture
-.gallery-slideshow-item {
-  width: 300px;
-  margin: 0 50px;
-  display: inline-block;
-
-}
-
-.gallery-list {
-  padding: 0;
-  @include vendor-property('column-count', '2');
-  @include vendor-property('column-gap', '1');
-  @include vendor-property('column-fill', 'auto');
-
-  font-size: 0.85em;
-
-  @include MQ (M) {
-    @include vendor-property('column-count', '3');
-
-  }
-
-  @include MQ (L) {
-    @include vendor-property('column-count', '4');
-
-  }
-}
+// .gallery { }
 
 .gallery-item {
-  display: inline-block;
-  // background: $foreground-color;
-  // margin: 0 0 1.5em;
-  // padding: 1em;
-  width: 100%;
-  @include vendor-property('box-sizing', 'border-box');
+  display: none;
 
-  @include MQ (M) {
-
-  }
-
-  @include MQ (L) {
-    
+  &.active {
+    display: block;
   }
 }
 
-.gallery-image {
+// .gallery-img { }
 
-}
-
-.gallery-pagination {
-  margin-top: 1em;
+.gallery-dot-list {
+  margin: 1em 0;
   text-align: center;
 }
 
-.gallery-pagination-item {
-  display: inline;
+.gallery-dot-item {
+  display: inline-block;
   padding: $content-padding;
 }
 
-.gallery-pagination-dot {
-  background: $foreground-color;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
+.gallery-dot {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  background-color: $silver;
   border: none;
-  // margin: 0 7px;
-  transition: background $duration-transition;
+  border-radius: 50%;
+  transition: background-color $duration-transition;
 
-  &.selected {
-    background: $warm-gradient;
+  &:hover {
+    background-color: $red;
+    animation: btn-special-animation 1s;
   }
+
+  &.current {
+    background-color: $foreground-color;
+  }
+}
+
+.gallery-btn-prev,
+.gallery-btn-next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -1em;
+  padding: 1em $content-padding 1em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba($background-color, 0.3);
+  color: $foreground-color;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  transition: padding $duration-transition;
+
+  &:hover {
+    padding: 1em;
+    background: $link-color-hover;
+    animation: btn-special-animation 1s;
+  }
+}
+
+// .gallery-btn-prev { }
+
+.gallery-btn-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
