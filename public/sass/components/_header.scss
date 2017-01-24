@@ -12,8 +12,13 @@
 }
 
 .logo {
-    width: $header-S;
-    height: $header-S;
+    width: 32px;
+    height: 32px;
+    margin: $content-padding 0 8px;
+    
+  @include MQ (M) {
+    margin: 0;
+  }
 }
 
 .logo-description {
