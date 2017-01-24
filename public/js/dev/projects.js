@@ -75,6 +75,14 @@ function Projects () {
   // Add event for touch moving
   window.addEventListener('touchmove', touchMoveEvent);
 
+  function efficientFunction (event) {
+    debounce(updateOnScroll, 250);
+  }
+
+  // let efficientFunction = debounce(function (event) {
+  //   updateOnScroll(event);
+  // }, 250);
+
   /**
    * @param  {} event
    */
@@ -125,8 +133,8 @@ function Projects () {
 
   function updateOnScroll (event) {
     event.preventDefault();
-
-    window.removeEventListener('scroll', updateOnScroll);
+    console.log('called');
+    // window.removeEventListener('scroll', updateOnScroll);
 
     if (!scrolling) {
       scrolling = true;
@@ -255,6 +263,62 @@ function Projects () {
     clearInterval(autoRun);
     resumeProjectBtn.classList.add('visible');
   }
+
+  // https://davidwalsh.name/essential-javascript-functions
+  // function debounce (func, waitTime, immediate) {
+  //   let timeout;
+  //   console.log('called deb');
+  //   debugger;
+  //   return function () {
+  //     let context = this,
+  //         args = arguments;
+      
+  //     let later = function () {
+  //       timeout = null;
+  //       if (!immediate) func.apply(context, args);
+  //     };
+
+  //     let callNow = immediate && !timeout;
+
+  //     clearTimeout(timeout);
+  //     timeout = setTimeout(later, waitTime);
+  //     if (callNow) func.apply(context, args);
+  //   };
+  // };
+
+  var debounce = function (func, wait) {
+    // Variables
+    var timeout, args, context, timestamp;
+    console.log('debound v2 called');
+    return function() {
+      debugger;
+      console.log('return');
+      // Save details of last call
+      context = this;
+      args = [].slice.call(arguments, 0);
+      timestamp = new Date();
+
+      // Magic happens here
+      var later = function () {
+        // How long ago was the last call
+        var last = (new Date()) - timestamp;
+        console.log('Last: ' + last);
+        // If the latest call was less than the wait period
+        if (last < wait) {
+          // Then we reset the timeout to wait for the difference
+          timeout = setTimeout(later, wait - last);
+        } else {
+          // Or if not we can null out the time and run the latest
+          timeout = null;
+          func.apply(context, args);
+        }
+      };
+
+      if (!timeout) {
+        timeout = setTimeout(later, wait);
+      }
+    }
+  };
 }
 
 export {Projects};
