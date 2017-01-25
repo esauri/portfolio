@@ -16,7 +16,8 @@
 }
 
 .nav-item {
-  flex-basis: 25%;
+  // flex-basis: 25%;
+  flex-basis: 33.3%;
 
   &:first-of-type .nav-item-link {
     display: flex;

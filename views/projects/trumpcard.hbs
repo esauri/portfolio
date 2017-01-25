@@ -13,15 +13,6 @@
         <h3>iOS App</h3>
         <h5>Technologies Used</h5>
         <h6>Swift</h6>
-        {{!--<h5>Useful Links</h5>
-        <ul class='social-links'>
-          <li>
-            <a class='icon ion-social-github' href='https://github.com/esauri/audiovisualizer' target='_blank'></a>
-          </li>
-          <li>
-            <a class='mobile-unfriendly icon ion-laptop' href='https://people.rit.edu/ejs3863/330/audiovisualizer/' target='_blank'></a>
-          </li>
-        </ul>--}}
       </aside>
       <section class='project-intro-summary'>
         <h5>Description</h5>
@@ -44,51 +35,120 @@
           their makeup of the electorate. If by the end of the press conference there favorability is 
           above 50% then the player wins otherwise they lose.
         </p>
-        <table>
-          <thead>
-            <th>Makeup of the Electorate</th>
+        <table class='table'>
+          <thead class='thead'>
+            <th class='th'>Demographic</th>
+            <th class='th'>Makeup of the Electorate</th>
           </thead>
-          <tr>
-            <td>African-American</td>
-            <td>10.8%</td>
+          <tr class='table-row'>
+            <td class='table-cell'>African-American</td>
+            <td class='table-cell'>10.8%</td>
           </tr>
-          <tr>
-            <td>Asian-American</td>
-            <td>6%</td>
+          <tr class='table-row'>
+            <td class='table-cell'>Asian-American</td>
+            <td class='table-cell'>6%</td>
           </tr>
-          <tr>
-            <td>Latino</td>
-            <td>10%</td>
+          <tr class='table-row'>
+            <td class='table-cell'>Latino</td>
+            <td class='table-cell'>10%</td>
           </tr>
-          <tr>
-            <td>White (College educated)</td>
-            <td>30.2%</td>
+          <tr class='table-row'>
+            <td class='table-cell'>White (College educated)</td>
+            <td class='table-cell'>30.2%</td>
           </tr>     
-          <tr>
-            <td>White (Not college educated)</td>
-            <td>43%</td>
+          <tr class='table-row'>
+            <td class='table-cell'>White (Not college educated)</td>
+            <td class='table-cell'>43%</td>
           </tr>
         </table>
       </section>
     </section>
-    <section class='project-body cta'>
-      <h1>Coming Soon</h1>
-      {{!--<h6>Demo</h6>
-      <section class='video-responsive'>
-        <iframe class='iframe' src='https://player.vimeo.com/video/183408638' width='420' height='236' frameBorder='0' allowFullScreen></iframe>
-      </section>--}}
+    <section class='project-body wrapper'>
+      <h3>Game</h3>
+      <ul class='grid'>
+        <li class='column-left'>
+          <img data-action='zoom' src='./img/trumpcard/public/small/gameView.png' srcset='./img/trumpcard/public/small/gameView.png 480w, ./img/trumpcard/public/medium/gameView.png 760w, ./img/trumpcard/public/large/gameView.png 960w' alt='Trump Card Game View'>
+        </li>
+        <li class='column-right'>
+          <h6>Game View</h6>
+          <p>
+            Trump Card is a simple game where the player acts as then Presidential candidate Donald Trump and is asked numerous
+            questions during a press conference. The player has the opportunity to swipe left or right to give an answer. The player's
+            goal is then to have a high enough favorability rating to win the presidency.
+          </p>
+        </li>
+        <li class='column-left'>
+          <h6>Swipes</h6>
+          <p>
+            Once the player begins dragging a card to the left or right corner Trump's answer will appear on the card. 
+            If the player drags the card to a corner and lets go of the card that answer is given otherwise the player can choose the other
+            answer. The left choice is Trump's more subdued answer while the right one is his irate answer.
+          </p>
+          <p>
+            In order to avoid the player from
+            always choosing the left answer, the Trump-o-meter comes into play. As seen in the screenshot it is a bar that dictates Trump's temperament.
+            Ranging from happy to angry, every left swipe causes Trump to get angrier and once in reaches a certain point Trump will be too angry and the player
+            will be unable to swipe left. In order for Trump to calm down the player needs to swipe right a couple of times. 
+            This way players can gauge if a right choice won't be too damaging to Trump's favorables so they can save their left swipes to avoid
+            giving really damaging answers.
+          </p>
+          <p>
+            On every swipe head icons representing the different demographic groups will appear showing their reaction to the answer. If the group found
+            the answer damaging.
+          </p>
+        </li>
+        <li class='column-right gallery-container'>
+          <ul class='gallery'>
+            <li class='gallery-item active'>
+              <img data-action='zoom' src='./img/trumpcard/public/small/leftSwipe.png' srcset='./img/trumpcard/public/small/leftSwipe.png 480w, ./img/trumpcard/public/medium/leftSwipe.png 760w, ./img/trumpcard/public/large/leftSwipe.png 960w' alt='Trump Card Game View when swiping left'>
+            </li>
+            <li class='gallery-item'>
+              <img data-action='zoom' src='./img/trumpcard/public/small/rightSwipe.png' srcset='./img/trumpcard/public/small/rightSwipe.png 480w, ./img/trumpcard/public/medium/rightSwipe.png 760w, ./img/trumpcard/public/large/rightSwipe.png 960w' alt='Trump Card Game View when swiping right'>
+            </li>
+          </ul>
+          <ul class='gallery-dot-list'>
+            <li class='gallery-dot-item'><button class='gallery-dot js-gallery-dot current'></button></li>
+            <li class='gallery-dot-item'><button class='gallery-dot js-gallery-dot'></button></li>
+          </ul>
+        </li>
+        <li class='column-left gallery-container'>
+          <ul class='gallery'>
+            <li class='gallery-item active'>
+              <img data-action='zoom' src='./img/trumpcard/public/small/gameWin.png' srcset='./img/trumpcard/public/small/gameWin.png 480w, ./img/trumpcard/public/medium/gameWin.png 760w, ./img/trumpcard/public/large/gameWin.png 960w' alt='Trump Card Game Win Alert'>
+            </li>
+            <li class='gallery-item'>
+              <img data-action='zoom' src='./img/trumpcard/public/small/gameLoss.png' srcset='./img/trumpcard/public/small/gameLoss.png 480w, ./img/trumpcard/public/medium/gameLoss.png 760w, ./img/trumpcard/public/large/gameLoss.png 960w' alt='Trump Card Game Loss Alert'>
+            </li>
+            <li class='gallery-item'>
+              <img data-action='zoom' src='./img/trumpcard/public/small/startView.png' srcset='./img/trumpcard/public/small/startView.png 480w, ./img/trumpcard/public/medium/startView.png 760w, ./img/trumpcard/public/large/startView.png 960w' alt='Trump Card Start View'>
+            </li>
+          </ul>
+          <ul class='gallery-dot-list'>
+            <li class='gallery-dot-item'><button class='gallery-dot js-gallery-dot current'></button></li>
+            <li class='gallery-dot-item'><button class='gallery-dot js-gallery-dot'></button></li>
+            <li class='gallery-dot-item'><button class='gallery-dot js-gallery-dot'></button></li>
+          </ul>
+        </li>
+        <li class='column-right'>
+          <h6>Game over</h6>
+          <p>
+            Upon finishing the press conference the results of the election will dictate whether Donald Trump wins the election
+            and a message will pop-up congratulating or attacking him. The player can then dismiss the alert and they will be brought back to the main 
+            view where they can play again or check the references page where they can find the Trump quotes with sources and in some cases audio.
+          </p>
+        </li>
+      </ul>
     </section>
     <section class='wrapper project-conclusion'>
-      {{!--<h3>Thoughts</h3>
+      <h3>Thoughts</h3>
       <p>
-        Working with canvas and audio was a great
-        exercise as it helped me improve and learn
-        more using Javascript. I was able to see its
-        strength when combined with HTML and CSS to
-        make awesome web applications. The audio visualizer
-        was also a big stepping stone as it aided me when
-        creating <a href='/clickergame'>Clicker Game</a>.
-      </p>--}}
+        Trump Card was an exciting app since it was my first Swift project 
+        and I was able to implement the features I wanted with ease. I liked the idea
+        of using a politician's actual quotes and statements without having to make some up.
+        I hope to continue this project and add other politicians as well so the game isn't centered
+        around one particular person but players can choose which candidate they want to play as making
+        the experience more varied.
+      </p>
     </section>
   </article>
 </main>
