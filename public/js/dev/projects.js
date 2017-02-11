@@ -133,8 +133,7 @@ function Projects () {
 
   function updateOnScroll (event) {
     event.preventDefault();
-    console.log('called');
-    // window.removeEventListener('scroll', updateOnScroll);
+    window.removeEventListener('scroll', updateOnScroll);
 
     if (!scrolling) {
       scrolling = true;
