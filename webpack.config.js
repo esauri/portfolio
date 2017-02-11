@@ -1,3 +1,5 @@
+var queryObject = {presets: [require.resolve('babel-preset-es2015')]};
+var query = require('querystring').stringify(queryObject);
 var webpack = require('webpack'),
     path = require('path'),
     config = {
@@ -11,15 +13,14 @@ var webpack = require('webpack'),
         loaders: [
           {
             test: /\.js$/,
-            loaders: ['babel-loader?presets[]=es2015'],
+            loaders: ['babel?' + query],
             exclude: /node_modules/
           }
         ]
-      }
+      },
       /* Uncomment to minify js file */
-      // ,
-      // plugins: [
-      //   new webpack.optimize.UglifyJsPlugin({minimize: true})
-      // ]
+      plugins: [
+        new webpack.optimize.UglifyJsPlugin({minimize: true})
+      ]
     };
 module.exports = config;
