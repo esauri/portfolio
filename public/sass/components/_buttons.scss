@@ -51,15 +51,12 @@
 
 .floating-action-btn {
 	position: fixed;
-	width: 48px;
-	height: 48px;
 	right: $content-padding;
-	bottom: 1em;
-	background: none;
-	color: $foreground-color;
-	border: 1px solid $foreground-color;
-	border-radius: 50%;
-	font-size: 1em;
+	bottom: $header-L;
+  background: none;
+  border: none;
+  color: $foreground-color;
+	font-size: 2em;
 	transform: scale(0);
 	pointer-events: none;
 	transition: transform $duration-transition;
@@ -70,9 +67,8 @@
 	}
 
 	&:hover {
-		background: $red;
-		border-color: $red;
-		animation: btn-special-animation 1s;
+		color: $link-color-hover;
+    animation: link-animation 1s;
 	}
 
 	@include MQ (M) {

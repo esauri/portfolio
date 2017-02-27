@@ -9,6 +9,7 @@
 
 .nav-item-list {
   display: flex;
+  justify-content: space-between;
 
   @include MQ (M) {
     justify-content: flex-start;
@@ -16,8 +17,7 @@
 }
 
 .nav-item {
-  // flex-basis: 25%;
-  flex-basis: 33.3%;
+  // flex-basis: 20%;
 
   &:first-of-type .nav-item-link {
     display: flex;
@@ -26,7 +26,7 @@
   }
 
   &:nth-of-type(2) {
-    display: none;
+    cursor: pointer;
   }
 
   @include MQ(M) {
@@ -35,17 +35,13 @@
     &:first-of-type {
       margin-right: auto;
     }
-    
-    &:nth-of-type(2) {
-      display: inline;
-    }
   }
 }
 
 .nav-item-link {
   display: block;
   width: 100%;
-  line-height: $header-S;
+  line-height: calc(#{$header-S} + 4px);
   padding: $content-padding 1em;
   color: $foreground-color-accent;
   text-align: center;

@@ -1,22 +1,34 @@
 import {Projects} from './projects';
 import {Gallery} from './gallery';
+import _ from 'lodash';
 
 (function() {
 	'use strict';
 
   const SCROLL_TOP_MIN = 700;
 
-  let sidebar = document.querySelector('.nav-global'),
-      scrollToTopBtn;
+  let header = document.getElementById('header'),
+      projectPanel = document.getElementById('js-project-panel'),
+      projectPanelButtonOpen = document.getElementById('js-project-panel-open-button'),
+      projectPanelButtonClose = document.getElementById('js-project-panel-close-button'),
+      scrollToTopBtns = Array.from(document.getElementsByClassName('js-scroll-to-top')),
+      SCROLL_THRESHOLD = 30;
 
-  scrollToTopBtn = (document.getElementById('js-scroll-to-top')) ? document.getElementById('js-scroll-to-top') : null;
 
-  if (scrollToTopBtn !== null) {
-    scrollToTopBtn.addEventListener('click', function (event) { scrollTo(document.body); });
-    window.addEventListener('scroll', scrollBtnToggle);
+  projectPanelButtonClose.addEventListener('click', closeProjectPanel);
+  projectPanelButtonOpen.addEventListener('click', toggleProjectPanel);
+
+  if (scrollToTopBtns !== null) {
+    scrollToTopBtns.forEach((scrollToTopBtn) => {
+      scrollToTopBtn.addEventListener('click', function (event) { scrollTo(document.body); });
+    });
+    
+    window.addEventListener('scroll', _.debounce((event) => {
+    scrollBtnToggle(event);
+  }, SCROLL_THRESHOLD));
   }
 
-
+  
   // If work page
   if (document.getElementsByClassName('project-carousel').length > 0) {
     Projects();
@@ -30,12 +42,19 @@ import {Gallery} from './gallery';
     });
   }
 
-  function scrollBtnToggle (event) {
+  function scrollBtnToggle(event) {
+    // check window size first
+    let windowWidth = window.innerWidth < 760;
+
+    if (windowWidth) {
+      return;
+    }
+
     if (document.body.scrollTop >= SCROLL_TOP_MIN) {
-      scrollToTopBtn.classList.add('visible');
+      scrollToTopBtns[1].classList.add('visible');
     }
     else {
-      scrollToTopBtn.classList.remove('visible');
+      scrollToTopBtns[1].classList.remove('visible');
     }
   }
 
@@ -56,6 +75,18 @@ import {Gallery} from './gallery';
         }
     };
     animateScroll();
+  }
+
+  function toggleProjectPanel(event) {
+    // Toggle Project Panel class
+    projectPanel.classList.toggle('open');
+    header.classList.toggle('panel-open');
+  }
+
+  function closeProjectPanel(event) {
+    // Remove Project Panel class 'open'
+    header.classList.remove('panel-open');
+    projectPanel.classList.remove('open');
   }
 
   Math.easeInOutQuad = function (time, start, change, duration) {

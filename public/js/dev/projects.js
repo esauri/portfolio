@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 function Projects () {
   let currentProjectSlide,
       projectSlideshow,
@@ -10,7 +12,7 @@ function Projects () {
       autoRun,
       positionX,
       positionY,
-      SCROLL_THRESHOLD = 60,
+      SCROLL_THRESHOLD = 30,
       scrolling = false;
 
   const PROJECT_TIMER = 5000;
@@ -67,21 +69,15 @@ function Projects () {
   window.addEventListener('keydown', keydownEvent);
 
   // Add event for mouse wheel
-  window.addEventListener('wheel', updateOnScroll);
+  window.addEventListener('wheel', _.debounce((event) => {
+    updateOnScroll(event);
+  }, SCROLL_THRESHOLD));
 
   // Add event for touch starting
   window.addEventListener('touchstart', touchStartEvent);
 
   // Add event for touch moving
   window.addEventListener('touchmove', touchMoveEvent);
-
-  function efficientFunction (event) {
-    debounce(updateOnScroll, 250);
-  }
-
-  // let efficientFunction = debounce(function (event) {
-  //   updateOnScroll(event);
-  // }, 250);
 
   /**
    * @param  {} event
@@ -95,11 +91,15 @@ function Projects () {
    * @param  {} event
    */
   function touchMoveEvent (event) {
-    event.preventDefault();
+    if (document.getElementById('js-project-panel').classList.contains('open')) {
+      return;
+    }
 
     if (!positionX || !positionY) {
       return;
     }
+
+    event.preventDefault();
 
     let newX = event.touches[0].clientX,
         newY = event.touches[0].clientY;
@@ -163,7 +163,6 @@ function Projects () {
         nextBtnEvent(event);
       }
     }
-
     
     scrolling = false;
     return false;
@@ -262,62 +261,6 @@ function Projects () {
     clearInterval(autoRun);
     resumeProjectBtn.classList.add('visible');
   }
-
-  // https://davidwalsh.name/essential-javascript-functions
-  // function debounce (func, waitTime, immediate) {
-  //   let timeout;
-  //   console.log('called deb');
-  //   debugger;
-  //   return function () {
-  //     let context = this,
-  //         args = arguments;
-      
-  //     let later = function () {
-  //       timeout = null;
-  //       if (!immediate) func.apply(context, args);
-  //     };
-
-  //     let callNow = immediate && !timeout;
-
-  //     clearTimeout(timeout);
-  //     timeout = setTimeout(later, waitTime);
-  //     if (callNow) func.apply(context, args);
-  //   };
-  // };
-
-  var debounce = function (func, wait) {
-    // Variables
-    var timeout, args, context, timestamp;
-    console.log('debound v2 called');
-    return function() {
-      debugger;
-      console.log('return');
-      // Save details of last call
-      context = this;
-      args = [].slice.call(arguments, 0);
-      timestamp = new Date();
-
-      // Magic happens here
-      var later = function () {
-        // How long ago was the last call
-        var last = (new Date()) - timestamp;
-        console.log('Last: ' + last);
-        // If the latest call was less than the wait period
-        if (last < wait) {
-          // Then we reset the timeout to wait for the difference
-          timeout = setTimeout(later, wait - last);
-        } else {
-          // Or if not we can null out the time and run the latest
-          timeout = null;
-          func.apply(context, args);
-        }
-      };
-
-      if (!timeout) {
-        timeout = setTimeout(later, wait);
-      }
-    }
-  };
 }
 
 export {Projects};

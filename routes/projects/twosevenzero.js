@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET 270 page. */
 router.get('/', function(req, res, next) {
-  var model = {
-    title: 'Erick Sauri - 270',
-    viewId: 'two-seven-zero',
-    projectTitle: '270'
-  };
+  var model = require('../../model/global')(req, res);
+  
+  model.viewId = 'two-seven-zero';
+  model.title += ' - 270';
+  model.projectTitle = '270';
 
   res.render('./projects/twosevenzero', model);
 });

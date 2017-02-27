@@ -39,14 +39,10 @@ const projects = [
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var model = {
-    title: 'Erick Sauri',
-    viewId: 'work',
-    project: projects
-  };
-  // var model = require('../model/global')(req, res);
+  var model = require('../model/global')(req, res);
 
-  // model.viewId = 'work';
+  model.viewId = 'work';
+  model.homePage = true;
 
   res.render('index', model);
 });

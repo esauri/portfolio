@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET trump-card page. */
 router.get('/', function(req, res, next) {
-  var model = {
-    title: 'Erick Sauri - Trump Card',
-    viewId: 'trump-card',
-    projectTitle: 'Trump Card'
-  };
+  var model = require('../../model/global')(req, res);
+  
+  model.viewId = 'trump-card';
+  model.title += ' - Trump Card';
+  model.projectTitle = 'Trump Card';
 
   res.render('./projects/trumpcard', model);
 });
