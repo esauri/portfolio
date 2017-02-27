@@ -1,8 +1,4 @@
-var express = require('express');
-var router = express.Router();
-
-const projects = [
-      {
+const projects = [{
         name: 'two-seven-zero',
         title: '270',
         category: 'Angular • Ionic Framework',
@@ -35,20 +31,17 @@ const projects = [
         description: 'Visualize audio',
         image: './img/audiovisualizer.png'
       }
-    ];
+];
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  var model = {
-    title: 'Erick Sauri',
-    viewId: 'work',
-    project: projects
+function global(req, res) {
+  return {
+    // Always static
+    title: 'Erick Sauri' ,
+    viewId: '',
+    projects: projects,
+    currentYear: new Date().getFullYear()
   };
-  // var model = require('../model/global')(req, res);
+}
 
-  // model.viewId = 'work';
+module.exports = global;
 
-  res.render('index', model);
-});
-
-module.exports = router;

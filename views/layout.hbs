@@ -56,8 +56,22 @@
         </ul>
       </nav>
     </header>
+    <section id='js-project-panel' class='project-panel open'>
+      <button id='js-project-panel-close-button'>Close</button>
+      <ul>
+        <li class='project-panel-item'>
+          <a href='/' class='project-panel-wrapper'>
+            <section id='' class='project-panel-item-image'>
+            </section>
+            <section class='project-panel-item-blurb'>
+              <h2></h2>
+              <p></p>
+            </section>
+          </a>
+        </li>
+      </ul>
+    </section>
     {{{body}}}
-
     {{#unless project}}
     <button class='icon ion-ios-arrow-thin-up floating-action-btn' id='js-scroll-to-top'></button>
     <footer class='footer'>
