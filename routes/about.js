@@ -3,11 +3,9 @@ var router = express.Router();
 
 /* GET about page. */
 router.get('/', function(req, res, next) {
-  var model = {
-    title: 'Erick Sauri - About',
-    viewId: 'about'
-  };
-
+  var model = require('../model/global')(req, res);
+  model.viewId = 'about';
+  model.title += ' - About';
   res.render('about', model);
 });
 

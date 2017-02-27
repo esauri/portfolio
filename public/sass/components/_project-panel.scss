@@ -1,0 +1,122 @@
+.project-panel {
+  position: fixed;
+  bottom: $header-S;
+  width: 100%;
+  background: $background-color-accent;
+  padding: 1em;
+  z-index: $panel-zindex;
+  transform: translateY(calc(100% + #{$header-L}));
+  transition: transform $duration-transition;
+
+  display: flex;
+  flex-flow: column;
+
+  @include MQ (M) {
+    position: absolute;
+    top: $header-L;
+    bottom: auto;
+    transform: translateY(calc(-100% - #{$header-L}));
+  }
+
+  &.open {
+    transform: translateY(0);
+  }
+}
+
+.project-panel-close-button {
+  background: none;
+  border: none;
+  color: $foreground-color;
+  font-size: 1.5em;
+  align-self: flex-end;
+
+  @include MQ(M) {
+    margin-right: 1em;
+  }
+  
+  &:hover {
+    color: $link-color-hover;
+    animation: link-animation 1s;
+  }
+}
+
+.project-panel-list {
+  position: relative;
+  display: flex;
+  flex-flow: row-wrap;
+  width: 100%;
+  margin-top: 1em;
+  padding-right: 50px;
+  overflow-x: auto;
+
+  @include MQ(M) {
+    padding-right: 0;
+  }
+}
+
+.project-panel-item {
+  position: relative;
+  display: inline;
+
+  min-width: 150px;
+  margin-right: 1em;
+
+  &::last-of-type {
+    margin-right: 0;
+  }
+
+  @include MQ(M) {
+    width: calc(100% - 1em);
+    flex-basis: 25%;
+  }
+}
+
+.project-panel-wrapper {
+  color: $foreground-color;
+}
+
+.project-panel-item-image {
+  height: 100px;
+
+  &.audio-visualizer {
+    background: url('../img/audiovisualizer/public/small/thumbnail.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &.clicker-game {
+    background: url('../img/clickergame/public/small/thumbnail.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &.trump-card {
+    background: url('../img/trumpcard/public/small/thumbnail.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  &.two-seven-zero {
+    background: url('../img/270/public/small/thumbnail.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  @include MQ(M) {
+    height: 150px;
+  }
+
+  @include MQ(L) {
+    height: 250px;
+  }
+}
+
+.project-panel-item-blurb {
+  .project-panel-item-title {
+    font-size: 0.85em;
+
+    @include MQ(M) {
+      font-size: 1em;
+    }
+  }
+
+  .project-panel-item-description {
+    font-size: 0.75em;
+  }
+}

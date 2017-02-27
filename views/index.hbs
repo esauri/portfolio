@@ -1,6 +1,6 @@
 <main class='container-fullpage' id='{{viewId}}'>
   <ul class='project-carousel'>
-    {{#each project}}
+    {{#each projects}}
       <li class='project-slide{{#if this.bool}} visible{{/if}}' id='{{this.name}}' aria-hidden='{{#if this.bool}}false{{else}}true{{/if}}'>
         <section class='project-slide-section'>
           <h2 class='project-slide-section-title'>{{this.title}}</h2>
@@ -13,8 +13,8 @@
   </ul>
   <p id='project-carousel-tip'>
     <i class='icon ion-information-circled'></i> 
-    <span class='mobile-only'>Switch slides by swiping.</span> 
-    <span class='desktop-only'>Switch slides by scrolling or pressing the arrow keys.</span>
+    <span class='mobile-only'>Swipe to switch slides</span> 
+    <span class='desktop-only'>Scroll of press arrow keys to switch slides</span>
   </p>
   <ul class='project-carousel-nav'>
     <li class='project-carousel-nav-list'>
@@ -23,7 +23,7 @@
         <i class='icon ion-ios-arrow-left phone-friendly'></i>
       </button>
     </li>
-    {{#each project}}
+    {{#each projects}}
       <li class='project-carousel-nav-list {{#if this.bool}}current{{/if}}'>
         <button class='project-carousel-btn'>          
           {{@index}}

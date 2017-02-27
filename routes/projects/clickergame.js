@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET clickergame page. */
 router.get('/', function(req, res, next) {
-  var model = {
-    title: 'Erick Sauri - Clicker Game',
-    viewId: 'clicker-game',
-    projectTitle: 'Clicker Game'
-  };
+  var model = require('../../model/global')(req, res);
+  
+  model.viewId = 'clicker-game';
+  model.title += ' - Clicker Game';
+  model.projectTitle = 'Clicker Game';
 
   res.render('./projects/clickergame', model);
 });

@@ -121,7 +121,7 @@
 #project-carousel-tip {
   position: absolute;
   @include center(x);
-  bottom: 3em;
+  bottom: calc(#{$header-L} + 3em);
   text-shadow: $background-color 0.5px 0.5px 0.5px;
 
   &.hide {
@@ -133,7 +133,7 @@
   position: fixed;
   display: flex;
   flex-direction: row;
-  bottom: 1em;
+  bottom: calc(#{$header-L} + 1em);
   padding-left: 2em;
   @include center(x);
 
@@ -147,7 +147,8 @@
 }
 
 .project-carousel-nav-list {
-  padding: calc($content-padding / 1.5);
+  // padding: calc($content-padding * 2);
+  padding: 12px;
   text-align: center;
   text-shadow: $background-color 0.5px 0.5px 0.5px;
 
