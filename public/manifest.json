@@ -1,22 +1,15 @@
 {
-	//Required
-	"manifest_version": 2,
-	"short_name" : "Sauri",
-	"name" : "Erick Sauri",
-	"version" : "1.0",
-	
-	//Recommended
-	"default_locale": "en",
-	"lang" : "en",
-	"description": "Erick Sauri's personal portfolio. Here you can find several examples of my web designs, games, and applications.",
-	"icons":[
-		{
-			"src": "img/misc/logo.png",
-			"sizes": "64x64"
-		}
-	],
-	
-	//Optional
-	"author": "Erick Sauri",
-	"background_color" : "#1f1f1f"	
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
