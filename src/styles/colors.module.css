@@ -1,0 +1,9 @@
+:root {
+  --dark: #231f20;
+  --light: #f3f6fa;
+  --light-gray: #e4e4e4;
+  --white: #ffffff;
+  --black: #000000;
+  --red: #e74c3c;
+  --highlight: var(--red);
+}
