@@ -4,9 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Main Container
 import Main from './../Main/Main';
+import About from './../About/About';
 
 const Home = () => <h1>Erick Sauri Home</h1>;
-const About = () => <h1>My About page</h1>;
 
 class App extends Component {
   render() {

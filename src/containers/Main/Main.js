@@ -9,8 +9,8 @@ class Main extends Component {
     return (
       <article className={styles.container}>
         <NavigationBar>
-          <Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
+          <Link className={styles.link} to='/'>Home</Link>
+          <Link className={styles.link} to='/about'>About</Link>
         </NavigationBar>
         { this.props.children }
       </article>
