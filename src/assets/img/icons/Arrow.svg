@@ -1,0 +1,18 @@
+<svg width="16" height="11" viewBox="0 0 16 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Arrow</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" figma:type="canvas">
+<g id="Arrow" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Right" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_fill" transform="matrix(0.801045 -0.598604 0.598604 0.801045 7.40577 0.534195)" fill="#F3F6FA" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Left" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path1_fill" transform="matrix(0.801033 0.598621 -0.598621 0.801033 7.87959 0.0735322)" fill="#F3F6FA" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0.4462C 0 0.199771 0.199771 0 0.4462 0L 0.4462 0C 0.69263 0 0.892401 0.199771 0.892401 0.4462L 0.892401 12.7167C 0.892401 12.9631 0.69263 13.1629 0.4462 13.1629L 0.4462 13.1629C 0.199771 13.1629 0 12.9631 0 12.7167L 0 0.4462Z"/>
+<path id="path1_fill" d="M 0 0.446206C 0 0.199773 0.199773 0 0.446206 0L 0.446206 0C 0.692639 0 0.892413 0.199773 0.892413 0.446206L 0.892413 12.7167C 0.892413 12.9631 0.692639 13.1629 0.446206 13.1629L 0.446206 13.1629C 0.199773 13.1629 0 12.9631 0 12.7167L 0 0.446206Z"/>
+</defs>
+</svg>

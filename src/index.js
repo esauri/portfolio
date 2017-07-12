@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
-import App from './App/App';
+import App from './containers/App/App';
 
 import './styles/base.module.css';
 import './styles/colors.module.css';
