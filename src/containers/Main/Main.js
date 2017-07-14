@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './styles.module.css';
 
-import NavigationBar from './../../components/NavigationBar/NavigationBar';
+import Navigation from './../Navigation/Navigation';
 
 class Main extends Component {
   render() {
     return (
       <article className={styles.container}>
-        <NavigationBar>
-          <Link className={styles.link} to='/'>Home</Link>
-          <Link className={styles.link} to='/about'>About</Link>
-        </NavigationBar>
+        <Navigation />
         { this.props.children }
       </article>
     );

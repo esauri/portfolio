@@ -1,0 +1,9 @@
+.global_nav {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.global_nav_item {
+  padding: 0 calc(var(--padding) * 2);
+}

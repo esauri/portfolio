@@ -1,0 +1,38 @@
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --light: #f3f4fa;
+  --light-gray: #e4e4e4;
+  --gray: #a5aebc;
+  --dark: #272727;
+  --red: #e74c3c;
+  --orange: #f66b34;
+  --yellow: #f1b340;
+  --green: #7dcf85;
+  --aqua: #3a8580;
+  --blue: #5480f1;
+  --purple: #b062ea;
+  --warm-gradient: linear-gradient(to bottom right, var(--red), var(--orange));
+  --cold-gradient: linear-gradient(to bottom right, var(--aqua), var(--blue));
+  --background-color: var(--white);
+  --foreground-color: var(--black);
+  --highlight-color: var(--red);
+
+  --padding: 10px;
+  --topbar-height: 80px;
+
+  --duration: 0.2s;
+  --duration-long: 0.4s;
+
+  --btn-height: 52px;
+}
+
+@value mobile-small: 320px;
+@value mobile-medium: 375px;
+@value mobile-large: 480px;
+@value tablet-small: 600px;
+@value tablet-medium: 768px;
+@value tablet-large: 960px;
+@value laptop: 1024px;
+@value desktop: 1200px;

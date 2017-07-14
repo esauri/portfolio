@@ -1,0 +1,48 @@
+.popup_container {
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+.popup_container_show {
+  display: block;
+}
+
+.link {
+  position: relative;
+   color: var(--foreground-color);
+  cursor: pointer;
+}
+
+.link::after {
+  display: block;
+  content: '';
+  border-bottom: 2px solid currentColor;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.dropdown_item:hover > section {
+  visibility: visible;
+  animation: card_show var(--duration);
+}
+
+@keyframes card_show {
+  0% {
+    opacity: 0;
+    transform: perspective(600px) rotateX(-30deg) translateX(-42%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0) translateX(-42%);
+  }
+}

@@ -1,0 +1,22 @@
+.nav_dropdown {
+  position: absolute;
+  min-width: 300px;
+  transform: translateX(-42%);
+  padding: 1em;
+  visibility: hidden;
+}
+
+.nav_dropdown:hover {
+  visibility: visible;
+}
+
+.arrow {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: 1em;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--light);
+  box-shadow: -3px -3px 5px rgba(82,95,127,.04);
+}

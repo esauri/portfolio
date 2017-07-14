@@ -1,6 +1,37 @@
+@value tablet-small, tablet-large from './../../styles/variables.module.css';
+
 .container {
-  width: 90%;
-  margin: 2em auto;
+  margin-top: 2em;
+}
+
+@media only screen and (min-width: tablet-small) {
+  .container {
+    margin-top: 4.25em;
+  }
+}
+
+@media only screen and (min-width: tablet-large) {
+  .container {
+    margin-top: 6em;
+  }
+}
+
+.cta {
+  background: #e4e4e4;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 100%;
 }
 
 .list {
@@ -8,7 +39,7 @@
   padding-left: 0;
 }
 
-.item {}
+/* .item {} */
 
 .item_header {
   padding-left: 10px;
