@@ -29,6 +29,7 @@
   width: 100%;
   position: absolute;
   border-radius: 4px;
+  z-index: 5;
 }
 
 .popup_container_show {

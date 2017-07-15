@@ -1,14 +1,15 @@
 @value tablet-small, tablet-large from './../../styles/variables.module.css';
 
 .header {
-  /* background: var(--black); */
   width: 100%;
+  height: var(--header-height);
 }
 
 .nav_bar {
   position: relative;
   margin: 0 auto;
   width: 90%;
+  height: 100%;
   max-width: tablet-large;
   padding: 0 1.5em;
   display: flex;

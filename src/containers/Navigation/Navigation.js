@@ -1,79 +1,42 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './styles.module.css';
+import { connect } from 'react-redux';
 
+// Components
 import Header from './../../components/Header/Header';
 import CloseIcon from './../../components/CloseIcon/CloseIcon';
 import HamburgerIcon from './../../components/HamburgerIcon/HamburgerIcon';
-
 import PopupNavigation from './../../components/PopupNavigation/PopupNavigation';
 import GlobalNavigation from './../../components/GlobalNavigation/GlobalNavigation';
 import DropdownNavigation from './../../components/DropdownNavigation/DropdownNavigation';
 
+// Actions
+import { togglePopupMenu, toggleDropdownMenu } from './../../actions';
+
+// Styles
+import styles from './styles.module.css';
+
 class Navigation extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      mobile: true,
-      navOpen: false,
-      showDropdown: false,
-    };
-
-    this.handleResize = this.handleResize.bind(this);
-    this.handleDropdownToggle = this.handleDropdownToggle.bind(this);
-    this.handleHamburgerBtnClick = this.handleHamburgerBtnClick.bind(this);
-  }
-
-  componentDidMount() {
-    // Get layout
-    this.handleResize();
-
-    // Add event listener
-    window.addEventListener('resize', this.handleResize);
-  }
-
-  componentWillUnmount() {
-    // Remove event listener
-    window.removeEventListener('resize', this.handleResize);
-  }
-
-  handleResize() {
-    // Maximum size for mobile
-    const LAYOUT_THRESHOLD = 600;
-
-    // Set state
-    this.setState({
-      // We're in mobile if width is less than 600
-      mobile: (LAYOUT_THRESHOLD > window.innerWidth)
-    });
-  }
-
-  handleHamburgerBtnClick() {
-    const { navOpen } = this.state;
-
-    this.setState({
-      navOpen: !navOpen,
-    });
-  }
-
-  handleDropdownToggle() {
-    const { showDropdown } = this.state;
-
-    this.setState({
-      showDropdown: !showDropdown,
-    });
-  }
-
   renderNavigation() {
-    const { projects, playground } = this.props;
-    const { mobile, navOpen, showDropdown } = this.state;
+    const {
+      mobile,
+      projects,
+      playground,
+      showDropdown,
+      mobileNavOpen,
+      handleDropdownToggle,
+      handleHamburgerBtnClick,
+    } = this.props;
 
     const desktopNav = (
       <GlobalNavigation>
         <Link className={styles.link} to=''>Home</Link>
         <Link className={styles.link} to='/about'>About</Link>
-        <span className={`${styles.link} ${styles.dropdown_item}`} onMouseEnter={this.handleDropdownToggle} onMouseLeave={() => { setTimeout(this.handleDropdownToggle, 50); }}>
+        <span
+          className={`${styles.link} ${styles.dropdown_item}`}
+          onMouseEnter={() => { handleDropdownToggle(true); }}
+          onMouseLeave={() => { setTimeout(() => { handleDropdownToggle(false); }, 50); }}
+        >
           Work
           <DropdownNavigation show={showDropdown}>
             {/* Main Projects */}
@@ -120,10 +83,10 @@ class Navigation extends Component {
     );
 
     const mobileNav = (
-      <section className={`${styles.popup_container} ${(navOpen) ? styles.popup_container_show : ''}`}>
+      <section className={`${styles.popup_container} ${(mobileNavOpen) ? styles.popup_container_show : ''}`}>
         <PopupNavigation>
           {/* Close button */}
-          <CloseIcon onClickEvent={this.handleHamburgerBtnClick} />
+          <CloseIcon onClickEvent={() => { handleHamburgerBtnClick(false); }} />
             {/* Projects */}
             <h3 className={styles.nav_section_title}>Projects</h3>
             <ul className={styles.nav_list}>
@@ -177,10 +140,10 @@ class Navigation extends Component {
   }
 
   render() {
-    const { mobile } = this.state;
+    const { mobile, handleHamburgerBtnClick } = this.props;
 
     // IF mobile show hamburger menu icon
-    const hamburgerMenu = (mobile) ? <HamburgerIcon onClickEvent={this.handleHamburgerBtnClick} /> : null;
+    const hamburgerMenu = (mobile) ? <HamburgerIcon onClickEvent={() => { handleHamburgerBtnClick(true); }} /> : null;
 
     return (
       <Header>
@@ -192,4 +155,35 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation;
+/**
+ * mapStateToProps
+ *
+ * @param {Object} state
+ */
+const mapStateToProps = state => {
+  return {
+    mobile: state.global.mobile,
+    projects: state.global.projects,
+    playground: state.global.playground,
+    showDropdown: state.global.showDropdown,
+    mobileNavOpen: state.global.mobileNavOpen,
+  };
+}
+
+/**
+ * mapDispatchToProps
+ *
+ * @param {Function} dispatch
+ */
+const mapDispatchToProps = dispatch => {
+  return {
+    handleHamburgerBtnClick: open => {
+      dispatch(togglePopupMenu(open));
+    },
+    handleDropdownToggle: show => {
+      dispatch(toggleDropdownMenu(show));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

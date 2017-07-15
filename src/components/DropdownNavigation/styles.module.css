@@ -4,6 +4,7 @@
   position: absolute;
   visibility: hidden;
   transform: translateX(-45%);
+  z-index: 5;
 }
 
 .nav_dropdown_show,

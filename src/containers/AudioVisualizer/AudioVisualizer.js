@@ -1,24 +1,35 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Button from './../../components/Button/Button';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiDeviceDesktop from 'react-icons/lib/ti/device-desktop';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
-import styles from './styles.module.css';
 
+// Components
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
 import Vimeo from './../../components/Vimeo/Vimeo';
+import Button from './../../components/Button/Button';
+import Banner from './../../components/Banner/Banner';
 import ProjectDetail from './../../components/ProjectDetail/ProjectDetail';
 import ProjectDetailContainer from './../../components/ProjectDetailContainer/ProjectDetailContainer';
+
+// Assets
+import AudioVisualizerBanner from './../../assets/img/audiovisualizer/public/large/banner.jpg';
+
+// Styles
+import styles from './styles.module.css';
 
 class AudioVisualizer extends Component {
   render() {
     return (
       <article>
         {/* Banner */}
-        <header>
-        </header>
+        <Banner src={AudioVisualizerBanner} invert>
+          <section>
+            <h2>Audio Visualizer</h2>
+            <p>Visualize Audio</p>
+          </section>
+        </Banner>
         {/* Content */}
         <section className='wrapper'>
             {/* Intro */}
