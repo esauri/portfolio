@@ -16,9 +16,6 @@ import ProjectDetailContainer from './../../components/ProjectDetailContainer/Pr
 // Assets
 import AudioVisualizerBanner from './../../assets/img/audiovisualizer/public/large/banner.jpg';
 
-// Styles
-import styles from './styles.module.css';
-
 class AudioVisualizer extends Component {
   render() {
     return (
@@ -27,7 +24,6 @@ class AudioVisualizer extends Component {
         <Banner src={AudioVisualizerBanner} invert>
           <section>
             <h2>Audio Visualizer</h2>
-            <p>Visualize Audio</p>
           </section>
         </Banner>
         {/* Content */}
@@ -35,11 +31,11 @@ class AudioVisualizer extends Component {
             {/* Intro */}
             <h2>Audio Visualizer</h2>
             {/* Project Details */}
-            <ProjectDetailContainer className={styles.project_details}>
-              <ProjectDetail className={styles.project_details_item}>
+            <ProjectDetailContainer>
+              <ProjectDetail>
                 <TiDeviceDesktop /> Web Application
               </ProjectDetail>
-              <ProjectDetail className={styles.project_details_item}>
+              <ProjectDetail>
                 <TiCalendarOutline /> Fall 2015
               </ProjectDetail>
             </ProjectDetailContainer>
@@ -80,7 +76,7 @@ class AudioVisualizer extends Component {
               </Button>
             </a>
             {/* Conclusion */}
-            <h3>Thoughts</h3>
+            <h3>Parting Thoughts</h3>
             <p>
               Working with canvas and audio was a great
               exercise as it helped me improve and learn

@@ -1,0 +1,20 @@
+.carousel:hover {
+  cursor: grab;
+}
+
+.dots {
+  list-style-type: none;
+  padding: 0;
+  display: flex !important;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.dots li {
+  margin-right: 1em;
+}
+
+.dots li button {
+  background: none;
+  border: none;
+}

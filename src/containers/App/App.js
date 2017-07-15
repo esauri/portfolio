@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import Main from './../Main/Main';
 import About from './../About/About';
 import AudioVisualizer from './../AudioVisualizer/AudioVisualizer';
-
+import ClickerGame from './../ClickerGame/ClickerGame';
 // Create store
 import store from './../../store/store';
 
@@ -24,6 +24,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/about' component={About} />
               <Route exact path='/audiovisualizer' component={AudioVisualizer} />
+              <Route exact path='/clickergame' component={ClickerGame} />
               <Route render={() => <section><h1>Not Found</h1></section>} />
             </Switch>
           </Main>
