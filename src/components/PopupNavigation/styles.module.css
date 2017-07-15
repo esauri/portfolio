@@ -1,6 +1,7 @@
 .container {
-  background: var(--light);
-  padding: var(--padding);
+  display: block;
+  width: 100%;
+  background: var(--background-color);
   border-radius: 4px;
   box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
 }

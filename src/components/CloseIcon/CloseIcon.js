@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import styles from './styles.module.css';
 
-class HamburgerIcon extends Component {
+class CloseIcon extends Component {
   render() {
     const { onClickEvent } = this.props;
 
-    return (
+    return(
       <button className={styles.btn} onClick={onClickEvent}>
-        <span className={styles.line} />
-        <span className={styles.line} />
-        <span className={styles.line} />
+        <span className={styles.close}></span>
+        {/* <span className={styles.line}></span> */}
       </button>
     );
   }
 }
 
-export default HamburgerIcon;
+export default CloseIcon;

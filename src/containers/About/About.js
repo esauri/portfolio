@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './styles.module.css';
 import Avatar from './../../assets/img/misc/me.jpg';
-import ButtonLink from './../../components/ButtonLink/ButtonLink';
+import Button from './../../components/Button/Button';
 
 class About extends Component {
   render() {
@@ -9,7 +9,6 @@ class About extends Component {
       <section className={styles.container}>
         <section className='wrapper'>
           <img className={styles.avatar} src={Avatar} alt='Erick Sauri' title='Erick Sauri' />
-          <h1>Hi there!</h1>
           <p>
             Hey! I’m Erick Sauri a front end developer originally from Puerto Rico
             <span role='img' aria-label='Puerto Rican Flag Emoji'>🇵🇷</span> but currently
@@ -19,7 +18,6 @@ class About extends Component {
             as making games in my spare time. Feel free to email me at <a href='mailto:ejs3863@rit.edu'>ejs3863 at rit.edu</a>.
           </p>
         </section>
-
         {/* Resume Section */}
         <section className='wrapper'>
           <ul className={styles.list}>
@@ -127,13 +125,11 @@ class About extends Component {
             </li>
           </ul>
         </section>
-
         {/* CTA PDF version */}
         <section className={styles.cta}>
           <h2>Looking for a PDF of printable version of my resume?</h2>
-          <ButtonLink to=''>Resume</ButtonLink>
+           <a href='media/resume.pdf' target='_blank'><Button>Resume</Button></a>
         </section>
-
         {/* TODO: Contact Form */}
       </section>
     );

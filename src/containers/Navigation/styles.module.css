@@ -1,17 +1,8 @@
-.popup_container {
-  position: absolute;
-  right: 0;
-  display: none;
-}
+@value tablet-small from './../../styles/variables.module.css';
 
-.popup_container_show {
-  display: block;
-}
-
+/* Desktop Nav Links */
 .link {
-  position: relative;
-   color: var(--foreground-color);
-  cursor: pointer;
+  color: var(--foreground-color);
 }
 
 .link::after {
@@ -30,19 +21,119 @@
   transform: scaleX(1);
 }
 
-.dropdown_item:hover > section {
-  visibility: visible;
-  animation: card_show var(--duration);
+/* Popup */
+.popup_container {
+  display: none;
+  top: var(--padding);
+  right: 0;
+  width: 100%;
+  position: absolute;
+  border-radius: 4px;
 }
 
-@keyframes card_show {
+.popup_container_show {
+  display: block;
+  animation: pop var(--duration);
+}
+
+/* Popup Nav Items */
+
+.nav_section_title {
+  margin: 0;
+  padding: 1em 0 0 1em;
+  color: var(--gray);
+}
+
+.nav_section_title_secondary {
+  background: var(--light);
+}
+
+.nav_list {
+  margin: 0;
+  padding: 1em;
+  list-style-type: none;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.nav_list_secondary {
+  background: var(--light);
+  border-radius: 0 0 4px 4px;
+}
+
+.nav_list_secondary .project_thumbnail {
+  width: 48px;
+  height: 48px;
+}
+
+.nav_list_secondary .project_desc {
+  display: none;
+}
+
+.nav_item {
+  flex-basis: 50%;
+  padding: var(--padding) 0;
+}
+
+.project_container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.project_container:hover {
+  text-decoration: none;
+}
+
+.project_thumbnail {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
+
+.project_label {
+  margin-left: var(--padding);
+  display: flex;
+  flex-flow: column;
+}
+
+.project_desc,
+.project_title {
+   margin: 0;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+.project_desc {
+  display: none;
+}
+
+@media only screen and (min-width: tablet-small) {
+  .nav_item {
+    flex-basis: 100%;
+  }
+
+  .project_thumbnail {
+    width: 64px;
+    height: 64px;
+  }
+
+  .project_desc {
+    display: block;
+  }
+}
+
+@keyframes pop {
   0% {
-    opacity: 0;
-    transform: perspective(600px) rotateX(-30deg) translateX(-42%);
+    transform: scale(0.95);
+  }
+
+  50% {
+    transform: scale(1.05);
   }
 
   100% {
-    opacity: 1;
-    transform: rotateX(0) translateX(-42%);
+    transform: scale(1);
   }
 }

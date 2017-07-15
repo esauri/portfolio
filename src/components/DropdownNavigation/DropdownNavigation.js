@@ -5,8 +5,10 @@ import PopupNavigation from './../PopupNavigation/PopupNavigation';
 
 class DropdownNavigation extends Component {
   render() {
+    const { show } = this.props;
+
     return (
-      <section className={styles.nav_dropdown}>
+      <section className={`${styles.nav_dropdown} ${(show) ? styles.nav_dropdown_show : ''}`}>
         <section className={styles.arrow}/>
         <PopupNavigation>
           {this.props.children}
