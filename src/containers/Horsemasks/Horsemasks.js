@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
 import Zooming from 'zooming';
-import TiDevicePhone from 'react-icons/lib/ti/device-phone';
-import TiSocialGithub from 'react-icons/lib/ti/social-github';
+import FaGamepad from 'react-icons/lib/fa/gamepad';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
 
 // Components
 import Row from './../../components/Row/Row';
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
-import Vimeo from './../../components/Vimeo/Vimeo';
 import Banner from './../../components/Banner/Banner';
-import Button from './../../components/Button/Button';
 import Column from './../../components/Column/Column';
 import Picture from './../../components/Picture/Picture';
-import Carousel from './../../components/Carousel/Carousel';
-import CallToAction from './../../components/CallToAction/CallToAction';
 import ProjectDetail from './../../components/ProjectDetail/ProjectDetail';
 import ProjectDetailContainer from './../../components/ProjectDetailContainer/ProjectDetailContainer';
 
 import PanzerImage from './../../assets/img/horsemasks/panzer.png';
 import PlayerImage from './../../assets/img/horsemasks/player.png';
 import HorsemaskImage from './../../assets/img/horsemasks/horsemask.png';
-import PanzerThumbnail from './../../assets/img/horsemasks/panzerthumbnail.png';
-import PlayerThumbnail from './../../assets/img/horsemasks/playerthumbnail.png';
-import HorsemaskThumbnail from './../../assets/img/horsemasks/horsemaskthumbnail.png';
 import HorsemaskBanner from './../../assets/img/horsemasks/dawnofthelivinghorsemasks.png';
 
 class Horsemasks extends Component {
@@ -41,7 +33,7 @@ class Horsemasks extends Component {
           {/* Project Details */}
           <ProjectDetailContainer>
             <ProjectDetail>
-              <TiDevicePhone /> Game Design &amp; Development
+              <FaGamepad /> Game Design &amp; Development
             </ProjectDetail>
             <ProjectDetail>
               <TiCalendarOutline /> Spring 2015
@@ -70,6 +62,8 @@ class Horsemasks extends Component {
             and simple Path following. As an added bonus I decided to also add in a playable character
             that the user may move around the city with and is even able to attack the Horsemasks.
           </p>
+          </section>
+          <section className={'wrapper'}>
           <h3>Gameplay</h3>
           {/* Player */}
           <Row wrap>
@@ -97,9 +91,11 @@ class Horsemasks extends Component {
               </p>
             </Column>
             <Column space={'50'}>
-              <Picture alt={'Player character thumbnail'} src={PlayerImage} />
+              <Picture alt={'Player character thumbnail'} zooming={zooming} src={PlayerImage} />
             </Column>
           </Row>
+          </section>
+          <section className={'wrapper'}>
           {/* Timeline */}
           <h3>Project Timeline</h3>
           <Row>
@@ -129,6 +125,8 @@ class Horsemasks extends Component {
               </p>
             </Column>
           </Row>
+          </section>
+          <section className={'wrapper'}>
           {/* Assets */}
           <h3>Assets</h3>
           <Picture alt={'Tank thumbnail'} src={PanzerImage} />
@@ -144,6 +142,8 @@ class Horsemasks extends Component {
             The tank is from <a href='https://www.assetstore.unity3d.com/en/#!/publisher/2490' target='_blank' rel='noopener noreferrer'>Torsten Heldmann</a>, the rubber horse mask is from <a href='https://www.assetstore.unity3d.com/en/#!/publisher/4624' target='_blank' rel='noopener noreferrer'>Biscuitland</a>,
             the zombies are from <a href='https://www.assetstore.unity3d.com/en/#!/publisher/11247' target='_blank' rel='noopener noreferrer'>Pxktiger</a>, and the female model is from <a href='https://www.assetstore.unity3d.com/en/#!/publisher/11008' target='_blank' rel='noopener noreferrer'>Yurov Viktor</a>.
           </p>
+          </section>
+          <section className={'wrapper'}>
           <h3>Reflections</h3>
           <p>
             Dawn of the Living Horsemasks was a fun project to do and working with Craig Reynolds steering behaviors was a fascinating exercise in viewing how animated characters would behave as if they were alive.

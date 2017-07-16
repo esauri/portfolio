@@ -5,10 +5,11 @@ import {
 } from './../constants';
 
 // Assets
-import AudioVisThumbnail from './../assets/img/audiovisualizer/public/small/thumbnail.jpg';
-import ClickerThumbnail from './../assets/img/clickergame/public/small/thumbnail.jpg';
-import TrumpCardThumbnail from './../assets/img/trumpcard/public/small/thumbnail.jpg';
-import TwoSevenZeroThumbnail from './../assets/img/270/public/small/thumbnail.jpg';
+import AudioVisThumbnail from './../assets/img/audiovisualizer/public/small/avatar.jpg';
+import ClickerThumbnail from './../assets/img/clickergame/public/small/avatar.jpg';
+import TrumpCardThumbnail from './../assets/img/trumpcard/public/small/avatar.png';
+import TwoSevenZeroThumbnail from './../assets/img/270/public/small/avatar.png';
+import HorsemaskThumbnail from './../assets/img/horsemasks/avatar.png';
 
 // Create intial app state
 const initialState = {
@@ -33,7 +34,7 @@ const initialState = {
       id: 1,
       name: 'Trump Card',
       link: '/trumpcard',
-      desc: 'Make America Great Again',
+      desc: 'Make America Great Again?',
       tags: ['Mobile Development', 'Swift'],
       thumbnail: {
         src: TrumpCardThumbnail,
@@ -46,6 +47,17 @@ const initialState = {
   playground: [
     {
       id: 0,
+      name: 'Horsemasks',
+      link: '/horsemask',
+      desc: 'Dawn of the Living Horsemasks',
+      tags: ['C#', 'Game Development', 'Unity'],
+      thumbnail: {
+        src: HorsemaskThumbnail,
+        desc: 'Dawn of the Living Horsemasks Thumbnail',
+      },
+    },
+    {
+      id: 1,
       name: 'Clicker Game',
       link: '/clickergame',
       desc: 'Save Bob!',
@@ -56,7 +68,7 @@ const initialState = {
       },
     },
     {
-      id: 1,
+      id: 2,
       name: 'Audio Visualizer',
       link: '/audiovisualizer',
       desc: '',
@@ -64,17 +76,6 @@ const initialState = {
       thumbnail: {
         src: AudioVisThumbnail,
         desc: 'Audio Visualizer Thumbnail',
-      },
-    },
-    {
-      id: 2,
-      name: 'Horsemasks',
-      link: '/horsemask',
-      desc: 'Dawn of the Living Horsemasks',
-      tags: ['C#', 'Game Development', 'Unity'],
-      thumbnail: {
-        src: AudioVisThumbnail,
-        desc: 'Dawn of the Living Horsemasks Thumbnail',
       },
     },
   ],

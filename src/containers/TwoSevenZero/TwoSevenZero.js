@@ -75,6 +75,8 @@ class TwoSevenZero extends Component {
             In order to get all of the electoral votes in a state their vote percentage must exceed 50%. Once enough states
             have been won to reach 270 electoral votes the player becomes President-Elect of the United States of America.
           </p>
+          </section>
+          <section className={'wrapper'}>
           {/* Mockups */}
           <h3>Mockups</h3>
           <Picture alt={'Mockup main screens'} zooming={zooming} src={TwoSevenZeroMockupMainImage} />
@@ -173,23 +175,27 @@ class TwoSevenZero extends Component {
             The player can also forfeit the question by tapping on the back key in the top bar. Their opponent will get
             the vote percentage increase for that question.
           </p>
+        </section>
+        <section className={'wrapper'}>
           {/* Video */}
           <h3>Gameplay</h3>
           <Vimeo
             title={'270 Demo'}
             src={'https://player.vimeo.com/video/183411950'}
           />
+        </section>
+        <section className={'wrapper'}>
           {/* Parting Thoughts */}
           <h3>Reflections</h3>
           <p>
             270 was a fun project to work on and the end result was a fun and replayable
-          game that can easily be expanded. During the development cycle I learned a lot about
-          the technologies I used to make it, which I had no experience with such as
-          AngularJS. I also got more experience working with the model-view-controller pattern which made my app's organization clear and effective.
-          As a solo project I was also able to get a sense of what it takes to create a minimum viable product
-          and learn from appropriately scoping my project. As my first app I feel more excited to delve deeper
-          into mobile development, including progressive web apps, hybrid apps, and native apps.
-        </p>
+            ame that can easily be expanded. During the development cycle I learned a lot about
+            the technologies I used to make it, which I had no experience with such as
+            AngularJS. I also got more experience working with the model-view-controller pattern which made my app's organization clear and effective.
+            As a solo project I was also able to get a sense of what it takes to create a minimum viable product
+            and learn from appropriately scoping my project. As my first app I feel more excited to delve deeper
+            into mobile development, including progressive web apps, hybrid apps, and native apps.
+          </p>
         </section>
         {/* CTA */}
         <CallToAction>

@@ -27,11 +27,7 @@ class ClickerGame extends Component {
     return (
       <article>
         {/* Banner */}
-        <Banner src={ClickerGameBanner} invert>
-          <section>
-            <h2>Clicker Game</h2>
-          </section>
-        </Banner>
+        <Banner src={ClickerGameBanner} invert />
         {/* Content */}
         <section className='wrapper'>
           {/* Intro */}
@@ -76,12 +72,16 @@ class ClickerGame extends Component {
           the shield sound is by <a href='https://freesound.org/people/thehorriblejoke/sounds/198969/' target='_blank' rel='noopener noreferrer'>thehorriblejoke</a>.
           The art is slightly edited by me but was created by <a href='http://www.kenney.nl' target='_blank' rel='noopener noreferrer'>Kenney Vleugels</a>.
           </p>
+        </section>
+        <section className={'wrapper'}>
           {/* Video */}
           <h3>Gameplay</h3>
           <Vimeo
             title={'Clicker Game Demo'}
             src={'https://player.vimeo.com/video/183410426'}
           />
+        </section>
+        <section className={'wrapper'}>
           <h3>Screenshots</h3>
           {/* Carousel */}
             <Carousel showButtons>
@@ -91,6 +91,8 @@ class ClickerGame extends Component {
               <img alt={'Clicker Game Pause'} src={PauseImg} />
               <img alt={'Clicker Game Over'} src={GameOverImg} />
             </Carousel>
+          </section>
+          <section className={'wrapper'}>
           {/* Conclusion */}
           <h3>Reflections</h3>
           <p>

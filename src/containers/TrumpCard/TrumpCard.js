@@ -27,9 +27,7 @@ class TrumpCard extends Component {
     return (
       <article>
         {/* Banner */}
-        <Banner src={TrumpCardBanner} invert>
-          <h2>Trump Card</h2>
-        </Banner>
+        <Banner src={TrumpCardBanner} invert />
         {/* Content */}
         <section className={'wrapper'}>
           {/* Intro */}
@@ -71,6 +69,8 @@ class TrumpCard extends Component {
             their makeup of the electorate. If by the end of the press conference there favorability is
             above 50% then the player wins otherwise they lose.
           </p>
+          </section>
+          <section className={'wrapper'}>
           {/* Game Mechanics: Intro */}
           <h3>Game Mechanics</h3>
           <p>
@@ -116,6 +116,8 @@ class TrumpCard extends Component {
             <img alt={'Trump Card Game Win Alert'} src={TrumpWinView} />
             <img alt={'Trump Card Game Loss Alert'} src={TrumpLoseView} />
           </Carousel>
+          </section>
+          <section className={'wrapper'}>
           <h3>Reflections</h3>
           <p>
             Trump Card was an exciting app since it was my first Swift project

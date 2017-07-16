@@ -22,11 +22,7 @@ class AudioVisualizer extends Component {
     return (
       <article>
         {/* Banner */}
-        <Banner src={AudioVisualizerBanner} invert>
-          <section>
-            <h2>Audio Visualizer</h2>
-          </section>
-        </Banner>
+        <Banner src={AudioVisualizerBanner} invert />
         {/* Content */}
         <section className='wrapper'>
             {/* Intro */}
@@ -64,12 +60,16 @@ class AudioVisualizer extends Component {
               <em>'Cause I'm a man</em> by <a href='http://www.tameimpala.com/' target='_blank' rel='noopener noreferrer'>Tame Impala</a>,
               and <em>Lux Aeterna</em> by <a href='https://www.youtube.com/watch?v=W2JTwoO0geM' target='_blank' rel='noopener noreferrer'>Clint Mastell</a>.
             </p>
+          </section>
+          <section className={'wrapper'}>
             {/* Video */}
             <h3>Demo</h3>
             <Vimeo
               title={'Audio Visualizer Demo'}
               src={'https://player.vimeo.com/video/183408638'}
             />
+          </section>
+          <section className={'wrapper'}>
             {/* Conclusion */}
             <h3>Reflections</h3>
             <p>
