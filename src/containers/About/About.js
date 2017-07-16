@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import styles from './styles.module.css';
-import Avatar from './../../assets/img/misc/me.jpg';
+
 import Button from './../../components/Button/Button';
+import CallToAction from './../../components/CallToAction/CallToAction';
+
+// Assets
+import Avatar from './../../assets/img/misc/me.jpg';
+
+// Styles
+import styles from './styles.module.css';
 
 class About extends Component {
   render() {
@@ -126,10 +132,10 @@ class About extends Component {
           </ul>
         </section>
         {/* CTA PDF version */}
-        <section className={styles.cta}>
-          <h2>Looking for a PDF of printable version of my resume?</h2>
+        <CallToAction>
+          <h3>Looking for a PDF of printable version of my resume?</h3>
            <a href='media/resume.pdf' target='_blank'><Button>Resume</Button></a>
-        </section>
+        </CallToAction>
         {/* TODO: Contact Form */}
       </section>
     );

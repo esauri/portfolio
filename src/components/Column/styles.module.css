@@ -1,28 +1,18 @@
 @value tablet-small from './../../styles/variables.module.css';
 
-.row_wrap {
+.column {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-basis: 100%;
+  flex-flow: column;
 }
 
-.column_30,
-.column_40,
-.column_50,
-.column_60,
-.column_70 {
-  flex-basis: 100%;
-  display: flex;
-  flex-flow: column;
+.reverse {
+  align-self: flex-end;
 }
 
 @media only screen and (min-width: tablet-small) {
   .column_30 {
     flex-basis: 30%;
-  }
-
-  .column_30 {
-    align-items: flex-end;
   }
 
   .column_40 {

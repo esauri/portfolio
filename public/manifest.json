@@ -3,7 +3,7 @@
   "short_name": "Sauri",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": ".`media/logo.png",
       "sizes": "192x192",
       "type": "image/png"
     }

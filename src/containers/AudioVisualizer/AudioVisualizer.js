@@ -10,6 +10,7 @@ import Tags from './../../components/Tags/Tags';
 import Vimeo from './../../components/Vimeo/Vimeo';
 import Button from './../../components/Button/Button';
 import Banner from './../../components/Banner/Banner';
+import CallToAction from './../../components/CallToAction/CallToAction';
 import ProjectDetail from './../../components/ProjectDetail/ProjectDetail';
 import ProjectDetailContainer from './../../components/ProjectDetailContainer/ProjectDetailContainer';
 
@@ -69,14 +70,8 @@ class AudioVisualizer extends Component {
               title={'Audio Visualizer Demo'}
               src={'https://player.vimeo.com/video/183408638'}
             />
-            {/* Github */}
-            <a href='https://github.com/esauri/audiovisualizer' target='_blank' rel='noopener noreferrer'>
-              <Button>
-                <TiSocialGithub size={28} /> View Project
-              </Button>
-            </a>
             {/* Conclusion */}
-            <h3>Parting Thoughts</h3>
+            <h3>Reflections</h3>
             <p>
               Working with canvas and audio was a great
               exercise as it helped me improve and learn
@@ -87,6 +82,15 @@ class AudioVisualizer extends Component {
               creating <Link to='/clickergame'>Clicker Game</Link>.
             </p>
         </section>
+        <CallToAction>
+          <h3>Want to check out the repo?</h3>
+          {/* Github */}
+          <a href='https://github.com/esauri/audiovisualizer' target='_blank' rel='noopener noreferrer'>
+            <Button>
+              <TiSocialGithub size={28} /> View Project
+            </Button>
+          </a>
+        </CallToAction>
       </article>
     );
   }

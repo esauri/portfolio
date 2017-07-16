@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
-import TiDeviceDesktop from 'react-icons/lib/ti/device-desktop';
+import FaGamepad from 'react-icons/lib/fa/gamepad';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
 
 // Components
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
 import Vimeo from './../../components/Vimeo/Vimeo';
-import Button from './../../components/Button/Button';
 import Banner from './../../components/Banner/Banner';
+import Button from './../../components/Button/Button';
 import Carousel from './../../components/Carousel/Carousel';
+import CallToAction from './../../components/CallToAction/CallToAction';
 import ProjectDetail from './../../components/ProjectDetail/ProjectDetail';
 import ProjectDetailContainer from './../../components/ProjectDetailContainer/ProjectDetailContainer';
 
@@ -20,9 +21,6 @@ import InstructionsImg from './../../assets/img/clickergame/public/small/instruc
 import GameImg from './../../assets/img/clickergame/public/small/gameView.jpg';
 import PauseImg from './../../assets/img/clickergame/public/small/pausegame.jpg';
 import GameOverImg from './../../assets/img/clickergame/public/small/gameover.jpg';
-
-// Styles
-import styles from './styles.module.css';
 
 class ClickerGame extends Component {
   render() {
@@ -41,7 +39,7 @@ class ClickerGame extends Component {
           {/* Project Details */}
           <ProjectDetailContainer>
             <ProjectDetail>
-              <TiDeviceDesktop /> Game Development
+              <FaGamepad /> Game Development
             </ProjectDetail>
             <ProjectDetail>
               <TiCalendarOutline /> Winter 2015
@@ -50,6 +48,7 @@ class ClickerGame extends Component {
           {/* Tags */}
           <Tags>
             <Tag>Canvas</Tag>
+            <Tag>Game Dev</Tag>
             <Tag>Javascript</Tag>
           </Tags>
           {/* Description */}
@@ -83,21 +82,17 @@ class ClickerGame extends Component {
             title={'Clicker Game Demo'}
             src={'https://player.vimeo.com/video/183410426'}
           />
-          {/* Github */}
-          <a href='https://github.com/esauri/clickergame' target='_blank' rel='noopener noreferrer'>
-            <Button>
-              <TiSocialGithub size={28} /> View Project
-            </Button>
-          </a>
-          <Carousel>
-            <img className={styles.picture} data-action='zoom' src={SplashscreenImg} alt='Clicker Game Splash Screen' />
-            <img className={styles.picture} data-action='zoom' src={InstructionsImg} alt='Clicker Game How to Play' />
-            <img className={styles.picture} data-action='zoom' src={GameImg} alt='Clicker Game' />
-            <img className={styles.picture} data-action='zoom' src={PauseImg} alt='Clicker Game Pause' />
-            <img className={styles.picture} data-action='zoom' src={GameOverImg} alt='Clicker Game Over' />
-          </Carousel>
+          <h3>Screenshots</h3>
+          {/* Carousel */}
+            <Carousel showButtons>
+              <img alt={'Clicker Game Splash Screen'} src={SplashscreenImg} />
+              <img alt={'Clicker Game How to Play'} src={InstructionsImg} />
+              <img alt={'Clicker Game'} src={GameImg} />
+              <img alt={'Clicker Game Pause'} src={PauseImg} />
+              <img alt={'Clicker Game Over'} src={GameOverImg} />
+            </Carousel>
           {/* Conclusion */}
-          <h3>Parting Thoughts</h3>
+          <h3>Reflections</h3>
           <p>
             I enjoyed making this project I found it
             interesting to work with canvas and javascript
@@ -109,6 +104,15 @@ class ClickerGame extends Component {
             beyond the tutorial without just having the free for all level.
           </p>
         </section>
+        <CallToAction>
+          <h3>Want to check out the repo?</h3>
+          {/* Github */}
+          <a href='https://github.com/esauri/clickergame' target='_blank' rel='noopener noreferrer'>
+            <Button>
+              <TiSocialGithub size={28} /> View Project
+            </Button>
+          </a>
+        </CallToAction>
       </article>
     );
   }

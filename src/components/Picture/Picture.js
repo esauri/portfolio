@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
-// import styles from './styles.module.css';
+import styles from './styles.module.css';
 
 class Picture extends Component {
+  componentDidMount() {
+    // Get zooming - right now we give zoom to first <Picture /> in container
+    const { zooming } = this.props;
+
+    // If zooming
+    if (zooming) {
+      // Add event listener
+      zooming.listen(`.${styles.picture}`);
+    }
+  }
+
   render() {
-    const { alt, folder, src } = this.props;
+    const { alt, src } = this.props;
 
     return (
-      <img
-        alt={alt}
-        src={`./../../assets/img/${folder}/public/small/${src}`}
-      />
+      <img className={styles.picture} alt={alt} src={src} />
     );
   }
 }

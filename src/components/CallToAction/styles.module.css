@@ -1,0 +1,8 @@
+.cta {
+  background: #e4e4e4;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+}

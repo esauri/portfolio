@@ -30,7 +30,6 @@ class Navigation extends Component {
 
     const desktopNav = (
       <GlobalNavigation>
-        <Link className={styles.link} to=''>Home</Link>
         <Link className={styles.link} to='/about'>About</Link>
         <span
           className={`${styles.link} ${styles.dropdown_item}`}
@@ -147,7 +146,7 @@ class Navigation extends Component {
 
     return (
       <Header>
-        <h1><Link className={styles.link} to='/'>Erick Sauri</Link></h1>
+        <h1><Link className={styles.link} to=''>Erick Sauri</Link></h1>
         { hamburgerMenu }
         { this.renderNavigation() }
       </Header>

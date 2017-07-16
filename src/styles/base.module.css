@@ -50,10 +50,6 @@ a:hover {
   padding: 0 1.5em 1.25em 1.5em;
 }
 
-:global(li.slick-active) {
-  transform: scale(1.5);
-}
-
 @media only screen and (min-width: tablet-small) {
   :global(.wrapper) {
      padding: 0 2.5em;

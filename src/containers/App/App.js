@@ -9,6 +9,9 @@ import Main from './../Main/Main';
 import About from './../About/About';
 import AudioVisualizer from './../AudioVisualizer/AudioVisualizer';
 import ClickerGame from './../ClickerGame/ClickerGame';
+import TrumpCard from './../TrumpCard/TrumpCard';
+import TwoSevenZero from './../TwoSevenZero/TwoSevenZero';
+
 // Create store
 import store from './../../store/store';
 
@@ -24,7 +27,9 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/about' component={About} />
               <Route exact path='/audiovisualizer' component={AudioVisualizer} />
+              <Route exact path='/twosevenzero' component={TwoSevenZero} />
               <Route exact path='/clickergame' component={ClickerGame} />
+              <Route exact path='/trumpcard' component={TrumpCard} />
               <Route render={() => <section><h1>Not Found</h1></section>} />
             </Switch>
           </Main>
