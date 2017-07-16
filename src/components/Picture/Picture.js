@@ -14,10 +14,9 @@ class Picture extends Component {
   }
 
   render() {
-    const { alt, src } = this.props;
-
+    const { alt, src, zoomSrc } = this.props;
     return (
-      <img className={styles.picture} alt={alt} src={src} />
+      <img className={styles.picture} alt={alt} src={src} data-original={zoomSrc} />
     );
   }
 }

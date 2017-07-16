@@ -71,9 +71,9 @@ class TwoSevenZero extends Component {
           <h3>Goal</h3>
           <p>
             In order for the candidate to win the Presidency, they must earn at least 270 electoral votes. Players must then enter a
-          state where they have several random trivia to answer. Players earn percentages of a state's vote if they answer trivia correctly.
-          In order to get all of the electoral votes in a state their vote percentage must exceed 50%. Once enough states
-          have been won to reach 270 electoral votes the player becomes President-Elect of the United States of America.
+            state where they have several random trivia to answer. Players earn percentages of a state's vote if they answer trivia correctly.
+            In order to get all of the electoral votes in a state their vote percentage must exceed 50%. Once enough states
+            have been won to reach 270 electoral votes the player becomes President-Elect of the United States of America.
           </p>
           {/* Mockups */}
           <h3>Mockups</h3>

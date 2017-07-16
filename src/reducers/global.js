@@ -39,7 +39,7 @@ const initialState = {
         src: TrumpCardThumbnail,
         desc: 'Trump Card Thumbnail',
       },
-    }
+    },
   ],
 
   // Playground Projects
@@ -65,7 +65,18 @@ const initialState = {
         src: AudioVisThumbnail,
         desc: 'Audio Visualizer Thumbnail',
       },
-    }
+    },
+    {
+      id: 2,
+      name: 'Horsemasks',
+      link: '/horsemask',
+      desc: 'Dawn of the Living Horsemasks',
+      tags: ['C#', 'Game Development', 'Unity'],
+      thumbnail: {
+        src: AudioVisThumbnail,
+        desc: 'Dawn of the Living Horsemasks Thumbnail',
+      },
+    },
   ],
 };
 
