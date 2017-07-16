@@ -75,6 +75,7 @@
 .nav_item {
   flex-basis: 50%;
   padding: var(--padding) 0;
+  overflow: hidden;
 }
 
 .project_container {
@@ -97,13 +98,15 @@
   margin-left: var(--padding);
   display: flex;
   flex-flow: column;
+  overflow: hidden;
 }
 
 .project_desc,
 .project_title {
-   margin: 0;
-   white-space: nowrap;
-   text-overflow: ellipsis;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .project_desc {

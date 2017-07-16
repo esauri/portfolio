@@ -47,7 +47,7 @@ const initialState = {
   playground: [
     {
       id: 0,
-      name: 'Horsemasks',
+      name: 'Horsemask',
       link: '/horsemask',
       desc: 'Dawn of the Living Horsemasks',
       tags: ['C#', 'Game Development', 'Unity'],

@@ -8,10 +8,11 @@ import { Provider } from 'react-redux';
 import Main from './../Main/Main';
 import About from './../About/About';
 import AudioVisualizer from './../AudioVisualizer/AudioVisualizer';
-import ClickerGame from './../ClickerGame/ClickerGame';
-import TrumpCard from './../TrumpCard/TrumpCard';
 import TwoSevenZero from './../TwoSevenZero/TwoSevenZero';
+import ClickerGame from './../ClickerGame/ClickerGame';
 import Horsemasks from './../Horsemasks/Horsemasks';
+import TrumpCard from './../TrumpCard/TrumpCard';
+import NotFound from './../NotFound/NotFound';
 
 // Create store
 import store from './../../store/store';
@@ -32,7 +33,7 @@ class App extends Component {
               <Route exact path='/clickergame' component={ClickerGame} />
               <Route exact path='/horsemask' component={Horsemasks} />
               <Route exact path='/trumpcard' component={TrumpCard} />
-              <Route render={() => <section><h1>Not Found</h1></section>} />
+              <Route component={NotFound} />
             </Switch>
           </Main>
         </Provider>
