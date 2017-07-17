@@ -98,11 +98,8 @@ class Horsemasks extends Component {
           <section className={'wrapper'}>
           {/* Timeline */}
           <h3>Project Timeline</h3>
-          <Row>
-            <Column space={50}>
-              <Picture alt={'Living Horsemask character thumbnail'} src={HorsemaskImage} />
-            </Column>
-            <Column space={50}>
+          <Row wrap reverse>
+            <Column space={'50'}>
               <h4>Ideation &amp; Planning</h4>
               <p>
                 First phase of the project was coming up with the initial plan that encompassed the steering behaviors and how they react to other agents and respond to objects in the environment, flocking, and character motivations.
@@ -123,6 +120,9 @@ class Horsemasks extends Component {
                 I made a draft of how I wanted the city to look, the park with its benches, dumpsters, trees and vending machines as well as the small graveyard north of it.
                 I created the new path the tank would follow with roads. Finally, I implemented the combat and "eliminating" the horsemask by translating it somewhere else.
               </p>
+            </Column>
+            <Column space={'50'}>
+              <Picture alt={'Living Horsemask character thumbnail'} src={HorsemaskImage} />
             </Column>
           </Row>
           </section>

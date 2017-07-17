@@ -36,22 +36,47 @@
 }
 
 .dots li button {
-  background: var(--light);
-  border-radius: 100%;
-  border: none;
+  position: relative;
+  border: 0;
+  background: 0 0;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: 0;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
 }
 
-.dots li button:hover {
+.dots li button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 2em;
+  content: '';
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 100%;
+  color: var(--light-gray);
+  background: currentColor;
+}
+
+.dots li button:hover::before {
   animation: rainbow-color 1s infinite;
 }
 
-.dots li button:focus {
+.dots li button:focus::before {
   outline: 0;
+  color: var(--highlight-color);
 }
 
-:global(li.slick-active button) {
-  transform: scale(1.5);
-  color: var(--highlight-color);
+:global(li.slick-active button::before) {
+  transform: scale(1.25);
+  color: var(--foreground-color);
 }
 
 @keyframes rainbow-color{
