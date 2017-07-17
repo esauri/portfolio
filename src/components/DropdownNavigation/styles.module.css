@@ -1,0 +1,38 @@
+.nav_dropdown {
+  padding: 1em;
+  width: 400px;
+  position: absolute;
+  visibility: hidden;
+  transform: translateX(-45%);
+  z-index: 5;
+}
+
+.nav_dropdown_show,
+.nav_dropdown:hover {
+  visibility: visible;
+  animation: card_show var(--duration);
+}
+
+.arrow {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: 1em;
+  left: 50%;
+  border-radius: 4px;
+  background: var(--background-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: -3px -3px 5px rgba(82,95,127,.04);
+}
+
+@keyframes card_show {
+  0% {
+    opacity: 0;
+    transform: perspective(600px) rotateX(-30deg) translateX(-45%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0) translateX(-45%);
+  }
+}

@@ -1,0 +1,143 @@
+@value tablet-small from './../../styles/variables.module.css';
+
+/* Desktop Nav Links */
+.link {
+  color: var(--foreground-color);
+}
+
+.link::after {
+  display: block;
+  content: '';
+  border-bottom: 2px solid currentColor;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Popup */
+.popup_container {
+  display: none;
+  top: var(--padding);
+  right: 0;
+  width: 100%;
+  position: absolute;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+.popup_container_show {
+  display: block;
+  animation: pop var(--duration);
+}
+
+/* Popup Nav Items */
+
+.nav_section_title {
+  margin: 0;
+  padding: 1em 0 0 1em;
+  color: var(--gray);
+}
+
+.nav_section_title_secondary {
+  background: var(--light);
+}
+
+.nav_list {
+  margin: 0;
+  padding: 1em;
+  list-style-type: none;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.nav_list_secondary {
+  background: var(--light);
+  border-radius: 0 0 4px 4px;
+}
+
+.nav_list_secondary .project_thumbnail {
+  width: 48px;
+  height: 48px;
+}
+
+.nav_list_secondary .project_desc {
+  display: none;
+}
+
+.nav_item {
+  flex-basis: 50%;
+  padding: var(--padding) 0;
+  overflow: hidden;
+}
+
+.project_container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.project_container:hover {
+  text-decoration: none;
+}
+
+.project_thumbnail {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
+
+.project_label {
+  margin-left: var(--padding);
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+}
+
+.project_desc,
+.project_title {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.project_desc {
+  display: none;
+}
+
+@media only screen and (min-width: tablet-small) {
+  .nav_item {
+    flex-basis: 100%;
+  }
+
+  .project_thumbnail {
+    width: 64px;
+    height: 64px;
+  }
+
+  .project_desc {
+    display: block;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.95);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

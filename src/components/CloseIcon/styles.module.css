@@ -1,0 +1,71 @@
+.btn {
+  background: none;
+  position: relative;
+  border: 0;
+  outline: 0;
+  padding: 1em 2em 0;
+  margin-left: auto;
+  display: block;
+}
+
+.close{
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.close::before,
+.close::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: currentColor;
+  border-radius: 4px;
+}
+
+.close::before {
+  transform: rotate(45deg);
+}
+.close::after {
+  transform: rotate(-45deg);
+}
+
+.btn:hover .close::before,
+.btn:hover .close::after,
+
+.btn:focus .close::before,
+.btn:focus .close::after {
+  animation: rainbow-bg 1s infinite;
+}
+
+@keyframes rainbow-bg {
+  0% {
+    background: var(--orange);
+  }
+
+  20% {
+    background: var(--yellow);
+  }
+
+  40% {
+    background: var(--green);
+  }
+
+  60% {
+    background: var(--blue);
+  }
+
+  80% {
+    background: var(--purple);
+  }
+
+  100% {
+    background: var(--red);
+  }
+}

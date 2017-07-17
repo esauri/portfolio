@@ -1,0 +1,26 @@
+@value tablet-small, tablet-large from './../../styles/variables.module.css';
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+}
+
+.nav_bar {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  max-width: tablet-large;
+  padding: 0 1.5em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+@media only screen and (min-width: tablet-small) {
+  .nav_bar {
+     padding: 0 2.5em;
+  }
+}
+

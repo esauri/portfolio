@@ -1,0 +1,46 @@
+.banner {
+  position: relative;
+  background: var(--warm-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: calc(100vh - var(--header-height));
+  z-index: 0;
+}
+
+.invert {
+  color: var(--background-color);
+  text-shadow: var(--foreground-color) 0.5px 0.5px 0.5px;
+}
+
+.chevron_down {
+  position: absolute;
+  left: 50%;
+  bottom: 1em;
+	width: 20px;
+	height: 20px;
+  border: 1px solid currentColor;
+  border-width: 0 1px 1px 0;
+  border-radius: 0 0 4px;
+  transform-origin: 0 100%;
+  transform: rotate(45deg) translateX(-50%);
+  animation: signal 1s ease-out infinite;
+}
+
+@keyframes signal {
+  0% {
+    bottom: 4em;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    bottom: 1em;
+  }
+}
