@@ -2,3 +2,14 @@
   width: 100%;
   overflow-x: hidden;
 }
+
+.social_links {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.social_link {
+  padding: 0 1em;
+}

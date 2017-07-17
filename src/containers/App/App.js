@@ -5,19 +5,18 @@ import { Provider } from 'react-redux';
 
 // Main Container
 
+import Home from './../Home/Home';
 import Main from './../Main/Main';
 import About from './../About/About';
-import AudioVisualizer from './../AudioVisualizer/AudioVisualizer';
-import TwoSevenZero from './../TwoSevenZero/TwoSevenZero';
-import ClickerGame from './../ClickerGame/ClickerGame';
-import Horsemasks from './../Horsemasks/Horsemasks';
-import TrumpCard from './../TrumpCard/TrumpCard';
 import NotFound from './../NotFound/NotFound';
+import TrumpCard from './../TrumpCard/TrumpCard';
+import Horsemasks from './../Horsemasks/Horsemasks';
+import ClickerGame from './../ClickerGame/ClickerGame';
+import TwoSevenZero from './../TwoSevenZero/TwoSevenZero';
+import AudioVisualizer from './../AudioVisualizer/AudioVisualizer';
 
 // Create store
 import store from './../../store/store';
-
-const Home = () => <h1>Erick Sauri Home</h1>;
 
 class App extends Component {
   render() {

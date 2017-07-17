@@ -20,6 +20,10 @@
   }
 
   .column_50 {
+    flex-basis: calc(50% - var(--padding));
+  }
+
+  .column_50.full {
     flex-basis: 50%;
   }
 

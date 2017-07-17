@@ -47,8 +47,6 @@
 
 .dots li button:focus {
   outline: 0;
-  color: var(--white);
-  animation: rainbow-background 1s infinite;
 }
 
 :global(li.slick-active button) {
@@ -79,31 +77,5 @@
 
   100% {
     color: var(--red);
-  }
-}
-
-@keyframes rainbow-background{
-  0% {
-    background: var(--orange);
-  }
-
-  20% {
-    background: var(--yellow);
-  }
-
-  40% {
-    background: var(--green);
-  }
-
-  60% {
-    background: var(--blue);
-  }
-
-  80% {
-    background: var(--purple);
-  }
-
-  100% {
-    background: var(--red);
   }
 }

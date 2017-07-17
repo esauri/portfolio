@@ -46,7 +46,7 @@ class Navigation extends Component {
                   return (
                     <li className={styles.nav_item} key={index}>
                       <Link className={styles.project_container} to={project.link}>
-                        <img className={styles.project_thumbnail} alt={project.thumbnail.desc} src={project.thumbnail.src} />
+                        <img className={styles.project_thumbnail} alt={project.avatar.desc} src={project.avatar.src} />
                         <section className={styles.project_label}>
                           <h3 className={styles.project_title}>{project.name}</h3>
                           <p className={styles.project_desc}>{project.desc}</p>
@@ -65,7 +65,7 @@ class Navigation extends Component {
                   return (
                     <li className={styles.nav_item} key={index}>
                       <Link className={styles.project_container} to={project.link}>
-                        <img className={styles.project_thumbnail} alt={project.thumbnail.desc} src={project.thumbnail.src} />
+                        <img className={styles.project_thumbnail} alt={project.avatar.desc} src={project.avatar.src} />
                         <section className={styles.project_label}>
                           <h3 className={styles.project_title}>{project.name}</h3>
                         </section>
@@ -94,7 +94,7 @@ class Navigation extends Component {
                   return (
                     <li className={styles.nav_item} key={index}>
                       <Link className={styles.project_container} to={project.link}>
-                        <img className={styles.project_thumbnail} alt={project.thumbnail.desc} src={project.thumbnail.src} />
+                        <img className={styles.project_thumbnail} alt={project.avatar.desc} src={project.avatar.src} />
                         <section className={styles.project_label}>
                           <h3 className={styles.project_title}>{project.name}</h3>
                         </section>
@@ -108,7 +108,7 @@ class Navigation extends Component {
                   return (
                     <li className={styles.nav_item} key={index}>
                       <Link className={styles.project_container} to={project.link}>
-                        <img className={styles.project_thumbnail} alt={project.thumbnail.desc} src={project.thumbnail.src} />
+                        <img className={styles.project_thumbnail} alt={project.avatar.desc} src={project.avatar.src} />
                         <section className={styles.project_label}>
                           <h3 className={styles.project_title}>{project.name}</h3>
                         </section>

@@ -1,4 +1,4 @@
-@value mobile-small, mobile-medium, mobile-large, tablet-small, tablet-medium, tablet-large, laptop from './variables.module.css';
+@value tablet-small, tablet-large from './variables.module.css';
 
 html * {
   -webkit-font-smoothing: antialiased;

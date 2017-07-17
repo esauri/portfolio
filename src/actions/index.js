@@ -1,14 +1,21 @@
 import {
   TOGGLE_MOBILE,
-  UPDATE_LOCATION,
   TOGGLE_POPUP_MENU,
   TOGGLE_DROPDOWN_MENU,
+  TOGGLE_BACK_TO_TOP_BUTTON,
 } from './../constants';
 
-export function updateLocation(location) {
+
+/**
+ * toggleBackToTopButton - Action for toggling between showing or hiding
+ * back to top button
+ *
+ * @param {boolean} visible
+ */
+export function toggleBackToTopButton(visible) {
   return {
-    type: UPDATE_LOCATION,
-    payload: location,
+    type: TOGGLE_BACK_TO_TOP_BUTTON,
+    payload: visible,
   };
 }
 
