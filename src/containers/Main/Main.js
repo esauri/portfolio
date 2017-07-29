@@ -133,7 +133,7 @@ class Main extends Component {
     const { dispatchMobileToggle } = this.props;
 
     // Maximum size for mobile
-    const LAYOUT_THRESHOLD = 600;
+    const LAYOUT_THRESHOLD = 768;
 
     // We're in mobile if width is less than 600
     dispatchMobileToggle(LAYOUT_THRESHOLD > window.innerWidth);

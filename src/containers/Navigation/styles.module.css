@@ -1,4 +1,4 @@
-@value tablet-small from './../../styles/variables.module.css';
+@value tablet-medium from './../../styles/variables.module.css';
 
 /* Desktop Nav Links */
 .link {
@@ -113,7 +113,7 @@
   display: none;
 }
 
-@media only screen and (min-width: tablet-small) {
+@media only screen and (min-width: tablet-medium) {
   .nav_item {
     flex-basis: 100%;
   }
