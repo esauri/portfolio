@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiDeviceDesktop from 'react-icons/lib/ti/device-desktop';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -22,7 +23,11 @@ class AudioVisualizer extends Component {
     return (
       <article>
         {/* Banner */}
-        <Banner src={AudioVisualizerBanner} invert />
+        <Banner
+          isMobile={this.props.mobile}
+          src={AudioVisualizerBanner}
+          invert
+        />
         {/* Content */}
         <section className='wrapper'>
             {/* Intro */}
@@ -96,4 +101,10 @@ class AudioVisualizer extends Component {
   }
 }
 
-export default AudioVisualizer;
+const mapStateToProps = state => {
+  return {
+    mobile: state.global.mobile,
+  };
+}
+
+export default connect(mapStateToProps)(AudioVisualizer);

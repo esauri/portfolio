@@ -3,12 +3,12 @@ import styles from './styles.module.css';
 
 class Banner extends Component {
   render() {
-    const { src, invert } = this.props;
+    const { src, invert, isMobile } = this.props;
 
     return (
       <section
         className={`${styles.banner} ${(invert) ? styles.invert : ''}`}
-        style={{ background: `url(${src}) no-repeat fixed center center`, backgroundSize: 'cover' }}
+        style={{ background: `url(${src}) center / cover ${(isMobile) ? '' : 'fixed'} no-repeat` }}
       >
         { this.props.children }
         <span className={styles.chevron_down} />
