@@ -9,7 +9,7 @@ class Picture extends Component {
     // If zooming
     if (zooming) {
       // Add event listener
-      zooming.listen(`.${styles.picture}`);
+      zooming.listen(`.${styles.picture}`, { passive: true });
     }
   }
 
