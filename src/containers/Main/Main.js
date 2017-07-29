@@ -39,7 +39,7 @@ class Main extends Component {
     this.handleResize();
 
     // Add event listeners
-    window.addEventListener('resize', this.handleResize);
+    window.addEventListener('resize', this.handleResize, { passive: true });
     window.addEventListener('scroll', this.scrollButtonToggle);
   }
 
