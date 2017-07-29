@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import FaGamepad from 'react-icons/lib/fa/gamepad';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -27,7 +28,11 @@ class ClickerGame extends Component {
     return (
       <article>
         {/* Banner */}
-        <Banner src={ClickerGameBanner} invert />
+        <Banner
+          isMobile={this.props.mobile}
+          src={ClickerGameBanner}
+          invert
+        />
         {/* Content */}
         <section className='wrapper'>
           {/* Intro */}
@@ -120,4 +125,10 @@ class ClickerGame extends Component {
   }
 }
 
-export default ClickerGame;
+const mapStateToProps = state => {
+  return {
+    mobile: state.global.mobile,
+  };
+}
+
+export default connect(mapStateToProps)(ClickerGame);

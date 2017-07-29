@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Zooming from 'zooming';
+import { connect } from 'react-redux';
 import TiDevicePhone from 'react-icons/lib/ti/device-phone';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -37,7 +38,11 @@ class TwoSevenZero extends Component {
     return (
       <article>
         {/* Banner */}
-        <Banner src={TwoSevenZeroBanner} invert />
+        <Banner
+          isMobile={this.props.mobile}
+          src={TwoSevenZeroBanner}
+          invert
+        />
         {/* Content */}
         <section className={'wrapper'}>
           {/* Intro */}
@@ -212,4 +217,10 @@ class TwoSevenZero extends Component {
   }
 }
 
-export default TwoSevenZero;
+const mapStateToProps = state => {
+  return {
+    mobile: state.global.mobile,
+  };
+}
+
+export default connect(mapStateToProps)(TwoSevenZero);

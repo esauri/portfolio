@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import TiDevicePhone from 'react-icons/lib/ti/device-phone';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -27,7 +28,11 @@ class TrumpCard extends Component {
     return (
       <article>
         {/* Banner */}
-        <Banner src={TrumpCardBanner} invert />
+        <Banner
+          isMobile={this.props.mobile}
+          src={TrumpCardBanner}
+          invert
+        />
         {/* Content */}
         <section className={'wrapper'}>
           {/* Intro */}
@@ -143,4 +148,10 @@ class TrumpCard extends Component {
   }
 }
 
-export default TrumpCard;
+const mapStateToProps = state => {
+  return {
+    mobile: state.global.mobile,
+  };
+}
+
+export default connect(mapStateToProps)(TrumpCard);
