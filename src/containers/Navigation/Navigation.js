@@ -77,7 +77,14 @@ class Navigation extends Component {
             </ul>
           </DropdownNavigation>
         </span>
-        <a className={styles.link} href='media/resume.pdf' target='_blank'>Resume</a>
+        <a
+          className={styles.link}
+          href='https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2Fresume.pdf?alt=media&token=96224ac0-2c3e-4dce-98d2-cf64f73c0a2a'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Resume
+        </a>
       </GlobalNavigation>
     );
 
@@ -128,7 +135,13 @@ class Navigation extends Component {
                 <Link to='/about'>About</Link>
               </li>
               <li className={styles.nav_item}>
-                <a href='media/resume.pdf' target='_blank'>Resume</a>
+                <a
+                  href='https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2Fresume.pdf?alt=media&token=96224ac0-2c3e-4dce-98d2-cf64f73c0a2a'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Resume
+                </a>
               </li>
             </ul>
         </PopupNavigation>

@@ -15,12 +15,13 @@ import Avatar from './../../assets/img/misc/me.jpg';
 import styles from './styles.module.css';
 
 class About extends Component {
+
   render() {
     return (
       <section className={styles.container}>
         {/* About Me */}
         <section className='wrapper'>
-          <img className={styles.avatar} src={Avatar} alt='Erick Sauri' title='Erick Sauri' />
+          <img className='avatar' src={Avatar} alt='Erick Sauri' title='Erick Sauri' />
           <header className={styles.resume_header}>
             <h2 className={styles.resume_title}>About Me</h2>
           </header>
@@ -148,7 +149,13 @@ class About extends Component {
         {/* CTA PDF version */}
         <CallToAction>
           <h3>Looking for a PDF of printable version of my resume?</h3>
-           <a href='media/resume.pdf' target='_blank'><Button>Resume</Button></a>
+           <a
+            href='https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2Fresume.pdf?alt=media&token=96224ac0-2c3e-4dce-98d2-cf64f73c0a2a'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+          <Button>Resume</Button>
+        </a>
         </CallToAction>
         {/* TODO: Contact Form */}
       </section>

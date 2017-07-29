@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // Main Container
-
 import Home from './../Home/Home';
 import Main from './../Main/Main';
 import About from './../About/About';

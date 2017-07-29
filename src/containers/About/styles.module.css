@@ -4,7 +4,7 @@
   margin-top: 2em;
 }
 
-.avatar {
+:global(.avatar) {
   display: block;
   margin: 0 auto;
   width: 100%;
