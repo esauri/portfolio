@@ -123,7 +123,7 @@ class About extends Component {
                 <Tag>Swift</Tag>
               </Tags>
               <p>
-                Build in Swift, Trump Card is a take on the 2016
+                Built in Swift, Trump Card is a take on the 2016
                 presidential election where players take the role
                 of then candidate Donald Trump. Set in a press conference,
                 the player must answer various questions and is given two choices,

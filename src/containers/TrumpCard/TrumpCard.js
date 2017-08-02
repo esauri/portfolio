@@ -56,7 +56,7 @@ class TrumpCard extends Component {
           {/* Description */}
           <h3>Description</h3>
           <p>
-            Trump Card is an iOS app that I developed for my Mobile App Dev class.
+            Trump Card is an iOS app I developed for my Mobile App Dev class.
             In the game the player takes the role of Donald J. Trump as the Presidential
             nominee. The setting is a press conference where players are asked questions
             by the press and each question has two choices, one choice is generally a response a
