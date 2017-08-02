@@ -77,6 +77,9 @@ class Navigation extends Component {
             </ul>
           </DropdownNavigation>
         </span>
+        <a className={styles.link} href='https://github.com/esauri' target='_blank' rel='noopener noreferrer'>
+          Github
+        </a>
         <a
           className={styles.link}
           href='https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2Fresume.pdf?alt=media&token=96224ac0-2c3e-4dce-98d2-cf64f73c0a2a'
@@ -133,6 +136,11 @@ class Navigation extends Component {
               </li>
               <li className={styles.nav_item}>
                 <Link to='/about'>About</Link>
+              </li>
+              <li className={styles.nav_item}>
+                <a href='https://github.com/esauri' target='_blank' rel='noopener noreferrer'>
+                  Github
+                </a>
               </li>
               <li className={styles.nav_item}>
                 <a
