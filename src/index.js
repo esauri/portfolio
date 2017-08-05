@@ -10,5 +10,6 @@ import App from './containers/App/App';
 
 const mountNode = document.getElementById('app');
 
+console.log('\n %c Howdy folks \n', 'background: #272727; color: #f3f6fa; padding: 10px;');
 ReactDOM.render(<App />, mountNode);
 registerServiceWorker();

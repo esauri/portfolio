@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Row from './../../components/Row/Row';
 import Card from './../../components/Card/Card';
 import Column from './../../components/Column/Column';
+import MidnightCruise from './../MidnightCruise/MidnightCruise';
 
 // Styles
 import styles from './styles.module.css';
@@ -14,12 +15,14 @@ class Home extends Component {
     const { projects } = this.props;
     return (
       <article className={styles.container}>
-        <section className={'wrapper'}>
-          <h2>Hi there, I'm Erick Sauri!</h2>
-          <p className={styles.intro}>
-            I'm a creative developer who focuses on front-end interactive experiences, web &amp; mobile apps, and games.
-          </p>
-        </section>
+        <MidnightCruise>
+          <section className={'wrapper'}>
+            <h2>Hi there, I'm Erick Sauri!</h2>
+            <p className={styles.intro}>
+              I'm a creative developer who focuses on front-end interactive experiences, web &amp; mobile apps, and games.
+            </p>
+          </section>
+        </MidnightCruise>
         {/* Projects */}
         <section className={'wrapper'}>
           <Row wrap>
