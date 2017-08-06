@@ -56,12 +56,14 @@ function registerValidSW(swUrl) {
               // the fresh content will have been added to the cache.
               // It's the perfect time to display a "New content is
               // available; please refresh." message in your web app.
-              console.log('%c 🤗 New content is available; please refresh.');
+              console.log('%c 🤗 New content is available; please refresh.',
+                'background: #272727; color: #7dcf85; padding: 5px; line-height: 1.5;');
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
               // "Content is cached for offline use." message.
-              console.log('%c 😎 Content is cached for offline use.');
+              console.log('%c 😎 Content is cached for offline use.',
+                'background: #272727; color: #5480f1; padding: 5px; line-height: 1.5;');
             }
           }
         };
@@ -94,7 +96,8 @@ function checkValidServiceWorker(swUrl) {
     })
     .catch(() => {
       console.log(
-        '%c 🔌 No internet connection found. App is running in offline mode.'
+        '%c 🔌 No internet connection found. App is running in offline mode.',
+        'background: #272727; color: #e74c3c; padding: 5px; line-height: 1.5;'
       );
     });
 }
