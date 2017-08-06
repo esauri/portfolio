@@ -1,10 +1,10 @@
 .canvas {
-  background: var(--foreground-color);
-  position: relative;
   display: flex;
-  margin-bottom: -2em;
   flex-flow: column;
+  position: relative;
+  margin-bottom: -1em;
   justify-content: center;
+  background: var(--foreground-color);
 }
 
 .canvas :global(.wrapper) {

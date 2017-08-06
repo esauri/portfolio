@@ -180,7 +180,7 @@ class MidnightCruise extends Component {
         if (circle.shape.x > 0) {
           // Move it left
           star.beginFill(circle.fillColor, circle.fillAlpha);
-          star.drawCircle(circle.shape.x - getRandomBetween(1, 3), circle.shape.y, circle.shape.radius);
+          star.drawCircle(circle.shape.x - 3, circle.shape.y, circle.shape.radius);
         } else {
           // Otherwise if star is out of bounds
           // Create new circle properties

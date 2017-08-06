@@ -17,7 +17,7 @@ class Home extends Component {
       <article>
         <MidnightCruise>
           <section className={'wrapper'}>
-            <h2>Hi there, I'm Erick Sauri!</h2>
+            <h2 className={styles.heading}>Hi there, I'm Erick Sauri!</h2>
             <p className={styles.intro}>
               I'm a creative developer who focuses on front-end interactive experiences, web &amp; mobile apps, and games.
             </p>

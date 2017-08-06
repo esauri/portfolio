@@ -1,6 +1,39 @@
+@value mobile-medium, tablet-small, tablet-medium from './../../styles/variables.module.css';
+
+.heading {
+  font-size: 0.9rem;
+}
+
 .intro {
   width: 100%;
   margin: 0 auto;
   max-width: 480px;
+  font-size: 0.75rem;
   text-shadow: var(--foreground-color) 0.5px 0.5px 0.5px;
+}
+
+@media only screen and (min-width: mobile-medium) {
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .intro {
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (min-width: tablet-small) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: tablet-medium) {
+  .heading {
+    font-size: 2rem;
+  }
 }
