@@ -14,7 +14,7 @@ class Home extends Component {
   render() {
     const { projects } = this.props;
     return (
-      <article className={styles.container}>
+      <article>
         <MidnightCruise>
           <section className={'wrapper'}>
             <h2>Hi there, I'm Erick Sauri!</h2>

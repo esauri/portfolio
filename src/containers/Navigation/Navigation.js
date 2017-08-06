@@ -160,13 +160,13 @@ class Navigation extends Component {
   }
 
   render() {
-    const { mobile, handleHamburgerBtnClick } = this.props;
+    const { mobile, sticky, handleHamburgerBtnClick } = this.props;
 
     // IF mobile show hamburger menu icon
     const hamburgerMenu = (mobile) ? <HamburgerIcon onClickEvent={() => { handleHamburgerBtnClick(true); }} /> : null;
 
     return (
-      <Header>
+      <Header sticky={sticky}>
         <h1><Link className={styles.link} to=''>Erick Sauri</Link></h1>
         { hamburgerMenu }
         { this.renderNavigation() }
@@ -183,6 +183,7 @@ class Navigation extends Component {
 const mapStateToProps = state => {
   return {
     mobile: state.global.mobile,
+    sticky: state.global.backToTop,
     projects: state.global.projects,
     playground: state.global.playground,
     showDropdown: state.global.showDropdown,

@@ -1,8 +1,24 @@
 @value tablet-small, tablet-large from './../../styles/variables.module.css';
 
 .header {
-  width: 100%;
   height: var(--header-height);
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  color: var(--background-color);
+}
+
+.header.reverse:not(.sticky) {
+  color: var(--foreground-color);
+}
+
+.header.sticky {
+  position: fixed;
+  color: var(--foreground-color);
+  box-shadow: 0 1px 2px var(--gray);
+  background: var(--background-color);
+  animation: slide-down var(--duration) ease-in-out;
 }
 
 .nav_bar {
@@ -21,6 +37,16 @@
 @media only screen and (min-width: tablet-small) {
   .nav_bar {
      padding: 0 2.5em;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    top: -100px;
+  }
+
+  100% {
+    top: 0;
   }
 }
 
