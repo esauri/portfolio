@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 // Components
@@ -10,39 +10,34 @@ import MidnightCruise from './../../containers/MidnightCruise/MidnightCruise';
 // Styles
 import styles from './styles.module.css';
 
-class Home extends Component {
-  render() {
-    const { projects } = this.props;
-    return (
-      <article>
-        <MidnightCruise>
-          <section className={'wrapper'}>
-            <h2 className={styles.heading}>Hi there, I'm Erick Sauri!</h2>
-            <p className={styles.intro}>
-              I'm a creative developer who focuses on front-end interactive experiences, web &amp; mobile apps, and games.
-            </p>
-          </section>
-        </MidnightCruise>
-        {/* Projects */}
-        <section className={'wrapper'}>
-          <Row wrap>
-            {
-              projects.map((project, index) => {
-                return (
-                  <Column key={index} space={project.style.gutter} full>
-                    <Card
-                      project={project}
-                    />
-                  </Column>
-                );
-              })
-            }
-          </Row>
-        </section>
-      </article>
-    );
-  }
-}
+const Home = ({ projects }) => (
+  <article>
+    <MidnightCruise>
+      <section className={'wrapper'}>
+        <h2 className={styles.heading}>Hi there, I'm Erick Sauri!</h2>
+        <p className={styles.intro}>
+          I'm a creative developer who focuses on front-end interactive experiences, web &amp; mobile apps, and games.
+        </p>
+      </section>
+    </MidnightCruise>
+    {/* Projects */}
+    <section className={'wrapper'}>
+      <Row wrap>
+        {
+          projects.map((project, index) => {
+            return (
+              <Column key={index} space={project.style.gutter} full>
+                <Card
+                  project={project}
+                />
+              </Column>
+            );
+          })
+        }
+      </Row>
+    </section>
+  </article>
+);
 
 /**
  * mapStateToProps
