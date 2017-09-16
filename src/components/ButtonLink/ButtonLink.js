@@ -1,15 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './styles.module.css';
 
-class ButtonLink extends Component {
-  render() {
-    return (
-      <Link className={styles.btn} to={this.props.to}>
-        { this.props.children }
-      </Link>
-    );
-  }
-}
-
-export default ButtonLink;
+export default ({ to, children }) => (
+  <Link className={styles.btn} to={to}>
+    { children }
+  </Link>
+);
