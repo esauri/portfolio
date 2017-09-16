@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Row from './../../components/Row/Row';
 import Card from './../../components/Card/Card';
 import Column from './../../components/Column/Column';
-import MidnightCruise from './../MidnightCruise/MidnightCruise';
+import MidnightCruise from './../../containers/MidnightCruise/MidnightCruise';
 
 // Styles
 import styles from './styles.module.css';

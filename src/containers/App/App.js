@@ -4,15 +4,15 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // Main Container
-import Home from './../Home/Home';
 import Main from './../Main/Main';
-import About from './../About/About';
-import NotFound from './../NotFound/NotFound';
-import TrumpCard from './../TrumpCard/TrumpCard';
-import Horsemasks from './../Horsemasks/Horsemasks';
-import ClickerGame from './../ClickerGame/ClickerGame';
-import TwoSevenZero from './../TwoSevenZero/TwoSevenZero';
-import AudioVisualizer from './../AudioVisualizer/AudioVisualizer';
+import Home from './../../pages/Home/Home';
+import About from './../../pages/About/About';
+import NotFound from './../../pages/NotFound/NotFound';
+import TrumpCard from './../../pages/TrumpCard/TrumpCard';
+import Horsemasks from './../../pages/Horsemasks/Horsemasks';
+import ClickerGame from './../../pages/ClickerGame/ClickerGame';
+import TwoSevenZero from './../../pages/TwoSevenZero/TwoSevenZero';
+import AudioVisualizer from './../../pages/AudioVisualizer/AudioVisualizer';
 
 // Create store
 import store from './../../store/store';

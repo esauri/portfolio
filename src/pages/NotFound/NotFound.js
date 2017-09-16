@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // Components
 import ButtonLink from './../../components/ButtonLink/ButtonLink';
-import MidnightCruise from './../MidnightCruise/MidnightCruise';
+import MidnightCruise from './../../containers/MidnightCruise/MidnightCruise';
 
 // Styles
 import styles from './styles.module.css';
