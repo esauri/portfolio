@@ -1,6 +1,32 @@
 .container {
   width: 100%;
   overflow-x: hidden;
+  background: var(--base);
+  color: var(--foreground);
+}
+
+.light_theme {
+  --base: var(--white);
+  --base-2: var(--light);
+  --base-1: #f3f6fa;
+  --base-3: var(--gray);
+
+  --foreground: var(--black);
+  --foreground-1: var(--black-2);
+  --nav-shadow: rgba(7, 6, 6, 0.4);
+  --accent: var(--red);
+}
+
+.dark_theme {
+  --base: var(--black-1);
+  --base-1: var(--black-3);
+  --base-2: var(--black-2);
+  --base-3: var(--black-5);
+
+  --foreground: var(--white);
+  --foreground-1: var(--light);
+  --nav-shadow: rgba(34, 34, 34, 0.4);
+  --accent: var(--red);
 }
 
 .social_links {

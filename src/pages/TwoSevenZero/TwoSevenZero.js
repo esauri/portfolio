@@ -78,8 +78,8 @@ const TwoSevenZero = ({ mobile }) => (
         In order to get all of the electoral votes in a state their vote percentage must exceed 50%. Once enough states
         have been won to reach 270 electoral votes the player becomes President-Elect of the United States of America.
       </p>
-      </section>
-      <section className={'wrapper'}>
+    </section>
+    <section className={'wrapper'}>
       {/* Mockups */}
       <h3>Mockups</h3>
       <Picture alt={'Mockup main screens'} zooming={zooming} src={TwoSevenZeroMockupMainImage} />
@@ -204,7 +204,7 @@ const TwoSevenZero = ({ mobile }) => (
     <CallToAction>
       <h3>Want to check out the repo?</h3>
       {/* Github */}
-      <a href='https://github.com/esauri/270' target='_blank' rel='noopener noreferrer'>
+      <a href={'https://github.com/esauri/270'} target={'_blank'} rel={'noopener noreferrer'}>
         <Button>
           <TiSocialGithub size={28} /> View Project
         </Button>

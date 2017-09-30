@@ -45,8 +45,8 @@ export default () => (
             <Tag>Front End Developer</Tag>
           </Tags>
           <p>
-            Tasked to create a progressive web app using Ionic 3 and Angular.
-            Dealt with data visualization using libraries such as Highcharts.
+            Developed a hybrid app with Ionic, Angular, and Cordova for data visualization of ferrous and non-ferrous materials tracked by oil sensors.
+            Utilized ReactiveX for predictable state management and observable based patterns.
           </p>
         </Column>
         <Column space={'50'}>
@@ -147,7 +147,7 @@ export default () => (
     <CallToAction>
       <h3>Looking for a PDF of printable version of my resume?</h3>
       <a
-        href={'https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2Fresume.pdf?alt=media&token=96224ac0-2c3e-4dce-98d2-cf64f73c0a2a'}
+        href={'https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2FErickSauriResume.pdf?alt=media&token=f0555afe-d95a-4a28-a66d-e268bab081dd'}
         target={'_blank'}
         rel={'noopener noreferrer'}
       >

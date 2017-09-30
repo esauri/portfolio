@@ -6,10 +6,9 @@
   line-height: 1.4;
   border-radius: 4px;
   box-sizing: border-box;
-  background: var(--light);
+  background: var(--base-2);
   text-transform: uppercase;
-  color: var(--highlight-color);
-  border-bottom: 6px solid var(--light-gray);
+  color: var(--accent);
   padding: var(--padding) calc(var(--padding) * 3);
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 }
@@ -40,7 +39,6 @@
 }
 
 .btn:focus {
-  border-bottom: 4px solid var(--light-gray);
   outline: 0;
 }
 

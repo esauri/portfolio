@@ -2,6 +2,7 @@
 
 .heading {
   font-size: 0.9rem;
+  /* text-align: center; */
 }
 
 .intro {
@@ -9,7 +10,8 @@
   margin: 0 auto;
   max-width: 480px;
   font-size: 0.75rem;
-  text-shadow: var(--foreground-color) 0.5px 0.5px 0.5px;
+  text-align: center;
+  /* text-shadow: var(--foreground) 0.5px 0.5px 0.5px; */
 }
 
 @media only screen and (min-width: mobile-medium) {

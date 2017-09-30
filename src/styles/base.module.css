@@ -12,8 +12,8 @@ html * {
 }
 
 ::selection {
-  background: var(--dark);
-  color: var(--light);
+  background: var(--foreground-1);
+  color: var(--base-1);
 }
 
 body {
@@ -43,7 +43,7 @@ p {
 }
 
 a {
-  color: var(--highlight-color);
+  color: var(--accent);
   text-decoration: none;
 }
 

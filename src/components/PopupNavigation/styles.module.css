@@ -1,11 +1,11 @@
 .container {
   display: block;
   width: 100%;
-  background: var(--background-color);
+  background: var(--base-2);
   border-radius: 4px;
-  box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+  /* box-shadow: 0 50px 100px var(--nav-shadow), 0 15px 35px var(--nav-shadow), 0 5px 15px var(--nav-shadow); */
 }
 
 .container a {
-  color: var(--dark);
+  color: var(--foreground);
 }

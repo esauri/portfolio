@@ -1,8 +1,8 @@
 .tag {
   font-size: 0.85em;
-  color: var(--gray);
+  color: var(--base-3);
   border-radius: 50px;
   margin: 1em 1em 1em 0;
   padding: 4px var(--padding);
-  border: 1px solid var(--gray);
+  border: 1px solid var(--base-3);
 }

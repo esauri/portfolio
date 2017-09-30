@@ -5,23 +5,17 @@ import { connect } from 'react-redux';
 import Row from './../../components/Row/Row';
 import Card from './../../components/Card/Card';
 import Column from './../../components/Column/Column';
-import MidnightCruise from './../../containers/MidnightCruise/MidnightCruise';
 
 // Styles
 import styles from './styles.module.css';
 
 const Home = ({ projects }) => (
   <article>
-    <MidnightCruise>
-      <section className={'wrapper'}>
-        <h2 className={styles.heading}>Hi there, I'm Erick Sauri!</h2>
-        <p className={styles.intro}>
-          I'm a creative developer who focuses on front-end interactive experiences, web &amp; mobile apps, and games.
-        </p>
-      </section>
-    </MidnightCruise>
-    {/* Projects */}
     <section className={'wrapper'}>
+      <h2 className={styles.heading}>Hi there, I'm Erick Sauri! A front-end developer who works on web and mobile apps.</h2>
+    </section>
+    {/* Projects */}
+    <section className={'w2rapper'}>
       <Row wrap>
         {
           projects.map((project, index) => {
