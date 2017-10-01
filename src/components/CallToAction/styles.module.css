@@ -1,8 +1,9 @@
 .cta {
-  background: #e4e4e4;
+  background: var(--base-1);
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 4em;
 }

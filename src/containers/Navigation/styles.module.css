@@ -1,5 +1,21 @@
 @value tablet-medium from './../../styles/variables.module.css';
 
+.fill_space {
+  flex: 1 1 auto;
+}
+
+.button {
+  border: 0;
+  padding: 0;
+  color: inherit;
+  background: none;
+  margin-left: var(--padding);
+}
+
+.button:focus {
+  outline: 0;
+}
+
 /* Desktop Nav Links */
 .link {
   color: inherit;
@@ -42,11 +58,7 @@
 .nav_section_title {
   margin: 0;
   padding: 1em 0 0 1em;
-  color: var(--gray);
-}
-
-.nav_section_title_secondary {
-  background: var(--light);
+  color: var(--base-3);
 }
 
 .nav_list {
@@ -59,7 +71,6 @@
 }
 
 .nav_list_secondary {
-  background: var(--light);
   border-radius: 0 0 4px 4px;
 }
 

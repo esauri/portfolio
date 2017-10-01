@@ -1,0 +1,42 @@
+@value mobile-medium, tablet-small, tablet-medium from './../../styles/variables.module.css';
+
+.projects {
+  margin-top: 1em;
+}
+
+.intro {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: mobile-medium) {
+  .heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: tablet-small) {
+  .intro {
+    height: 300px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: tablet-medium) {
+  .intro {
+    height: 400px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}

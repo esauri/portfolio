@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import TiLightbulb from 'react-icons/lib/ti/lightbulb';
 
 // Components
 import Header from './../../components/Header/Header';
@@ -11,7 +12,7 @@ import GlobalNavigation from './../../components/GlobalNavigation/GlobalNavigati
 import DropdownNavigation from './../../components/DropdownNavigation/DropdownNavigation';
 
 // Actions
-import { togglePopupMenu, toggleDropdownMenu } from './../../actions';
+import { toggleDarkTheme, togglePopupMenu, toggleDropdownMenu } from './../../actions';
 
 // Styles
 import styles from './styles.module.css';
@@ -27,6 +28,8 @@ class Navigation extends Component {
       handleDropdownToggle,
       handleHamburgerBtnClick,
     } = this.props;
+
+    const resumeLink = 'https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2FErickSauriResume.pdf?alt=media&token=f0555afe-d95a-4a28-a66d-e268bab081dd';
 
     const desktopNav = (
       <GlobalNavigation>
@@ -58,7 +61,7 @@ class Navigation extends Component {
               }
             </ul>
             {/* Playground */}
-            <h3 className={`${styles.nav_section_title} ${styles.nav_section_title_secondary}`}>Playground</h3>
+            <h3 className={styles.nav_section_title}>Playground</h3>
             <ul className={`${styles.nav_list} ${styles.nav_list_secondary}`}>
               {
                 playground.map((project, index) => {
@@ -82,7 +85,7 @@ class Navigation extends Component {
         </a>
         <a
           className={styles.link}
-          href='https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2Fresume.pdf?alt=media&token=96224ac0-2c3e-4dce-98d2-cf64f73c0a2a'
+          href={resumeLink}
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -129,7 +132,7 @@ class Navigation extends Component {
               }
             </ul>
             {/* Secondary Links */}
-            <h3 className={`${styles.nav_section_title} ${styles.nav_section_title_secondary}`}>General</h3>
+            <h3 className={styles.nav_section_title}>General</h3>
             <ul className={`${styles.nav_list} ${styles.nav_list_secondary}`}>
               <li className={styles.nav_item}>
                 <Link to=''>Home</Link>
@@ -144,7 +147,7 @@ class Navigation extends Component {
               </li>
               <li className={styles.nav_item}>
                 <a
-                  href='https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2Fresume.pdf?alt=media&token=96224ac0-2c3e-4dce-98d2-cf64f73c0a2a'
+                  href={resumeLink}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -159,8 +162,9 @@ class Navigation extends Component {
     return (mobile) ? mobileNav : desktopNav;
   }
 
+
   render() {
-    const { mobile, sticky, handleHamburgerBtnClick } = this.props;
+    const { mobile, theme, sticky, handleThemeChange, handleHamburgerBtnClick } = this.props;
 
     // IF mobile show hamburger menu icon
     const hamburgerMenu = (mobile) ? <HamburgerIcon onClickEvent={() => { handleHamburgerBtnClick(true); }} /> : null;
@@ -168,8 +172,12 @@ class Navigation extends Component {
     return (
       <Header sticky={sticky}>
         <h1><Link className={styles.link} to=''>Erick Sauri</Link></h1>
+        <span className={styles.fill_space} />
         { hamburgerMenu }
         { this.renderNavigation() }
+        <button className={styles.button} onClick={() => { handleThemeChange(!theme); }}>
+          <TiLightbulb size={20} />
+        </button>
       </Header>
     );
   }
@@ -182,6 +190,7 @@ class Navigation extends Component {
  */
 const mapStateToProps = state => {
   return {
+    theme: state.global.theme,
     mobile: state.global.mobile,
     sticky: state.global.backToTop,
     projects: state.global.projects,
@@ -198,6 +207,9 @@ const mapStateToProps = state => {
  */
 const mapDispatchToProps = dispatch => {
   return {
+    handleThemeChange: dark => {
+      dispatch(toggleDarkTheme(dark));
+    },
     handleHamburgerBtnClick: open => {
       dispatch(togglePopupMenu(open));
     },

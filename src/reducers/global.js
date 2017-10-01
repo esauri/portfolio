@@ -1,5 +1,6 @@
 import {
   TOGGLE_MOBILE,
+  TOGGLE_DARK_THEME,
   TOGGLE_POPUP_MENU,
   TOGGLE_DROPDOWN_MENU,
   TOGGLE_BACK_TO_TOP_BUTTON,
@@ -7,19 +8,22 @@ import {
 
 // Assets
 // Avatars
-import AudioVisAvatar from './../assets/img/audiovisualizer/public/small/avatar.jpg';
 import ClickerAvatar from './../assets/img/clickergame/public/small/avatar.jpg';
 import TrumpCardAvatar from './../assets/img/trumpcard/public/small/avatar.png';
 import TwoSevenZeroAvatar from './../assets/img/270/public/small/avatar.png';
 import HorsemaskAvatar from './../assets/img/horsemasks/avatar.png';
+import VenuAvatar from './../assets/img/venu/avatar.png';
+
 // Thumbnails
 import TwoSevenZeroThumbnail from './../assets/img/270/public/large/thumbnail2.jpg'
 import TrumpCardThumbnail from './../assets/img/trumpcard/public/large/thumbnail.jpg';
 import ClickerGameThumbnail from './../assets/img/clickergame/public/large/thumbnail.jpg';
+import VenuThumbnail from './../assets/img/venu/thumbnail.jpeg';
 
 // Create intial app state
 const initialState = {
   mobile: true,
+  theme: true,
   backToTop: false,
   showDropdown: false,
   mobileNavOpen: false,
@@ -28,6 +32,25 @@ const initialState = {
   projects: [
     {
       id: 0,
+      name: 'VENU',
+      link: '/venu',
+      desc: 'Wayfinding for Imagine RIT',
+      tags: ['Progressive Web App Development', 'React'],
+      avatar: {
+        src: VenuAvatar,
+        desc: 'Venu Avatar',
+      },
+      thumbnail: {
+        src: VenuThumbnail,
+        desc: 'Venu Thumbnail',
+      },
+      style: {
+        invert: true,
+        gutter: '100',
+      },
+    },
+    {
+      id: 1,
       name: 'Trump Card',
       link: '/trumpcard',
       desc: 'Make America Great Again?',
@@ -42,11 +65,11 @@ const initialState = {
       },
       style: {
         invert: true,
-        gutter: '100',
+        gutter: '50',
       },
     },
     {
-      id: 1,
+      id: 2,
       name: '270',
       link: '/twosevenzero',
       desc: 'Race to the White House',
@@ -58,25 +81,6 @@ const initialState = {
       thumbnail: {
         src: TwoSevenZeroThumbnail,
         desc: '270 Thumbnail',
-      },
-      style: {
-        invert: true,
-        gutter: '50',
-      },
-    },
-    {
-      id: 2,
-      name: 'Clicker Game',
-      link: '/clickergame',
-      desc: 'Save Bob!',
-      tags: ['Canvas', 'Game Development', 'Javascipt'],
-      avatar: {
-        src: ClickerAvatar,
-        desc: 'Clicker Game Avatar',
-      },
-      thumbnail: {
-        src: ClickerGameThumbnail,
-        desc: 'Clicker Game Thumbnail',
       },
       style: {
         invert: true,
@@ -100,13 +104,21 @@ const initialState = {
     },
     {
       id: 1,
-      name: 'Audio Visualizer',
-      link: '/audiovisualizer',
-      desc: '',
-      tags: ['Canvas', 'Javascript', 'Web App Development', 'Web Audio'],
+      name: 'Clicker Game',
+      link: '/clickergame',
+      desc: 'Save Bob!',
+      tags: ['Canvas', 'Game Development', 'Javascipt'],
       avatar: {
-        src: AudioVisAvatar,
-        desc: 'Audio Visualizer Avatar',
+        src: ClickerAvatar,
+        desc: 'Clicker Game Avatar',
+      },
+      thumbnail: {
+        src: ClickerGameThumbnail,
+        desc: 'Clicker Game Thumbnail',
+      },
+      style: {
+        invert: true,
+        gutter: '50',
       },
     },
   ],
@@ -114,6 +126,7 @@ const initialState = {
 
 /**
  * globalReducer - Global reducer for redux store
+ *
  * @param {Object} state
  * @param {Object} action
  */
@@ -123,6 +136,8 @@ function globalReducer(state = initialState, action) {
       return { ...state, mobile: action.payload };
     case TOGGLE_BACK_TO_TOP_BUTTON:
       return { ...state, backToTop: action.payload };
+    case TOGGLE_DARK_THEME:
+      return { ...state, theme: action.payload };
     case TOGGLE_POPUP_MENU:
       return { ...state, mobileNavOpen: action.payload };
     case TOGGLE_DROPDOWN_MENU:

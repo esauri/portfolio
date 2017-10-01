@@ -16,6 +16,7 @@
   margin-bottom: 4px;
   background: currentColor;
   color: inherit;
+  padding-top: 2px;
 }
 
 .line:last-of-type {

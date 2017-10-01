@@ -1,14 +1,8 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 
-class ProjectDetailContainer extends PureComponent {
-  render() {
-    return (
-      <aside className={styles.project_details}>
-        { this.props.children }
-      </aside>
-    );
-  }
-}
-
-export default ProjectDetailContainer;
+export default ({ children }) => (
+  <aside className={styles.project_details}>
+    { children }
+  </aside>
+);

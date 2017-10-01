@@ -1,14 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 
-class CallToAction extends Component {
-  render() {
-    return(
-      <section className={styles.cta}>
-        { this.props.children }
-      </section>
-    );
-  }
-}
-
-export default CallToAction;
+export default ({ children }) => (
+  <section className={styles.cta}>
+    { children }
+  </section>
+);

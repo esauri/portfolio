@@ -20,9 +20,9 @@
   top: 1em;
   left: 50%;
   border-radius: 4px;
-  background: var(--background-color);
+  background: var(--base-2);
   transform: translate(-50%, -50%) rotate(45deg);
-  box-shadow: -3px -3px 5px rgba(82,95,127,.04);
+  /* box-shadow: -3px -3px 5px var(--nav-shadow); */
 }
 
 @keyframes card_show {

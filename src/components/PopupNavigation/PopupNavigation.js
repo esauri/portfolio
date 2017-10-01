@@ -1,14 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 
-class PopupNavigation extends Component {
-  render() {
-    return (
-    <nav className={styles.container}>
-      {this.props.children}
-    </nav>
-    );
-  }
-}
-
-export default PopupNavigation;
+export default ({ children }) => (
+  <nav className={styles.container}>
+    {children}
+  </nav>
+);

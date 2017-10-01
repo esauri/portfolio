@@ -1,6 +1,7 @@
 import {
   TOGGLE_MOBILE,
   TOGGLE_POPUP_MENU,
+  TOGGLE_DARK_THEME,
   TOGGLE_DROPDOWN_MENU,
   TOGGLE_BACK_TO_TOP_BUTTON,
 } from './../constants';
@@ -52,5 +53,17 @@ export function toggleDropdownMenu(visible) {
   return {
     type: TOGGLE_DROPDOWN_MENU,
     payload: visible,
+  };
+}
+
+/**
+ * toggleDarkTheme - Action for toggling between light and dark theme
+ *
+ * @param {boolean} dark
+ */
+export function toggleDarkTheme(dark) {
+  return {
+    type: TOGGLE_DARK_THEME,
+    payload: dark,
   };
 }

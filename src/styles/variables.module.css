@@ -1,11 +1,16 @@
 :root {
   /* Colors */
   --white: #ffffff;
-  --black: #000000;
   --light: #f3f4fa;
   --light-gray: #e4e4e4;
   --gray: #a5aebc;
-  --dark: #272727;
+
+  --black: #000000;
+  --black-1: #070606;
+  --black-2: #191414;
+  --black-3: #222;
+  --black-5: #74777c;
+
   --red: #e74c3c;
   --orange: #f66b34;
   --yellow: #f1b340;
@@ -17,7 +22,6 @@
   --cold-gradient: linear-gradient(to bottom right, var(--aqua), var(--blue));
   --background-color: var(--white);
   --foreground-color: var(--black);
-  --highlight-color: var(--red);
 
   --padding: 10px;
   --header-height: 60px;
@@ -27,6 +31,7 @@
 
   --btn-height: 52px;
 }
+
 
 @value mobile-small: 320px;
 @value mobile-medium: 375px;

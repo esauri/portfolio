@@ -19,13 +19,12 @@
 }
 
 :global(.slick-slide) {
-  /* max-height: 700px; */
   padding: 0 1em;
 }
 
 .dots {
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
   display: flex !important;
   flex-flow: row nowrap;
   justify-content: center;
@@ -61,7 +60,7 @@
   line-height: 20px;
   text-align: center;
   border-radius: 100%;
-  color: var(--light-gray);
+  color: var(--base-3);
   background: currentColor;
 }
 
@@ -71,12 +70,12 @@
 
 .dots li button:focus::before {
   outline: 0;
-  color: var(--highlight-color);
+  color: var(--accent);
 }
 
 :global(li.slick-active button::before) {
   transform: scale(1.25);
-  color: var(--foreground-color);
+  color: var(--foreground);
 }
 
 @keyframes rainbow-color{

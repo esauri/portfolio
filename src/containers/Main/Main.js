@@ -10,7 +10,7 @@ import TiSocialLinkedIn from 'react-icons/lib/ti/social-linkedin';
 // Components
 import Navigation from './../Navigation/Navigation';
 import Footer from './../../components/Footer/Footer';
-import Button from './../../components/Button/Button';
+// import Button from './../../components/Button/Button';
 
 // Actions
 import {
@@ -70,10 +70,9 @@ class Main extends Component {
    */
   backToTop() {
     // Scroll to top
-    // window.scrollTo(0, 0);
     const to = 0;
     const duration = 500;
-    const start = document.body.scrollTop;
+    const start = window.scrollY;
     const change = to - start;
     let currentTime = 0;
     const increment = 20;
@@ -140,24 +139,24 @@ class Main extends Component {
   }
 
   scrollButtonToggle(event) {
-    const SCROLL_TOP_MIN = 700;
+    const SCROLL_TOP_MIN = 600;
     const { dispatchBackToTopToggle } = this.props;
 
-    dispatchBackToTopToggle(document.body.scrollTop >= SCROLL_TOP_MIN);
+    dispatchBackToTopToggle(window.scrollY >= SCROLL_TOP_MIN);
   }
 
   render() {
     const iconSize = 30;
-    const { backToTop } = this.props;
+    const { theme } = this.props;
 
     return (
-      <article className={styles.container}>
+      <article className={`${styles.container} ${(theme) ? styles.dark_theme : styles.light_theme}`}>
         <Navigation />
         { this.props.children }
         {/* Back to top */}
-        <Button fab show={backToTop} onClick={this.backToTop}>
+        {/* <Button fab show={backToTop} onClick={this.backToTop}>
           <TiArrowUp size={iconSize} />
-        </Button>
+        </Button> */}
         {/* Footer */}
         <Footer>
           <ul className={styles.social_links}>
@@ -176,6 +175,11 @@ class Main extends Component {
                 <TiSocialGithub size={iconSize} />
               </a>
             </li>
+            <li>
+              <a onClick={this.backToTop}>
+                <TiArrowUp size={iconSize} />
+              </a>
+            </li>
           </ul>
           <p>&copy; 2017 Erick Sauri</p>
         </Footer>
@@ -186,6 +190,7 @@ class Main extends Component {
 
 const mapStateToProps = state => {
   return {
+    theme: state.global.theme,
     backToTop: state.global.backToTop,
   };
 }
