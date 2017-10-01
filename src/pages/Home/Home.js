@@ -9,13 +9,17 @@ import Column from './../../components/Column/Column';
 // Styles
 import styles from './styles.module.css';
 
+import MidnightCruise from './../../containers/MidnightCruise/MidnightCruise';
+
 const Home = ({ projects }) => (
   <article>
-    <section className={'wrapper'}>
-      <h2 className={styles.heading}>Hi there, I'm Erick Sauri! A front-end developer who works on web and mobile apps.</h2>
-    </section>
+    <MidnightCruise>
+      <section className={`wrapper`}>
+        <h2 className={styles.heading}>Hi there, I'm Erick Sauri! A front-end developer who works on web and mobile apps.</h2>
+      </section>
+    </MidnightCruise>
     {/* Projects */}
-    <section className={'w2rapper'}>
+    <section className={styles.projects}>
       <Row wrap>
         {
           projects.map((project, index) => {

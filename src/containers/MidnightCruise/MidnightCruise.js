@@ -135,7 +135,7 @@ class MidnightCruise extends Component {
    */
   startCanvas() {
     // If we have a WebGL renderer make many stars otherwise just a few
-    const TOTAL_STARS = PIXI.WebGLRenderer ? 1000 : 100;
+    const TOTAL_STARS = PIXI.WebGLRenderer ? 500 : 50;
 
     // For every star we want to make
     for (let i = 0; i < TOTAL_STARS; i++) {

@@ -8,7 +8,6 @@ import {
 
 // Assets
 // Avatars
-import AudioVisAvatar from './../assets/img/audiovisualizer/public/small/avatar.jpg';
 import ClickerAvatar from './../assets/img/clickergame/public/small/avatar.jpg';
 import TrumpCardAvatar from './../assets/img/trumpcard/public/small/avatar.png';
 import TwoSevenZeroAvatar from './../assets/img/270/public/small/avatar.png';
@@ -120,17 +119,6 @@ const initialState = {
       style: {
         invert: true,
         gutter: '50',
-      },
-    },
-    {
-      id: 2,
-      name: 'Audio Visualizer',
-      link: '/audiovisualizer',
-      desc: '',
-      tags: ['Canvas', 'Javascript', 'Web App Development', 'Web Audio'],
-      avatar: {
-        src: AudioVisAvatar,
-        desc: 'Audio Visualizer Avatar',
       },
     },
   ],

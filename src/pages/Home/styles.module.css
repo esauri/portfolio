@@ -1,40 +1,41 @@
 @value mobile-medium, tablet-small, tablet-medium from './../../styles/variables.module.css';
 
-.heading {
-  font-size: 0.9rem;
-  /* text-align: center; */
+.projects {
+  margin-top: 1em;
 }
 
 .intro {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 480px;
-  font-size: 0.75rem;
-  text-align: center;
-  /* text-shadow: var(--foreground) 0.5px 0.5px 0.5px; */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 0.9rem;
 }
 
 @media only screen and (min-width: mobile-medium) {
   .heading {
     font-size: 1.2rem;
   }
-
-  .intro {
-    font-size: 0.85rem;
-  }
 }
 
 @media only screen and (min-width: tablet-small) {
-  .heading {
-    font-size: 1.5rem;
+  .intro {
+    height: 300px;
   }
 
-  .intro {
-    font-size: 1rem;
+  .heading {
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (min-width: tablet-medium) {
+  .intro {
+    height: 400px;
+  }
+
   .heading {
     font-size: 2rem;
   }
