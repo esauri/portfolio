@@ -307,7 +307,7 @@ const Venu = ({ mobile }) => (
       {/* VENU */}
       <a href={'https://ritvenu.com'} target={'_blank'} rel={'noopener noreferrer'}>
         <Button>
-          <TiSocialGithub size={28} /> Visit VENU
+          <TiDevicePhone size={28} /> Visit VENU
         </Button>
       </a>
       {/* Github */}
