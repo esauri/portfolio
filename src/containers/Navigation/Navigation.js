@@ -29,7 +29,7 @@ class Navigation extends Component {
       handleHamburgerBtnClick,
     } = this.props;
 
-    const resumeLink = 'https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2FErickSauriResume.pdf?alt=media&token=f0555afe-d95a-4a28-a66d-e268bab081dd';
+    const resumeLink = 'https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2FErick%20Sauri%20Resume.pdf?alt=media&token=2e50cb15-4ddc-4e17-831a-3a4792853010';
 
     const desktopNav = (
       <GlobalNavigation>
