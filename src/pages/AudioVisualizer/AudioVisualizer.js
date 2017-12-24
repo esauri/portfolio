@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiDeviceDesktop from 'react-icons/lib/ti/device-desktop';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -18,14 +17,10 @@ import ProjectDetailContainer from './../../components/ProjectDetailContainer/Pr
 // Assets
 import AudioVisualizerBanner from './../../assets/img/audiovisualizer/public/large/banner.jpg';
 
-const AudioVisualizer = ({ mobile }) => (
+export default () => (
   <article>
     {/* Banner */}
-    <Banner
-      isMobile={mobile}
-      src={AudioVisualizerBanner}
-      invert
-    />
+    <Banner src={AudioVisualizerBanner} invert/>
     {/* Content */}
     <section className={'wrapper'}>
         {/* Intro */}
@@ -96,11 +91,3 @@ const AudioVisualizer = ({ mobile }) => (
     </CallToAction>
   </article>
 );
-
-const mapStateToProps = state => {
-  return {
-    mobile: state.global.mobile,
-  };
-}
-
-export default connect(mapStateToProps)(AudioVisualizer);

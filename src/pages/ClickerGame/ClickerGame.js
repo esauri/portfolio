@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import FaGamepad from 'react-icons/lib/fa/gamepad';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -23,14 +22,10 @@ import GameImg from './../../assets/img/clickergame/public/small/gameView.jpg';
 import PauseImg from './../../assets/img/clickergame/public/small/pausegame.jpg';
 import GameOverImg from './../../assets/img/clickergame/public/small/gameover.jpg';
 
-const ClickerGame = ({ mobile }) => (
+export default () => (
   <article>
     {/* Banner */}
-    <Banner
-      isMobile={mobile}
-      src={ClickerGameBanner}
-      invert
-    />
+    <Banner src={ClickerGameBanner} invert />
     {/* Content */}
     <section className={'wrapper'}>
       {/* Intro */}
@@ -120,11 +115,3 @@ const ClickerGame = ({ mobile }) => (
     </CallToAction>
   </article>
 );
-
-const mapStateToProps = state => {
-  return {
-    mobile: state.global.mobile,
-  };
-}
-
-export default connect(mapStateToProps)(ClickerGame);

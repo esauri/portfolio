@@ -1,6 +1,5 @@
 import React from 'react';
 import Zooming from 'zooming';
-import { connect } from 'react-redux';
 import FaGamepad from 'react-icons/lib/fa/gamepad';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
 
@@ -21,14 +20,10 @@ import HorsemaskBanner from './../../assets/img/horsemasks/dawnofthelivinghorsem
 
 const zooming = new Zooming();
 
-const Horsemasks = ({ mobile }) => (
+export default () => (
   <article>
     {/* Banner */}
-    <Banner
-      isMobile={mobile}
-      src={HorsemaskBanner}
-      invert
-    />
+    <Banner src={HorsemaskBanner} invert />
     {/* Content */}
     <section className={'wrapper'}>
       {/* Intro */}
@@ -157,11 +152,3 @@ const Horsemasks = ({ mobile }) => (
     </section>
   </article>
 );
-
-const mapStateToProps = state => {
-  return {
-    mobile: state.global.mobile,
-  };
-}
-
-export default connect(mapStateToProps)(Horsemasks);

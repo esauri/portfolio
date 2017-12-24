@@ -5,6 +5,12 @@
   color: var(--foreground);
 }
 
+.main {
+  position: relative;
+  margin-top: 3.335rem;
+  animation: fade-in 1s ease-in;
+}
+
 .light_theme {
   --base: var(--white);
   --base-2: var(--light);
@@ -13,6 +19,7 @@
 
   --foreground: var(--black);
   --foreground-1: var(--black-2);
+  --foreground-2: var(--grey);
   --nav-shadow: rgba(7, 6, 6, 0.4);
   --accent: var(--red);
 }
@@ -25,17 +32,18 @@
 
   --foreground: var(--white);
   --foreground-1: var(--light);
+  --foreground-2: var(--gray);
+
   --nav-shadow: rgba(34, 34, 34, 0.4);
   --accent: var(--red);
 }
 
-.social_links {
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-flow: row nowrap;
-}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
 
-.social_link {
-  padding: 0 1em;
+  to {
+    opacity: 1;
+  }
 }

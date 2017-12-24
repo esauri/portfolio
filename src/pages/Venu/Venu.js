@@ -1,6 +1,5 @@
 import React from 'react';
 import Zooming from 'zooming';
-import { connect } from 'react-redux';
 import TiDevicePhone from 'react-icons/lib/ti/device-phone';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -58,14 +57,10 @@ import ProfileScreen from './../../assets/img/venu/public/profile.png';
 // Create new zoomable object
 const zooming = new Zooming();
 
-const Venu = ({ mobile }) => (
+export default () => (
   <article>
     {/* Banner */}
-    <Banner
-      isMobile={mobile}
-      src={VenuBanner}
-      invert
-    />
+    <Banner src={VenuBanner} invert />
     {/* Content */}
     <section className={'wrapper'}>
       {/* Intro */}
@@ -319,11 +314,3 @@ const Venu = ({ mobile }) => (
     </CallToAction>
   </article>
 );
-
-const mapStateToProps = state => {
-  return {
-    mobile: state.global.mobile,
-  };
-}
-
-export default connect(mapStateToProps)(Venu);

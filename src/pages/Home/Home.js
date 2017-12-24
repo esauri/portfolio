@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 // Components
 import Row from './../../components/Row/Row';
@@ -9,43 +8,34 @@ import Column from './../../components/Column/Column';
 // Styles
 import styles from './styles.module.css';
 
-import MidnightCruise from './../../containers/MidnightCruise/MidnightCruise';
+import projects from './../../utils/getProjectList';
 
-const Home = ({ projects }) => (
+export default () => (
   <article>
-    <MidnightCruise>
-      <section className={`wrapper`}>
-        <h2 className={styles.heading}>Hi there, I'm Erick Sauri! A front-end developer who works on web and mobile apps.</h2>
-      </section>
-    </MidnightCruise>
-    {/* Projects */}
-    <section className={styles.projects}>
-      <Row wrap>
-        {
-          projects.map((project, index) => {
-            return (
-              <Column key={index} space={project.style.gutter} full>
-                <Card
-                  project={project}
-                />
-              </Column>
-            );
-          })
-        }
+    <section className={`wrapper`}>
+      <Row>
+        <Column space={'70'}>
+          <h2 className={styles.intro}>
+            Hi there, I'm <span className={styles.intro_accent}>Erick</span>, a <span className={styles.intro_accent}>front-end developer</span>
+            &nbsp;
+            who works on <span className={styles.intro_accent}>web</span> and <span className={styles.intro_accent}>mobile apps</span>.
+          </h2>
+        </Column>
       </Row>
     </section>
+    {/* Projects */}
+    <Row wrap>
+      {
+        projects.map((project, index) => {
+          return (
+            <Column key={index} space={100} full>
+              <Card
+                project={project}
+              />
+            </Column>
+          );
+        })
+      }
+    </Row>
   </article>
 );
-
-/**
- * mapStateToProps
- *
- * @param {Object} state
- */
-const mapStateToProps = state => {
-  return {
-    projects: state.global.projects,
-  };
-}
-
-export default connect(mapStateToProps, null)(Home);

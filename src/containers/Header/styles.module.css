@@ -1,0 +1,20 @@
+@value tablet-medium from './../../styles/variables.module.css';
+
+.nav {
+  display: none;
+}
+
+.link {
+  color: inherit;
+}
+
+
+@media only screen and (min-width: tablet-medium) {
+  .nav {
+    display: block;
+  }
+
+  .mobile_nav {
+    display: none;
+  }
+}

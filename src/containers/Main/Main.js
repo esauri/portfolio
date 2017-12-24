@@ -1,24 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-
-import TiMail from 'react-icons/lib/ti/mail';
 import TiArrowUp from 'react-icons/lib/ti/arrow-up';
-import TiSocialGithub from 'react-icons/lib/ti/social-github';
-import TiSocialLinkedIn from 'react-icons/lib/ti/social-linkedin';
 
 // Components
-import Navigation from './../Navigation/Navigation';
-import Footer from './../../components/Footer/Footer';
-// import Button from './../../components/Button/Button';
-
-// Actions
-import {
-  toggleMobile,
-  togglePopupMenu,
-  toggleDropdownMenu,
-  toggleBackToTopButton,
-} from './../../actions';
+import Header from './../Header/Header';
+import Footer from './../Footer/Footer';
+import Button from './../../components/Button/Button';
 
 // Styles
 import styles from './styles.module.css';
@@ -27,41 +13,51 @@ class Main extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      darkMode: false,
+      showBackToTop: false,
+    };
+
     // Bind functions
     this.backToTop = this.backToTop.bind(this);
-    this.handleResize = this.handleResize.bind(this);
+    this.toggleTheme = this.toggleTheme.bind(this);
     this.easeInOutQuad = this.easeInOutQuad.bind(this);
     this.scrollButtonToggle = this.scrollButtonToggle.bind(this);
+    this.setThemeBasedOnTime = this.setThemeBasedOnTime.bind(this);
   }
 
   componentDidMount() {
-    // Get layout
-    this.handleResize();
+    // Get theme based on time
+    this.setThemeBasedOnTime();
 
     // Add event listeners
-    window.addEventListener('resize', this.handleResize, { passive: true });
-    window.addEventListener('scroll', this.scrollButtonToggle);
+    // window.addEventListener('scroll', this.scrollButtonToggle);
   }
 
   componentWillUnmount() {
     // Remove event listeners
-    window.removeEventListener('resize', this.handleResize);
-    window.removeEventListener('scroll', this.scrollButtonToggle);
-
+    // window.removeEventListener('scroll', this.scrollButtonToggle);
   }
 
-  componentDidUpdate(prevProps) {
-    const { location, dispatchDropdownToggle, dispatchtTogglePopupMenu } = this.props;
+  /**
+   * setThemeBasedOnTime
+   *
+   */
+  setThemeBasedOnTime() {
+    const currentHour = new Date().getHours();
 
-    // If we changed route
-    if (location.pathname !== prevProps.location.pathname) {
-      // Scroll to top
-      window.scrollTo(0, 0);
+    // Light mode if between 6 and 6, othernise dark mode
+    this.setState({ darkMode: !(6 > currentHour > 18) });
+  }
 
-      // Close/hide menu
-      dispatchDropdownToggle(false);
-      dispatchtTogglePopupMenu(false);
-    }
+  /**
+   * toggleTheme - Toggles theme
+   *
+   */
+  toggleTheme() {
+    const { darkMode } = this.state;
+
+    this.setState({ darkMode: !darkMode });
   }
 
   /**
@@ -124,98 +120,37 @@ class Main extends Component {
   	return - change / 2 * (time * (time - 2) - 1) + start;
   }
 
-  /**
-   * handleResize - Handles window resize
-   *
-   */
-  handleResize() {
-    const { dispatchMobileToggle } = this.props;
-
-    // Maximum size for mobile
-    const LAYOUT_THRESHOLD = 768;
-
-    // We're in mobile if width is less than 600
-    dispatchMobileToggle(LAYOUT_THRESHOLD > window.innerWidth);
-  }
-
   scrollButtonToggle(event) {
     const SCROLL_TOP_MIN = 600;
-    const { dispatchBackToTopToggle } = this.props;
+    const { showBackToTop } = this.state;
 
-    dispatchBackToTopToggle(window.scrollY >= SCROLL_TOP_MIN);
+    // If displayed and scroll is less
+    if (showBackToTop && (SCROLL_TOP_MIN > window.scrollY)) {
+      // Hide
+      this.setState({ showBackToTop: !showBackToTop });
+    } else if ((window.scrollY >= SCROLL_TOP_MIN) && !showBackToTop) {
+      this.setState({ showBackToTop: !showBackToTop });
+    }
   }
 
   render() {
-    const iconSize = 30;
-    const { theme } = this.props;
+    const { darkMode, showBackToTop } = this.state;
 
     return (
-      <article className={`${styles.container} ${(theme) ? styles.dark_theme : styles.light_theme}`}>
-        <Navigation />
-        { this.props.children }
+      <article className={`${styles.container} ${(darkMode) ? styles.dark_theme : styles.light_theme}`}>
+        <Header darkMode={darkMode} />
+        <main className={styles.main}>
+          { this.props.children }
+        </main>
         {/* Back to top */}
-        {/* <Button fab show={backToTop} onClick={this.backToTop}>
-          <TiArrowUp size={iconSize} />
-        </Button> */}
+        <Button fab show={showBackToTop} onClick={this.backToTop}>
+          <TiArrowUp size={24} />
+        </Button>
         {/* Footer */}
-        <Footer>
-          <ul className={styles.social_links}>
-            <li className={styles.social_link}>
-              <a href='mailto:ejs3863@rit.edu'>
-                <TiMail size={iconSize} />
-              </a>
-            </li>
-            <li className={styles.social_link}>
-              <a href='https://www.linkedin.com/in/erick-sauri-1847357b' target='_blank' rel='noopener noreferrer'>
-                <TiSocialLinkedIn size={iconSize} />
-              </a>
-            </li>
-            <li className={styles.social_link}>
-              <a href='https://github.com/esauri' target='_blank' rel='noopener noreferrer'>
-                <TiSocialGithub size={iconSize} />
-              </a>
-            </li>
-            <li>
-              <a onClick={this.backToTop}>
-                <TiArrowUp size={iconSize} />
-              </a>
-            </li>
-          </ul>
-          <p>&copy; 2017 Erick Sauri</p>
-        </Footer>
+        <Footer backToTop={this.backToTop} toggleTheme={this.toggleTheme} />
       </article>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    theme: state.global.theme,
-    backToTop: state.global.backToTop,
-  };
-}
-
-/**
- * mapDispatchToProps
- *
- * @param {Function} dispatch
- */
-const mapDispatchToProps = dispatch => {
-  return {
-    dispatchMobileToggle: mobile => {
-      dispatch(toggleMobile(mobile));
-    },
-    dispatchtTogglePopupMenu: open => {
-      dispatch(togglePopupMenu(open));
-    },
-    dispatchDropdownToggle: show => {
-      dispatch(toggleDropdownMenu(show));
-    },
-    dispatchBackToTopToggle: visible => {
-      dispatch(toggleBackToTopButton(visible));
-    },
-  };
-}
-
-// Export connected Component
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
+export default Main;

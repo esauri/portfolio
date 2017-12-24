@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import TiDevicePhone from 'react-icons/lib/ti/device-phone';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -23,14 +22,10 @@ import TrumpCardBanner from './../../assets/img/trumpcard/public/large/banner.jp
 import TrumpLeftSwipe from './../../assets/img/trumpcard/public/small/leftSwipe.png';
 import TrumpRightSwipe from './../../assets/img/trumpcard/public/small/rightSwipe.png';
 
-const TrumpCard = ({ mobile }) => (
+export default () => (
   <article>
     {/* Banner */}
-    <Banner
-      isMobile={mobile}
-      src={TrumpCardBanner}
-      invert
-    />
+    <Banner src={TrumpCardBanner} invert />
     {/* Content */}
     <section className={'wrapper'}>
       {/* Intro */}
@@ -143,11 +138,3 @@ const TrumpCard = ({ mobile }) => (
     </CallToAction>
   </article>
 );
-
-const mapStateToProps = state => {
-  return {
-    mobile: state.global.mobile,
-  };
-}
-
-export default connect(mapStateToProps)(TrumpCard);

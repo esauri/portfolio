@@ -1,8 +1,12 @@
-@value tablet-small, tablet-large from './variables.module.css';
+@value tablet-small, tablet-large, laptop from './variables.module.css';
 
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 18px;
 }
 
 *,
@@ -19,6 +23,7 @@ html * {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: -apple-system, ".SFNSText-Regular", "Avenir Next", "San Francisco", "Roboto", "Lato", sans-serif;
 }
 
@@ -53,20 +58,35 @@ a:hover {
 
 :global(.wrapper) {
   margin: 0 auto;
-  width: 90%;
-  max-width: tablet-large;
-  padding: 0 1.5em 1.25em 1.5em;
+  width: 100%;
+  padding: 0 1.11rem;
+  max-width: 1350px;
+}
+
+@supports(padding: max(0px)) {
+  :global(.wrapper) {
+    padding-left: max(1.11rem, env(safe-area-inset-left));
+    padding-right: max(1.11rem, env(safe-area-inset-right));
+  }
 }
 
 @media only screen and (min-width: tablet-small) {
   :global(.wrapper) {
-     padding: 0 2.5em;
+    padding: 0 2.22rem;
+  }
+
+  @supports(padding: max(0px)) {
+    :global(.wrapper) {
+      padding-left: max(2.22rem, env(safe-area-inset-left));
+      padding-right: max(2.22rem, env(safe-area-inset-right));
+    }
   }
 }
 
-@media only screen and (min-width: tablet-large) {
+@media only screen and (min-width: laptop) {
   :global(.wrapper) {
-     padding-bottom: 4em;
+    padding: 0 3.33rem;
+    padding-bottom: 4em;
   }
 }
 

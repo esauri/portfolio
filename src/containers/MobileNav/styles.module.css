@@ -1,0 +1,46 @@
+/* Desktop Nav Links */
+.link {
+  color: inherit;
+}
+
+.link::after {
+  display: block;
+  content: '';
+  border-bottom: 2px solid currentColor;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Popup */
+.popup_container {
+  display: block;
+  animation: pop var(--duration);
+  top: 0;
+  right: 0;
+  width: 100%;
+  position: absolute;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.95);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

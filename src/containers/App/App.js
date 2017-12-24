@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
 
-// Main Container
+// Containers
 import Main from './../Main/Main';
+import ScrollToTop from './../ScrollToTop/ScrollToTop';
 
 // Pages
 import Home from './../../pages/Home/Home';
@@ -17,12 +17,10 @@ import ClickerGame from './../../pages/ClickerGame/ClickerGame';
 import TwoSevenZero from './../../pages/TwoSevenZero/TwoSevenZero';
 import AudioVisualizer from './../../pages/AudioVisualizer/AudioVisualizer';
 
-// Create store
-import store from './../../store/store';
 
 export default () => (
   <BrowserRouter>
-    <Provider store={store}>
+    <ScrollToTop>
       <Main>
         <Switch>
           <Route exact path={'/'} component={Home} />
@@ -36,6 +34,6 @@ export default () => (
           <Route component={NotFound} />
         </Switch>
       </Main>
-    </Provider>
+    </ScrollToTop>
   </BrowserRouter>
 );

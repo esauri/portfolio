@@ -1,6 +1,5 @@
 import React from 'react';
 import Zooming from 'zooming';
-import { connect } from 'react-redux';
 import TiDevicePhone from 'react-icons/lib/ti/device-phone';
 import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
@@ -33,14 +32,10 @@ import TwoSevenZeroMockupTriviaImage from './../../assets/img/270/public/large/m
 // Create new zoomable object
 const zooming = new Zooming();
 
-const TwoSevenZero = ({ mobile }) => (
+export default () => (
   <article>
     {/* Banner */}
-    <Banner
-      isMobile={mobile}
-      src={TwoSevenZeroBanner}
-      invert
-    />
+    <Banner src={TwoSevenZeroBanner} invert />
     {/* Content */}
     <section className={'wrapper'}>
       {/* Intro */}
@@ -212,11 +207,3 @@ const TwoSevenZero = ({ mobile }) => (
     </CallToAction>
   </article>
 );
-
-const mapStateToProps = state => {
-  return {
-    mobile: state.global.mobile,
-  };
-}
-
-export default connect(mapStateToProps)(TwoSevenZero);

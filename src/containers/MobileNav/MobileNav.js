@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-// Components
-import Nav from './../../components/GlobalNavigation/GlobalNavigation';
-import DropdownNavigation from './../../components/DropdownNavigation/DropdownNavigation';
 import {
   NavList,
   NavItem,
@@ -12,48 +9,40 @@ import {
   ProjectLabel,
   ProjectTitle,
   NavSectionTitle,
-  ProjectDescription,
 } from './../../components/Nav/Nav';
+import PopupNavigation from './../../components/PopupNavigation/PopupNavigation';
+import HamburgerIcon from './../../components/HamburgerIcon/HamburgerIcon';
+import CloseIcon from './../../components/CloseIcon/CloseIcon';
 
 // Utils
 import playground from './../../utils/getPlaygroundList';
 import projects from './../../utils/getProjectList';
 import links from './../../utils/getUsefulLinks';
 
-// Styles
 import styles from './styles.module.css';
 
-class Navigation extends Component {
+class MobileNav extends Component {
 
   constructor(props) {
     super(props);
 
-    this.state = { showDropdown: false };
-    this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.state = { openMenu: false, };
+    this.togglePopupMenu = this.togglePopupMenu.bind(this);
   }
 
-  toggleDropdown(show) {
-    this.setState({ showDropdown: show });
+  togglePopupMenu(open) {
+    this.setState({ openMenu: open });
   }
 
   render() {
-    const { showDropdown } = this.state;
+    const { openMenu } = this.state;
 
-    return (
-      <Nav className={styles.a}>
-        {/* About */}
-        <Link className={styles.link} to='/about'>About</Link>
-
-        {/* Work */}
-        <span
-          className={styles.link}
-          onMouseEnter={() => { this.toggleDropdown(true); }}
-          onTouchStart={() => {this.toggleDropdown(!showDropdown); } }
-          onMouseLeave={() => { setTimeout(() => { this.toggleDropdown(false); }, 50); }}>
-          Work
-
-          <DropdownNavigation show={showDropdown}>
-
+    return openMenu
+      ? (
+        <section className={styles.popup_container}>
+          <PopupNavigation>
+            {/* Close button */}
+            <CloseIcon onClickEvent={() => { this.togglePopupMenu(false); }} />
             {/* Projects */}
             <NavSectionTitle>Projects</NavSectionTitle>
             <NavList>
@@ -65,17 +54,12 @@ class Navigation extends Component {
                         <ProjectImage alt={project.avatar.desc} src={project.avatar.src} />
                         <ProjectLabel>
                           <ProjectTitle>{project.name}</ProjectTitle>
-                          <ProjectDescription>{project.desc}</ProjectDescription>
                         </ProjectLabel>
                       </ProjectLink>
                     </NavItem>
                   );
                 })
               }
-            </NavList>
-            {/* Playground */}
-            <NavSectionTitle>Playground</NavSectionTitle>
-            <NavList secondary>
               {
                 playground.map((project, index) => {
                   return (
@@ -91,20 +75,31 @@ class Navigation extends Component {
                 })
               }
             </NavList>
-          </DropdownNavigation>
-        </span>
-        {/* Github */}
-        <a className={styles.link} href={links.github} target={'_blank'} rel={'noopener noreferrer'}>
-          Github
-        </a>
-        {/* Resume */}
-        <a className={styles.link} href={links.resume} target={'_blank'} rel={'noopener noreferrer'}>
-          Resume
-        </a>
-      </Nav>
-    );
+            {/* Secondary Links */}
+            <NavSectionTitle>General</NavSectionTitle>
+            <NavList secondary>
+              <NavItem>
+                <Link to=''>Home</Link>
+              </NavItem>
+              <NavItem>
+                <Link to='/about'>About</Link>
+              </NavItem>
+              <NavItem>
+                <a href={links.github} target={'_blank'} rel={'noopener noreferrer'}>
+                  Github
+                </a>
+              </NavItem>
+              <NavItem>
+                <a href={links.resume} target={'_blank'} rel={'noopener noreferrer'}>
+                  Resume
+                </a>
+              </NavItem>
+            </NavList>
+          </PopupNavigation>
+        </section>
+      )
+      : (<HamburgerIcon onClickEvent={() => { this.togglePopupMenu(true); }} />);
   }
 }
 
-export default Navigation;
-
+export default MobileNav;

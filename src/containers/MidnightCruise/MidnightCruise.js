@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import * as PIXI from 'pixi.js';
+import React, { Component } from 'react';
 import TiMediaPause from 'react-icons/lib/ti/media-pause';
 import TiMediaPlay from 'react-icons/lib/ti/media-play';
 import styles from './styles.module.css';
