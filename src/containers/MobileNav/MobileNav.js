@@ -19,6 +19,7 @@ import playground from './../../utils/getPlaygroundList';
 import projects from './../../utils/getProjectList';
 import links from './../../utils/getUsefulLinks';
 
+// Styles
 import styles from './styles.module.css';
 
 class MobileNav extends Component {
@@ -50,7 +51,7 @@ class MobileNav extends Component {
                 projects.map((project, index) => {
                   return (
                     <NavItem key={index}>
-                      <ProjectLink to={project.link}>
+                      <ProjectLink to={project.link} onClick={() => this.togglePopupMenu(false)}>
                         <ProjectImage alt={project.avatar.desc} src={project.avatar.src} />
                         <ProjectLabel>
                           <ProjectTitle>{project.name}</ProjectTitle>
@@ -64,7 +65,7 @@ class MobileNav extends Component {
                 playground.map((project, index) => {
                   return (
                     <NavItem key={index}>
-                      <ProjectLink to={project.link}>
+                      <ProjectLink to={project.link} onClick={() => this.togglePopupMenu(false)}>
                         <ProjectImage alt={project.avatar.desc} src={project.avatar.src} />
                         <ProjectLabel>
                           <ProjectTitle>{project.name}</ProjectTitle>
@@ -79,18 +80,18 @@ class MobileNav extends Component {
             <NavSectionTitle>General</NavSectionTitle>
             <NavList secondary>
               <NavItem>
-                <Link to=''>Home</Link>
+                <Link to='' onClick={() => this.togglePopupMenu(false)}>Home</Link>
               </NavItem>
               <NavItem>
-                <Link to='/about'>About</Link>
+                <Link to='/about' onClick={() => this.togglePopupMenu(false)}>About</Link>
               </NavItem>
               <NavItem>
-                <a href={links.github} target={'_blank'} rel={'noopener noreferrer'}>
+                <a href={links.github} target={'_blank'} rel={'noopener noreferrer'} onClick={() => this.togglePopupMenu(false)}>
                   Github
                 </a>
               </NavItem>
               <NavItem>
-                <a href={links.resume} target={'_blank'} rel={'noopener noreferrer'}>
+                <a href={links.resume} target={'_blank'} rel={'noopener noreferrer'} onClick={() => this.togglePopupMenu(false)}>
                   Resume
                 </a>
               </NavItem>

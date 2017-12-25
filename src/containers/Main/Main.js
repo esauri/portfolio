@@ -44,10 +44,20 @@ class Main extends Component {
    *
    */
   setThemeBasedOnTime() {
+    const MIN = 6;
+    const MAX = MIN + 12;
     const currentHour = new Date().getHours();
+    const isDaytime = (MAX > currentHour) && (currentHour > MIN);
+    const storedTheme = JSON.parse(localStorage.getItem('ERICK_SAURI/PORTFOLIO/THEME'));
 
-    // Light mode if between 6 and 6, othernise dark mode
-    this.setState({ darkMode: !(6 > currentHour > 18) });
+    // Check if preference has been set in local storage
+    if (typeof(storedTheme) === 'boolean') {
+      // If there is a stored preference use that
+      this.setState({ darkMode: storedTheme })
+    } else {
+      // Light mode if between 6 and 6, othernise dark mode
+      this.setState({ darkMode: !isDaytime });
+    }
   }
 
   /**
@@ -57,6 +67,10 @@ class Main extends Component {
   toggleTheme() {
     const { darkMode } = this.state;
 
+    // Save in local storage
+    localStorage.setItem('ERICK_SAURI/PORTFOLIO/THEME', !darkMode);
+
+    // Set theme
     this.setState({ darkMode: !darkMode });
   }
 

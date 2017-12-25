@@ -1,6 +1,6 @@
 @value tablet-medium from './../../styles/variables.module.css';
 
-.nav_section_title {
+.section_title {
   margin: 0;
   padding: 1em 0 0 1em;
   color: var(--foreground-2);
@@ -26,7 +26,7 @@
   border-radius: 0 0 4px 4px;
 }
 
-.nav_list_secondary .project_thumbnail {
+.nav_list_secondary .project_img {
   width: 48px;
   height: 48px;
 }
@@ -37,21 +37,21 @@
 
 .nav_item {
   flex-basis: 50%;
-  padding: var(--padding) 0;
   overflow: hidden;
+  padding: var(--padding) 0;
 }
 
-.project_container {
+.project_link {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
 
-.project_container:hover {
+.project_link:hover {
   text-decoration: none;
 }
 
-.project_thumbnail {
+.project_img {
   width: 48px;
   height: 48px;
   border-radius: 100%;
@@ -81,7 +81,7 @@
     flex-basis: 100%;
   }
 
-  .project_thumbnail {
+  .project_img {
     width: 64px;
     height: 64px;
   }

@@ -47,9 +47,9 @@ class Navigation extends Component {
         {/* Work */}
         <span
           className={styles.link}
-          onMouseEnter={() => { this.toggleDropdown(true); }}
-          onTouchStart={() => {this.toggleDropdown(!showDropdown); } }
-          onMouseLeave={() => { setTimeout(() => { this.toggleDropdown(false); }, 50); }}>
+          onMouseEnter={() => this.toggleDropdown(true) }
+          onTouchStart={() => this.toggleDropdown(!showDropdown) }
+          onMouseLeave={() => setTimeout(() => { this.toggleDropdown(false); }, 50) }>
           Work
 
           <DropdownNavigation show={showDropdown}>
