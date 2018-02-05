@@ -5,11 +5,14 @@ import TiDeviceDesktop from 'react-icons/lib/ti/device-desktop';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
 
 // Components
+import Row from './../../components/Row/Row';
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
+import Card from './../../components/Card/Card';
 import Vimeo from './../../components/Vimeo/Vimeo';
 import Button from './../../components/Button/Button';
 import Banner from './../../components/Banner/Banner';
+import Column from './../../components/Column/Column';
 import CallToAction from './../../components/CallToAction/CallToAction';
 import ProjectDetail from './../../components/ProjectDetail/ProjectDetail';
 import ProjectDetailContainer from './../../components/ProjectDetailContainer/ProjectDetailContainer';
@@ -17,7 +20,10 @@ import ProjectDetailContainer from './../../components/ProjectDetailContainer/Pr
 // Assets
 import AudioVisualizerBanner from './../../assets/img/audiovisualizer/public/large/banner.jpg';
 
-export default () => (
+// Utils
+import projects from './../../utils/getProjectList';
+
+export default ({ route }) => (
   <article>
     {/* Banner */}
     <Banner src={AudioVisualizerBanner} invert/>
@@ -69,7 +75,7 @@ export default () => (
       </section>
       <section className={'wrapper'}>
         {/* Conclusion */}
-        <h3>Reflections</h3>
+        <h3>Parting Thoughts</h3>
         <p>
           Working with canvas and audio was a great
           exercise as it helped me improve and learn
@@ -89,5 +95,20 @@ export default () => (
         </Button>
       </a>
     </CallToAction>
+    <Row wrap>
+      {
+        projects
+          .filter((project) => project.link !== route)
+          .map((project, index, list) => {
+            return (
+              <Column key={index} space={parseInt(100 / list.length, 10)} full>
+                <Card
+                  project={project}
+                />
+              </Column>
+            );
+          })
+      }
+    </Row>
   </article>
 );

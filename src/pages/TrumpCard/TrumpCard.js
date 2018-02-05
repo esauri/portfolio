@@ -4,8 +4,11 @@ import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
 
 // Components
+import Row from './../../components/Row/Row';
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
+import Card from './../../components/Card/Card';
+import Column from './../../components/Column/Column';
 import Banner from './../../components/Banner/Banner';
 import Button from './../../components/Button/Button';
 import Carousel from './../../components/Carousel/Carousel';
@@ -22,7 +25,10 @@ import TrumpCardBanner from './../../assets/img/trumpcard/public/large/banner.jp
 import TrumpLeftSwipe from './../../assets/img/trumpcard/public/small/leftSwipe.png';
 import TrumpRightSwipe from './../../assets/img/trumpcard/public/small/rightSwipe.png';
 
-export default () => (
+// Utils
+import projects from './../../utils/getProjectList';
+
+export default ({ route }) => (
   <article>
     {/* Banner */}
     <Banner src={TrumpCardBanner} invert />
@@ -116,7 +122,7 @@ export default () => (
       </Carousel>
       </section>
       <section className={'wrapper'}>
-      <h3>Reflections</h3>
+      <h3>Parting Thoughts</h3>
       <p>
         Trump Card was an exciting app since it was my first Swift project
         and I was able to implement the features I wanted with ease. I liked the idea
@@ -136,5 +142,20 @@ export default () => (
         </Button>
       </a>
     </CallToAction>
+    <Row wrap>
+      {
+        projects
+          .filter((project) => project.link !== route)
+          .map((project, index, list) => {
+            return (
+              <Column key={index} space={parseInt(100 / list.length, 10)} full>
+                <Card
+                  project={project}
+                />
+              </Column>
+            );
+          })
+      }
+    </Row>
   </article>
 );

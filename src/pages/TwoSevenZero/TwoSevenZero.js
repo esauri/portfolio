@@ -8,6 +8,7 @@ import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
 import Row from './../../components/Row/Row';
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
+import Card from './../../components/Card/Card';
 import Vimeo from './../../components/Vimeo/Vimeo';
 import Banner from './../../components/Banner/Banner';
 import Button from './../../components/Button/Button';
@@ -29,10 +30,13 @@ import TwoSevenZeroTriviaCorrectImage from './../../assets/img/270/public/small/
 import TwoSevenZeroMockupMainImage from './../../assets/img/270/public/large/mockupMainScreens.jpg';
 import TwoSevenZeroMockupTriviaImage from './../../assets/img/270/public/large/mockupTriviaScreens.jpg';
 
+// Utils
+import projects from './../../utils/getProjectList';
+
 // Create new zoomable object
 const zooming = new Zooming();
 
-export default () => (
+export default ({ route }) => (
   <article>
     {/* Banner */}
     <Banner src={TwoSevenZeroBanner} invert />
@@ -184,7 +188,7 @@ export default () => (
     </section>
     <section className={'wrapper'}>
       {/* Parting Thoughts */}
-      <h3>Reflections</h3>
+      <h3>Parting Thoughts</h3>
       <p>
         270 was a fun project to work on and the end result was a fun and replayable
         ame that can easily be expanded. During the development cycle I learned a lot about
@@ -205,5 +209,20 @@ export default () => (
         </Button>
       </a>
     </CallToAction>
+    <Row wrap>
+      {
+        projects
+          .filter((project) => project.link !== route)
+          .map((project, index, list) => {
+            return (
+              <Column key={index} space={parseInt(100 / list.length, 10)} full>
+                <Card
+                  project={project}
+                />
+              </Column>
+            );
+          })
+      }
+    </Row>
   </article>
 );

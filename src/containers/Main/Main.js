@@ -29,14 +29,6 @@ class Main extends Component {
   componentDidMount() {
     // Get theme based on time
     this.setThemeBasedOnTime();
-
-    // Add event listeners
-    // window.addEventListener('scroll', this.scrollButtonToggle);
-  }
-
-  componentWillUnmount() {
-    // Remove event listeners
-    // window.removeEventListener('scroll', this.scrollButtonToggle);
   }
 
   /**
@@ -161,7 +153,7 @@ class Main extends Component {
           <TiArrowUp size={24} />
         </Button>
         {/* Footer */}
-        <Footer backToTop={this.backToTop} toggleTheme={this.toggleTheme} />
+        <Footer theme={(darkMode) ? 'Light' : 'Dark'} backToTop={this.backToTop} toggleTheme={this.toggleTheme} />
       </article>
     );
   }

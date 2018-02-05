@@ -1,9 +1,7 @@
 // Avatars
+import AudioAvatar from './../assets/img/audiovisualizer/public/small/avatar.jpg';
 import ClickerAvatar from './../assets/img/clickergame/public/small/avatar.jpg';
 import HorsemaskAvatar from './../assets/img/horsemasks/avatar.png';
-
-// Thumbnails
-import ClickerGameThumbnail from './../assets/img/clickergame/public/large/thumbnail.jpg';
 
 export default [
   {
@@ -27,13 +25,16 @@ export default [
       src: ClickerAvatar,
       desc: 'Clicker Game Avatar',
     },
-    thumbnail: {
-      src: ClickerGameThumbnail,
-      desc: 'Clicker Game Thumbnail',
-    },
-    style: {
-      invert: true,
-      gutter: '50',
+  },
+  {
+    id: 2,
+    name: 'Audio Visualizer',
+    link: '/audiovisualizer',
+    desc: '',
+    tags: ['Canvas', 'Web Audio APi', 'Javascipt'],
+    avatar: {
+      src: AudioAvatar,
+      desc: 'Audio Visualizer Avatar',
     },
   },
 ];

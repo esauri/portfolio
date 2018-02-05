@@ -9,6 +9,7 @@ import TiGroup from 'react-icons/lib/ti/group';
 import Row from './../../components/Row/Row';
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
+import Card from './../../components/Card/Card';
 import Vimeo from './../../components/Vimeo/Vimeo';
 import Button from './../../components/Button/Button';
 import Banner from './../../components/Banner/Banner';
@@ -54,10 +55,13 @@ import SearchedScreen from './../../assets/img/venu/public/search 2.png';
 // Profile
 import ProfileScreen from './../../assets/img/venu/public/profile.png';
 
+// Utils
+import projects from './../../utils/getProjectList';
+
 // Create new zoomable object
 const zooming = new Zooming();
 
-export default () => (
+export default ({ route }) => (
   <article>
     {/* Banner */}
     <Banner src={VenuBanner} invert />
@@ -312,5 +316,20 @@ export default () => (
         </Button>
       </a>
     </CallToAction>
+    <Row wrap>
+      {
+        projects
+          .filter((project) => project.link !== route)
+          .map((project, index, list) => {
+            return (
+              <Column key={index} space={parseInt(100 / list.length, 10)} full>
+                <Card
+                  project={project}
+                />
+              </Column>
+            );
+          })
+      }
+    </Row>
   </article>
 );

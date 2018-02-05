@@ -1,19 +1,39 @@
+@value tablet-medium from './../../styles/variables.module.css';
+
 .footer {
   display: flex;
+  flex-direction: column-reverse;
   margin: 6em auto 4em;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .social_links {
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
 }
 
 .social_link {
-  padding: 0 1em;
+  margin-bottom: 10px;
+}
+
+.footer_action {
+  display: flex;
+  align-items: center;
+}
+
+.footer_icon {
+  margin-right: 10px;
+}
+
+.grid_item {
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: tablet-medium) {
+  .footer {
+    flex-flow: row;
+  }
+
+  .grid_item {
+    flex-basis: 33.3%;
+  }
 }
