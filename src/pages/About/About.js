@@ -4,6 +4,7 @@ import React from 'react';
 import Row from './../../components/Row/Row';
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
+import Card from './../../components/Card/Card';
 import Column from './../../components/Column/Column';
 import Button from './../../components/Button/Button';
 import CallToAction from './../../components/CallToAction/CallToAction';
@@ -13,6 +14,7 @@ import Avatar from './../../assets/img/misc/me.jpg';
 
 // Utils
 import links from './../../utils/getUsefulLinks';
+import projects from './../../utils/getProjectList';
 
 // Styles
 import styles from './styles.module.css';
@@ -28,7 +30,7 @@ export default () => (
       <p>
         Hey! I’m Erick Sauri a front end developer originally from Puerto Rico
         <span role={'img'} aria-label={'Puerto Rican Flag Emoji'}>🇵🇷</span> but currently
-        living in Rochester, NY. I'm a graduate from Rochester Institute of Technology
+        living in New York. I'm a graduate from Rochester Institute of Technology
         with a Bachelor's in New Media Interactive Development and a minor
         in Mobile App Development. I enjoy working on web and mobile applications as well
         as making games in my spare time. Feel free to email me at <a href={'mailto:ejs3863@rit.edu'}>ejs3863 at rit.edu</a>.
@@ -43,14 +45,16 @@ export default () => (
         <Column space={'50'}>
           {/* Poseidon Systems */}
           <h3>Poseidon Systems</h3>
-          <h4>Rochester, NY (May 2017 - Present)</h4>
+          <h4>Rochester, NY (May 2017 - Jan 2018)</h4>
           <Tags>
             <Tag>Front End Developer</Tag>
           </Tags>
-          <p>
-            Developed a hybrid app with Ionic, Angular, and Cordova for data visualization of ferrous and non-ferrous materials tracked by oil sensors.
-            Utilized ReactiveX for predictable state management and observable based patterns.
-          </p>
+          <ul className={styles.resume_list}>
+            <li className={styles.resume_list_item}>Participated in redesign for a hybrid mobile and progressive web app</li>
+            <li className={styles.resume_list_item}>Developed app front end using Angular and Ionic Framework</li>
+            <li className={styles.resume_list_item}>Utilized libraries such as Highcharts for oil monitoring data visualization</li>
+            <li className={styles.resume_list_item}>Performed back end tasks using Firebase for authentication, storage, cloud messaging, and database needs</li>
+          </ul>
         </Column>
         <Column space={'50'}>
           {/* CACI */}
@@ -59,11 +63,12 @@ export default () => (
           <Tags>
             <Tag>Web Developer</Tag>
           </Tags>
-          <p>
-            Worked collaboratively in creating a web application
-            utilizing Node, Express, and Postgresql.
-            Utilized the MVC model and client side programming.
-          </p>
+          <ul className={styles.resume_list}>
+            <li className={styles.resume_list_item}>Tasked with maintaining and implementing admin features for a web app</li>
+            <li className={styles.resume_list_item}>Utilized Node.js for server-side and an internal framework based on the MVC paradigm</li>
+            <li className={styles.resume_list_item}>Performed database tasks with PostgreSQL</li>
+            <li className={styles.resume_list_item}>Created unit and end to end tests using libraries like Mocha and Selenium</li>
+          </ul>
         </Column>
       </Row>
     </section>
@@ -87,11 +92,28 @@ export default () => (
       </header>
       <Tags>
         <Tag>HTML5</Tag>
-        <Tag>NodeJS</Tag>
-        <Tag>Angular</Tag>
+        <Tag>CSS3</Tag>
+        <Tag>SASS</Tag>
+        <Tag>LESS</Tag>
+        <Tag>Node.js</Tag>
+        <Tag>Express.js</Tag>
         <Tag>React</Tag>
+        <Tag>React Native</Tag>
+        <Tag>Redux</Tag>
+        <Tag>Angular</Tag>
+        <Tag>Rxjs</Tag>
         <Tag>Ionic</Tag>
+        <Tag>PHP</Tag>
         <Tag>Swift</Tag>
+        <Tag>C#</Tag>
+        <Tag>MySQL</Tag>
+        <Tag>PostgreSQL</Tag>
+        <Tag>MongoDB</Tag>
+        <Tag>Visual Studio</Tag>
+        <Tag>Unity</Tag>
+        <Tag>Photoshop</Tag>
+        <Tag>Illustrator</Tag>
+        <Tag>Sketch</Tag>
       </Tags>
     </section>
     {/* Recent Projects */}
@@ -158,5 +180,19 @@ export default () => (
     </a>
     </CallToAction>
     {/* TODO: Contact Form */}
+    <Row wrap>
+      {
+        projects
+          .map((project, index, list) => {
+            return (
+              <Column key={index} space={parseInt(100 / list.length, 10)} full>
+                <Card
+                  project={project}
+                />
+              </Column>
+            );
+          })
+      }
+    </Row>
   </section>
 );

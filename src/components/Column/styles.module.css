@@ -11,8 +11,16 @@
 }
 
 @media only screen and (min-width: tablet-small) {
+  .column_25 {
+    flex-basis: 25%;
+  }
+
   .column_30 {
     flex-basis: 30%;
+  }
+
+  .column_33 {
+    flex-basis: calc(33.33% - var(--padding));
   }
 
   .column_40 {
@@ -21,6 +29,10 @@
 
   .column_50 {
     flex-basis: calc(50% - var(--padding));
+  }
+
+  .column_33.full {
+    flex-basis: 33.33%;
   }
 
   .column_50.full {

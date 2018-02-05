@@ -7,6 +7,7 @@ import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
 import Row from './../../components/Row/Row';
 import Tag from './../../components/Tag/Tag';
 import Tags from './../../components/Tags/Tags';
+import Card from './../../components/Card/Card';
 import Banner from './../../components/Banner/Banner';
 import Column from './../../components/Column/Column';
 import Picture from './../../components/Picture/Picture';
@@ -18,9 +19,12 @@ import PlayerImage from './../../assets/img/horsemasks/player.png';
 import HorsemaskImage from './../../assets/img/horsemasks/horsemask.png';
 import HorsemaskBanner from './../../assets/img/horsemasks/dawnofthelivinghorsemasks.png';
 
+// Utils
+import projects from './../../utils/getProjectList';
+
 const zooming = new Zooming();
 
-export default () => (
+export default ({ route }) => (
   <article>
     {/* Banner */}
     <Banner src={HorsemaskBanner} invert />
@@ -142,7 +146,7 @@ export default () => (
       </p>
       </section>
       <section className={'wrapper'}>
-      <h3>Reflections</h3>
+      <h3>Parting Thoughts</h3>
       <p>
         Dawn of the Living Horsemasks was a fun project to do and working with Craig Reynolds steering behaviors was a fascinating exercise in viewing how animated characters would behave as if they were alive.
         I was glad to have extra time to also implement the fighting aspect of the game and wish I had even more time to expand on it and make it clearer with nameplates and health bars.
@@ -150,5 +154,20 @@ export default () => (
         It would have been interesting to expand on the city and add tunnels and bridges but for the purposes of the project a smaller city facilitated the display of the required behaviors.
       </p>
     </section>
+    <Row wrap>
+      {
+        projects
+          .filter((project) => project.link !== route)
+          .map((project, index, list) => {
+            return (
+              <Column key={index} space={parseInt(100 / list.length, 10)} full>
+                <Card
+                  project={project}
+                />
+              </Column>
+            );
+          })
+      }
+    </Row>
   </article>
 );
