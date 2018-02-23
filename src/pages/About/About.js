@@ -28,8 +28,7 @@ export default () => (
         <h2 className={styles.resume_title}>About Me</h2>
       </header>
       <p>
-        Hey! I’m Erick Sauri a front end developer originally from Puerto Rico
-        <span role={'img'} aria-label={'Puerto Rican Flag Emoji'}>🇵🇷</span> but currently
+        Hey! I’m Erick Sauri a front end developer originally from Puerto Rico but currently
         living in New York. I'm a graduate from Rochester Institute of Technology
         with a Bachelor's in New Media Interactive Development and a minor
         in Mobile App Development. I enjoy working on web and mobile applications as well
