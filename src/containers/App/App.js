@@ -10,6 +10,7 @@ import ScrollToTop from './../ScrollToTop/ScrollToTop';
 import Home from './../../pages/Home/Home';
 import Venu from './../../pages/Venu/Venu';
 import About from './../../pages/About/About';
+import TipTap from './../../pages/TipTap/TipTap';
 import Poseidon from './../../pages/Poseidon/Poseidon';
 import NotFound from './../../pages/NotFound/NotFound';
 import TrumpCard from './../../pages/TrumpCard/TrumpCard';
@@ -29,8 +30,9 @@ export default () => (
           <Route exact path={'/twosevenzero'} component={() => <TwoSevenZero route={'/twosevenzero'} />} />
           <Route exact path={'/clickergame'} component={() => <ClickerGame route={'/clickergame'} />} />
           <Route exact path={'/horsemask'} component={() => <Horsemasks route={'/horsemask'} />} />
-          <Route exact path={'/poseidon'} component={() => <Poseidon route={'/poseidon'} />} />
           <Route exact path={'/trumpcard'} component={() => <TrumpCard route={'/trumpcard'} />} />
+          <Route exact path={'/poseidon'} component={() => <Poseidon route={'/poseidon'} />} />
+          <Route exact path={'/tiptap'} component={() => <TipTap route={'/tiptap'} />} />
           <Route exact path={'/venu'} component={() => <Venu route={'/venu'} />} />
           <Route component={NotFound} />
         </Switch>

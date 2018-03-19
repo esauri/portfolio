@@ -64,8 +64,8 @@ export default ({ route }) => (
         and simple Path following. As an added bonus I decided to also add in a playable character
         that the user may move around the city with and is even able to attack the Horsemasks.
       </p>
-      </section>
-      <section className={'wrapper'}>
+    </section>
+    <section className={'wrapper'}>
       <h3>Gameplay</h3>
       {/* Player */}
       <Row wrap>
@@ -96,8 +96,8 @@ export default ({ route }) => (
           <Picture alt={'Player character thumbnail'} zooming={zooming} src={PlayerImage} />
         </Column>
       </Row>
-      </section>
-      <section className={'wrapper'}>
+    </section>
+    <section className={'wrapper'}>
       {/* Timeline */}
       <h3>Project Timeline</h3>
       <Row wrap reverse>
@@ -127,8 +127,8 @@ export default ({ route }) => (
           <Picture alt={'Living Horsemask character thumbnail'} src={HorsemaskImage} />
         </Column>
       </Row>
-      </section>
-      <section className={'wrapper'}>
+    </section>
+    <section className={'wrapper'}>
       {/* Assets */}
       <h3>Assets</h3>
       <Picture alt={'Tank thumbnail'} src={PanzerImage} />
@@ -144,8 +144,8 @@ export default ({ route }) => (
         The tank is from <a href={'https://www.assetstore.unity3d.com/en/#!/publisher/2490'} target={'_blank'} rel={'noopener noreferrer'}>Torsten Heldmann</a>, the rubber horse mask is from <a href={'https://www.assetstore.unity3d.com/en/#!/publisher/4624'} target={'_blank'} rel={'noopener noreferrer'}>Biscuitland</a>,
         the zombies are from <a href={'https://www.assetstore.unity3d.com/en/#!/publisher/11247'} target={'_blank'} rel={'noopener noreferrer'}>Pxktiger</a>, and the female model is from <a href={'https://www.assetstore.unity3d.com/en/#!/publisher/11008'} target={'_blank'} rel={'noopener noreferrer'}>Yurov Viktor</a>.
       </p>
-      </section>
-      <section className={'wrapper'}>
+    </section>
+    <section className={'wrapper'}>
       <h3>Parting Thoughts</h3>
       <p>
         Dawn of the Living Horsemasks was a fun project to do and working with Craig Reynolds steering behaviors was a fascinating exercise in viewing how animated characters would behave as if they were alive.

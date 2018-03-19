@@ -2,10 +2,22 @@
 import AudioAvatar from './../assets/img/audiovisualizer/public/small/avatar.jpg';
 import ClickerAvatar from './../assets/img/clickergame/public/small/avatar.jpg';
 import HorsemaskAvatar from './../assets/img/horsemasks/avatar.png';
+import TipTapAvatar from './../assets/img/tiptap/tiptap_icon.png';
 
 export default [
   {
     id: 0,
+    name: 'TipTap',
+    link: '/tiptap',
+    desc: 'Tipping made easy',
+    tags: ['React', 'React Native', 'Javascript', 'Mobile App Dev'],
+    avatar: {
+      src: TipTapAvatar,
+      desc: 'TipTap app icon',
+    },
+  },
+  {
+    id: 1,
     name: 'Horsemask',
     link: '/horsemask',
     desc: 'Dawn of the Living Horsemasks',
@@ -16,7 +28,7 @@ export default [
     },
   },
   {
-    id: 1,
+    id: 2,
     name: 'Clicker Game',
     link: '/clickergame',
     desc: 'Save Bob!',
@@ -27,7 +39,7 @@ export default [
     },
   },
   {
-    id: 2,
+    id: 3,
     name: 'Audio Visualizer',
     link: '/audiovisualizer',
     desc: '',
