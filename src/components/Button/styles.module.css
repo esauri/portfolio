@@ -1,16 +1,17 @@
 .btn {
+  background: var(--base-2);
   border: 0;
-  font-size: 1em;
-  margin-top: 1em;
-  cursor: pointer;
-  line-height: 1.4;
   border-radius: 4px;
   box-sizing: border-box;
-  background: var(--base-2);
-  text-transform: uppercase;
-  color: var(--accent);
-  padding: var(--padding) calc(var(--padding) * 3);
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.4;
+  margin-top: 1em;
+  padding: var(--padding) calc(var(--padding) * 3);
+  text-transform: uppercase;
+  transition: box-shadow;
 }
 
 .round {
@@ -36,6 +37,7 @@
 
 .btn:hover {
   animation: rainbow-color 1s infinite;
+  box-shadow: 0 6px 8px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 }
 
 .btn:focus {

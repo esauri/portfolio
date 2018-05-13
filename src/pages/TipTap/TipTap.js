@@ -1,7 +1,8 @@
 import React from 'react';
 import Zooming from 'zooming';
+import FaApple from 'react-icons/lib/fa/apple';
+import MdAndroid from 'react-icons/lib/md/android';
 import TiDevicePhone from 'react-icons/lib/ti/device-phone';
-import TiSocialGithub from 'react-icons/lib/ti/social-github';
 import TiCalendarOutline from 'react-icons/lib/ti/calendar-outline';
 
 // Components
@@ -15,6 +16,7 @@ import Column from './../../components/Column/Column';
 import Picture from './../../components/Picture/Picture';
 import CallToAction from './../../components/CallToAction/CallToAction';
 import ProjectDetail from './../../components/ProjectDetail/ProjectDetail';
+import VerticalSeparator from './../../components/VerticalSeparator/VerticalSeparator';
 import ProjectDetailContainer from './../../components/ProjectDetailContainer/ProjectDetailContainer';
 
 import TipTapBanner from './../../assets/img/tiptap/tiptap_banner.jpg';
@@ -61,11 +63,18 @@ export default ({ route }) => (
     <Picture alt={'TipTap Promotion'} zooming={zooming} src={TipTapPromo} />
     {/* CTA */}
     <CallToAction>
-      <h3>Want to check out the repo?</h3>
-      {/* Github */}
-      <a href={'https://github.com/GoodHombres/TipTap'} target={'_blank'} rel={'noopener noreferrer'}>
+      <h3>Download the App now!</h3>
+      {/* App Store */}
+      <a href={'https://itunes.apple.com/us/app/tiptap-tip-calculator/id1360335414'} target={'_blank'} rel={'noopener noreferrer'}>
         <Button>
-          <TiSocialGithub size={28} /> View Project
+          <FaApple size={28} /> App Store
+        </Button>
+      </a>
+      <VerticalSeparator>or</VerticalSeparator>
+      {/* Play Store */}
+      <a href={'https://play.google.com/store/apps/details?id=com.tiptap'} target={'_blank'} rel={'noopener noreferrer'}>
+        <Button>
+          <MdAndroid size={28} /> Play Store
         </Button>
       </a>
       <p>
