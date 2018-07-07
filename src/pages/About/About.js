@@ -29,7 +29,7 @@ export default () => (
       </header>
       <p>
         Hey! I’m Erick Sauri a front end developer originally from Puerto Rico but currently
-        living in New York City and working for <a href={'https://patch.com/'} target={'_blank'} rel={'noopener noreferrer'}>Patch Media</a>. I'm a graduate from Rochester Institute of Technology
+        living in Brooklyn. I'm a graduate from Rochester Institute of Technology
         with a Bachelor's in New Media Interactive Development and a minor
         in Mobile App Development. I enjoy working on web and mobile applications as well
         as making games in my spare time. Feel free to email me at <a href={'mailto:ejs3863@rit.edu'}>ejs3863 at rit.edu</a>.
@@ -41,12 +41,27 @@ export default () => (
         <h2 className={styles.resume_title}>Work</h2>
       </header>
       <Row wrap>
+      <Column space={'50'}>
+          {/* Patch Media */}
+          <h3>Patch Media</h3>
+          <h4>New York, NY (March 2018 - Present)</h4>
+          <Tags>
+            <Tag>Front End Developer</Tag>
+          </Tags>
+          <ul className={styles.resume_list}>
+            <li className={styles.resume_list_item}>Maintained and implemented new functionality for site and its CMS built on <em>PHP</em> and <em>Drupal</em></li>
+            <li className={styles.resume_list_item}>Created new features using <em>Vue.js</em> and used APIs such as <em>Google Analytics</em>, <em>DoubleClick</em>, and <em>Stripe.js</em></li>
+            <li className={styles.resume_list_item}>Participated in A/B and multivariate testing, utilizing tools such as <em>Google Optimize</em></li>
+            <li className={styles.resume_list_item}>Aided in the development of an experimental feed for local news, events, and announcements</li>
+            <li className={styles.resume_list_item}>Created email templates for <em>daily newsletter</em>, <em>breaking news</em>, and <em>news update</em> campaigns.</li>
+          </ul>
+        </Column>
         <Column space={'50'}>
           {/* Poseidon Systems */}
           <h3>Poseidon Systems</h3>
           <h4>Rochester, NY (May 2017 - Jan 2018)</h4>
           <Tags>
-            <Tag>Front End Developer</Tag>
+            <Tag>Software Engineer</Tag>
           </Tags>
           <ul className={styles.resume_list}>
             <li className={styles.resume_list_item}>Participated in redesign for a hybrid mobile and progressive web app</li>
@@ -98,11 +113,13 @@ export default () => (
         <Tag>Express.js</Tag>
         <Tag>React</Tag>
         <Tag>React Native</Tag>
+        <Tag>Vue</Tag>
         <Tag>Redux</Tag>
         <Tag>Angular</Tag>
         <Tag>Rxjs</Tag>
         <Tag>Ionic</Tag>
         <Tag>PHP</Tag>
+        <Tag>Drupal</Tag>
         <Tag>Swift</Tag>
         <Tag>C#</Tag>
         <Tag>MySQL</Tag>
@@ -113,6 +130,8 @@ export default () => (
         <Tag>Photoshop</Tag>
         <Tag>Illustrator</Tag>
         <Tag>Sketch</Tag>
+        <Tag>Google Optimize</Tag>
+        <Tag>Sailthru</Tag>
       </Tags>
     </section>
     {/* Recent Projects */}
