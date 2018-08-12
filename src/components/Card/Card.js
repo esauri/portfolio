@@ -5,8 +5,8 @@ import TiArrowRight from 'react-icons/lib/ti/arrow-right';
 // Styles
 import styles from './styles.module.css';
 
-export default ({ project }) => (
-  <Link to={project.link} className={`${styles.card} ${(project.style.invert) ? styles.invert : ''}`}>
+export default ({ float, project, children }) => (
+  <Link to={project.link} className={`${styles.card} ${(project.style.invert) ? styles.invert : ''} ${float ? styles.float : ''}`}>
     <section
       className={styles.thumbnail}
       style={{ background: `url(${project.thumbnail.src}) no-repeat center center`, backgroundSize: 'cover' }}

@@ -1,4 +1,5 @@
 import React from 'react';
+import TiArrowRight from 'react-icons/lib/ti/arrow-right';
 
 // Components
 import Row from './../../components/Row/Row';
@@ -28,14 +29,19 @@ export default () => (
       {
         projects.map((project, index) => {
           return (
-            <Column key={index} space={100} full>
-              <Card
-                project={project}
-              />
-            </Column>
+              <Column full key={index} space={50} classes={`${styles.project_item}`}>
+                <Card
+                  float
+                  project={project}>
+                </Card>
+                <h3 className={styles.project_subtitle}>
+                  view project
+                  <TiArrowRight />
+                </h3>
+              </Column>
           );
         })
       }
-    </Row>
+      </Row>
   </article>
 );

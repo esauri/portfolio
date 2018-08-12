@@ -1,4 +1,4 @@
-@value tablet-small from './../../styles/variables.module.css';
+@value tablet-small, tablet-medium from './../../styles/variables.module.css';
 
 .card {
   position: relative;
@@ -13,7 +13,7 @@
 }
 
 .card:hover .thumbnail {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 .card:hover .icon {
@@ -27,6 +27,7 @@
 .thumbnail {
   position: relative;
   height: 100%;
+  transform: scale(1.25);
   transition: transform var(--duration);
 }
 
@@ -52,5 +53,16 @@
   .card {
     margin: 0;
     height: 475px;
+  }
+}
+
+@media only screen and (min-width: tablet-medium) {
+  .float .icon,
+  .float .blurb {
+    display: none;
+  }
+
+  .float .title {
+    font-size: 2em;
   }
 }

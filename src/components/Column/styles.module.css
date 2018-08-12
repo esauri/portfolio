@@ -1,4 +1,4 @@
-@value tablet-small from './../../styles/variables.module.css';
+@value tablet-medium from './../../styles/variables.module.css';
 
 .column {
   display: flex;
@@ -10,7 +10,7 @@
   align-self: flex-end;
 }
 
-@media only screen and (min-width: tablet-small) {
+@media only screen and (min-width: tablet-medium) {
   .column_25 {
     flex-basis: 25%;
   }

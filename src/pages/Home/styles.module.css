@@ -1,3 +1,5 @@
+@value tablet-medium, tablet-large from './../../styles/variables.module.css';
+
 .intro {
   font-size: 2rem;
   font-weight: 300;
@@ -10,4 +12,64 @@
 
 .intro_accent {
   color: var(--foreground);
+}
+
+.project_subtitle {
+  display: none;
+}
+
+@media only screen and (min-width: tablet-medium) {
+  .project_item {
+    padding: 16px;
+    position: relative;
+  }
+
+  .project_item:nth-of-type(2n) {
+    margin-top: 80px;
+  }
+
+  .project_item:nth-of-type(n) > a section {
+    right: 0;
+  }
+
+  .project_item:nth-of-type(2n) > a section {
+    left: 0;
+    right: auto;
+  }
+
+  .project_subtitle {
+    display: block;
+    padding: 0 1.11rem;
+    opacity: 0;
+    text-align: right;
+    transform: translateY(100%);
+    transition: opacity 0.6s, transform 0.2s;
+  }
+
+  .project_item:nth-of-type(2n) .project_subtitle {
+    text-align: left;
+  }
+
+  @supports(padding: max(0px)) {
+    .project_subtitle {
+      padding-left: max(1.11rem, env(safe-area-inset-left));
+      padding-right: max(1.11rem, env(safe-area-inset-right));
+    }
+  }
+
+  .project_item > a:hover + .project_subtitle {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: tablet-large) {
+  .project_item {
+    padding: 20px;
+    position: relative;
+  }
+
+  .project_item:nth-of-type(2n) {
+    margin-top: 120px;
+  }
 }
