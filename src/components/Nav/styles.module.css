@@ -1,4 +1,4 @@
-@value tablet-medium from './../../styles/variables.module.css';
+@value tablet-small, tablet-medium from './../../styles/variables.module.css';
 
 .section_title {
   margin: 0;
@@ -36,9 +36,13 @@
 }
 
 .nav_item {
-  flex-basis: 50%;
+  flex-basis: 100%;
   overflow: hidden;
   padding: var(--padding) 0;
+}
+
+.nav_list_secondary .nav_item {
+  flex-basis: 50%;
 }
 
 .project_link {
@@ -76,8 +80,15 @@
   display: none;
 }
 
-@media only screen and (min-width: tablet-medium) {
+@media only screen and (min-width: tablet-small) {
   .nav_item {
+    flex-basis: 50%;
+  }
+}
+
+@media only screen and (min-width: tablet-medium) {
+  .nav_item,
+  .nav_list_secondary .nav_item {
     flex-basis: 100%;
   }
 

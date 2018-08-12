@@ -1,7 +1,7 @@
 .btn {
-  background: var(--base-2);
-  border: 0;
-  border-radius: 4px;
+  background: none;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
   color: var(--accent);
@@ -11,7 +11,7 @@
   margin-top: 1em;
   padding: var(--padding) calc(var(--padding) * 3);
   text-transform: uppercase;
-  transition: box-shadow;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s,;
 }
 
 .round {
@@ -36,8 +36,10 @@
 }
 
 .btn:hover {
-  animation: rainbow-color 1s infinite;
+  /* animation: rainbow-color 1s infinite; */
+  background: var(--accent);
   box-shadow: 0 6px 8px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  color: var(--white);
 }
 
 .btn:focus {
