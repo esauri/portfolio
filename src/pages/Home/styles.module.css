@@ -8,6 +8,7 @@
   color: var(--foreground-2);
 
   padding: 6.666666666666667rem 0;
+  padding-bottom: 0.4em !important
 }
 
 .intro_accent {
@@ -20,7 +21,7 @@
 
 @media only screen and (min-width: tablet-medium) {
   .project_item {
-    padding: 16px;
+    padding: 1em;
     position: relative;
   }
 
@@ -43,7 +44,7 @@
     opacity: 0;
     text-align: right;
     transform: translateY(100%);
-    transition: opacity 0.6s, transform 0.2s;
+    transition: opacity var(--duration), transform var(--duration);
   }
 
   .project_item:nth-of-type(2n) .project_subtitle {

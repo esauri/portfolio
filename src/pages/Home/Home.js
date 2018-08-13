@@ -13,10 +13,10 @@ import projects from './../../utils/getProjectList';
 
 export default () => (
   <article>
-    <section className={`wrapper`}>
+    <section className={`wrapper pb-0`}>
       <Row>
         <Column space={'70'}>
-          <h2 className={styles.intro}>
+          <h2 className={`${styles.intro} pb-0`}>
             Hi there, I'm <span className={styles.intro_accent}>Erick</span>, a <span className={styles.intro_accent}>front-end developer</span>
             &nbsp;
             who works on <span className={styles.intro_accent}>web</span> and <span className={styles.intro_accent}>mobile apps</span>.

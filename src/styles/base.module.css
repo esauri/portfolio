@@ -55,6 +55,30 @@ a {
 a:hover {
   animation: rainbow-color 1s infinite;
 }
+:global(.p-0) {
+  padding: 0 !important;
+}
+
+:global(.pb-0),
+:global(.py-0) {
+  padding-bottom: 0 !important;
+}
+
+:global(.pl-0),
+:global(.px-0) {
+  padding-left: 0 !important;
+}
+
+:global(.pr-0),
+:global(.px-0) {
+  padding-right: 0 !important;
+}
+
+:global(.pt-0),
+:global(.py-0) {
+  padding-top: 0 !important;
+}
+
 
 :global(.wrapper) {
   margin: 0 auto;
