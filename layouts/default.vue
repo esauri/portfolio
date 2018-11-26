@@ -1,55 +1,76 @@
 <template>
-  <div>
+  <div class='bg-black text-white'>
+    <header class='bg-grey-darker'>
+      <section class='bg-grey-darkest flex items-center justify-between max-w-2xl mx-auto px-8 py-3'>
+        <Logo />
+        <Navigation />
+      </section>
+    </header>
     <nuxt/>
   </div>
 </template>
 
 <style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+  html {
+    background: #020202;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: -apple-system, ".SFNSText-Regular", "Avenir Next", "San Francisco", "Roboto", "Lato", sans-serif;
+    font-size: 16px;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  a:hover,
+  .link:hover {
+    animation: rainbow-color 1s infinite;
+  }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  @keyframes rainbow-color{
+    0% {
+      color: #f66b34;
+    }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+    20% {
+      color: #f1b340;
+    }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+    40% {
+      color: #7dcf85;
+    }
+
+    60% {
+      color: #5480f1;
+    }
+
+    80% {
+      color: #b062ea;
+    }
+
+    100% {
+      color: #e74c3c;
+    }
+  }
 </style>
+
+<script>
+import Logo from '~/components/Logo.vue';
+import Navigation from '~/components/Navigation.vue';
+
+export default {
+  components: {
+    Logo,
+    Navigation,
+  },
+}
+</script>

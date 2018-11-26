@@ -18,6 +18,9 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore aliquid sit dicta molestias laudantium sequi voluptatum quaerat, odio aut aliquam ratione possimus modi quidem, quas mollitia quae quod ducimus facere.
+      </p>
     </div>
   </section>
 </template>
@@ -34,11 +37,11 @@ export default {
 
 <style>
 
-/* Sample `apply` at-rules with Tailwind CSS
+/* Sample `apply` at-rules with Tailwind CSS */
 .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
-*/
+
 
 
 .container {

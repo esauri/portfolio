@@ -2,6 +2,13 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
+const _9830a9c8 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _19e0c258 = () => interopDefault(import('../pages/horsemask.vue' /* webpackChunkName: "pages/horsemask" */))
+const _1c44dae8 = () => interopDefault(import('../pages/poseidon.vue' /* webpackChunkName: "pages/poseidon" */))
+const _0e705f29 = () => interopDefault(import('../pages/tiptap.vue' /* webpackChunkName: "pages/tiptap" */))
+const _9bc60d8e = () => interopDefault(import('../pages/trumpcard.vue' /* webpackChunkName: "pages/trumpcard" */))
+const _7a591bac = () => interopDefault(import('../pages/twosevenzero.vue' /* webpackChunkName: "pages/twosevenzero" */))
+const _b7f73412 = () => interopDefault(import('../pages/venu.vue' /* webpackChunkName: "pages/venu" */))
 const _58c0f43e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
@@ -62,6 +69,34 @@ export function createRouter() {
     scrollBehavior,
 
     routes: [{
+      path: "/about",
+      component: _9830a9c8,
+      name: "about"
+    }, {
+      path: "/horsemask",
+      component: _19e0c258,
+      name: "horsemask"
+    }, {
+      path: "/poseidon",
+      component: _1c44dae8,
+      name: "poseidon"
+    }, {
+      path: "/tiptap",
+      component: _0e705f29,
+      name: "tiptap"
+    }, {
+      path: "/trumpcard",
+      component: _9bc60d8e,
+      name: "trumpcard"
+    }, {
+      path: "/twosevenzero",
+      component: _7a591bac,
+      name: "twosevenzero"
+    }, {
+      path: "/venu",
+      component: _b7f73412,
+      name: "venu"
+    }, {
       path: "/",
       component: _58c0f43e,
       name: "index"
