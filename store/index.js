@@ -1,6 +1,18 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+// Assets
+import PoseidonIcon from '~/assets/images/poseidon/icon.png';
+import PoseidonThumbnail from '~/assets/images/poseidon/poseidon_home.jpg';
+import VenuIcon from '~/assets/images/venu/avatar.png';
+import VenuThumbnail from '~/assets/images/venu/thumbnail.jpeg';
+import TrumpIcon from '~/assets/images/trumpcard/public/small/avatar.png';
+import TrumpThumbnail from '~/assets/images/trumpcard/public/large/thumbnail.jpg';
+import TwoSevenZeroIcon from '~/assets/images/270/public/small/avatar.png';
+import TwoSevenZeroThumbnail from '~/assets/images/270/public/small/avatar.png';
+import TipTapIcon from '~/assets/images/tiptap/tiptap_icon.png';
+import HorsemaskIcon from '~/assets/images/horsemasks/avatar.png';
+
 // Tell Vue we want to use Vuex!
 Vue.use(Vuex);
 
@@ -18,11 +30,11 @@ const store = () => {
           tags: ['Progressive Web App Development', 'Angular 5', 'Ionic'],
           assets: {
             icon: {
-              src: '~/assets/images/poseidon/icon.png',
+              src: PoseidonIcon,
               description: 'Poseidon Icon',
             },
             thumbnail: {
-              src: '~/assets/images/poseidon/poseidon_home.jpg',
+              src: PoseidonThumbnail,
               description: 'Poseidon Thumbnail',
             },
           },
@@ -36,11 +48,11 @@ const store = () => {
           tags: ['Firebase', 'Progressive Web App Development', 'React'],
           assets: {
             icon: {
-              src: '~/assets/images/venu/avatar.png',
+              src: VenuIcon,
               description: 'VENU Icon',
             },
             thumbnail: {
-              src: '~/assets/images/venu/thumbnail.jpeg',
+              src: VenuThumbnail,
               description: 'VENU Thumbnail',
             },
           },
@@ -54,11 +66,11 @@ const store = () => {
           tags: ['Mobile Development', 'Swift'],
           assets: {
             icon: {
-              src: '~/assets/images/trumpcard/public/small/avatar.png',
+              src: TrumpIcon,
               description: 'Trump Card Icon',
             },
             thumbnail: {
-              src: '~/assets/images/trumpcard/public/large/thumbnail.jpg',
+              src: TrumpThumbnail,
               description: 'Trump Card Thumbnail',
             },
           },
@@ -72,11 +84,11 @@ const store = () => {
           tags: ['AngularJS', 'Ionic', 'Mobile Development'],
           assets: {
             icon: {
-              src: '~/assets/images/270/public/small/avatar.png',
+              src: TwoSevenZeroIcon,
               description: '270 Icon',
             },
             thumbnail: {
-              src: '~/assets/images/270/public/small/avatar.png',
+              src: TwoSevenZeroThumbnail,
               description: '270 Thumbnail',
             },
           },
@@ -93,7 +105,7 @@ const store = () => {
           tags: ['React', 'React Native', 'Javascript', 'Mobile App Dev'],
           assets: {
             icon: {
-              src: '~/assets/images/tiptap/tiptap_icon.png',
+              src: TipTapIcon,
               description: 'TipTap app Icon',
             },
           },
@@ -107,7 +119,7 @@ const store = () => {
           tags: ['C#', 'Game Development', 'Unity'],
           assets: {
             icon: {
-              src: '~/assets/images/horsemasks/avatar.png',
+              src: HorsemaskIcon,
               description: 'Dawn of the Living Horsemasks Icon',
             },
           },
