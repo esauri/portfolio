@@ -3,18 +3,23 @@
  *
  */
 <template>
-  <section class='flex justify-center'>
+  <section class='flex justify-center relative'>
     <button class='text-white focus:outline-none' @click='toggleMenu'>
       <HamburgerIcon />
     </button>
-
-    <section v-if='showMenu' class='fixed bg-grey-darker pin'>
-      <section>
+    <!-- Menu -->
+    <section v-if='showMenu' class='fixed h-screen pin overflow-y-scroll z-40'>
+      <!-- Header -->
+      <section class='bg-black container flex justify-between py-3'>
+        <!-- Logo -->
+        <Logo />
         <!-- Close button -->
-        <section class='bg-grey-darkest flex justify-end max-w-2xl mx-auto px-8 py-5'>
-          <Logo />
-          <button class='text-white focus:outline-none' @click='toggleMenu'>Close</button>
-        </section>
+        <button class='text-white focus:outline-none' @click='toggleMenu'>
+          <span class='close'></span>
+        </button>
+      </section>
+      <!-- Nav -->
+      <section class='bg-grey-darker mobile-nav'>
         <!-- Projects -->
         <section v-if='projects.length' class='pb-2 pt-4 px-4'>
           <h3 class='text-grey'>Projects</h3>
@@ -63,6 +68,7 @@
 
   export default {
     components: {
+      Logo,
       ListItem,
       HamburgerIcon,
     },
@@ -102,6 +108,38 @@
 </script>
 
 <style scoped>
+  .close{
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  .close::before,
+  .close::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: currentColor;
+    border-radius: 4px;
+  }
+
+  .close::before {
+    transform: rotate(45deg);
+  }
+  .close::after {
+    transform: rotate(-45deg);
+  }
+
+  .mobile-nav {
+    animation: pop 0.2s;
+  }
+
   .nav-link::after {
     display: block;
     content: '';
@@ -114,34 +152,17 @@
     transform: scaleX(1);
   }
 
-  .dropdown-nav {
-    animation: dropdown-reveal 0.2s;
-    padding: 1em;
-    width: 400px;
-    position: absolute;
-    transform: translateX(-45%);
-    z-index: 5;
-  }
-
-  .dropdown-arrow {
-    position: absolute;
-    width: 1em;
-    height: 1em;
-    top: 1em;
-    left: 50%;
-    border-radius: 4px;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-
-  @keyframes dropdown-reveal {
+  @keyframes pop {
     0% {
-      opacity: 0;
-      transform: perspective(600px) rotateX(-30deg) translateX(-45%);
+      transform: scale(0.95);
+    }
+
+    50% {
+      transform: scale(1.05);
     }
 
     100% {
-      opacity: 1;
-      transform: rotateX(0) translateX(-45%);
+      transform: scale(1);
     }
   }
 </style>

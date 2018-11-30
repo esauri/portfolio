@@ -35,7 +35,7 @@
                         <h3>{{ project.name }}</h3>
                       </template>
                       <template slot='description'>
-                        <p class='mt-1'>{{ project.description }}</p>
+                        <p class='text-sm'>{{ project.description }}</p>
                       </template>
                     </ListItem>
                   </nuxt-link>
@@ -157,7 +157,7 @@
     position: absolute;
     width: 1em;
     height: 1em;
-    top: 1em;
+    top: 1.1em;
     left: 50%;
     border-radius: 4px;
     transform: translate(-50%, -50%) rotate(45deg);
