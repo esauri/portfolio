@@ -34,7 +34,7 @@ import TwoSevenZeroMockupTriviaImage from './../../assets/img/270/public/large/m
 import projects from './../../utils/getProjectList';
 
 // Create new zoomable object
-const zooming = new Zooming();
+const zooming = new Zooming({ bgColor: '#070606' });
 
 export default ({ route }) => (
   <article>

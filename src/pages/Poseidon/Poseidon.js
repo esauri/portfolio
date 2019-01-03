@@ -26,7 +26,7 @@ import projects from './../../utils/getProjectList';
 import styles from './styles.module.css';
 
 // Create new zoomable object
-const zooming = new Zooming();
+const zooming = new Zooming({ bgColor: '#070606' });
 
 export default ({ route }) => (
   <article>

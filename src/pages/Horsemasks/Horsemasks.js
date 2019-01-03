@@ -22,7 +22,7 @@ import HorsemaskBanner from './../../assets/img/horsemasks/dawnofthelivinghorsem
 // Utils
 import projects from './../../utils/getProjectList';
 
-const zooming = new Zooming();
+const zooming = new Zooming({ bgColor: '#070606' });
 
 export default ({ route }) => (
   <article>

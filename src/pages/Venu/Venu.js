@@ -59,7 +59,7 @@ import ProfileScreen from './../../assets/img/venu/public/profile.png';
 import projects from './../../utils/getProjectList';
 
 // Create new zoomable object
-const zooming = new Zooming();
+const zooming = new Zooming({ bgColor: '#070606' });
 
 export default ({ route }) => (
   <article>

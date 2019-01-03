@@ -32,7 +32,7 @@ export default () => (
         living in Brooklyn. I'm a graduate from Rochester Institute of Technology
         with a Bachelor's in New Media Interactive Development and a minor
         in Mobile App Development. I enjoy working on web and mobile applications as well
-        as making games in my spare time. Feel free to email me at <a href={'mailto:ejs3863@rit.edu'}>ejs3863 at rit.edu</a>.
+        as making games in my spare time. Feel free to email me at <a href={`mailto:${links.email}`}>ericksaurisyl [at] gmail.com</a>.
       </p>
     </section>
     {/* Work */}

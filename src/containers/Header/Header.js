@@ -12,11 +12,11 @@ import Navigation from './../Navigation/Navigation';
 // Styles
 import styles from './styles.module.css';
 
-export default ({ darkMode }) => (
+export default () => (
   <Navbar>
     {/* Logo */}
     <Link className={styles.link} to=''>
-      <Logo darkMode={darkMode} />
+      <Logo />
     </Link>
 
     {/* Mobile Menu */}

@@ -14,56 +14,21 @@ class Main extends Component {
     super(props);
 
     this.state = {
-      darkMode: false,
       showBackToTop: false,
     };
 
     // Bind functions
     this.backToTop = this.backToTop.bind(this);
-    this.toggleTheme = this.toggleTheme.bind(this);
     this.easeInOutQuad = this.easeInOutQuad.bind(this);
     this.scrollButtonToggle = this.scrollButtonToggle.bind(this);
-    this.setThemeBasedOnTime = this.setThemeBasedOnTime.bind(this);
   }
 
   componentDidMount() {
-    // Get theme based on time
-    this.setThemeBasedOnTime();
+    window.addEventListener('scroll', this.scrollButtonToggle);
   }
 
-  /**
-   * setThemeBasedOnTime
-   *
-   */
-  setThemeBasedOnTime() {
-    const MIN = 6;
-    const MAX = MIN + 12;
-    const currentHour = new Date().getHours();
-    const isDaytime = (MAX > currentHour) && (currentHour > MIN);
-    const storedTheme = JSON.parse(localStorage.getItem('ERICK_SAURI/PORTFOLIO/THEME'));
-
-    // Check if preference has been set in local storage
-    if (typeof(storedTheme) === 'boolean') {
-      // If there is a stored preference use that
-      this.setState({ darkMode: storedTheme })
-    } else {
-      // Light mode if between 6 and 6, othernise dark mode
-      this.setState({ darkMode: !isDaytime });
-    }
-  }
-
-  /**
-   * toggleTheme - Toggles theme
-   *
-   */
-  toggleTheme() {
-    const { darkMode } = this.state;
-
-    // Save in local storage
-    localStorage.setItem('ERICK_SAURI/PORTFOLIO/THEME', !darkMode);
-
-    // Set theme
-    this.setState({ darkMode: !darkMode });
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.scrollButtonToggle);
   }
 
   /**
@@ -140,20 +105,20 @@ class Main extends Component {
   }
 
   render() {
-    const { darkMode, showBackToTop } = this.state;
+    const { showBackToTop } = this.state;
 
     return (
-      <article className={`${styles.container} ${(darkMode) ? styles.dark_theme : styles.light_theme}`}>
-        <Header darkMode={darkMode} />
+      <article className={`${styles.container} ${styles.dark_theme}`}>
+        <Header />
         <main className={styles.main}>
           { this.props.children }
         </main>
         {/* Back to top */}
         <Button fab show={showBackToTop} onClick={this.backToTop}>
-          <TiArrowUp size={24} />
+          <TiArrowUp size={30} />
         </Button>
         {/* Footer */}
-        <Footer theme={(darkMode) ? 'Light' : 'Dark'} backToTop={this.backToTop} toggleTheme={this.toggleTheme} />
+        <Footer />
       </article>
     );
   }

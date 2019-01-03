@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 // Containers
 import Main from './../Main/Main';
@@ -19,24 +20,36 @@ import ClickerGame from './../../pages/ClickerGame/ClickerGame';
 import TwoSevenZero from './../../pages/TwoSevenZero/TwoSevenZero';
 import AudioVisualizer from './../../pages/AudioVisualizer/AudioVisualizer';
 
+const page = ({ location }) => (
+  <TransitionGroup>
+    <CSSTransition
+      key={location.key}
+      classNames={'fade'}
+      timeout={300}
+    >
+      <ScrollToTop>
+        <Main>
+          <Switch location={location}>
+            <Route exact path={'/'} component={Home} />
+            <Route exact path={'/about'} component={About} />
+            <Route exact path={'/audiovisualizer'} component={() => <AudioVisualizer route={'/audiovisualizer'} />} />
+            <Route exact path={'/twosevenzero'} component={() => <TwoSevenZero route={'/twosevenzero'} />} />
+            <Route exact path={'/clickergame'} component={() => <ClickerGame route={'/clickergame'} />} />
+            <Route exact path={'/horsemask'} component={() => <Horsemasks route={'/horsemask'} />} />
+            <Route exact path={'/trumpcard'} component={() => <TrumpCard route={'/trumpcard'} />} />
+            <Route exact path={'/poseidon'} component={() => <Poseidon route={'/poseidon'} />} />
+            <Route exact path={'/tiptap'} component={() => <TipTap route={'/tiptap'} />} />
+            <Route exact path={'/venu'} component={() => <Venu route={'/venu'} />} />
+            <Route component={NotFound} />
+          </Switch>
+        </Main>
+      </ScrollToTop>
+    </CSSTransition>
+  </TransitionGroup>
+);
+
 export default () => (
   <BrowserRouter>
-    <ScrollToTop>
-      <Main>
-        <Switch>
-          <Route exact path={'/'} component={Home} />
-          <Route exact path={'/about'} component={About} />
-          <Route exact path={'/audiovisualizer'} component={() => <AudioVisualizer route={'/audiovisualizer'} />} />
-          <Route exact path={'/twosevenzero'} component={() => <TwoSevenZero route={'/twosevenzero'} />} />
-          <Route exact path={'/clickergame'} component={() => <ClickerGame route={'/clickergame'} />} />
-          <Route exact path={'/horsemask'} component={() => <Horsemasks route={'/horsemask'} />} />
-          <Route exact path={'/trumpcard'} component={() => <TrumpCard route={'/trumpcard'} />} />
-          <Route exact path={'/poseidon'} component={() => <Poseidon route={'/poseidon'} />} />
-          <Route exact path={'/tiptap'} component={() => <TipTap route={'/tiptap'} />} />
-          <Route exact path={'/venu'} component={() => <Venu route={'/venu'} />} />
-          <Route component={NotFound} />
-        </Switch>
-      </Main>
-    </ScrollToTop>
+    <Route render={page} />
   </BrowserRouter>
 );

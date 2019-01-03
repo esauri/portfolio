@@ -20,7 +20,8 @@
   position: absolute;
   background: none;
   border: 0;
-  bottom: 0;
+  left: 20px;
+  bottom: 40px;
   order: 3;
 }
 
