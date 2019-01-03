@@ -24,7 +24,7 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.scrollButtonToggle);
+    window.addEventListener('scroll', this.scrollButtonToggle, { passive: true });
   }
 
   componentWillUnmount() {
