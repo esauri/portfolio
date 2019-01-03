@@ -41,7 +41,7 @@ export default () => (
         <h2 className={styles.resume_title}>Work</h2>
       </header>
       <Row wrap>
-      <Column space={'50'}>
+      <Column space={'100'}>
           {/* Patch Media */}
           <h3>Patch Media</h3>
           <h4>New York, NY (March 2018 - Present)</h4>
@@ -49,11 +49,12 @@ export default () => (
             <Tag>Front End Developer</Tag>
           </Tags>
           <ul className={styles.resume_list}>
-            <li className={styles.resume_list_item}>Maintained and implemented new functionality for site and its CMS built on <em>PHP</em> and <em>Drupal</em></li>
-            <li className={styles.resume_list_item}>Created new features using <em>Vue.js</em> and used APIs such as <em>Google Analytics</em>, <em>DoubleClick</em>, and <em>Stripe.js</em></li>
-            <li className={styles.resume_list_item}>Participated in A/B and multivariate testing, utilizing tools such as <em>Google Optimize</em></li>
-            <li className={styles.resume_list_item}>Aided in the development of an experimental feed for local news, events, and announcements</li>
-            <li className={styles.resume_list_item}>Created email templates for <em>daily newsletter</em>, <em>breaking news</em>, and <em>news update</em> campaigns.</li>
+            <li className={styles.resume_list_item}>Optimized images using Fastly Image Optimization, implemented responsive images, and lazy loading for images below the fold</li>
+            <li className={styles.resume_list_item}>Implemented a new, quicker content posting and replying experience for users to share what's happening in their local community</li>
+            <li className={styles.resume_list_item}>Maintained and implemented new functionality for site and its CMS built on <strong>PHP</strong> and <strong>Drupal</strong></li>
+            <li className={styles.resume_list_item}>Created new features using <strong>Vue</strong> and used APIs such as <strong>Google Analytics</strong>, <strong>DoubleClick</strong>, and <strong>Stripe</strong></li>
+            <li className={styles.resume_list_item}>Participated in A/B and multivariate testing, utilizing tools such as <strong>Google Optimize</strong></li>
+            <li className={styles.resume_list_item}>Created email templates for <em>daily newsletter</em>, <em>breaking news</em>, and weekly <em>community calendar events</em> campaigns</li>
           </ul>
         </Column>
         <Column space={'50'}>
@@ -109,11 +110,11 @@ export default () => (
         <Tag>CSS3</Tag>
         <Tag>SASS</Tag>
         <Tag>LESS</Tag>
-        <Tag>Node.js</Tag>
-        <Tag>Express.js</Tag>
+        <Tag>Node</Tag>
+        <Tag>Express</Tag>
+        <Tag>Vue</Tag>
         <Tag>React</Tag>
         <Tag>React Native</Tag>
-        <Tag>Vue</Tag>
         <Tag>Redux</Tag>
         <Tag>Angular</Tag>
         <Tag>Rxjs</Tag>
@@ -124,14 +125,14 @@ export default () => (
         <Tag>C#</Tag>
         <Tag>MySQL</Tag>
         <Tag>PostgreSQL</Tag>
-        <Tag>MongoDB</Tag>
+        <Tag>Fastly</Tag>
+        <Tag>Sailthru</Tag>
+        <Tag>Google Optimize</Tag>
         <Tag>Visual Studio</Tag>
         <Tag>Unity</Tag>
         <Tag>Photoshop</Tag>
         <Tag>Illustrator</Tag>
         <Tag>Sketch</Tag>
-        <Tag>Google Optimize</Tag>
-        <Tag>Sailthru</Tag>
       </Tags>
     </section>
     {/* Recent Projects */}
