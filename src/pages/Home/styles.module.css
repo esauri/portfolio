@@ -11,10 +11,8 @@
   font-weight: 300;
   line-height: 3.16rem;
   letter-spacing: 0.06rem;
+  padding: 1rem 0 2rem;
   color: var(--foreground-2);
-
-  /* padding: 4rem 0;
-  padding-bottom: 0.4em !important */
 }
 
 .intro_accent {
@@ -29,6 +27,7 @@
   .intro {
     font-size: 2rem;
     padding: 6.666666666666667rem 0;
+    padding-bottom: 0.4em !important;
   }
 
   .project_item {

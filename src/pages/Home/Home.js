@@ -16,7 +16,7 @@ export default () => (
     <section className={`wrapper pb-0`}>
       <section className={styles.header}>
         <Column space={'70'}>
-          <h2 className={`${styles.intro} pb-0`}>
+          <h2 className={`${styles.intro}`}>
             Hi there, I'm <span className={styles.intro_accent}>Erick</span>, a <span className={styles.intro_accent}>front-end developer</span>
             &nbsp;
             who works on <span className={styles.intro_accent}>web</span> and <span className={styles.intro_accent}>mobile apps</span>.
