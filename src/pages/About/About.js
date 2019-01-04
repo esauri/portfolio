@@ -50,9 +50,9 @@ export default () => (
               <Tag>Front End Developer</Tag>
             </Tags>
             <ul className={styles.resume_list}>
-              <li className={styles.resume_list_item}>Optimized images using Fastly Image Optimization, implemented responsive images, and lazy loading for images below the fold</li>
+              <li className={styles.resume_list_item}>Optimized images using <strong>Fastly Image Optimization</strong>, implemented responsive images, and lazy loading for images below the fold</li>
               <li className={styles.resume_list_item}>Implemented a new, quicker content posting and replying experience for users to share what's happening in their local community</li>
-              <li className={styles.resume_list_item}>Maintained and implemented new functionality for site and its CMS built on <strong>PHP</strong> and <strong>Drupal</strong></li>
+              <li className={styles.resume_list_item}>Maintained and implemented new functionality for site and its CMS built in <strong>PHP</strong> and <strong>Drupal</strong></li>
               <li className={styles.resume_list_item}>Created new features using <strong>Vue</strong> and used APIs such as <strong>Google Analytics</strong>, <strong>DoubleClick</strong>, and <strong>Stripe</strong></li>
               <li className={styles.resume_list_item}>Participated in A/B and multivariate testing, utilizing tools such as <strong>Google Optimize</strong></li>
               <li className={styles.resume_list_item}>Created email templates for <em>daily newsletter</em>, <em>breaking news</em>, and weekly <em>community calendar events</em> campaigns</li>
@@ -69,9 +69,9 @@ export default () => (
             </Tags>
             <ul className={styles.resume_list}>
               <li className={styles.resume_list_item}>Participated in redesign for a hybrid mobile and progressive web app</li>
-              <li className={styles.resume_list_item}>Developed app front end using Angular and Ionic Framework</li>
-              <li className={styles.resume_list_item}>Utilized libraries such as Highcharts for oil monitoring data visualization</li>
-              <li className={styles.resume_list_item}>Performed back end tasks using Firebase for authentication, storage, cloud messaging, and database needs</li>
+              <li className={styles.resume_list_item}>Developed app front end using <strong>Angular</strong> and <strong>Ionic Framework</strong></li>
+              <li className={styles.resume_list_item}>Utilized libraries such as <strong>Highcharts</strong> for oil monitoring data visualization</li>
+              <li className={styles.resume_list_item}>Performed back end tasks using <strong>Firebase</strong> for authentication, storage, cloud messaging, and database needs</li>
             </ul>
           </section>
         </Column>
@@ -85,9 +85,9 @@ export default () => (
             </Tags>
             <ul className={styles.resume_list}>
               <li className={styles.resume_list_item}>Tasked with maintaining and implementing admin features for a web app</li>
-              <li className={styles.resume_list_item}>Utilized Node.js for server-side and an internal framework based on the MVC paradigm</li>
-              <li className={styles.resume_list_item}>Performed database tasks with PostgreSQL</li>
-              <li className={styles.resume_list_item}>Created unit and end to end tests using libraries like Mocha and Selenium</li>
+              <li className={styles.resume_list_item}>Utilized <strong>Node.js</strong> for server-side and an internal framework based on the MVC paradigm</li>
+              <li className={styles.resume_list_item}>Performed database tasks with <strong>PostgreSQL</strong></li>
+              <li className={styles.resume_list_item}>Created unit and end to end tests using libraries like <strong>Mocha</strong> and <strong>Selenium</strong></li>
             </ul>
           </section>
         </Column>
