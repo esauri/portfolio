@@ -1,14 +1,20 @@
 @value tablet-medium, tablet-large from './../../styles/variables.module.css';
 
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
 .intro {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 3.16rem;
   letter-spacing: 0.06rem;
   color: var(--foreground-2);
 
-  padding: 6.666666666666667rem 0;
-  padding-bottom: 0.4em !important
+  /* padding: 4rem 0;
+  padding-bottom: 0.4em !important */
 }
 
 .intro_accent {
@@ -20,6 +26,11 @@
 }
 
 @media only screen and (min-width: tablet-medium) {
+  .intro {
+    font-size: 2rem;
+    padding: 6.666666666666667rem 0;
+  }
+
   .project_item {
     padding: 1em;
     position: relative;

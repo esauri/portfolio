@@ -28,9 +28,13 @@ body {
   font-family: -apple-system, ".SFNSText-Regular", "Avenir Next", "San Francisco", "Roboto", "Lato", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 12px 0;
+}
+
 p {
   line-height: 1.6;
-  margin-bottom: 1em;
   letter-spacing: 0.01rem;
 }
 

@@ -13,6 +13,10 @@
   border-radius: 100%;
 }
 
+.resume_sub_section {
+  padding-bottom: 16px;
+}
+
 .resume_header {
   position: relative;
   overflow: hidden;
@@ -29,12 +33,13 @@
 }
 
 .resume_list {
+  margin: 0;
+  margin-left: 12px;
   padding: 0;
-  margin-left: 16px;
 }
 
 .resume_list_item {
-  margin: 16px 0;
+  margin: 12px 0;
 }
 
 @media only screen and (min-width: tablet-small) {

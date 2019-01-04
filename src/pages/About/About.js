@@ -41,49 +41,55 @@ export default () => (
         <h2 className={styles.resume_title}>Work</h2>
       </header>
       <Row wrap>
-      <Column space={'100'}>
-          {/* Patch Media */}
-          <h3>Patch Media</h3>
-          <h4>New York, NY (March 2018 - Present)</h4>
-          <Tags>
-            <Tag>Front End Developer</Tag>
-          </Tags>
-          <ul className={styles.resume_list}>
-            <li className={styles.resume_list_item}>Optimized images using Fastly Image Optimization, implemented responsive images, and lazy loading for images below the fold</li>
-            <li className={styles.resume_list_item}>Implemented a new, quicker content posting and replying experience for users to share what's happening in their local community</li>
-            <li className={styles.resume_list_item}>Maintained and implemented new functionality for site and its CMS built on <strong>PHP</strong> and <strong>Drupal</strong></li>
-            <li className={styles.resume_list_item}>Created new features using <strong>Vue</strong> and used APIs such as <strong>Google Analytics</strong>, <strong>DoubleClick</strong>, and <strong>Stripe</strong></li>
-            <li className={styles.resume_list_item}>Participated in A/B and multivariate testing, utilizing tools such as <strong>Google Optimize</strong></li>
-            <li className={styles.resume_list_item}>Created email templates for <em>daily newsletter</em>, <em>breaking news</em>, and weekly <em>community calendar events</em> campaigns</li>
-          </ul>
+        <Column space={'100'}>
+          <section className={styles.resume_sub_section}>
+            {/* Patch Media */}
+            <h3>Patch Media</h3>
+            <h4>New York, NY (March 2018 - Present)</h4>
+            <Tags>
+              <Tag>Front End Developer</Tag>
+            </Tags>
+            <ul className={styles.resume_list}>
+              <li className={styles.resume_list_item}>Optimized images using Fastly Image Optimization, implemented responsive images, and lazy loading for images below the fold</li>
+              <li className={styles.resume_list_item}>Implemented a new, quicker content posting and replying experience for users to share what's happening in their local community</li>
+              <li className={styles.resume_list_item}>Maintained and implemented new functionality for site and its CMS built on <strong>PHP</strong> and <strong>Drupal</strong></li>
+              <li className={styles.resume_list_item}>Created new features using <strong>Vue</strong> and used APIs such as <strong>Google Analytics</strong>, <strong>DoubleClick</strong>, and <strong>Stripe</strong></li>
+              <li className={styles.resume_list_item}>Participated in A/B and multivariate testing, utilizing tools such as <strong>Google Optimize</strong></li>
+              <li className={styles.resume_list_item}>Created email templates for <em>daily newsletter</em>, <em>breaking news</em>, and weekly <em>community calendar events</em> campaigns</li>
+            </ul>
+          </section>
         </Column>
         <Column space={'50'}>
-          {/* Poseidon Systems */}
-          <h3>Poseidon Systems</h3>
-          <h4>Rochester, NY (May 2017 - Jan 2018)</h4>
-          <Tags>
-            <Tag>Software Engineer</Tag>
-          </Tags>
-          <ul className={styles.resume_list}>
-            <li className={styles.resume_list_item}>Participated in redesign for a hybrid mobile and progressive web app</li>
-            <li className={styles.resume_list_item}>Developed app front end using Angular and Ionic Framework</li>
-            <li className={styles.resume_list_item}>Utilized libraries such as Highcharts for oil monitoring data visualization</li>
-            <li className={styles.resume_list_item}>Performed back end tasks using Firebase for authentication, storage, cloud messaging, and database needs</li>
-          </ul>
+          <section className={styles.resume_sub_section}>
+            {/* Poseidon Systems */}
+            <h3>Poseidon Systems</h3>
+            <h4>Rochester, NY (May 2017 - Jan 2018)</h4>
+            <Tags>
+              <Tag>Software Engineer</Tag>
+            </Tags>
+            <ul className={styles.resume_list}>
+              <li className={styles.resume_list_item}>Participated in redesign for a hybrid mobile and progressive web app</li>
+              <li className={styles.resume_list_item}>Developed app front end using Angular and Ionic Framework</li>
+              <li className={styles.resume_list_item}>Utilized libraries such as Highcharts for oil monitoring data visualization</li>
+              <li className={styles.resume_list_item}>Performed back end tasks using Firebase for authentication, storage, cloud messaging, and database needs</li>
+            </ul>
+          </section>
         </Column>
         <Column space={'50'}>
-          {/* CACI */}
-          <h3>CACI</h3>
-          <h4>Rome, NY (Summer 2016)</h4>
-          <Tags>
-            <Tag>Web Developer</Tag>
-          </Tags>
-          <ul className={styles.resume_list}>
-            <li className={styles.resume_list_item}>Tasked with maintaining and implementing admin features for a web app</li>
-            <li className={styles.resume_list_item}>Utilized Node.js for server-side and an internal framework based on the MVC paradigm</li>
-            <li className={styles.resume_list_item}>Performed database tasks with PostgreSQL</li>
-            <li className={styles.resume_list_item}>Created unit and end to end tests using libraries like Mocha and Selenium</li>
-          </ul>
+          <section className={styles.resume_sub_section}>
+            {/* CACI */}
+            <h3>CACI</h3>
+            <h4>Rome, NY (Summer 2016)</h4>
+            <Tags>
+              <Tag>Web Developer</Tag>
+            </Tags>
+            <ul className={styles.resume_list}>
+              <li className={styles.resume_list_item}>Tasked with maintaining and implementing admin features for a web app</li>
+              <li className={styles.resume_list_item}>Utilized Node.js for server-side and an internal framework based on the MVC paradigm</li>
+              <li className={styles.resume_list_item}>Performed database tasks with PostgreSQL</li>
+              <li className={styles.resume_list_item}>Created unit and end to end tests using libraries like Mocha and Selenium</li>
+            </ul>
+          </section>
         </Column>
       </Row>
     </section>
