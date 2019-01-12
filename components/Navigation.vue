@@ -6,13 +6,13 @@
   <section>
     <ul class='flex list-reset'>
       <li class='flex items-center justify-center'>
-        <nuxt-link class='antialiased font-light nav-link no-underline px-4 text-lg text-white' to='about'>
+        <nuxt-link class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg text-black' to='about'>
           About
         </nuxt-link>
       </li>
       <li class='flex items-center justify-center'>
         <button
-          class='antialiased font-light link nav-link no-underline px-4 focus:outline-none relative text-lg text-white'
+          class='antialiased font-light link nav-link no-underline hover:no-underline px-4 focus:outline-none relative text-lg text-black'
           @mouseenter='handleDropdown(true)'
           @mouseleave='handleMouseLeave'
           @touchstart='handleDropdown(!showDropdown)'
@@ -23,19 +23,19 @@
             <section class='bg-grey-darker dropdown-arrow' />
             <!-- Projects -->
             <section v-if='projects.length' class='bg-grey-darker pb-2 pt-4 px-4 rounded-t-lg text-left'>
-              <h3 class='text-grey'>Projects</h3>
+              <h2 class='text-grey'>Projects</h2>
               <ul class='flex flex-col list-reset'>
                 <li v-for='project in projects' :key='project.id' class='my-3'>
-                  <nuxt-link class='block no-underline text-white' :to='project.alias'>
+                  <nuxt-link class='block no-underline hover:no-underline text-white' :to='project.alias'>
                     <ListItem>
                       <template slot='image'>
                         <img class='rounded-full w-16' :src='project.assets.icon.src' :alt='project.assets.icon.description'>
                       </template>
                       <template slot='title'>
-                        <h3>{{ project.name }}</h3>
+                        <h3 class='p-0'>{{ project.name }}</h3>
                       </template>
                       <template slot='description'>
-                        <p class='text-sm'>{{ project.description }}</p>
+                        <p class='font-hairline font-sans text-base'>{{ project.description }}</p>
                       </template>
                     </ListItem>
                   </nuxt-link>
@@ -44,16 +44,16 @@
             </section>
             <!-- Playground -->
             <section v-if='playground.length' class='bg-grey-darker pt-2 pb-4 px-4 rounded-b-lg text-left'>
-              <h3 class='text-grey'>Playground</h3>
+              <h2 class='text-grey'>Playground</h2>
               <ul class='flex flex-col list-reset'>
                 <li v-for='playgroundItem in playground' :key='playgroundItem.id' class='my-3'>
-                  <nuxt-link class='block no-underline text-white' :to='playgroundItem.alias'>
+                  <nuxt-link class='block no-underline hover:no-underline text-white' :to='playgroundItem.alias'>
                     <ListItem>
                       <template slot='image'>
                         <img class='rounded-full w-12' :src='playgroundItem.assets.icon.src' :alt='playgroundItem.assets.icon.description' />
                       </template>
                       <template slot='title'>
-                        <h3>{{ playgroundItem.name }}</h3>
+                        <h3 class='p-0'>{{ playgroundItem.name }}</h3>
                       </template>
                     </ListItem>
                   </nuxt-link>
@@ -65,12 +65,12 @@
         </button>
       </li>
       <li class='flex items-center justify-center'>
-        <a class='antialiased font-light nav-link no-underline px-4 text-lg text-white' rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.github'>
+        <a class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg text-black' rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.github'>
           Github
         </a>
       </li>
       <li class='flex items-center justify-center'>
-        <a class='antialiased font-light nav-link no-underline px-4 text-lg text-white' rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.resume'>
+        <a class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg text-black' rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.resume'>
           Resume
         </a>
       </li>
@@ -132,6 +132,10 @@
 </script>
 
 <style scoped>
+  .nav-link:hover {
+    text-decoration: none;
+  }
+
   .nav-link::after {
     display: block;
     content: '';
@@ -145,11 +149,11 @@
   }
 
   .dropdown-nav {
-    animation: dropdown-reveal 0.2s;
+    animation: dropdown-reveal 0.2s ease-in;
     padding: 1em;
     width: 400px;
     position: absolute;
-    transform: translateX(-45%);
+    transform: translateX(-43%);
     z-index: 5;
   }
 
@@ -166,12 +170,12 @@
   @keyframes dropdown-reveal {
     0% {
       opacity: 0;
-      transform: perspective(600px) rotateX(-30deg) translateX(-45%);
+      transform: translate(-43%, 25px);
     }
 
     100% {
       opacity: 1;
-      transform: rotateX(0) translateX(-45%);
+      transform: translate(-43%, 0);
     }
   }
 </style>

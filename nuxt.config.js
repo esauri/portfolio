@@ -15,7 +15,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'shortcut icon', href: '~/assets/images/icons/logo.png' }
+      { rel: 'shortcut icon', href: '~/assets/images/icons/logo.png' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lora:400,400i' },
     ]
   },
 

@@ -1,11 +1,11 @@
 <template>
   <footer class='footer text-center'>
     <section class='footer-left'>
-      <p class='m-0 py-4'>&copy; Erick Sauri {{ currentYear }}</p>
+      <span class='font-sans m-0 py-4'>&copy; Erick Sauri {{ currentYear }}</span>
     </section>
     <ul class='bg-white footer-right list-reset md:py-16'>
       <li class='py-4'>
-        <a rel='noopener noreferrer' :href='emailUrl'>ejs3863[at]rit.edu</a>
+        <a rel='noopener noreferrer' :href='emailUrl'>ericksaurisyl[at]gmail.com</a>
       </li>
       <li class='py-4'>
         <a rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.github'>Github</a>

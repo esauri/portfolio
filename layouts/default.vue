@@ -1,5 +1,5 @@
 <template>
-  <main class='bg-black text-white'>
+  <main>
     <!-- Header -->
     <header>
       <section class='container flex items-center justify-between py-3'>
@@ -21,9 +21,7 @@
 
 <style>
 html {
-  background: #020202;
   box-sizing: border-box;
-  color: #fff;
   font-family: -apple-system, ".SFNSText-Regular", "Avenir Next",
     "San Francisco", "Roboto", "Lato", sans-serif;
   font-size: 18px;
@@ -48,37 +46,68 @@ a {
 
 a:hover,
 .link:hover {
-  animation: rainbow-color 1s infinite;
+  color: #e74c3c;
+  text-decoration: underline;
 }
 
-p {
+.btn {
+  transition: all .15s ease;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+h1 {
+  @apply py-4 text-3xl;
+}
+
+h2 {
+ @apply py-2 text-2xl;
+}
+
+h3 {
+  @apply py-2 text-lg;
+}
+
+p, .p {
   line-height: 1.6;
-  margin-bottom: 1em;
-  letter-spacing: 0.01rem;
+  /* margin-bottom: 1em; */
+  letter-spacing: -0.004em;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  word-break: break-word;
+  @apply font-serif font-normal text-lg;
 }
 
 @media only screen and (min-width: 768px) {
-  p {
+  p, .p {
     line-height: 1.8;
+    @apply text-xl;
   }
 }
 
 /* Sample `apply` at-rules with Tailwind CSS */
 .container {
-  @apply max-w-2xl mx-auto px-5;
+  @apply max-w-container mx-auto px-5;
 }
 
 .page-enter-active, .page-leave-active {
   transition: opacity .5s
 }
+
 .page-enter, .page-leave-active {
   opacity: 0
 }
+
 .slide-left-enter,
 .slide-right-leave-active {
   opacity: 0;
   transform: translate(30px, 0);
 }
+
 .slide-left-leave-active,
 .slide-right-enter {
   opacity: 0;

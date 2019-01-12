@@ -208,6 +208,8 @@ module.exports = {
       'sans-serif',
     ],
     'serif': [
+      'Lora',
+      'Georigia',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -604,6 +606,7 @@ module.exports = {
     '4xl': '90rem',
     '5xl': '100rem',
     'full': '100%',
+    'container': '960px',
   },
 
 

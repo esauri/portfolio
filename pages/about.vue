@@ -1,5 +1,4 @@
 <template>
-
   <article>
     <!-- Picture Section -->
     <section class='container flex justify-center my-4'>
@@ -9,93 +8,93 @@
     <!-- About Me -->
     <section class='container py-4'>
       <header class='header my-6'>
-        <h2 class='title'>About me</h2>
+        <h1 class='title'>About me</h1>
       </header>
       <p class='my-4'>
         Hey! I’m Erick Sauri a front end developer originally from Puerto Rico but currently
         living in Brooklyn. I'm a graduate from Rochester Institute of Technology
         with a Bachelor's in New Media Interactive Development and a minor
         in Mobile App Development. I enjoy working on web and mobile applications as well
-        as making games in my spare time. Feel free to email me at <a href='mailto:ejs3863@rit.edu'>ejs3863 at rit.edu</a>.
+        as making games in my spare time. Feel free to email me at <a :href='emailUrl'>ericksaurisyl[at]gmail.com</a>.
       </p>
     </section>
     <!-- Work -->
     <section class='container py-4'>
       <header class='header my-6'>
-        <h2 class='title'>Work</h2>
+        <h1 class='title'>Work</h1>
       </header>
       <section class='flex flex-wrap'>
         <!-- Patch -->
-        <section class='mb-4 w-full'>
-          <h3 class='my-3'>Patch Media</h3>
-          <h4>New York, NY (March 2018 - Present)</h4>
+        <section class='pb-4 w-full'>
+          <h2>Patch Media</h2>
+          <h3>New York, NY &middot; March 2018 - Present</h3>
           <ul class='flex flex-wrap list-reset py-4'>
-            <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Front End Developer</li>
-            <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Full-time</li>
+            <li class='border border-grey mr-2 px-3 py-1 rounded-full text-grey text-sm'>Front End Developer</li>
+            <li class='border border-grey mr-2 px-3 py-1 rounded-full text-grey text-sm'>Full-time</li>
           </ul>
           <ul class='pl-5'>
-            <li class='leading-normal py-2'>
-              Optimized images using Fastly Image Optimization, implemented responsive images, and lazy loading for images below the fold
+            <li class='p'>
+              Optimized images using <strong>Fastly Image Optimization</strong>, implemented responsive images, and lazy loading for images below the fold
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Implemented a new, quicker content posting and replying experience for users to share what's happening in their local community
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Maintained and implemented new functionality for site and its CMS built on <strong>PHP</strong> and <strong>Drupal</strong>
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Created new features using <strong>Vue</strong> and used APIs such as <strong>Google Analytics</strong>, <strong>DoubleClick</strong>, and <strong>Stripe</strong>
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Participated in A/B and multivariate testing, utilizing tools such as <strong>Google Optimize</strong>
             </li>
-            <li class='leading-normal py-2'>
-              Created email templates for <em>daily newsletter</em>, <em>breaking news</em>, and weekly <em>community calendar events</em> campaigns
+            <li class='p'>
+              Created email templates for various newsletter campaigns
             </li>
           </ul>
         </section>
         <!-- Poseidon -->
-        <section class='mb-4 w-full md:w-1/2'>
-          <h3 class='my-3'>Poseidon Systems</h3>
-          <h4>Rochester, NY (May 2017 - Jan 2018)</h4>
+        <section class='pb-4 w-full'>
+          <h2>Poseidon Systems</h2>
+          <h3>Rochester, NY &middot; May 2017 - Jan 2018</h3>
           <ul class='flex flex-wrap list-reset py-4'>
-            <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Software Engineer</li>
-            <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Co-op</li>
+            <li class='border border-grey mr-2 px-3 py-1 rounded-full text-grey text-sm'>Software Engineer</li>
+            <li class='border border-grey mr-2 px-3 py-1 rounded-full text-grey text-sm'>Co-op</li>
           </ul>
           <ul class='pl-5'>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Participated in redesign for a hybrid mobile and progressive web app
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Developed app front end using <strong>Angular</strong> and <strong>Ionic Framework</strong>
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Utilized libraries such as <strong>Highcharts</strong> for oil monitoring data visualization
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Performed back end tasks using <strong>Firebase</strong> for authentication, storage, cloud messaging, and database needs
             </li>
           </ul>
         </section>
         <!-- CACI -->
-        <section class='mb-4 md:pl-2 w-full md:w-1/2'>
-          <h3 class='my-3'>CACI</h3>
-          <h4>Rome, NY (Summer 2016)</h4>
+        <section class='pb-4 w-full'>
+          <h2>CACI</h2>
+          <h3>Rome, NY &middot; Summer 2016</h3>
           <ul class='flex flex-wrap list-reset py-4'>
-            <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Web Developer</li>
-            <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Co-op</li>
+            <li class='border border-grey mr-2 px-3 py-1 rounded-full text-grey text-sm'>Web Developer</li>
+            <li class='border border-grey mr-2 px-3 py-1 rounded-full text-grey text-sm'>Co-op</li>
           </ul>
           <ul class='pl-5'>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Tasked with maintaining and implementing admin features for a web app
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Utilized <strong>Node</strong> for server-side and an internal framework based on the MVC paradigm
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Performed database tasks with <strong>PostgreSQL</strong>
             </li>
-            <li class='leading-normal py-2'>
+            <li class='p'>
               Created unit and end to end tests using libraries like <strong>Mocha</strong> and <strong>Selenium</strong>
             </li>
           </ul>
@@ -105,55 +104,62 @@
     <!-- Education -->
     <section class='container py-4'>
       <header class='header my-6'>
-        <h2 class='title'>Education</h2>
+        <h1 class='title'>Education</h1>
       </header>
-      <h3 class='my-3'>Rochester Institute of Technology</h3>
-      <h4>Rochester, NY (2013 - 2017)</h4>
-      <h5 class='my-3'>Bachelor's of Science</h5>
+      <h2>Rochester Institute of Technology</h2>
+      <h3>Rochester, NY (2013 - 2017)</h3>
+      <h4 class='my-3'>Bachelor's of Science</h4>
       <ul class='flex flex-wrap list-reset py-4'>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>New Media Interactive Dev<span class='hidden md:inline'>elopment</span></li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Mobile App Development</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>New Media Interactive Dev<span class='hidden md:inline'>elopment</span></li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Mobile App Development</li>
       </ul>
     </section>
     <!-- Skills -->
     <section class='container py-4'>
       <header class='header my-6'>
-        <h2 class='title'>Skills &amp; Tools</h2>
+        <h1 class='title'>Skills &amp; Tools</h1>
       </header>
       <ul class='flex flex-wrap list-reset py-4'>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>HTML5</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>CSS3</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>SASS</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>LESS</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Node</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Express</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Vue</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>React</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>React Native</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Redux</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Angular</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Rxjs</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Ionic</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>PHP</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Drupal</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Swift</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>C#</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>MySQL</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>PostgreSQL</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Unity</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Sketch</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Photoshop</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Illustrator</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Fastly</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Sailthru</li>
-        <li class='border border-grey rounded-full text-grey mr-3 mb-3 px-3 py-1'>Google Optimize</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>HTML5</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>CSS3</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>SASS</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>LESS</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Node</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Express</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Vue</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>React</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>React Native</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Redux</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Angular</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Rxjs</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Ionic</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>PHP</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Drupal</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Swift</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>C#</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>MySQL</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>PostgreSQL</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Unity</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Sketch</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Photoshop</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Illustrator</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Fastly</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Sailthru</li>
+        <li class='border border-grey mb-3 mr-2 px-3 py-1 rounded-full text-grey text-sm'>Google Optimize</li>
 
       </ul>
     </section>
     <!-- CTA -->
-    <section class='bg-grey-darker flex flex-col justify-center py-20 text-center'>
-      <h3 class='my-3'>Looking for a PDF of printable version of my resume?</h3>
-      <a :href='socialMediaUrls.resume' target='_blank' rel='noopener noreferrer'>Resume</a>
+    <section class='bg-grey-darker mt-8'>
+      <section class='container py-20 text-center text-white'>
+        <h3 class='my-3'>Looking for a PDF of printable version of my resume?</h3>
+        <a
+          :href='socialMediaUrls.resume'
+          class='bg-grey-lightest btn font-semibold hover:bg-white hover:shadow-lg inline-block px-8 py-3 rounded shadow-md text-red'
+          target='_blank'
+          rel='noopener noreferrer'
+        >Resume</a>
+      </section>
     </section>
   </article>
 </template>
@@ -161,6 +167,16 @@
 <script>
   export default {
     computed: {
+      /**
+       * Returns email url
+       *
+       */
+      emailUrl() {
+        return `mailto:${this.socialMediaUrls.email}`;
+      },
+      /**
+       * Returns social media urls
+       */
       socialMediaUrls() {
         return this.$store.getters.socialMediaUrls;
       }

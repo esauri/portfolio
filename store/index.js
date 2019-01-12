@@ -126,10 +126,10 @@ const store = () => {
         },
       ],
       // Useful links
-      email: 'ejs3863@rit.edu',
+      email: 'ericksaurisyl@gmail.com',
       github: 'https://github.com/esauri',
       linkedIn: 'https://www.linkedin.com/in/erick-sauri-1847357b',
-      resume: 'https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2FErick%20Sauri%20Resume.pdf?alt=media&token=2e50cb15-4ddc-4e17-831a-3a4792853010',
+      resume: 'https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2FErick%20Sauri%20Resume.pdf?alt=media&token=9e8a8332-65fd-4982-a82d-fbe4eff862c5',
     }),
     getters: {
       projectList({ projects }) {
