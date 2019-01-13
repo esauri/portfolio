@@ -5,6 +5,7 @@
       <Pic
         :src='images.banner'
         alt='TipTap Banner'
+        class='block w-full'
       />
     </section>
     <!-- Project Details -->

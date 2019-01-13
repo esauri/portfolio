@@ -4,7 +4,8 @@
     <section class='pb-8'>
       <Pic
         :src='images.banner'
-        alt='TipTap Banner'
+        alt='Dawn of the Living Horsemasks Banner'
+        class='block w-full'
       />
     </section>
     <!-- Introduction -->
