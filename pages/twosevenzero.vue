@@ -14,7 +14,7 @@
     <section class='container py-4'>
       <ul class='flex flex-wrap list-reset'>
         <li class='font-bold rounded-full text-blue text-grey text-sm uppercase'>
-          Angular.js &middot; Ionic Framework
+          Angularjs &middot; Ionic Framework
         </li>
       </ul>
       <h1>270</h1>
@@ -39,7 +39,7 @@
     <section class='container py-4'>
       <h2>Mockups</h2>
       <section class='my-6'>
-        <section class='pb-6'>
+        <figure class='pb-6'>
           <Pic
             lazy
             zoomable
@@ -49,7 +49,10 @@
             alt='Mockup of the home views'
             class='block w-full'
           />
-        </section>
+          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+            Initial mockups for main views
+          </figcaption>
+        </figure>
         <p>
           These are the first designs of the app views. Not much has changed
           from these views other than the tab bar, which due to time constraints
@@ -66,7 +69,7 @@
         </p>
       </section>
       <section class='my-6'>
-        <section class='pb-6'>
+        <figure class='pb-6'>
           <Pic
             lazy
             zoomable
@@ -76,7 +79,10 @@
             alt='Mockup of the trivia views'
             class='block w-full'
           />
-        </section>
+          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+            Initial mockups for trivia views
+          </figcaption>
+        </figure>
         <p>
           As for the trivia views little changed other than the tab bar with different helpers users could call if they wanted to.
           Players were supposed to use the currency earned in game to purchase these helpers.
@@ -84,7 +90,7 @@
       </section>
     </section>
     <!-- All Screens -->
-    <section class='py-4'>
+    <figure class='py-4'>
       <Pic
         lazy
         zoomable
@@ -94,7 +100,10 @@
         alt='Perspective view of all the app screens'
         class='block w-full'
       />
-    </section>
+      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        Final version
+      </figcaption>
+    </figure>
     <!-- Final Product -->
     <section class='container py-4'>
       <h2>Final Product</h2>
@@ -102,7 +111,7 @@
       <section class='my-6'>
         <h3>Home View</h3>
         <section class='flex flex-col items-center md:flex-row-reverse'>
-          <section class='w-full md:w-1/4'>
+          <figure class='w-full md:w-1/4'>
             <Pic
               lazy
               zoomable
@@ -112,7 +121,10 @@
               alt='Home screen for the Democratic Party candidate'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-          </section>
+            <figcaption class='text-center text-grey-dark text-sm'>
+              Democratic Party candidate home view
+            </figcaption>
+          </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
               Due to time constraints on the project I decided to make enough trivia for only 10 states. I
@@ -130,7 +142,7 @@
           </section>
         </section>
         <section class='flex flex-col items-center md:flex-row'>
-          <section class='w-full md:w-1/4'>
+          <figure class='w-full md:w-1/4'>
             <Pic
               lazy
               zoomable
@@ -140,7 +152,10 @@
               alt='Home screen for the Republican Party candidate'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-          </section>
+            <figcaption class='text-center text-grey-dark text-sm'>
+              Republican Party candidate home view
+            </figcaption>
+          </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <p>
               The states with the partisan background represent states that have already been completed while the states with the
@@ -156,7 +171,7 @@
       </section>
       <!-- State View -->
       <section class='flex flex-col items-center md:flex-row-reverse my-6'>
-        <section class='w-full md:w-1/4'>
+        <figure class='w-full md:w-1/4'>
           <Pic
             lazy
             zoomable
@@ -166,7 +181,10 @@
             alt='270 Republican candidate Iowa State View'
             class='block mx-auto md:mr-0 md:ml-auto'
           />
-        </section>
+          <figcaption class='text-center text-grey-dark text-sm'>
+            Iowa state view
+          </figcaption>
+        </figure>
         <section class='w-full md:mr-3 md:w-3/4'>
           <h3>State View</h3>
           <p>
@@ -188,7 +206,7 @@
       <section class='my-6'>
         <h3>Trivia View</h3>
         <section class='flex flex-col items-center md:flex-row-reverse'>
-          <section class='w-full md:w-1/4'>
+          <figure class='w-full md:w-1/4'>
             <Pic
               lazy
               zoomable
@@ -198,7 +216,10 @@
               alt='View for when trivia has been correctly answered'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-          </section>
+            <figcaption class='text-center text-grey-dark text-sm'>
+              Trivia View: Correct Answer
+            </figcaption>
+          </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
               Each trivia question has a category and four possible choices, one of them being the correct
@@ -212,7 +233,7 @@
           </section>
         </section>
         <section class='flex flex-col items-center md:flex-row'>
-          <section class='w-full md:w-1/4'>
+          <figure class='w-full md:w-1/4'>
             <Pic
               lazy
               zoomable
@@ -222,7 +243,10 @@
               alt='View for when trivia has been incorrectly answered'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-          </section>
+            <figcaption class='text-center text-grey-dark text-sm'>
+              Trivia View: Wrong Answer
+            </figcaption>
+          </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <p>
               If the player answers correctly, they will be told by how much did they score increase in that state.
@@ -238,10 +262,15 @@
     <!-- Gameplay video -->
     <section class='container py-4'>
       <h2>Gameplay</h2>
-      <Vimeo
-        title='270 Demo'
-        src='https://player.vimeo.com/video/183411950'
-      />
+      <figure>
+        <Vimeo
+          title='270 Demo'
+          src='https://player.vimeo.com/video/183411950'
+        />
+        <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          270 gameplay video
+        </figcaption>
+      </figure>
     </section>
     <!-- Parting Thoughts -->
     <section class='container py-4'>

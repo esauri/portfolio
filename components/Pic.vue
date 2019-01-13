@@ -94,7 +94,7 @@ export default {
 
       // "Intersect" certain pixels before actual top
       const observerOptions = {
-        rootMargin: '0px 0px 50px 0px',
+        rootMargin: '50px 0px 50px 0px',
       };
 
       // Create IntersectionObserver
