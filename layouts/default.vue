@@ -68,7 +68,7 @@ h2 {
 }
 
 h3 {
-  @apply py-2 text-lg;
+  @apply py-2 text-xl text-grey-light;
 }
 
 p, .p {
@@ -152,7 +152,7 @@ export default {
     Logo,
     Footer,
     MobileNav,
-    Navigation
+    Navigation,
   }
 };
 </script>

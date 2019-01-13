@@ -8,7 +8,7 @@ import _6f6c098b from '../layouts/default.vue'
 const layouts = { "_default": _6f6c098b }
 
 export default {
-  head: {"title":"portfolio","meta":[{"charset":"utf-8"},{"name":"viewport","content":"viewport-fit=cover, width=device-width, initial-scale=1, shrink-to-fit=no"},{"name":"apple-itunes-app","content":"app-id=1360335414"},{"hid":"description","name":"description","content":"Erick Sauri – Front End Developer. Hi there, I'm Erick, a front-end developer who works on web and mobile apps."}],"link":[{"rel":"shortcut icon","href":"~\u002Fassets\u002Fimages\u002Ficons\u002Flogo.png"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Amiri:400,400i"}],"style":[],"script":[]},
+  head: {"title":"portfolio","meta":[{"charset":"utf-8"},{"name":"viewport","content":"viewport-fit=cover, width=device-width, initial-scale=1, shrink-to-fit=no"},{"name":"apple-itunes-app","content":"app-id=1360335414"},{"hid":"description","name":"description","content":"Erick Sauri – Front End Developer. Hi there, I'm Erick, a front-end developer who works on web and mobile apps."}],"link":[{"rel":"shortcut icon","href":"~\u002Fassets\u002Fimages\u002Ficons\u002Flogo.png"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Lora:400,400i"}],"style":[],"script":[]},
 
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })

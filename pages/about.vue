@@ -3,7 +3,12 @@
     <!-- Picture Section -->
     <section class='container flex justify-center my-4'>
       <!-- Profile Picture -->
-      <img class='w-64 h-64 rounded-full' src='~/assets/images/misc/me.jpg' alt='Picture of Erick Sauri' />
+      <Pic
+        zoomable
+        :src='profileImageSrc'
+        class='w-64 h-64 rounded-full'
+        alt='Picture of Erick Sauri'
+      />
     </section>
     <!-- About Me -->
     <section class='container py-4'>
@@ -34,7 +39,7 @@
           </ul>
           <ul class='pl-5'>
             <li class='p'>
-              Optimized images using <strong>Fastly Image Optimization</strong>, implemented responsive images, and lazy loading for images below the fold
+              Optimized images using <strong>Fastly Pic Optimization</strong>, implemented responsive images, and lazy loading for images below the fold
             </li>
             <li class='p'>
               Implemented a new, quicker content posting and replying experience for users to share what's happening in their local community
@@ -165,7 +170,13 @@
 </template>
 
 <script>
+  import ProfileImage from '~/assets/images/misc/me.jpg';
+  import Pic from '~/components/Pic.vue';
+
   export default {
+    components: {
+      Pic,
+    },
     computed: {
       /**
        * Returns email url
@@ -173,6 +184,13 @@
        */
       emailUrl() {
         return `mailto:${this.socialMediaUrls.email}`;
+      },
+      /**
+       * Returns profile Pic src
+       *
+       */
+      profileImageSrc() {
+        return ProfileImage;
       },
       /**
        * Returns social media urls

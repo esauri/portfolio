@@ -25,13 +25,13 @@
           <h2 class='text-grey'>Projects</h2>
           <ul class='flex flex-col list-reset'>
             <li v-for='(project, index) in projects' :key='index' class='my-3'>
-              <nuxt-link class='block no-underline hover:no-underline text-white' :to='project.alias'>
+              <nuxt-link class='block nav-link no-underline hover:no-underline text-white' :to='project.alias'>
                 <ListItem>
                   <template slot='image'>
                     <img class='rounded-full w-12' :src='project.assets.icon.src' :alt='project.assets.icon.description'>
                   </template>
                   <template slot='title'>
-                    <h3 class='p-0'>{{ project.name }}</h3>
+                    <h3 class='p-0 text-white'>{{ project.name }}</h3>
                   </template>
                 </ListItem>
               </nuxt-link>
@@ -144,20 +144,9 @@
     animation: slide-up 0.3s ease-in-out;
   }
 
-  .nav-link:hover {
-    text-decoration: none;
-  }
-
-  .nav-link::after {
-    display: block;
-    content: '';
-    border-bottom: 2px solid currentColor;
-    transform: scaleX(0);
-    transition: transform 0.2s;
-  }
-
-  .nav-link:hover::after {
-    transform: scaleX(1);
+  .nav-link p,
+  .nav-link h3 {
+    color: inherit !important;
   }
 
   @keyframes fade {

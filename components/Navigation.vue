@@ -32,7 +32,7 @@
                         <img class='rounded-full w-16' :src='project.assets.icon.src' :alt='project.assets.icon.description'>
                       </template>
                       <template slot='title'>
-                        <h3 class='p-0'>{{ project.name }}</h3>
+                        <h3 class='p-0 text-white'>{{ project.name }}</h3>
                       </template>
                       <template slot='description'>
                         <p class='font-hairline font-sans text-base'>{{ project.description }}</p>
@@ -53,7 +53,7 @@
                         <img class='rounded-full w-12' :src='playgroundItem.assets.icon.src' :alt='playgroundItem.assets.icon.description' />
                       </template>
                       <template slot='title'>
-                        <h3 class='p-0'>{{ playgroundItem.name }}</h3>
+                        <h3 class='p-0 text-white'>{{ playgroundItem.name }}</h3>
                       </template>
                     </ListItem>
                   </nuxt-link>
@@ -132,6 +132,11 @@
 </script>
 
 <style scoped>
+  .nav-link p,
+  .nav-link h3 {
+    color: inherit !important;
+  }
+
   .nav-link:hover {
     text-decoration: none;
   }

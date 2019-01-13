@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import Zooming from 'zooming';
 
 // Assets
 import PoseidonIcon from '~/assets/images/poseidon/icon.png';
@@ -114,7 +115,7 @@ const store = () => {
         {
           id: 1,
           name: 'Horsemask',
-          alias: 'venu',
+          alias: 'horsemask',
           description: 'Dawn of the Living Horsemasks',
           tags: ['C#', 'Game Development', 'Unity'],
           assets: {
@@ -130,6 +131,11 @@ const store = () => {
       github: 'https://github.com/esauri',
       linkedIn: 'https://www.linkedin.com/in/erick-sauri-1847357b',
       resume: 'https://firebasestorage.googleapis.com/v0/b/portfolio-7ad56.appspot.com/o/media%2FErick%20Sauri%20Resume.pdf?alt=media&token=9e8a8332-65fd-4982-a82d-fbe4eff862c5',
+      // Zooming
+      zooming: new Zooming({
+        // options...
+        bgColor: '#020202',
+      }),
     }),
     getters: {
       projectList({ projects }) {
@@ -145,7 +151,10 @@ const store = () => {
           linkedIn,
           resume,
         };
-      }
+      },
+      zooming({ zooming }) {
+        return zooming;
+      },
     },
   });
 }
