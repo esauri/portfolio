@@ -9,7 +9,7 @@
       />
     </section>
     <!-- Project Details -->
-    <section class='container flex flex-col justify-center py-4'>
+    <section class='container py-4'>
       <ul class='flex flex-wrap list-reset'>
         <li class='font-bold rounded-full text-blue text-grey text-sm uppercase'>
           React Native
@@ -44,10 +44,10 @@
     <!-- CTA -->
     <section class='bg-grey-darker'>
       <section class='container py-20 text-center text-white'>
-        <h3 class='my-3'>Download the App now!</h3>
+        <h2 class='my-3'>Download the App now!</h2>
         <a
           href='https://itunes.apple.com/us/app/tiptap-tip-calculator/id1360335414'
-          class='bg-grey-lightest btn font-semibold hover:bg-white hover:shadow-lg inline-block px-8 py-3 rounded shadow-md text-red'
+          class='bg-grey-lightest btn font-semibold hover:bg-white hover:shadow-lg inline-block mb-2 px-8 py-3 rounded shadow-md text-red'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -57,14 +57,14 @@
 
         <a
           href='https://play.google.com/store/apps/details?id=com.tiptap'
-          class='bg-grey-lightest btn font-semibold hover:bg-white hover:shadow-lg inline-block px-8 py-3 rounded shadow-md text-red'
+          class='bg-grey-lightest btn font-semibold hover:bg-white hover:shadow-lg inline-block mb-2 px-8 py-3 rounded shadow-md text-red'
           target='_blank'
           rel='noopener noreferrer'
         >
         <FontAwesomeIcon :icon="['fab', 'android']"  />
           <span>Play Store</span>
         </a>
-        <p class='font-sans text-sm py-4'>Made in collaboration with <a href='http://goodhombres.blogspot.com' rel='noopener noreferrer' target='_blank'>Christian Medina</a></p>
+        <p class='font-sans text-sm py-2'>Made in collaboration with <a href='http://goodhombres.blogspot.com' rel='noopener noreferrer' target='_blank'>Christian Medina</a></p>
       </section>
     </section>
   </article>
