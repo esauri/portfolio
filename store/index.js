@@ -10,7 +10,7 @@ import VenuThumbnail from '~/assets/images/venu/thumbnail.jpeg';
 import TrumpIcon from '~/assets/images/trumpcard/public/small/avatar.png';
 import TrumpThumbnail from '~/assets/images/trumpcard/public/large/thumbnail.jpg';
 import TwoSevenZeroIcon from '~/assets/images/270/public/small/avatar.png';
-import TwoSevenZeroThumbnail from '~/assets/images/270/public/small/avatar.png';
+import TwoSevenZeroThumbnail from '~/assets/images/270/public/small/thumbnail2.jpg';
 import TipTapIcon from '~/assets/images/tiptap/tiptap_icon.png';
 import HorsemaskIcon from '~/assets/images/horsemasks/avatar.png';
 
@@ -62,7 +62,7 @@ const store = () => {
         {
           id: 2,
           name: 'Trump Card',
-          alias: '/trumpcard',
+          alias: 'trumpcard',
           description: 'Make America Great Again?',
           tags: ['Mobile Development', 'Swift'],
           assets: {

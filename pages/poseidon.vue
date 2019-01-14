@@ -1,12 +1,8 @@
 <template>
   <article>
     <!-- Hero Banner -->
-    <section class='pb-8'>
-      <Pic
-        :src='images.banner'
-        alt='Poseidon Banner'
-        class='block w-full'
-      />
+    <section class='banner banner-poseidon mb-8'>
+      <span class='banner-chevron-down border-grey-darker'></span>
     </section>
     <!-- Project Details -->
     <section class='container py-4'>
@@ -37,7 +33,7 @@
       </section>
     </section>
     <!-- Pic -->
-    <section class='py-8'>
+    <figure class='py-8'>
       <Pic
         lazy
         zoomable
@@ -45,7 +41,10 @@
         alt='Poseidon Asset Plots'
         class='block'
       />
-    </section>
+      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        Common plots
+      </figcaption>
+    </figure>
     <!-- Solution -->
     <section class='container py-4'>
       <h2>Solution</h2>
@@ -72,7 +71,7 @@
     <!-- Plot Annotations -->
     <section class='container py-4'>
       <h2>Plot Annotations &amp; Event Timeline</h2>
-      <section class='my-6'>
+      <figure class='my-6'>
         <Pic
           lazy
           zoomable
@@ -80,7 +79,10 @@
           alt='Poseidon Plot Page'
           class='block'
         />
-      </section>
+        <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          Plot View
+        </figcaption>
+      </figure>
       <section class='my-6'>
         <p>
           A new feature for the plots was the ability to attach events to them such as weather, device maintenance,
@@ -109,7 +111,7 @@
       </section>
     </section>
     <!-- Pic -->
-    <section class='py-8'>
+    <figure class='py-8'>
       <Pic
         lazy
         zoomable
@@ -117,7 +119,10 @@
         alt='Poseidon Event Creation Pages'
         class='block'
       />
-    </section>
+      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        Creating an event &amp; Event View
+      </figcaption>
+    </figure>
     <!-- Parting Thoughts -->
     <section class='container py-4'>
       <h2>Parting Thoughts</h2>
@@ -135,9 +140,14 @@
   </article>
 </template>
 
+<style scoped>
+  .banner-poseidon {
+    background-image: url('~assets/images/poseidon/poseidon_dark.jpg');
+  }
+</style>
+
 <script>
   // Assets
-  import ImageBanner from '~/assets/images/poseidon/poseidon_dark.jpg';
   import ImageEvent from '~/assets/images/poseidon/screens/event.jpg';
   import ImagePlots from '~/assets/images/poseidon/screens/plots.jpg';
   import ImagePlotPage from '~/assets/images/poseidon/screens/plot page.jpg';
@@ -151,7 +161,6 @@
     computed: {
       images() {
         return {
-          banner: ImageBanner,
           plots: ImagePlots,
           event: ImageEvent,
           plotPage: ImagePlotPage,

@@ -1,24 +1,35 @@
 <template>
-  <footer class='footer text-center'>
+  <footer class='bg-grey-darkest footer pt-8 text-center text-white'>
     <section class='footer-left'>
       <span class='font-sans m-0 py-4'>&copy; Erick Sauri {{ currentYear }}</span>
     </section>
-    <ul class='bg-white footer-right list-reset md:py-16'>
+    <ul class='footer-right list-reset md:py-16'>
       <li class='py-4'>
-        <a rel='noopener noreferrer' :href='emailUrl'>ericksaurisyl[at]gmail.com</a>
+        <a rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.github'>
+          <FontAwesomeIcon :icon='["fab", "github"]' />
+        </a>
       </li>
       <li class='py-4'>
-        <a rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.github'>Github</a>
+        <a rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.linkedIn'>
+          <FontAwesomeIcon :icon='["fab", "linkedin-in"]' />
+        </a>
       </li>
       <li class='py-4'>
-        <a rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.linkedIn'>LinkedIn</a>
+        <a rel='noopener noreferrer' :href='emailUrl'>
+          <span>ericksaurisyl[at]gmail.com</span>
+        </a>
       </li>
     </ul>
   </footer>
 </template>
 
 <script>
+  import FontAwesomeIcon from '~/components/FontAwesomeIcon';
+
   export default {
+    components: {
+      FontAwesomeIcon,
+    },
     computed: {
       emailUrl() {
         return `mailto:${this.$store.getters.socialMediaUrls.email}`;

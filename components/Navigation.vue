@@ -19,7 +19,7 @@
         >
           <span>Work</span>
           <!-- Dropdown -->
-          <section v-if='showDropdown' class='dropdown-nav'>
+          <section v-if='showDropdown' class='dropdown-nav z-10'>
             <section class='bg-grey-darker dropdown-arrow' />
             <!-- Projects -->
             <section v-if='projects.length' class='bg-grey-darker pb-2 pt-4 px-4 rounded-t-lg text-left'>

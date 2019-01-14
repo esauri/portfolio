@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'Erick Sauri',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'viewport-fit=cover, width=device-width, initial-scale=1, shrink-to-fit=no' },
@@ -15,7 +15,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'shortcut icon', href: '~/assets/images/icons/logo.png' },
+      { rel: 'shortcut icon', href: '/assets/images/icons/logo.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lora:400,400i' },
     ]
   },

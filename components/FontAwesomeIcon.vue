@@ -4,18 +4,16 @@
   import {
     faAndroid,
     faApple,
+    faGithub,
+    faLinkedinIn,
   } from '@fortawesome/free-brands-svg-icons';
 
   import {
-    faChevronRight,
-    faFrown,
-    faFrownOpen,
-    faPencilAlt,
-    faSearch,
-    faTimes,
+    faAngleRight,
+    faEnvelope,
   } from '@fortawesome/free-solid-svg-icons';
 
-  library.add(faAndroid, faApple, faSearch);
+  library.add(faAndroid, faAngleRight, faApple, faEnvelope, faGithub, faLinkedinIn);
 
   export default FontAwesomeIcon;
 </script>

@@ -1,14 +1,8 @@
 <template>
   <article>
     <!-- Hero Banner -->
-    <section class='pb-8'>
-      <Pic
-        :src='images.banner'
-        :srcset='imagesSrcSet.banner'
-        sizes='(max-width: 480px) 480px, (max-width: 768px) 760px, 960px'
-        alt='270 Banner'
-        class='block w-full'
-      />
+    <section class='banner banner-two-seven-zero mb-8'>
+      <span class='banner-chevron-down'></span>
     </section>
     <!-- Introduction -->
     <section class='container py-4'>
@@ -290,9 +284,20 @@
   </article>
 </template>
 
+<style scoped>
+  .banner-two-seven-zero {
+    background-image: url('~assets/images/270/public/medium/banner.jpg');
+  }
+
+  @media only screen and (min-width: 768px) {
+    .banner-two-seven-zero {
+      background-image: url('~assets/images/270/public/large/banner.jpg');
+    }
+  }
+</style>
+
 <script>
   // Small
-  import SmImageBanner from '~/assets/images/270/public/small/banner.jpg';
   import SmImageScreens from '~/assets/images/270/public/small/thumbnail.jpg';
   import SmImageMockupMain from '~/assets/images/270/public/small/mockupMainScreens.jpg';
   import SmImageMockupTrivia from '~/assets/images/270/public/small/mockupTriviaScreens.jpg';
@@ -303,7 +308,6 @@
   import SmImageWrongTrivia from '~/assets/images/270/public/small/triviaWrong.png';
 
   // Medium
-  import MdImageBanner from '~/assets/images/270/public/medium/banner.jpg';
   import MdImageScreens from '~/assets/images/270/public/medium/thumbnail.jpg';
   import MdImageMockupMain from '~/assets/images/270/public/medium/mockupMainScreens.jpg';
   import MdImageMockupTrivia from '~/assets/images/270/public/medium/mockupTriviaScreens.jpg';
@@ -314,7 +318,6 @@
   import MdImageWrongTrivia from '~/assets/images/270/public/medium/triviaWrong.png';
 
   // Large
-  import ImageBanner from '~/assets/images/270/public/large/banner.jpg';
   import ImageScreens from '~/assets/images/270/public/large/thumbnail.jpg';
   import ImageMockupMain from '~/assets/images/270/public/large/mockupMainScreens.jpg';
   import ImageMockupTrivia from '~/assets/images/270/public/large/mockupTriviaScreens.jpg';
@@ -335,7 +338,6 @@
     computed: {
       images() {
         return {
-          banner: ImageBanner,
           screens: ImageScreens,
           mainMockup: ImageMockupMain,
           triviaMockup: ImageMockupTrivia,
@@ -348,7 +350,6 @@
       },
       imagesSrcSet() {
         return {
-          banner: `${SmImageBanner} 480w, ${MdImageBanner} 760w, ${ImageBanner} 960w`,
           screens: `${SmImageScreens} 480w, ${MdImageScreens} 760w, ${ImageScreens} 960w`,
           mainMockup: `${SmImageMockupMain} 480w, ${MdImageMockupMain} 760w, ${ImageMockupMain} 960w`,
           triviaMockup: `${SmImageMockupTrivia} 480w, ${MdImageMockupTrivia} 760w, ${ImageMockupTrivia} 960w`,

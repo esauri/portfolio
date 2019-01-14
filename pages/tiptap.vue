@@ -1,12 +1,8 @@
 <template>
   <article>
     <!-- Hero Banner -->
-    <section class='pb-8'>
-      <Pic
-        :src='images.banner'
-        alt='TipTap Banner'
-        class='block w-full'
-      />
+    <section class='banner banner-tiptap mb-8'>
+      <span class='banner-chevron-down'></span>
     </section>
     <!-- Project Details -->
     <section class='container py-4'>
@@ -70,8 +66,13 @@
   </article>
 </template>
 
+<style scoped>
+  .banner-tiptap {
+    background-image: url('~assets/images/tiptap/tiptap_banner.jpg');
+  }
+</style>
+
 <script>
-  import TipTapBanner from '~/assets/images/tiptap/tiptap_banner.jpg';
   import TipTapPromoImage from '~/assets/images/tiptap/tiptap_promo.jpg';
   import FontAwesomeIcon from '~/components/FontAwesomeIcon';
   import Pic from '~/components/Pic.vue';
@@ -88,7 +89,6 @@
        */
       images() {
         return {
-          banner: TipTapBanner,
           promo: TipTapPromoImage,
         };
       },

@@ -1,15 +1,18 @@
 <template>
   <article>
     <!-- Picture Section -->
-    <section class='container flex justify-center my-4'>
+    <figure class='container my-4'>
       <!-- Profile Picture -->
       <Pic
         zoomable
         :src='profileImageSrc'
-        class='w-64 h-64 rounded-full'
+        class='block mx-auto w-64 h-64 rounded-full'
         alt='Picture of Erick Sauri'
       />
-    </section>
+      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        Moi
+      </figcaption>
+    </figure>
     <!-- About Me -->
     <section class='container py-4'>
       <header class='header my-6'>

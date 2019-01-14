@@ -1,12 +1,8 @@
 <template>
   <article>
     <!-- Hero Banner -->
-    <section class='pb-8'>
-      <Pic
-        :src='images.banner'
-        alt='Dawn of the Living Horsemasks Banner'
-        class='block w-full'
-      />
+    <section class='banner banner-horsemask mb-8'>
+      <span class='banner-chevron-down'></span>
     </section>
     <!-- Introduction -->
     <section class='container py-4'>
@@ -39,7 +35,7 @@
       <h2>Gameplay</h2>
       <!-- Player -->
       <section class='flex flex-col items-center md:flex-row my-6'>
-        <section class='w-full md:w-1/4'>
+        <figure class='w-full md:w-1/4'>
           <Pic
             lazy
             zoomable
@@ -50,7 +46,10 @@
             alt='Player character'
             class='block md:mr-auto'
           />
-        </section>
+          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+            Fearless heroine
+          </figcaption>
+        </figure>
         <section class='w-full md:w-3/4'>
           <h3>Player</h3>
           <p>
@@ -63,7 +62,7 @@
       </section>
       <!-- Horsemask -->
       <section class='flex flex-col items-center md:flex-row-reverse my-6'>
-        <section class='w-full md:w-1/4'>
+        <figure class='w-full md:w-1/4'>
           <Pic
             lazy
             zoomable
@@ -74,7 +73,10 @@
             alt='Horsemask'
             class='block md:ml-auto'
           />
-        </section>
+          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+            Horsemask
+          </figcaption>
+        </figure>
         <section class='w-full md:w-3/4'>
           <h3>Living Horsemask</h3>
           <p>
@@ -88,7 +90,7 @@
       </section>
       <!-- Tank -->
       <section class='flex flex-col items-center md:flex-row my-6'>
-        <section class='w-full md:w-1/4'>
+        <figure class='w-full md:w-1/4'>
           <Pic
             lazy
             zoomable
@@ -99,7 +101,10 @@
             alt='Panzer tank'
             class='block md:mr-auto'
           />
-        </section>
+          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+            Panzer
+          </figcaption>
+        </figure>
         <section class='w-full md:w-3/4'>
           <h3>Tank</h3>
           <p>
@@ -174,8 +179,13 @@
   </article>
 </template>
 
+<style scoped>
+  .banner-horsemask {
+    background-image: url('~assets/images/horsemasks/dawnofthelivinghorsemasks.png');
+  }
+</style>
+
 <script>
-  import HorsemaskBanner from '~/assets/images/horsemasks/dawnofthelivinghorsemasks.png';
   import PlayerImage from '~/assets/images/horsemasks/player.png';
   import PanzerImage from '~/assets/images/horsemasks/panzer.png';
   import HorsemaskImage from '~/assets/images/horsemasks/horsemask.png';
@@ -193,7 +203,6 @@
         return {
           panzer: PanzerImage,
           player: PlayerImage,
-          banner: HorsemaskBanner,
           horsemask: HorsemaskImage,
           panzerThumbnail: PanzerThumnbnail,
           playerThumbnail: PlayerThumnbnail,

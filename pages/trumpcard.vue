@@ -1,14 +1,8 @@
 <template>
   <article>
     <!-- Hero Banner -->
-    <section class='pb-8'>
-      <Pic
-        :src='images.banner'
-        :srcset='imagesSrcSet.banner'
-        sizes='(max-width: 480px) 480px, (max-width: 768px) 760px, 960px'
-        alt='Trump Card Banner'
-        class='block w-full'
-      />
+    <section class='banner banner-trump-card mb-8'>
+      <span class='banner-chevron-down'></span>
     </section>
     <!-- Introduction -->
     <section class='container py-4'>
@@ -48,7 +42,7 @@
       <section class='my-6'>
         <!-- Question -->
         <section class='flex flex-col items-center md:flex-row-reverse'>
-          <section class='w-full md:w-1/4'>
+          <figure class='w-full md:w-1/4'>
             <Pic
               lazy
               zoomable
@@ -58,7 +52,10 @@
               alt='Trump Card Game View'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-          </section>
+            <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+              Question view
+            </figcaption>
+          </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
               Trump Card is a simple game where the player acts as then Presidential candidate Donald Trump and is asked numerous
@@ -70,7 +67,7 @@
         </section>
         <!-- Left Swipe -->
         <section class='flex flex-col items-center md:flex-row'>
-          <section class='w-full md:w-1/4'>
+          <figure class='w-full md:w-1/4'>
             <Pic
               lazy
               zoomable
@@ -80,7 +77,10 @@
               alt='Trump Card Game View After Left Drag'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-          </section>
+            <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+              Left drag
+            </figcaption>
+          </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <p>
               Once the player begins dragging a card to the left or right corner Trump's answer will appear on the card.
@@ -91,7 +91,7 @@
         </section>
         <!-- Right Swipe -->
         <section class='flex flex-col items-center md:flex-row-reverse'>
-          <section class='w-full md:w-1/4'>
+          <figure class='w-full md:w-1/4'>
             <Pic
               lazy
               zoomable
@@ -101,7 +101,10 @@
               alt='Trump Card Game View After Right Drag'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-          </section>
+            <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+              Right drag
+            </figcaption>
+          </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
               In order to avoid the player from
@@ -140,10 +143,21 @@
   </article>
 </template>
 
+<style scoped>
+  .banner-trump-card {
+    background-image: url('~assets/images/trumpcard/public/medium/banner.jpg');
+  }
+
+  @media only screen and (min-width: 768px) {
+    .banner-trump-card {
+      background-image: url('~assets/images/trumpcard/public/large/banner.jpg');
+    }
+  }
+</style>
+
 <script>
   // Assets
   // Small
-  import SmImageBanner from '~/assets/images/trumpcard/public/small/banner.jpg';
   import SmImageGameView from '~/assets/images/trumpcard/public/small/gameView.png';
   import SmImageLeftSwipe from '~/assets/images/trumpcard/public/small/leftSwipe.png';
   import SmImageRightSwipe from '~/assets/images/trumpcard/public/small/rightSwipe.png';
@@ -152,7 +166,6 @@
   // import SmImageStartView from '~/assets/images/trumpcard/public/small/startView.png';
 
   // Medium
-  import MdImageBanner from '~/assets/images/trumpcard/public/medium/banner.jpg';
   import MdImageGameView from '~/assets/images/trumpcard/public/medium/gameView.png';
   import MdImageLeftSwipe from '~/assets/images/trumpcard/public/medium/leftSwipe.png';
   import MdImageRightSwipe from '~/assets/images/trumpcard/public/medium/rightSwipe.png';
@@ -161,7 +174,6 @@
   // import MdImageStartView from '~/assets/images/trumpcard/public/medium/startView.png';
 
   // Large
-  import ImageBanner from '~/assets/images/trumpcard/public/large/banner.jpg';
   import ImageGameView from '~/assets/images/trumpcard/public/large/gameView.png';
   import ImageLeftSwipe from '~/assets/images/trumpcard/public/large/leftSwipe.png';
   import ImageRightSwipe from '~/assets/images/trumpcard/public/large/rightSwipe.png';
@@ -178,7 +190,6 @@
     computed: {
       images() {
         return {
-          banner: ImageBanner,
           question: ImageGameView,
           leftSwipe: ImageLeftSwipe,
           rightSwipe: ImageRightSwipe,
@@ -189,7 +200,6 @@
       },
       imagesSrcSet() {
         return {
-          banner: `${SmImageBanner} 480w, ${MdImageBanner} 760w, ${ImageBanner} 960w`,
           question: `${SmImageGameView} 480w, ${MdImageGameView} 760w, ${ImageGameView} 960w`,
           leftSwipe: `${SmImageLeftSwipe} 480w, ${MdImageLeftSwipe} 760w, ${ImageLeftSwipe} 960w`,
           rightSwipe: `${SmImageRightSwipe} 480w, ${MdImageRightSwipe} 760w, ${ImageRightSwipe} 960w`,

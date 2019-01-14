@@ -1,12 +1,8 @@
 <template>
   <article>
     <!-- Hero Banner -->
-    <section class='pb-8'>
-      <Pic
-        :src='images.banner'
-        alt='VENU Banner'
-        class='block w-full'
-      />
+    <section class='banner banner-venu mb-8'>
+      <span class='banner-chevron-down'></span>
     </section>
     <!-- Introduction -->
     <section class='container py-4'>
@@ -432,6 +428,7 @@
           target='_blank'
           rel='noopener noreferrer'
         >
+          <FontAwesomeIcon :icon="['fab', 'github']"  />
           <span>Github</span>
         </a>
       </section>
@@ -439,9 +436,14 @@
   </article>
 </template>
 
+<style scoped>
+  .banner-venu {
+    background-image: url('~assets/images/venu/thumbnail.jpeg');
+  }
+</style>
+
 <script>
   // Assets
-  import ImageBanner from '~/assets/images/venu/thumbnail.jpeg';
   import ImageLogin from '~/assets/images/venu/public/login.png';
   import ImageAuthenticating from '~/assets/images/venu/public/login 2.png';
   import ImageOnboardingLocation from '~/assets/images/venu/public/onboarding 2.png';
@@ -462,16 +464,17 @@
   // Components
   import Pic from '~/components/Pic.vue';
   import Vimeo from '~/components/Vimeo.vue';
+  import FontAwesomeIcon from '~/components/FontAwesomeIcon';
 
   export default {
     components: {
       Pic,
+      FontAwesomeIcon,
       Vimeo,
     },
     computed: {
       images() {
         return {
-          banner: ImageBanner,
           login: ImageLogin,
           authenticating: ImageAuthenticating,
           onboardingLocation: ImageOnboardingLocation,
