@@ -209,5 +209,10 @@
         };
       },
     },
+    head() {
+      return {
+        title: 'Erick Sauri – Trump Card',
+      }
+    },
   }
 </script>

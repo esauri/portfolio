@@ -93,6 +93,11 @@
         };
       },
     },
+    head() {
+      return {
+        title: 'Erick Sauri – TipTap Calculator',
+      }
+    },
   }
 </script>
 

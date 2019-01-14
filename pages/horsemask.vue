@@ -210,5 +210,10 @@
         };
       }
     },
+    head() {
+      return {
+        title: 'Erick Sauri – Dawn of the Living Horsemasks',
+      }
+    },
   }
 </script>

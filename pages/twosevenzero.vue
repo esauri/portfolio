@@ -361,5 +361,10 @@
         };
       },
     },
+    head() {
+      return {
+        title: 'Erick Sauri – 270 Race to the White House',
+      }
+    },
   }
 </script>

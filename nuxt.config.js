@@ -12,10 +12,15 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'viewport-fit=cover, width=device-width, initial-scale=1, shrink-to-fit=no' },
       { name: 'apple-itunes-app', content: 'app-id=1360335414' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'white' },
+      { name: 'apple-mobile-web-app-title', content: 'Erick Sauri' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'shortcut icon', href: '/assets/images/icons/logo.png' },
+      { rel: 'shortcut icon', href: '/logo.png' },
+      { rel: 'manifest', href: '/manifest.json' },
+      { rel: 'apple-touch-icon', href: '/logo-ios.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lora:400,400i' },
     ]
   },

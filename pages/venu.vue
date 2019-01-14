@@ -494,5 +494,10 @@
         };
       },
     },
+    head() {
+      return {
+        title: 'Erick Sauri – VENU',
+      }
+    },
   }
 </script>

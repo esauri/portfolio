@@ -167,5 +167,10 @@
         };
       },
     },
+    head() {
+      return {
+        title: 'Erick Sauri – Poseidon Systems Live',
+      }
+    },
   }
 </script>
