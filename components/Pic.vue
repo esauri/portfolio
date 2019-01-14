@@ -85,36 +85,34 @@ export default {
      */
     handleLazyLoad() {
       // If IntersectionObserver is not available
-      if (!'IntersectionObserver' in window) {
+      if ('IntersectionObserver' in window) {
+        // "Intersect" certain pixels before actual top
+        const observerOptions = {
+          rootMargin: '50px 0px 50px 0px',
+        };
+
+        // Create IntersectionObserver
+        const imageObserver = new IntersectionObserver((images, observer) => {
+          images.forEach((image) => {
+            // If element is intersecting
+            if (image.isIntersecting) {
+              // Get target
+              var element = image.target;
+              // Lazy load
+              this.lazyLoaded = true;
+
+              // Unobserve target
+              observer.unobserve(element);
+            }
+          });
+        }, observerOptions);
+
+        // Observe image
+        imageObserver.observe(this.$refs.image);
+      } else {
         // Just lazy load it
         this.lazyLoaded = true;
-        // Exit
-        return;
       }
-
-      // "Intersect" certain pixels before actual top
-      const observerOptions = {
-        rootMargin: '50px 0px 50px 0px',
-      };
-
-      // Create IntersectionObserver
-      const imageObserver = new IntersectionObserver((images, observer) => {
-        images.forEach((image) => {
-          // If element is intersecting
-          if (image.isIntersecting) {
-            // Get target
-            var element = image.target;
-            // Lazy load
-            this.lazyLoaded = true;
-
-            // Unobserve target
-            observer.unobserve(element);
-          }
-        });
-      }, observerOptions);
-
-      // Observe image
-      imageObserver.observe(this.$refs.image);
     }
   },
 }
