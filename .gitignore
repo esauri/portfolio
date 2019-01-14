@@ -58,4 +58,7 @@ yarn-error.log*
 # Nuxt generate
 dist
 
+# Firebase
+.firebase
+.firebaserc
 
