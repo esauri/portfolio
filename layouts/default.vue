@@ -123,6 +123,13 @@ p, .p {
   @apply max-w-container mx-auto px-5;
 }
 
+@supports(padding: max(0px)) {
+  .container {
+    padding-left: max(1.25rem, env(safe-area-inset-left));
+    padding-right: max(1.25rem, env(safe-area-inset-right));
+  }
+}
+
 .icon {
   @apply inline-block;
   transition: transform 0.2s ease;

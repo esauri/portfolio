@@ -42,7 +42,7 @@
           </ul>
           <ul class='pl-5'>
             <li class='p'>
-              Optimized images using <strong>Fastly Pic Optimization</strong>, implemented responsive images, and lazy loading for images below the fold
+              Optimized images using <strong>Fastly Image Optimization</strong>, implemented responsive images, and lazy loading for images below the fold
             </li>
             <li class='p'>
               Implemented a new, quicker content posting and replying experience for users to share what's happening in their local community

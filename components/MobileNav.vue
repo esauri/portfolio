@@ -39,7 +39,7 @@
           </ul>
         </section>
         <!-- General -->
-        <section class='pb-2 pt-4 px-4'>
+        <section class='mb-4 pb-2 pt-4 px-4'>
           <h2 class='text-grey'>General</h2>
           <ul class='flex flex-wrap list-reset'>
             <li class='w-1/2'>
