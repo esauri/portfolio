@@ -56,7 +56,6 @@
           >
             <figure class='thumbnail-figure md:rounded'>
               <Pic
-                lazy
                 class='thumbnail w-full'
                 :alt='project.assets.thumbnail.description'
                 :src='project.assets.thumbnail.src'

@@ -44,7 +44,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.question'
               :srcset='imagesSrcSet.question'
@@ -69,7 +68,6 @@
         <section class='flex flex-col items-center md:flex-row'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.leftSwipe'
               :srcset='imagesSrcSet.leftSwipe'
@@ -93,7 +91,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.rightSwipe'
               :srcset='imagesSrcSet.rightSwipe'

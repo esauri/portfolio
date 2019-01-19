@@ -35,7 +35,6 @@
     <!-- Pic -->
     <figure class='py-8'>
       <Pic
-        lazy
         zoomable
         :src='images.plots'
         alt='Poseidon Asset Plots'
@@ -73,7 +72,6 @@
       <h2>Plot Annotations &amp; Event Timeline</h2>
       <figure class='my-6'>
         <Pic
-          lazy
           zoomable
           :src='images.plotPage'
           alt='Poseidon Plot Page'
@@ -113,7 +111,6 @@
     <!-- Pic -->
     <figure class='py-8'>
       <Pic
-        lazy
         zoomable
         :src='images.event'
         alt='Poseidon Event Creation Pages'

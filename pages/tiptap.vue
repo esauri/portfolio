@@ -30,7 +30,6 @@
     <!-- Pic -->
     <section class='pt-8'>
       <Pic
-        lazy
         zoomable
         :src='images.promo'
         alt='TipTap Promo'

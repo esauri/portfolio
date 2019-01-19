@@ -37,7 +37,6 @@
       <section class='flex flex-col items-center md:flex-row my-6'>
         <figure class='w-full md:w-1/4'>
           <Pic
-            lazy
             zoomable
             :src='images.playerThumbnail'
             :data-original='images.player'
@@ -64,7 +63,6 @@
       <section class='flex flex-col items-center md:flex-row-reverse my-6'>
         <figure class='w-full md:w-1/4'>
           <Pic
-            lazy
             zoomable
             :src='images.horsemaskThumbnail'
             :data-original='images.horsemask'
@@ -92,7 +90,6 @@
       <section class='flex flex-col items-center md:flex-row my-6'>
         <figure class='w-full md:w-1/4'>
           <Pic
-            lazy
             zoomable
             :src='images.panzerThumbnail'
             :data-original='images.panzer'

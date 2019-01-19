@@ -37,7 +37,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.login'
               alt='VENU Login Page'
@@ -60,7 +59,6 @@
         <section class='flex flex-col items-center md:flex-row'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.authenticating'
               alt='VENU Login Page while authenticating'
@@ -92,7 +90,6 @@
         <section class='flex flex-col items-center md:flex-row my-6'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.onboardingLocation'
               alt='VENU Onboarding Location Tracking Success Page'
@@ -115,7 +112,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse my-6'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.onboardingParking'
               alt='VENU Onboarding Parking Reminder Page'
@@ -140,7 +136,6 @@
         <section class='flex flex-col items-center md:flex-row my-6'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.onboardingInterests'
               alt='VENU Onboarding Interest Selection Page'
@@ -173,7 +168,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.home'
               alt='VENU Home Page'
@@ -195,7 +189,6 @@
         <section class='flex flex-col items-center md:flex-row'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.homeRecommended'
               alt='VENU Home Page Zoomed'
@@ -221,7 +214,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.itinerary'
               alt='VENU Itinerary Page'
@@ -253,7 +245,6 @@
         <section class='flex flex-col items-center justify-center md:flex-row'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.searchHome'
               alt='VENU Search Landing Page'
@@ -265,7 +256,6 @@
           </figure>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.searchResults'
               alt="VENU Search Page after searching for exhibits with Robot in it's name, description or tag"
@@ -282,7 +272,6 @@
         <section class='flex flex-col items-center md:flex-row'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.profile'
               alt='VENU Profile Page'
@@ -305,7 +294,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.detail'
               alt='VENU Exhibit Detail Page'
@@ -328,7 +316,6 @@
         <section class='flex flex-col items-center justify-center md:flex-row'>
           <figure class='w-full md:w-1/3'>
             <Pic
-              lazy
               zoomable
               :src='images.detailSaved'
               alt='VENU Exhibit Detail Page for Bookmarked Exhibit'
@@ -340,7 +327,6 @@
           </figure>
           <figure class='w-full md:w-1/3'>
             <Pic
-              lazy
               zoomable
               :src='images.detailVisited'
               alt='VENU Exhibit Detail Page for Marked as Visited Exhibit'
@@ -352,7 +338,6 @@
           </figure>
           <figure class='w-full md:w-1/3'>
             <Pic
-              lazy
               zoomable
               :src='images.detailBottom'
               alt='VENU Exhibit Detail Page Below the fold'
@@ -369,7 +354,6 @@
         <section class='flex flex-col items-center md:flex-row'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.directions'
               alt='VENU Directions Page'

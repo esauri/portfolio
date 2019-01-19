@@ -35,7 +35,6 @@
       <section class='my-6'>
         <figure class='pb-6'>
           <Pic
-            lazy
             zoomable
             :src='images.mainMockup'
             :srcset='imagesSrcSet.mainMockup'
@@ -65,7 +64,6 @@
       <section class='my-6'>
         <figure class='pb-6'>
           <Pic
-            lazy
             zoomable
             :src='images.triviaMockup'
             :srcset='imagesSrcSet.triviaMockup'
@@ -86,7 +84,6 @@
     <!-- All Screens -->
     <figure class='py-4'>
       <Pic
-        lazy
         zoomable
         :src='images.screens'
         :srcset='imagesSrcSet.screens'
@@ -107,7 +104,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.democrat'
               :srcset='imagesSrcSet.democrat'
@@ -138,7 +134,6 @@
         <section class='flex flex-col items-center md:flex-row'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.republican'
               :srcset='imagesSrcSet.republican'
@@ -167,7 +162,6 @@
       <section class='flex flex-col items-center md:flex-row-reverse my-6'>
         <figure class='w-full md:w-1/4'>
           <Pic
-            lazy
             zoomable
             :src='images.stateScreen'
             :srcset='imagesSrcSet.stateScreen'
@@ -202,7 +196,6 @@
         <section class='flex flex-col items-center md:flex-row-reverse'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.correctTrivia'
               :srcset='imagesSrcSet.correctTrivia'
@@ -229,7 +222,6 @@
         <section class='flex flex-col items-center md:flex-row'>
           <figure class='w-full md:w-1/4'>
             <Pic
-              lazy
               zoomable
               :src='images.wrongTrivia'
               :srcset='imagesSrcSet.wrongTrivia'
