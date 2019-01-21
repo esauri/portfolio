@@ -59,24 +59,25 @@ module.exports = {
     lang: 'en',
     background_color: '#070606',
     theme_color: '#e74c3c',
+    start_url: '/',
     icons: [
       {
-        src: './logo-128x128.png',
+        src: '/logo-128x128.png',
         sizes: '128x128',
         type: 'image/png'
       },
       {
-        src: './logo-144x144.png',
+        src: '/logo-144x144.png',
         sizes: '144x144',
         type: 'image/png'
       },
       {
-        src: './logo-152x152.png',
+        src: '/logo-152x152.png',
         sizes: '152x152',
         type: 'image/png'
       },
       {
-        src: './logo-192x192.png',
+        src: '/logo-192x192.png',
         sizes: '192x192',
         type: 'image/png'
       }
