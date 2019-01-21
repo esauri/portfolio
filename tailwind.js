@@ -209,7 +209,7 @@ module.exports = {
     ],
     'serif': [
       'Lora',
-      'Georigia',
+      'Georgia',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
