@@ -52,13 +52,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Service Workers
+sw.*
+
 # Nuxt build
 .nuxt
 
 # Nuxt generate
 dist
 
-# Firebase
-.firebase
-.firebaserc
 

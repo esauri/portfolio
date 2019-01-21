@@ -19,7 +19,6 @@ module.exports = {
     ],
     link: [
       { rel: 'shortcut icon', href: '/logo.png' },
-      { rel: 'manifest', href: '/manifest.json' },
       { rel: 'apple-touch-icon', href: '/logo-ios.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lora:400,400i' },
     ]
@@ -47,7 +46,9 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [],
+  modules: [
+    '@nuxtjs/pwa',
+  ],
 
   /*
   ** Build configuration
