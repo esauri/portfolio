@@ -50,6 +50,28 @@ module.exports = {
     '@nuxtjs/pwa',
   ],
 
+  /**
+   * Manifest JSON
+   */
+  manifest: {
+    name: 'Erick Sauri',
+    short_name: 'Erick Sauri',
+    lang: 'en',
+    background_color: '#070606',
+    theme_color: '#e74c3c',
+    related_applications: [
+      {
+        platform: 'play',
+        id: 'com.tiptap',
+        url: 'https://play.google.com/store/apps/details?id=com.tiptap',
+      },
+      {
+        platform: 'itunes',
+        url: 'https://itunes.apple.com/us/app/tiptap-tip-calculator/id1360335414',
+      }
+    ]
+  },
+
   /*
   ** Build configuration
   */
