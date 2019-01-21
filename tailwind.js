@@ -607,6 +607,7 @@ module.exports = {
     '5xl': '100rem',
     'full': '100%',
     'container': '960px',
+    'wrapper': '1170px',
   },
 
 

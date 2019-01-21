@@ -1,15 +1,8 @@
 <template>
-  <article class='flex flex-col md:flex-row'>
-    <!-- Featured project banner -->
-    <nuxt-link to='tiptap' class='hidden md:block w-screen md:w-1/3 lg:w-1/2'>
-      <figure class='thumbnail-figure h-full'>
-        <aside class='thumbnail banner-featured'></aside>
-      </figure>
-    </nuxt-link>
-    <!-- Right -->
-    <section class='mt-4 w-full md:w-2/3 lg:w-1/2'>
+  <article class='wrapper'>
+    <section class='mt-4 w-full'>
         <!-- Intro -->
-        <section class='border-b border-grey-lighter max-w-md mx-auto p-4'>
+        <section class='max-w-md mx-auto p-4'>
           <ul class='flex flex-wrap list-reset'>
             <li class='font-bold rounded-full text-blue text-grey text-sm uppercase'>
               Front-End Developer
@@ -29,52 +22,29 @@
             </span>
           </nuxt-link>
         </section>
-        <!-- Projects -->
-        <section
-          v-for='project in projects'
-          :key='project.id'
-          class='border-b border-grey-lighter flex flex-col-reverse md:flex-row items-center max-w-md mx-auto'
-        >
-          <section class='w-full md:w-1/2 p-4'>
-            <h1>{{ project.name }}</h1>
-            <p>
-              {{ project.description }}
-            </p>
-            <nuxt-link
-              :to='project.alias'
-              class='bg-grey-lightest btn font-semibold hover:bg-white hover:shadow-lg inline-block my-2 px-8 py-3 rounded shadow-md text-red'
-            >
-              <span>View project</span>
-              <span class='icon'>
-                <FontAwesomeIcon icon='angle-right'></FontAwesomeIcon>
-              </span>
-            </nuxt-link>
-          </section>
-          <nuxt-link
-            :to='project.alias'
-            class='block w-full md:w-1/2 md:p-4'
-          >
-            <figure class='thumbnail-figure md:rounded'>
-              <Pic
-                class='thumbnail w-full'
-                :alt='project.assets.thumbnail.description'
-                :src='project.assets.thumbnail.src'
-              />
-            </figure>
-          </nuxt-link>
-        </section>
+    </section>
+
+    <section class='flex flex-col md:flex-row flex-wrap'>
+      <Card
+        v-for='project in projects'
+        :key='project.id'
+        :columns='projects.length'
+        :project='project'
+      />
     </section>
   </article>
 </template>
 
 <script>
   import FontAwesomeIcon from '~/components/FontAwesomeIcon';
+  import Card from '~/components/Card';
   import Pic from '~/components/Pic';
 
   export default {
     components: {
       FontAwesomeIcon,
-      Pic
+      Card,
+      Pic,
     },
     computed: {
       /**
@@ -89,6 +59,10 @@
 </script>
 
 <style scoped>
+  .wrapper {
+    @apply max-w-wrapper mx-auto;
+  }
+
   .banner-featured {
     position: relative;
     display: flex;
