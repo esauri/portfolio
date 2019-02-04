@@ -13,7 +13,7 @@
             Hi there, I'm Erick, a front-end developer  who works on web and mobile apps.
           </p>
           <nuxt-link
-            to='tiptap'
+            to='quickpost'
             class='bg-red-light btn font-semibold hover:bg-red hover:text-white hover:shadow-lg inline-block my-4 px-8 py-3 rounded shadow-md text-white'
           >
             <span>View featured project</span>
@@ -52,6 +52,7 @@
        *
        */
       projects() {
+        // Don't show quickposts here for now
         return this.$store.getters.projectList;
       }
     },

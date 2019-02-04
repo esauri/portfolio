@@ -13,6 +13,8 @@ import TwoSevenZeroIcon from '~/assets/images/270/public/small/avatar.png';
 import TwoSevenZeroThumbnail from '~/assets/images/270/public/small/thumbnail2.jpg';
 import TipTapIcon from '~/assets/images/tiptap/tiptap_icon.png';
 import HorsemaskIcon from '~/assets/images/horsemasks/avatar.png';
+import PatchIcon from '~/assets/images/patch/patch-icon.png';
+import QuickpostThumbnail from '~/assets/images/patch/qp_thumbnail.jpg';
 
 // Tell Vue we want to use Vuex!
 Vue.use(Vuex);
@@ -22,9 +24,31 @@ const store = () => {
     state: () => ({
       // Projects
       projects: [
-        // Poseidon
+        // Quickpost
         {
           id: 0,
+          name: 'Patch: Posting',
+          alias: 'quickpost',
+          description: 'What\'s happening nearby?',
+          tags: [
+            'Drupal 7',
+            'PHP',
+            'Vue',
+          ],
+          assets: {
+            icon: {
+              src: PatchIcon,
+              description: 'Patch Icon',
+            },
+            thumbnail: {
+              src: QuickpostThumbnail,
+              description: 'Quickpost thumbnail',
+            },
+          },
+        },
+        // Poseidon
+        {
+          id: 1,
           name: 'Poseidon Live',
           alias: 'poseidon',
           description: 'Asset health monitoring',
@@ -42,7 +66,7 @@ const store = () => {
         },
         // VENU
         {
-          id: 1,
+          id: 2,
           name: 'VENU',
           alias: 'venu',
           description: 'Wayfinding for Imagine RIT',
@@ -60,7 +84,7 @@ const store = () => {
         },
         // Trump Card
         {
-          id: 2,
+          id: 3,
           name: 'Trump Card',
           alias: 'trumpcard',
           description: 'Make America Great Again?',
@@ -78,7 +102,7 @@ const store = () => {
         },
         // 270
         {
-          id: 3,
+          id: 4,
           name: '270',
           alias: 'twosevenzero',
           description: 'Race to the White House',

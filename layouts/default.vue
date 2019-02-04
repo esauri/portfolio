@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- Header -->
-    <header class='bg-white header w-screen z-50' :class='{ "fixed pin-t shadow": (stickyHeader && !isHomePage) }'>
+    <header class='bg-white header w-screen z-50' :class='{ "fixed pin-t shadow sticky-nav": (stickyHeader && !isHomePage) }'>
       <section class='container flex items-center justify-between py-3'>
         <Logo/>
         <nav>
@@ -72,6 +72,10 @@ p, .p {
   text-size-adjust: 100%;
   word-break: break-word;
   @apply font-serif font-normal text-lg;
+}
+
+.sticky-nav {
+  animation: slide-down 0.2s ease-in-out;
 }
 
 .header {
@@ -182,6 +186,16 @@ a:hover .thumbnail {
 
   .banner {
     background-attachment: fixed;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }
 

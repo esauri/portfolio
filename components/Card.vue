@@ -11,13 +11,13 @@
       ></section>
       <!-- Label -->
       <section class='card-label mb-4 w-full' :class='textAlignmentClass'>
-      <h2>
+      <h2 class='text text-shadow'>
         {{ project.name }}
         <span v-if='recirc' class='icon'>
           <FontAwesomeIcon icon='angle-right'></FontAwesomeIcon>
         </span>
       </h2>
-      <h4 class='blurb' :class='{ "md:hidden": !recirc }'>
+      <h4 class='blurb text-shadow' :class='{ "md:hidden": !recirc }'>
         {{ project.description }}
       </h4>
     </section>
@@ -71,6 +71,10 @@
   .card:hover + .card-subtitle {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .text-shadow {
+    text-shadow: 0.5px 0.5px 0.5px black
   }
 
   @media only screen and (min-width: 760px) {
