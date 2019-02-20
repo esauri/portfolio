@@ -27,7 +27,7 @@ const store = () => {
         // Quickpost
         {
           id: 0,
-          name: 'Patch: Posting',
+          name: 'Quickpost',
           alias: 'quickpost',
           description: 'What\'s happening nearby?',
           tags: [

@@ -5,10 +5,10 @@
       <section class='container flex items-center justify-between py-3'>
         <Logo/>
         <nav>
-          <section class='sm:hidden'>
+          <section class='md:hidden'>
             <MobileNav/>
           </section>
-          <section class='hidden sm:block'>
+          <section class='hidden md:block'>
             <Navigation/>
           </section>
         </nav>

@@ -11,7 +11,7 @@
           Vue &middot; PHP &middot; Drupal 7
         </li>
       </ul>
-      <h1>Patch: Posting</h1>
+      <h1>Quickpost</h1>
       <section class='my-6'>
         <h3>About Patch</h3>
         <p>

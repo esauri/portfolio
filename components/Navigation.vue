@@ -24,19 +24,19 @@
             <!-- Projects -->
             <section v-if='projects.length' class='bg-grey-darker pb-2 pt-4 px-4 rounded-t-lg text-left'>
               <h2 class='text-grey'>Projects</h2>
-              <ul class='flex flex-col list-reset'>
-                <li v-for='project in projects' :key='project.id' class='my-3'>
+              <ul class='flex flex-wrap list-reset'>
+                <li v-for='project in projects' :key='project.id' class='my-3 w-1/2'>
                   <nuxt-link class='block no-underline hover:no-underline text-white' :to='project.alias'>
                     <ListItem>
                       <template slot='image'>
-                        <img class='rounded-full w-16' :src='project.assets.icon.src' :alt='project.assets.icon.description'>
+                        <img class='rounded-full w-12' :src='project.assets.icon.src' :alt='project.assets.icon.description'>
                       </template>
                       <template slot='title'>
                         <h3 class='p-0 text-white'>{{ project.name }}</h3>
                       </template>
-                      <template slot='description'>
+                      <!-- <template slot='description'>
                         <p class='font-hairline font-sans text-base'>{{ project.description }}</p>
-                      </template>
+                      </template> -->
                     </ListItem>
                   </nuxt-link>
                 </li>
@@ -45,12 +45,12 @@
             <!-- Playground -->
             <section v-if='playground.length' class='bg-grey-darker pt-2 pb-4 px-4 rounded-b-lg text-left'>
               <h2 class='text-grey'>Playground</h2>
-              <ul class='flex flex-col list-reset'>
-                <li v-for='playgroundItem in playground' :key='playgroundItem.id' class='my-3'>
+              <ul class='flex flex-wrap list-reset'>
+                <li v-for='playgroundItem in playground' :key='playgroundItem.id' class='my-3 w-1/2'>
                   <nuxt-link class='block no-underline hover:no-underline text-white' :to='playgroundItem.alias'>
                     <ListItem>
                       <template slot='image'>
-                        <img class='rounded-full w-12' :src='playgroundItem.assets.icon.src' :alt='playgroundItem.assets.icon.description' />
+                        <img class='rounded-full w-10' :src='playgroundItem.assets.icon.src' :alt='playgroundItem.assets.icon.description' />
                       </template>
                       <template slot='title'>
                         <h3 class='p-0 text-white'>{{ playgroundItem.name }}</h3>
@@ -87,7 +87,7 @@
     },
     data() {
       return {
-        showDropdown: false,
+        showDropdown: true,
       };
     },
     computed: {
@@ -156,9 +156,9 @@
   .dropdown-nav {
     animation: dropdown-reveal 0.2s ease-in;
     padding: 1em;
-    width: 400px;
+    width: 550px;
     position: absolute;
-    transform: translateX(-43%);
+    transform: translateX(-46%);
     z-index: 5;
   }
 
@@ -175,12 +175,12 @@
   @keyframes dropdown-reveal {
     0% {
       opacity: 0;
-      transform: translate(-43%, 25px);
+      transform: translate(-46%, 25px);
     }
 
     100% {
       opacity: 1;
-      transform: translate(-43%, 0);
+      transform: translate(-46%, 0);
     }
   }
 </style>
