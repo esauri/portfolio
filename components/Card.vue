@@ -23,7 +23,7 @@
     </section>
     </nuxt-link>
 
-  <h4 v-if='!recirc' class='card-subtitle hidden md:block mt-2 text-black w-full' :class='textAlignmentClass'>
+  <h4 v-if='!recirc' class='card-subtitle hidden md:block mt-2 w-full' :class='[textAlignmentClass, darkTheme ? "text-white" : "text-black"]'>
     <span>view project</span>
     <span class='icon'>
       <FontAwesomeIcon icon='angle-right'></FontAwesomeIcon>
@@ -118,6 +118,9 @@
        */
       alignmentClass() {
         return this.project.id % 2 === 0;
+      },
+      darkTheme() {
+        return this.$store.getters.theme === 'dark';
       },
       /**
        * Returns text-alignment class

@@ -51,9 +51,9 @@
               alt='Trump Card Game View'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+            <Caption class='mt-2 text-center text-grey-dark text-sm'>
               Question view
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
@@ -75,9 +75,9 @@
               alt='Trump Card Game View After Left Drag'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+            <Caption class='mt-2 text-center text-grey-dark text-sm'>
               Left drag
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <p>
@@ -98,9 +98,9 @@
               alt='Trump Card Game View After Right Drag'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+            <Caption class='mt-2 text-center text-grey-dark text-sm'>
               Right drag
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
@@ -178,10 +178,12 @@
   // import ImageGameLoss from '~/assets/images/trumpcard/public/large/gameLoss.png';
   // import ImageStartView from '~/assets/images/trumpcard/public/large/startView.png';
 
+  import Caption from '~/components/Caption.vue';
   import Pic from '~/components/Pic.vue';
 
   export default {
     components: {
+      Caption,
       Pic,
     },
     computed: {

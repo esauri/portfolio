@@ -45,9 +45,9 @@
             alt='Player character'
             class='block md:mr-auto'
           />
-          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          <Caption class='mt-2 text-center text-grey-dark text-sm'>
             Fearless heroine
-          </figcaption>
+          </Caption>
         </figure>
         <section class='w-full md:w-3/4'>
           <h3>Player</h3>
@@ -71,9 +71,9 @@
             alt='Horsemask'
             class='block md:ml-auto'
           />
-          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          <Caption class='mt-2 text-center text-grey-dark text-sm'>
             Horsemask
-          </figcaption>
+          </Caption>
         </figure>
         <section class='w-full md:w-3/4'>
           <h3>Living Horsemask</h3>
@@ -98,9 +98,9 @@
             alt='Panzer tank'
             class='block md:mr-auto'
           />
-          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          <Caption class='mt-2 text-center text-grey-dark text-sm'>
             Panzer
-          </figcaption>
+          </Caption>
         </figure>
         <section class='w-full md:w-3/4'>
           <h3>Tank</h3>
@@ -189,10 +189,12 @@
   import PlayerThumnbnail from '~/assets/images/horsemasks/playerthumbnail.png';
   import PanzerThumnbnail from '~/assets/images/horsemasks/panzerthumbnail.png';
   import HorsemaskThumnbnail from '~/assets/images/horsemasks/horsemaskthumbnail.png';
+  import Caption from '~/components/Caption.vue';
   import Pic from '~/components/Pic.vue';
 
   export default {
     components: {
+      Caption,
       Pic,
     },
     computed: {

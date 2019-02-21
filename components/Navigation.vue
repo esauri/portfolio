@@ -6,13 +6,13 @@
   <section>
     <ul class='flex list-reset'>
       <li class='flex items-center justify-center'>
-        <nuxt-link class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg text-black' to='about'>
+        <nuxt-link class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg ' :class='[ darkTheme ? "text-white" : "text-black" ]'' to='about'>
           About
         </nuxt-link>
       </li>
       <li class='flex items-center justify-center'>
         <button
-          class='antialiased font-light link nav-link no-underline hover:no-underline px-4 focus:outline-none relative text-lg text-black'
+          class='antialiased font-light link nav-link no-underline hover:no-underline px-4 focus:outline-none relative text-lg ' :class='[ darkTheme ? "text-white" : "text-black" ]''
           @mouseenter='handleDropdown(true)'
           @mouseleave='handleMouseLeave'
           @touchstart='handleDropdown(!showDropdown)'
@@ -65,12 +65,12 @@
         </button>
       </li>
       <li class='flex items-center justify-center'>
-        <a class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg text-black' rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.github'>
+        <a class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg ' :class='[ darkTheme ? "text-white" : "text-black" ]'' rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.github'>
           Github
         </a>
       </li>
       <li class='flex items-center justify-center'>
-        <a class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg text-black' rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.resume'>
+        <a class='antialiased font-light nav-link no-underline hover:no-underline px-4 text-lg ' :class='[ darkTheme ? "text-white" : "text-black" ]'' rel='noopener noreferrer' target='_blank' :href='socialMediaUrls.resume'>
           Resume
         </a>
       </li>
@@ -91,6 +91,9 @@
       };
     },
     computed: {
+      darkTheme() {
+        return this.$store.getters.theme === 'dark';
+      },
       projects() {
         return this.$store.getters.projectList;
       },

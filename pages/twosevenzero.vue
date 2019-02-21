@@ -42,9 +42,9 @@
             alt='Mockup of the home views'
             class='block w-full'
           />
-          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          <Caption class='mt-2 text-center text-grey-dark text-sm'>
             Initial mockups for main views
-          </figcaption>
+          </Caption>
         </figure>
         <p>
           These are the first designs of the app views. Not much has changed
@@ -71,9 +71,9 @@
             alt='Mockup of the trivia views'
             class='block w-full'
           />
-          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          <Caption class='mt-2 text-center text-grey-dark text-sm'>
             Initial mockups for trivia views
-          </figcaption>
+          </Caption>
         </figure>
         <p>
           As for the trivia views little changed other than the tab bar with different helpers users could call if they wanted to.
@@ -91,9 +91,9 @@
         alt='Perspective view of all the app screens'
         class='block w-full'
       />
-      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+      <Caption class='mt-2 text-center text-grey-dark text-sm'>
         Final version
-      </figcaption>
+      </Caption>
     </figure>
     <!-- Final Product -->
     <section class='container py-4'>
@@ -111,9 +111,9 @@
               alt='Home screen for the Democratic Party candidate'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Democratic Party candidate home view
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
@@ -141,9 +141,9 @@
               alt='Home screen for the Republican Party candidate'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Republican Party candidate home view
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <p>
@@ -169,9 +169,9 @@
             alt='270 Republican candidate Iowa State View'
             class='block mx-auto md:mr-0 md:ml-auto'
           />
-          <figcaption class='text-center text-grey-dark text-sm'>
+          <Caption class='text-center text-grey-dark text-sm'>
             Iowa state view
-          </figcaption>
+          </Caption>
         </figure>
         <section class='w-full md:mr-3 md:w-3/4'>
           <h3>State View</h3>
@@ -203,9 +203,9 @@
               alt='View for when trivia has been correctly answered'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Trivia View: Correct Answer
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
@@ -229,9 +229,9 @@
               alt='View for when trivia has been incorrectly answered'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Trivia View: Wrong Answer
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <p>
@@ -253,9 +253,9 @@
           title='270 Demo'
           src='https://player.vimeo.com/video/183411950'
         />
-        <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        <Caption class='mt-2 text-center text-grey-dark text-sm'>
           270 gameplay video
-        </figcaption>
+        </Caption>
       </figure>
     </section>
     <!-- Parting Thoughts -->
@@ -319,11 +319,13 @@
   import ImageCorrectTrivia from '~/assets/images/270/public/large/triviaCorrect.png';
   import ImageWrongTrivia from '~/assets/images/270/public/large/triviaWrong.png';
 
+  import Caption from '~/components/Caption.vue';
   import Pic from '~/components/Pic.vue';
   import Vimeo from '~/components/Vimeo.vue';
 
   export default {
     components: {
+      Caption,
       Pic,
       Vimeo,
     },

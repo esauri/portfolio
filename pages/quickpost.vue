@@ -37,9 +37,9 @@
         alt='Quickpost prompt'
         class='block mx-auto'
       />
-      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+      <Caption class='mt-2 text-center text-grey-dark text-sm'>
         Introducing Quickpost
-      </figcaption>
+      </Caption>
     </figure>
     <!-- Solution -->
     <section class='container py-4'>
@@ -66,9 +66,9 @@
           alt='Quickpost thread'
           class='block mx-auto'
         />
-        <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        <Caption class='mt-2 text-center text-grey-dark text-sm'>
           Post with replies
-        </figcaption>
+        </Caption>
       </figure>
       <section class='my-6'>
         <h3>Rollout</h3>
@@ -101,9 +101,9 @@
             alt='Quickpost flagging'
             class='block mx-auto'
           />
-          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          <Caption class='mt-2 text-center text-grey-dark text-sm'>
             Users can indicate why they flagged a post
-          </figcaption>
+          </Caption>
         </figure>
       </section>
       <section class='my-6'>
@@ -123,9 +123,9 @@
             alt='Quickpost image uploader'
             class='block mx-auto'
           />
-          <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+          <Caption class='mt-2 text-center text-grey-dark text-sm'>
             Image Upload
-          </figcaption>
+          </Caption>
         </figure>
       </section>
     </section>
@@ -149,9 +149,9 @@
           alt='Quickpost dog post'
           class='block mx-auto'
         />
-        <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        <Caption class='mt-2 text-center text-grey-dark text-sm'>
           Post with image
-        </figcaption>
+        </Caption>
       </figure>
     </section>
   </article>
@@ -171,10 +171,12 @@
   import QuickPostTopBlock from '~/assets/images/patch/qp_top_block.jpg';
   import QuickPostImageUploader from '~/assets/images/patch/qp_image_upload.jpg';
 
+  import Caption from '~/components/Caption.vue';
   import Pic from '~/components/Pic.vue';
 
   export default {
     components: {
+      Caption,
       Pic,
     },
     computed: {

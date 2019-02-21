@@ -1,8 +1,8 @@
 <template>
   <span>
-    <span class='line'></span>
-    <span class='line'></span>
-    <span class='line'></span>
+    <span class='line' :class='[ darkTheme ? "bg-white" : "bg-black" ]'></span>
+    <span class='line' :class='[ darkTheme ? "bg-white" : "bg-black" ]'></span>
+    <span class='line' :class='[ darkTheme ? "bg-white" : "bg-black" ]'></span>
   </span>
 </template>
 
@@ -14,7 +14,6 @@
   border-radius: 4px;
   position: relative;
   margin-bottom: 4px;
-  background: currentColor;
   color: inherit;
   padding-top: 2px;
 }
@@ -24,3 +23,12 @@
 }
 </style>
 
+<script>
+export default {
+  computed: {
+    darkTheme() {
+      return this.$store.getters.theme === 'dark';
+    },
+  },
+}
+</script>

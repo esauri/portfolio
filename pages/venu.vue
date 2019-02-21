@@ -42,9 +42,9 @@
               alt='VENU Login Page'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Venu Login Page
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <h3>Role</h3>
@@ -64,9 +64,9 @@
               alt='VENU Login Page while authenticating'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Venu Authentication Experience
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <h3>Technology</h3>
@@ -95,9 +95,9 @@
               alt='VENU Onboarding Location Tracking Success Page'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Location Tracking
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <h4>Location</h4>
@@ -117,9 +117,9 @@
               alt='VENU Onboarding Parking Reminder Page'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Parking Reminder
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <h4>Parking</h4>
@@ -141,9 +141,9 @@
               alt='VENU Onboarding Interest Selection Page'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Interest Selection
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <h4>Interests</h4>
@@ -173,9 +173,9 @@
               alt='VENU Home Page'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Home View
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <p>
@@ -194,9 +194,9 @@
               alt='VENU Home Page Zoomed'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Zoomed in home view
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <h4>Recommended Exhibits</h4>
@@ -219,9 +219,9 @@
               alt='VENU Itinerary Page'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Itinerary View
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <h3>Itinerary</h3>
@@ -250,9 +250,9 @@
               alt='VENU Search Landing Page'
               class='block mx-auto md:mx-0'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Search View
-            </figcaption>
+            </Caption>
           </figure>
           <figure class='w-full md:w-1/4'>
             <Pic
@@ -261,9 +261,9 @@
               alt="VENU Search Page after searching for exhibits with Robot in it's name, description or tag"
               class='block mx-auto md:mx-0'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Search results
-            </figcaption>
+            </Caption>
           </figure>
         </section>
       </section>
@@ -277,9 +277,9 @@
               alt='VENU Profile Page'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Profile View
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <h3>Profile</h3>
@@ -299,9 +299,9 @@
               alt='VENU Exhibit Detail Page'
               class='block mx-auto md:mr-0 md:ml-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Exhibit Detail View
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:mr-3 md:w-3/4'>
             <h3>Exhibit Detail</h3>
@@ -321,9 +321,9 @@
               alt='VENU Exhibit Detail Page for Bookmarked Exhibit'
               class='block mx-auto md:mx-0'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Bookmarked Exhibit
-            </figcaption>
+            </Caption>
           </figure>
           <figure class='w-full md:w-1/3'>
             <Pic
@@ -332,9 +332,9 @@
               alt='VENU Exhibit Detail Page for Marked as Visited Exhibit'
               class='block mx-auto md:mx-0'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Visited Exhibit
-            </figcaption>
+            </Caption>
           </figure>
           <figure class='w-full md:w-1/3'>
             <Pic
@@ -343,9 +343,9 @@
               alt='VENU Exhibit Detail Page Below the fold'
               class='block mx-auto md:mx-0'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Below the fold
-            </figcaption>
+            </Caption>
           </figure>
         </section>
       </section>
@@ -359,9 +359,9 @@
               alt='VENU Directions Page'
               class='block mx-auto md:ml-0 md:mr-auto'
             />
-            <figcaption class='text-center text-grey-dark text-sm'>
+            <Caption class='text-center text-grey-dark text-sm'>
               Directions View
-            </figcaption>
+            </Caption>
           </figure>
           <section class='w-full md:ml-3 md:w-3/4'>
             <h3>Directions</h3>
@@ -381,9 +381,9 @@
           title='VENU Imagine RIT Video'
           src='https://player.vimeo.com/video/219845941'
         />
-        <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        <Caption class='mt-2 text-center text-grey-dark text-sm'>
           Imagine RIT Video
-        </figcaption>
+        </Caption>
       </figure>
     </section>
     <!-- Parting Thoughts -->
@@ -446,12 +446,14 @@
   import ImageDirections from '~/assets/images/venu/public/directions.png';
 
   // Components
+  import Caption from '~/components/Caption.vue';
   import Pic from '~/components/Pic.vue';
   import Vimeo from '~/components/Vimeo.vue';
   import FontAwesomeIcon from '~/components/FontAwesomeIcon';
 
   export default {
     components: {
+      Caption,
       Pic,
       FontAwesomeIcon,
       Vimeo,

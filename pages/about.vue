@@ -9,9 +9,6 @@
         class='block mx-auto w-64 h-64 rounded-full'
         alt='Picture of Erick Sauri'
       />
-      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
-        Moi
-      </figcaption>
     </figure>
     <!-- About Me -->
     <section class='container py-4'>

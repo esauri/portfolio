@@ -40,9 +40,9 @@
         alt='Poseidon Asset Plots'
         class='block'
       />
-      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+      <Caption class='mt-2 text-center text-grey-dark text-sm'>
         Common plots
-      </figcaption>
+      </Caption>
     </figure>
     <!-- Solution -->
     <section class='container py-4'>
@@ -77,9 +77,9 @@
           alt='Poseidon Plot Page'
           class='block'
         />
-        <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+        <Caption class='mt-2 text-center text-grey-dark text-sm'>
           Plot View
-        </figcaption>
+        </Caption>
       </figure>
       <section class='my-6'>
         <p>
@@ -116,9 +116,9 @@
         alt='Poseidon Event Creation Pages'
         class='block'
       />
-      <figcaption class='mt-2 text-center text-grey-dark text-sm'>
+      <Caption class='mt-2 text-center text-grey-dark text-sm'>
         Creating an event &amp; Event View
-      </figcaption>
+      </Caption>
     </figure>
     <!-- Parting Thoughts -->
     <section class='container py-4'>
@@ -148,11 +148,12 @@
   import ImageEvent from '~/assets/images/poseidon/screens/event.jpg';
   import ImagePlots from '~/assets/images/poseidon/screens/plots.jpg';
   import ImagePlotPage from '~/assets/images/poseidon/screens/plot page.jpg';
-
+  import Caption from '~/components/Caption.vue';
   import Pic from '~/components/Pic.vue';
 
   export default {
     components: {
+      Caption,
       Pic,
     },
     computed: {

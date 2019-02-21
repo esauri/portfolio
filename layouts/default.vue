@@ -1,17 +1,34 @@
 <template>
-  <main>
+  <main class='main' :class='[darkTheme ? "bg-grey-darkest text-white": "bg-white text-black"]'>
     <!-- Header -->
-    <header class='bg-white header w-screen z-50' :class='{ "fixed pin-t shadow sticky-nav": (stickyHeader && !isHomePage) }'>
+    <header class='header w-screen z-50' :class='{ "fixed pin-t shadow sticky-nav": (stickyHeader && !isHomePage) }'>
       <section class='container flex items-center justify-between py-3'>
-        <Logo/>
-        <nav>
-          <section class='md:hidden'>
-            <MobileNav/>
-          </section>
-          <section class='hidden md:block'>
-            <Navigation/>
-          </section>
-        </nav>
+        <Logo :white='darkTheme' />
+        <section class='flex'>
+          <nav class='flex items-center'>
+            <section class='md:hidden'>
+              <MobileNav/>
+            </section>
+            <section class='hidden md:block'>
+              <Navigation/>
+            </section>
+          </nav>
+          <aside class='ml-3'>
+            <Toggle
+              toggleId='js-theme-toggle'
+              ariaLabel='Switch between Dark and Light mode'
+              :checked='darkTheme'
+              @change='toggleTheme'
+            >
+              <template slot='toggle-track-checked'>
+                <span class='block'>🌙</span>
+              </template>
+              <template slot='toggle-track-x'>
+                <span class='block'>☀️</span>
+              </template>
+            </Toggle>
+          </aside>
+        </section>
       </section>
     </header>
     <nuxt/>
@@ -74,11 +91,16 @@ p, .p {
   @apply font-serif font-normal text-lg;
 }
 
+.main {
+  transition: background 0.2s ease-in, color 0.2s ease-in;
+}
+
 .sticky-nav {
   animation: slide-down 0.2s ease-in-out;
 }
 
 .header {
+  background: inherit;
   height: 70px;
 }
 
@@ -248,6 +270,7 @@ a:hover .thumbnail {
   import MobileNav from '~/components/MobileNav.vue';
   import Navigation from '~/components/Navigation.vue';
   import Recirc from '~/components/Recirc.vue';
+  import Toggle from '~/components/Toggle.vue';
 
   export default {
     components: {
@@ -256,17 +279,29 @@ a:hover .thumbnail {
       MobileNav,
       Navigation,
       Recirc,
+      Toggle,
     },
     computed: {
+      darkTheme() {
+        return this.theme === 'dark';
+      },
       isHomePage() {
         return this.$route.name === 'index';
-      }
+      },
+      theme() {
+        return this.$store.getters.theme;
+      },
     },
     data() {
       return {
         stickyHeader: false,
         windowHeight: window.innerHeight - 70,
       };
+    },
+    filters: {
+      themeIcon(theme) {
+        return theme === 'dark' ? '🌙' : '☀️';
+      },
     },
     mounted() {
       window.addEventListener('scroll', this.handleScroll);
@@ -278,6 +313,15 @@ a:hover .thumbnail {
 
         // If scrolled past the window height make it sticky
         this.stickyHeader = currentYPosition > this.windowHeight;
+      },
+      toggleTheme() {
+        const theme = this.darkTheme ? 'light' : 'dark';
+
+        // Save theme in local storage
+        localStorage.setItem('ERICKSAURI/THEME', theme);
+
+        // Update store
+        this.$store.commit('SET_THEME', theme);
       },
     },
   };

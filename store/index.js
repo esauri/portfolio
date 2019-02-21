@@ -19,9 +19,14 @@ import QuickpostThumbnail from '~/assets/images/patch/qp_thumbnail.jpg';
 // Tell Vue we want to use Vuex!
 Vue.use(Vuex);
 
+// Get visitor's last selected theme from local storage, otherwise default to light theme
+const defaultTheme = localStorage.getItem('ERICKSAURI/THEME') || 'light';
+
 const store = () => {
   return new Vuex.Store({
     state: () => ({
+      // Theme
+      theme: defaultTheme,
       // Projects
       projects: [
         // Quickpost
@@ -162,6 +167,9 @@ const store = () => {
       }),
     }),
     getters: {
+      theme({ theme }) {
+        return theme;
+      },
       projectList({ projects }) {
         return projects;
       },
@@ -178,6 +186,17 @@ const store = () => {
       },
       zooming({ zooming }) {
         return zooming;
+      },
+    },
+    mutations: {
+      /**
+       * Sets the theme
+       *
+       * @param state
+       * @param theme
+       */
+      SET_THEME(state, theme) {
+        state.theme = theme;
       },
     },
   });
