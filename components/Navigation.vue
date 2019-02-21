@@ -87,7 +87,7 @@
     },
     data() {
       return {
-        showDropdown: true,
+        showDropdown: false,
       };
     },
     computed: {
